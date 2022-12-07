@@ -2,6 +2,8 @@ defmodule GodzillaCineaste.Film do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias GodzillaCineaste.{FilmStudio, Studio}
+
   schema "films" do
     field :release_date, :date
     field :runtime, :integer
@@ -14,6 +16,8 @@ defmodule GodzillaCineaste.Film do
     field :aliases, {:array, :map}
     field :poster_urls, {:array, :map}
     field :original_title, :map
+
+    many_to_many :studios, Studio, join_through: FilmStudio
 
     timestamps()
   end
