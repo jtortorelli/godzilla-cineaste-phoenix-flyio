@@ -2,9 +2,13 @@ defmodule GodzillaCineaste.FilmSeries do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias GodzillaCineaste.FilmSeriesEntry
+
   schema "film_series" do
     field :name, :string
     field :slug, :string
+
+    has_many :entries, FilmSeriesEntry
 
     timestamps()
   end
