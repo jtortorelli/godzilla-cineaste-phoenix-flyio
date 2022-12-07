@@ -4,7 +4,7 @@ defmodule GodzillaCineaste.KaijuRole do
 
   alias GodzillaCineaste.{Film, KaijuCharacter, Person}
 
-  schema "kaiju_role" do
+  schema "kaiju_roles" do
     field :actor_alias, :string
     field :avatar_url, :string
     field :name, :string
