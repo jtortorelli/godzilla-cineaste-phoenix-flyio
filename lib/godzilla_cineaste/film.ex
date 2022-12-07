@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Film do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{FilmSeriesEntry, FilmStudio, Studio}
+  alias GodzillaCineaste.{FilmSeriesEntry, FilmStudio, KaijuRole, Studio}
 
   schema "films" do
     field :release_date, :date
@@ -16,6 +16,8 @@ defmodule GodzillaCineaste.Film do
     field :aliases, {:array, :map}
     field :poster_urls, {:array, :map}
     field :original_title, :map
+
+    has_many :kaiju_roles, KaijuRole
 
     has_one :series_entry, FilmSeriesEntry
 

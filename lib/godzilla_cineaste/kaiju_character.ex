@@ -2,10 +2,14 @@ defmodule GodzillaCineaste.KaijuCharacter do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias GodzillaCineaste.KaijuRole
+
   schema "kaiju_characters" do
     field :display_name, :string
     field :slug, :string
     field :tenant, :integer
+
+    has_many :roles, KaijuRole
 
     timestamps()
   end

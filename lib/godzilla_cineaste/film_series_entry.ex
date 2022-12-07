@@ -6,7 +6,7 @@ defmodule GodzillaCineaste.FilmSeriesEntry do
   schema "film_series_entries" do
     field :entry_number, :integer
 
-    belongs_to :series, FilmSeries
+    belongs_to :film_series, FilmSeries
     belongs_to :film, Film
     timestamps()
   end
