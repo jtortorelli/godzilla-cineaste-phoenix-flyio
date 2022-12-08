@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Film do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{FilmSeriesEntry, FilmStudio, KaijuRole, PersonRole, Studio}
+  alias GodzillaCineaste.{FilmSeriesEntry, FilmStudio, KaijuRole, PersonRole, PersonStaff, Studio}
 
   schema "films" do
     field :release_date, :date
@@ -19,6 +19,7 @@ defmodule GodzillaCineaste.Film do
 
     has_many :kaiju_roles, KaijuRole
     has_many :person_roles, PersonRole
+    has_many :person_staff, PersonStaff
 
     has_one :series_entry, FilmSeriesEntry
 
@@ -31,6 +32,14 @@ defmodule GodzillaCineaste.Film do
   def changeset(film, attrs) do
     film
     |> cast(attrs, [:slug, :title, :release_date, :runtime, :showcased, :tenant, :sort_title])
-    |> validate_required([:slug, :title, :release_date, :runtime, :showcased, :tenant, :sort_title])
+    |> validate_required([
+      :slug,
+      :title,
+      :release_date,
+      :runtime,
+      :showcased,
+      :tenant,
+      :sort_title
+    ])
   end
 end

@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{AuthorWork, KaijuRole, PersonRole, Work}
+  alias GodzillaCineaste.{AuthorWork, KaijuRole, PersonRole, PersonStaff, Work}
 
   schema "people" do
     field :display_name, :string
@@ -12,7 +12,8 @@ defmodule GodzillaCineaste.Person do
     field :tenant, :integer
 
     has_many :kaiju_roles, KaijuRole
-    has_many :roles, PersonRole
+    has_many :person_roles, PersonRole
+    has_many :person_staff, PersonStaff
 
     many_to_many :works, Work, join_through: AuthorWork
 
