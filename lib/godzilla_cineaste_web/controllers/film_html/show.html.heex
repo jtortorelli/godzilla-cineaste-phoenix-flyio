@@ -1,0 +1,45 @@
+<.header>
+  <%= @film.title %>
+</.header>
+<p>
+  <%= Timex.format!(@film.release_date, "{D} {Mshort} {YYYY}") %>
+</p>
+<p>
+  <%= "#{@film.runtime}m" %>
+</p>
+<p>
+  <%= Enum.map_join(@film.studios, ", ", & &1.name) %>
+</p>
+<p>
+  <%= Enum.map_join(@film.aliases, ", ", &"#{&1.title} (#{&1.context})") %>
+</p>
+<%= if @film.original_title.original do %>
+  <p>
+    <%= "#{@film.original_title.original} (#{@film.original_title.transliteration}/#{@film.original_title.translation})" %>
+  </p>
+<% end %>
+<%= if @film.work do %>
+  <p>
+    <%= "Based on the #{@film.work.format} \"#{@film.work.title}\" by #{Enum.map_join(@film.work.authors, ", ", & &1.display_name)}" %>
+  </p>
+<% end %>
+<%= if @film.series_entry do %>
+  <p>
+    <%= "#{@film.series_entry.film_series.name} Series No. #{@film.series_entry.entry_number}" %>
+  </p>
+  <%= if @previous_series_film do %>
+    <p>
+      <%= "Preceded by #{@previous_series_film.title} (#{@previous_series_film.release_date.year})" %>
+    </p>
+  <% end %>
+  <%= if @next_series_film do %>
+    <p>
+      <%= "Followed by #{@next_series_film.title} (#{@next_series_film.release_date.year})" %>
+    </p>
+  <% end %>
+<% end %>
+<img
+  height="400"
+  width="270"
+  src={Enum.find_value(@film.poster_urls, fn pu -> if pu.primary, do: pu.url end)}
+/>

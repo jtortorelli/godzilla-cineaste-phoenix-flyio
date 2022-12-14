@@ -18,6 +18,8 @@ defmodule GodzillaCineasteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/films", FilmController, :index
+    get "/films/:slug", FilmController, :show
   end
 
   # Other scopes may use custom stacks.

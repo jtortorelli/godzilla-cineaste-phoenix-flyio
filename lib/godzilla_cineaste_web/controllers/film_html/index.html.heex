@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    <%= for film <- @films do %>
+      <li>
+        <.link href={~p"/films/#{film.slug}"}><%= film.title %></.link>
+      </li>
+    <% end %>
+  </ul>
+</div>
