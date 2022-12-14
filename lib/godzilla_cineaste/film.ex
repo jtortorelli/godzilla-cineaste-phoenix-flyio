@@ -3,6 +3,9 @@ defmodule GodzillaCineaste.Film do
   import Ecto.Changeset
 
   alias GodzillaCineaste.{
+    FilmAlias,
+    FilmOriginalTitle,
+    FilmPosterUrl,
     FilmSeriesEntry,
     FilmStudio,
     KaijuRole,
@@ -21,9 +24,9 @@ defmodule GodzillaCineaste.Film do
     field :tenant, :integer
     field :title, :string
 
-    field :aliases, {:array, :map}
-    field :poster_urls, {:array, :map}
-    field :original_title, :map
+    embeds_many :aliases, FilmAlias
+    embeds_many :poster_urls, FilmPosterUrl
+    embeds_one :original_title, FilmOriginalTitle
 
     belongs_to :work, Work
 
