@@ -5,7 +5,7 @@ defmodule GodzillaCineaste.Work do
   alias GodzillaCineaste.{AuthorWork, Film, Person}
 
   schema "works" do
-    field :format, Ecto.Enum, values: [:novel, :manga, :serialized_novel]
+    field :format, Ecto.Enum, values: [:novel, :manga, :"serialized novel"]
     field :title, :string
 
     has_many :films, Film
