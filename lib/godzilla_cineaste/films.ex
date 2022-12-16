@@ -20,7 +20,7 @@ defmodule GodzillaCineaste.Films do
   def get_film_by_slug!(slug) do
     Film
     |> Repo.get_by!(slug: slug)
-    |> Repo.preload(studios: [], work: [:authors], series_entry: [:film_series])
+    |> Repo.preload(studios: [], work: [:authors], series_entry: [:film_series], synopsis: [])
   end
 
   def get_film_series_entry(film_series_id, entry_number) do

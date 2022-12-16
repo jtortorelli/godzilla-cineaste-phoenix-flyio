@@ -52,7 +52,8 @@ defmodule GodzillaCineaste.MixProject do
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:bandit, ">= 0.6.2"},
-      {:timex, "~> 3.7"}
+      {:timex, "~> 3.7"},
+      {:earmark, "~> 1.4"}
     ]
   end
 

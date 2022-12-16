@@ -8,6 +8,7 @@ defmodule GodzillaCineaste.Film do
     FilmPosterUrl,
     FilmSeriesEntry,
     FilmStudio,
+    FilmSynopsis,
     KaijuRole,
     PersonRole,
     PersonStaff,
@@ -35,6 +36,7 @@ defmodule GodzillaCineaste.Film do
     has_many :person_staff, PersonStaff
 
     has_one :series_entry, FilmSeriesEntry
+    has_one :synopsis, FilmSynopsis
 
     many_to_many :studios, Studio, join_through: FilmStudio
 
