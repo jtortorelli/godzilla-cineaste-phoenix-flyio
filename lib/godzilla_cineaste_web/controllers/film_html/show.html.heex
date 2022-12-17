@@ -48,3 +48,7 @@
 <div class="prose">
   <%= raw Earmark.as_html!(@film.synopsis.synopsis) %>
 </div>
+
+<%= for {role, staffs} <- display_staff(@film) do %>
+  <p><%= role %> - <%= Enum.map_join(staffs, ", ", & &1.person.display_name) %></p>
+<% end %>
