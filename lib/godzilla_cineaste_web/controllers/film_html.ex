@@ -7,6 +7,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     person_staff
     |> Enum.reduce([], fn ps, acc ->
       current_role = ps.role
+
       case acc do
         [{^current_role, pss} | rest] -> [{current_role, pss ++ [ps]} | rest]
         _ -> [{current_role, [ps]} | acc]

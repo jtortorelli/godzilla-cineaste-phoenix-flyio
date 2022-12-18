@@ -1,7 +1,7 @@
 defmodule GodzillaCineaste.Films do
   import Ecto.Query
   alias GodzillaCineaste.FilmSeriesEntry
-  alias GodzillaCineaste.{Film, FilmSeries, FilmSeriesEntry, PersonStaff, Repo}
+  alias GodzillaCineaste.{Film, FilmSeries, FilmSeriesEntry, PersonRole, PersonStaff, Repo}
 
   def get_adjacent_films_in_series(%Film{
         series_entry: %FilmSeriesEntry{
@@ -20,7 +20,16 @@ defmodule GodzillaCineaste.Films do
   def get_film_by_slug!(slug) do
     Film
     |> Repo.get_by!(slug: slug)
-    |> Repo.preload(studios: [], work: [:authors], series_entry: [:film_series], synopsis: [], person_staff: {from(ps in PersonStaff, order_by: ps.order), [:person]})
+    |> Repo.preload(
+      studios: [],
+      work: [:authors],
+      series_entry: [:film_series],
+      synopsis: [],
+      person_staff: {from(ps in PersonStaff, order_by: ps.order), [:person]},
+      person_roles:
+        {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),
+         [:person]}
+    )
   end
 
   def get_film_series_entry(film_series_id, entry_number) do

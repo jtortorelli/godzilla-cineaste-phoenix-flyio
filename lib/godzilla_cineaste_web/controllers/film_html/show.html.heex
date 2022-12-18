@@ -46,9 +46,19 @@
 />
 
 <div class="prose">
-  <%= raw Earmark.as_html!(@film.synopsis.synopsis) %>
+  <%= raw(Earmark.as_html!(@film.synopsis.synopsis)) %>
 </div>
 
 <%= for {role, staffs} <- display_staff(@film) do %>
   <p><%= role %> - <%= Enum.map_join(staffs, ", ", & &1.person.display_name) %></p>
+<% end %>
+
+<%= for person_role <- @film.person_roles do %>
+  <div>
+    <img src={person_role.avatar_url} />
+    <p>
+      <%= person_role.name %>: <%= person_role.person.display_name %> <%= if person_role.uncredited,
+        do: "(Uncredited)" %>
+    </p>
+  </div>
 <% end %>
