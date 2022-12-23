@@ -34,6 +34,7 @@ defmodule GodzillaCineaste.Films do
       work: [:authors],
       series_entry: [:film_series],
       synopsis: [],
+      credits: [],
       person_staff: {from(ps in PersonStaff, order_by: ps.order), [:person]},
       person_roles:
         {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),

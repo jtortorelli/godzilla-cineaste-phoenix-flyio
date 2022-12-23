@@ -4,6 +4,7 @@ defmodule GodzillaCineaste.Film do
 
   alias GodzillaCineaste.{
     FilmAlias,
+    FilmCredits,
     FilmOriginalTitle,
     FilmPosterUrl,
     FilmSeriesEntry,
@@ -37,6 +38,7 @@ defmodule GodzillaCineaste.Film do
 
     has_one :series_entry, FilmSeriesEntry
     has_one :synopsis, FilmSynopsis
+    has_one :credits, FilmCredits
 
     many_to_many :studios, Studio, join_through: FilmStudio
 
