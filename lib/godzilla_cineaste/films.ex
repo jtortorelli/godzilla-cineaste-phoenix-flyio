@@ -1,7 +1,16 @@
 defmodule GodzillaCineaste.Films do
   import Ecto.Query
   alias GodzillaCineaste.FilmSeriesEntry
-  alias GodzillaCineaste.{Film, FilmSeries, FilmSeriesEntry, PersonRole, PersonStaff, Repo}
+
+  alias GodzillaCineaste.{
+    Film,
+    FilmSeries,
+    FilmSeriesEntry,
+    KaijuRole,
+    PersonRole,
+    PersonStaff,
+    Repo
+  }
 
   def get_adjacent_films_in_series(%Film{
         series_entry: %FilmSeriesEntry{
@@ -28,7 +37,10 @@ defmodule GodzillaCineaste.Films do
       person_staff: {from(ps in PersonStaff, order_by: ps.order), [:person]},
       person_roles:
         {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),
-         [:person]}
+         [:person]},
+      kaiju_roles:
+        {from(kr in KaijuRole, join: p in assoc(kr, :person), order_by: [kr.order, p.sort_name]),
+         [:person, :kaiju_character]}
     )
   end
 

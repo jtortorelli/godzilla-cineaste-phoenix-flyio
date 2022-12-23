@@ -62,3 +62,17 @@
     </p>
   </div>
 <% end %>
+
+<%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@film) do %>
+  <div>
+    <img src={first.avatar_url} />
+    <p>
+      <%= kaiju_name %>
+    </p>
+    <%= for kr <- kaiju_roles do %>
+      <p>
+        <%= "#{kr.person.display_name} (#{Enum.join(kr.qualifiers, ", ")})" %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
