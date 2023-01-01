@@ -45,9 +45,11 @@
   src={Enum.find_value(@film.poster_urls, fn pu -> if pu.primary, do: pu.url end)}
 />
 
-<div class="prose">
-  <%= raw(Earmark.as_html!(@film.synopsis.synopsis)) %>
-</div>
+<%= if @film.synopsis do %>
+  <div class="prose">
+    <%= raw(Earmark.as_html!(@film.synopsis.synopsis)) %>
+  </div>
+<% end %>
 
 <%= for {role, staffs} <- display_staff(@film) do %>
   <p><%= role %> - <%= Enum.map_join(staffs, ", ", & &1.person.display_name) %></p>
@@ -77,4 +79,6 @@
   </div>
 <% end %>
 
-<%= @film.credits.credits %>
+<%= if @film.credits do %>
+  <%= @film.credits.credits %>
+<% end %>
