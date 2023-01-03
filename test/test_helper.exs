@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(GodzillaCineaste.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(CineasteData.Repo, :manual)

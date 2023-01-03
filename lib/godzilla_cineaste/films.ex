@@ -1,8 +1,9 @@
 defmodule GodzillaCineaste.Films do
+  @moduledoc false
+  
   import Ecto.Query
-  alias GodzillaCineaste.FilmSeriesEntry
 
-  alias GodzillaCineaste.{
+  alias CineasteData.{
     Film,
     FilmSeries,
     FilmSeriesEntry,

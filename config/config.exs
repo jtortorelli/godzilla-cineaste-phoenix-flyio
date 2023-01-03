@@ -8,7 +8,7 @@
 import Config
 
 config :godzilla_cineaste,
-  ecto_repos: [GodzillaCineaste.Repo]
+  ecto_repos: [CineasteData.Repo]
 
 # Configures the endpoint
 config :godzilla_cineaste, GodzillaCineasteWeb.Endpoint,

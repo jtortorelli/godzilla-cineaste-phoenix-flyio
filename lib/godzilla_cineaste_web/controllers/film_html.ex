@@ -1,7 +1,9 @@
 defmodule GodzillaCineasteWeb.FilmHTML do
+  @moduledoc false
+
   use GodzillaCineasteWeb, :html
 
-  alias GodzillaCineaste.Film
+  alias CineasteData.Film
 
   def display_kaiju_roles(%Film{kaiju_roles: kaiju_roles}) when is_list(kaiju_roles) do
     kaiju_roles

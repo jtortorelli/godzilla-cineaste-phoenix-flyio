@@ -11,7 +11,7 @@ defmodule GodzillaCineaste.Application do
       # Start the Telemetry supervisor
       GodzillaCineasteWeb.Telemetry,
       # Start the Ecto repository
-      GodzillaCineaste.Repo,
+      CineasteData.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: GodzillaCineaste.PubSub},
       # Start Finch

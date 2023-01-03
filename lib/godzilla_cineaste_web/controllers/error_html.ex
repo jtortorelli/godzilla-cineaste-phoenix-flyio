@@ -1,4 +1,6 @@
 defmodule GodzillaCineasteWeb.ErrorHTML do
+  @moduledoc false
+
   use GodzillaCineasteWeb, :html
 
   # If you want to customize your error pages,
