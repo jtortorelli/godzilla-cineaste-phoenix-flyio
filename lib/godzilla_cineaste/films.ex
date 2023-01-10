@@ -1,12 +1,13 @@
 defmodule GodzillaCineaste.Films do
   @moduledoc false
-  
+
   import Ecto.Query
 
   alias CineasteData.{
     Film,
     FilmSeries,
     FilmSeriesEntry,
+    GroupStaff,
     KaijuRole,
     PersonRole,
     PersonStaff,
@@ -42,7 +43,8 @@ defmodule GodzillaCineaste.Films do
          [:person]},
       kaiju_roles:
         {from(kr in KaijuRole, join: p in assoc(kr, :person), order_by: [kr.order, p.sort_name]),
-         [:person, :kaiju_character]}
+         [:person, :kaiju_character]},
+      group_staff: {from(gs in GroupStaff, order_by: gs.order), [:group]}
     )
   end
 

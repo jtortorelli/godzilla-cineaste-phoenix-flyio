@@ -52,7 +52,9 @@
 <% end %>
 
 <%= for {role, staffs} <- display_staff(@film) do %>
-  <p><%= role %> - <%= Enum.map_join(staffs, ", ", & &1.person.display_name) %></p>
+  <p>
+    <%= role %> - <%= Enum.map_join(staffs, ", ", &staff_display_name(&1)) %>
+  </p>
 <% end %>
 
 <%= for person_role <- @film.person_roles do %>
