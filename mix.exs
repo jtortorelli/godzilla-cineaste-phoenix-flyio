@@ -54,7 +54,7 @@ defmodule GodzillaCineaste.MixProject do
       {:bandit, ">= 0.6.2"},
       {:timex, "~> 3.7"},
       {:earmark, "~> 1.4"},
-      {:cineaste_data, git: "https://github.com/jtortorelli/cineaste_data.git", tag: "0.2"},
+      {:cineaste_data, git: "https://github.com/jtortorelli/cineaste_data.git", tag: "0.3"},
       {:credo, "~> 1.6"}
     ]
   end
