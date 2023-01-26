@@ -3,7 +3,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   use GodzillaCineasteWeb, :html
 
-  alias CineasteData.{Film, Group, GroupStaff, Person, PersonStaff}
+  alias CineasteData.{Film, Group, GroupRole, GroupStaff, Person, PersonRole, PersonStaff}
 
   def display_kaiju_roles(%Film{kaiju_roles: kaiju_roles}) when is_list(kaiju_roles) do
     kaiju_roles
@@ -34,10 +34,42 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     |> Enum.reverse()
   end
 
+  def display_roles(%Film{person_roles: person_roles, group_roles: group_roles})
+      when is_list(person_roles) do
+    person_roles
+    |> Enum.concat(group_roles)
+    |> Enum.sort_by(& &1.order)
+    |> Enum.reduce([], fn role, acc ->
+      current_role = role.name
+
+      case acc do
+        [{nil, rs} | rest] -> [{current_role, [role]} | acc]
+        [{^current_role, rs} | rest] -> [{current_role, rs ++ [role]} | rest]
+        _ -> [{current_role, [role]} | acc]
+      end
+    end)
+    |> Enum.reverse()
+  end
+
   def staff_display_name(%PersonStaff{person: %Person{display_name: display_name}}),
     do: display_name
 
   def staff_display_name(%GroupStaff{group: %Group{display_name: display_name}}), do: display_name
 
-  embed_templates "film_html/*"
+  def role_display_name(%PersonRole{person: %Person{display_name: display_name}}),
+    do: display_name
+
+  def role_display_name(%GroupRole{group: %Group{display_name: display_name}}), do: display_name
+
+  def display_qualifiers(%PersonRole{qualifiers: []}), do: nil
+
+  def display_qualifiers(%PersonRole{qualifiers: qualifiers}),
+    do: "(#{Enum.join(qualifiers, ", ")})"
+
+  def display_qualifiers(_), do: nil
+
+  def role_is_uncredited?(%PersonRole{uncredited: true}), do: true
+  def role_is_uncredited?(_), do: false
+
+  embed_templates("film_html/*")
 end

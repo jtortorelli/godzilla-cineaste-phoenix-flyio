@@ -7,6 +7,7 @@ defmodule GodzillaCineaste.Films do
     Film,
     FilmSeries,
     FilmSeriesEntry,
+    GroupRole,
     GroupStaff,
     KaijuRole,
     PersonRole,
@@ -41,6 +42,9 @@ defmodule GodzillaCineaste.Films do
       person_roles:
         {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),
          [:person]},
+      group_roles:
+        {from(gr in GroupRole, join: g in assoc(gr, :group), order_by: [gr.order, g.sort_name]),
+         [:group]},
       kaiju_roles:
         {from(kr in KaijuRole, join: p in assoc(kr, :person), order_by: [kr.order, p.sort_name]),
          [:person, :kaiju_character]},
