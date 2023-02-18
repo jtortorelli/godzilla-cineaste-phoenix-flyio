@@ -3,7 +3,16 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   use GodzillaCineasteWeb, :html
 
-  alias CineasteData.{Film, Group, GroupRole, GroupStaff, Person, PersonRole, PersonStaff}
+  alias CineasteData.{
+    Film,
+    Group,
+    GroupRole,
+    GroupStaff,
+    KaijuRole,
+    Person,
+    PersonRole,
+    PersonStaff
+  }
 
   def display_kaiju_roles(%Film{kaiju_roles: kaiju_roles}) when is_list(kaiju_roles) do
     kaiju_roles
@@ -60,6 +69,9 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     do: display_name
 
   def role_display_name(%GroupRole{group: %Group{display_name: display_name}}), do: display_name
+
+  def role_display_name(%KaijuRole{person: %Person{display_name: display_name}}), do: display_name
+  def role_display_name(%KaijuRole{}), do: ""
 
   def display_qualifiers(%PersonRole{qualifiers: []}), do: nil
 

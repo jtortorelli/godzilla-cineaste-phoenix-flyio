@@ -45,9 +45,7 @@ defmodule GodzillaCineaste.Films do
       group_roles:
         {from(gr in GroupRole, join: g in assoc(gr, :group), order_by: [gr.order, g.sort_name]),
          [:group]},
-      kaiju_roles:
-        {from(kr in KaijuRole, join: p in assoc(kr, :person), order_by: [kr.order, p.sort_name]),
-         [:person, :kaiju_character]},
+      kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
       group_staff: {from(gs in GroupStaff, order_by: gs.order), [:group]}
     )
   end

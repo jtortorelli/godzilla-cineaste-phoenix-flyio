@@ -84,7 +84,7 @@
     </p>
     <%= for kr <- kaiju_roles do %>
       <p>
-        <%= "#{kr.person.display_name} (#{Enum.join(kr.qualifiers, ", ")})" %>
+        <%= role_display_name(kr) %> <%= "(#{Enum.join(kr.qualifiers, ", ")})" %>
       </p>
     <% end %>
   </div>
