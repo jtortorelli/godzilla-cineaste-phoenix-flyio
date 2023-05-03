@@ -57,11 +57,14 @@
   </p>
 <% end %>
 
-<%= for {name, [primary_role | rest] = roles} <- display_roles(@film) do %>
+<%= for {_name, [primary_role | rest] = _roles} <- display_roles(@film) do %>
   <div>
     <img src={primary_role.avatar_url} />
     <p>
-      <%= primary_role.name || primary_role.description %>: <%= role_display_name(primary_role) %> <%= display_qualifiers(primary_role) %> <%= if role_is_uncredited?(primary_role),
+      <%= role_title(primary_role) %>
+      <%= primary_role.name || primary_role.description %>: <%= role_display_name(primary_role) %> <%= display_qualifiers(
+        primary_role
+      ) %> <%= if role_is_uncredited?(primary_role),
         do: "(Uncredited)" %>
     </p>
     <%= for role <- rest do %>
@@ -69,8 +72,10 @@
         <img src={role.avatar_url} />
       <% end %>
       <p>
-        <%= role_display_name(role) %> <%= display_qualifiers(role) %> <%= if role_is_uncredited?(role),
-        do: "(Uncredited)" %>
+        <%= role_display_name(role) %> <%= display_qualifiers(role) %> <%= if role_is_uncredited?(
+                                                                                role
+                                                                              ),
+                                                                              do: "(Uncredited)" %>
       </p>
     <% end %>
   </div>

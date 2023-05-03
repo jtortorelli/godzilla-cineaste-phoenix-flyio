@@ -52,7 +52,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
       current_role = role.name
 
       case acc do
-        [{nil, rs} | rest] -> [{current_role, [role]} | acc]
+        [{nil, _rs} | _rest] -> [{current_role, [role]} | acc]
         [{^current_role, rs} | rest] -> [{current_role, rs ++ [role]} | rest]
         _ -> [{current_role, [role]} | acc]
       end
@@ -82,6 +82,9 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   def role_is_uncredited?(%PersonRole{uncredited: true}), do: true
   def role_is_uncredited?(_), do: false
+
+  def role_title(%PersonRole{title: title}), do: title
+  def role_title(_), do: nil
 
   embed_templates("film_html/*")
 end
