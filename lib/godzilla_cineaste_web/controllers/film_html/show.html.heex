@@ -18,10 +18,12 @@
     <%= "#{@film.original_title.original} (#{@film.original_title.transliteration}/#{@film.original_title.translation})" %>
   </p>
 <% end %>
-<%= if @film.work do %>
+<%= if @film.works do %>
+ <%= for work <- @film.works do %>
   <p>
-    <%= "Based on the #{@film.work.format} \"#{@film.work.title}\" by #{Enum.map_join(@film.work.authors, ", ", & &1.display_name)}" %>
+    <%= "Based on the #{work.format} \"#{work.title}\" by #{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
   </p>
+  <% end %>
 <% end %>
 <%= if @film.series_entry do %>
   <p>
