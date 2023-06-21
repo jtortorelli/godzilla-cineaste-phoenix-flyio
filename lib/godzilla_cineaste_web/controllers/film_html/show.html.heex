@@ -19,10 +19,10 @@
   </p>
 <% end %>
 <%= if @film.works do %>
- <%= for work <- @film.works do %>
-  <p>
-    <%= "Based on the #{work.format} \"#{work.title}\" by #{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
-  </p>
+  <%= for work <- @film.works do %>
+    <p>
+      <%= "Based on the #{work.format} \"#{work.title}\" by #{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
+    </p>
   <% end %>
 <% end %>
 <%= if @film.series_entry do %>
