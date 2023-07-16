@@ -1061,7 +1061,6 @@ original_titles = [
   {"zeiram-2-1994", %{original: "ゼイラム2", transliteration: "Zeiramu 2", translation: "Zëiram 2"}}
 ]
 
-
 original_titles
 |> Enum.chunk_every(20)
 |> Enum.map(fn chunk ->

@@ -8,7 +8,7 @@
   <%= "#{@film.runtime}m" %>
 </p>
 <p>
-  <%= Enum.map_join(@film.studios, ", ", & &1.name) %>
+  <%= Enum.map_join(@film.studios, ", ", & &1.display_name) %>
 </p>
 <p>
   <%= Enum.map_join(@film.aliases, ", ", &"#{&1.title} (#{&1.context})") %>

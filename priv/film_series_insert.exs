@@ -29,7 +29,7 @@ series = [
   %{slug: "rurouni-kenshin", name: "Rurouni Kenshin"},
   %{slug: "musashi-miyamoto", name: "Musashi Miyamoto"},
   %{slug: "yojimbo", name: "Yojimbo"},
-  %{slug: "zeiram", name: "Zëiram"},
+  %{slug: "zeiram", name: "Zëiram"}
 ]
 
 series_and_entries = [
@@ -314,10 +314,16 @@ Repo.transaction(fn ->
   series_and_entries
   |> Enum.map(fn {series_slug, entries} ->
     series = Repo.get_by!(FilmSeries, slug: series_slug)
+
     Enum.map(entries, fn {film_slug, entry_number} ->
       film = Repo.get_by!(Film, slug: film_slug)
+
       %FilmSeriesEntry{}
-      |> FilmSeriesEntry.changeset(%{film_id: film.id, film_series_id: series.id, entry_number: entry_number})
+      |> FilmSeriesEntry.changeset(%{
+        film_id: film.id,
+        film_series_id: series.id,
+        entry_number: entry_number
+      })
       |> Repo.insert!()
     end)
   end)

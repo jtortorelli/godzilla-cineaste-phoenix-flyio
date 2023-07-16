@@ -32,7 +32,7 @@ defmodule GodzillaCineaste.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.7.0-rc.0", override: true},
+      {:phoenix, "~> 1.7"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
@@ -54,7 +54,7 @@ defmodule GodzillaCineaste.MixProject do
       {:bandit, ">= 0.6.2"},
       {:timex, "~> 3.7"},
       {:earmark, "~> 1.4"},
-      {:cineaste_data, git: "https://github.com/jtortorelli/cineaste_data.git", tag: "0.20"},
+      {:cineaste_data, git: "https://github.com/jtortorelli/cineaste_data.git", tag: "0.22"},
       {:credo, "~> 1.6"}
     ]
   end
