@@ -8,10 +8,9 @@ defmodule GodzillaCineaste.Films do
     FilmSeries,
     FilmSeriesEntry,
     GroupRole,
-    GroupStaff,
     KaijuRole,
     PersonRole,
-    PersonStaff,
+    Staff,
     Repo
   }
 
@@ -38,7 +37,6 @@ defmodule GodzillaCineaste.Films do
       series_entry: [:film_series],
       synopsis: [],
       credits: [],
-      person_staff: {from(ps in PersonStaff, order_by: ps.order), [:person]},
       person_roles:
         {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),
          [:person]},
@@ -46,7 +44,7 @@ defmodule GodzillaCineaste.Films do
         {from(gr in GroupRole, join: g in assoc(gr, :group), order_by: [gr.order, g.sort_name]),
          [:group]},
       kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
-      group_staff: {from(gs in GroupStaff, order_by: gs.order), [:group]}
+      staff: {from(s in Staff, order_by: [s.order]), [:person, :group]}
     )
   end
 
