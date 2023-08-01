@@ -6,10 +6,9 @@ defmodule GodzillaCineasteWeb.FilmHTML do
   alias CineasteData.{
     Film,
     Group,
-    GroupRole,
     KaijuRole,
     Person,
-    PersonRole,
+    Role,
     Staff
   }
 
@@ -39,11 +38,8 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     |> Enum.reverse()
   end
 
-  def display_roles(%Film{person_roles: person_roles, group_roles: group_roles})
-      when is_list(person_roles) do
-    person_roles
-    |> Enum.concat(group_roles)
-    |> Enum.sort_by(& &1.order)
+  def display_roles(%Film{roles: roles}) do
+    roles
     |> Enum.reduce([], fn role, acc ->
       current_role = role.name
 
@@ -61,25 +57,25 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   def staff_display_name(%Staff{group: %Group{display_name: display_name}}), do: display_name
 
-  def role_display_name(%PersonRole{person: %Person{display_name: display_name}}),
+  def role_display_name(%Role{person: %Person{display_name: display_name}}),
     do: display_name
 
-  def role_display_name(%GroupRole{group: %Group{display_name: display_name}}), do: display_name
+  def role_display_name(%Role{group: %Group{display_name: display_name}}), do: display_name
 
   def role_display_name(%KaijuRole{person: %Person{display_name: display_name}}), do: display_name
   def role_display_name(%KaijuRole{}), do: ""
 
-  def display_qualifiers(%PersonRole{qualifiers: []}), do: nil
+  def display_qualifiers(%Role{qualifiers: []}), do: nil
 
-  def display_qualifiers(%PersonRole{qualifiers: qualifiers}),
+  def display_qualifiers(%Role{qualifiers: qualifiers}),
     do: "(#{Enum.join(qualifiers, ", ")})"
 
   def display_qualifiers(_), do: nil
 
-  def role_is_uncredited?(%PersonRole{uncredited: true}), do: true
+  def role_is_uncredited?(%Role{uncredited: true}), do: true
   def role_is_uncredited?(_), do: false
 
-  def role_title(%PersonRole{title: title}), do: title
+  def role_title(%Role{title: title}), do: title
   def role_title(_), do: nil
 
   embed_templates("film_html/*")

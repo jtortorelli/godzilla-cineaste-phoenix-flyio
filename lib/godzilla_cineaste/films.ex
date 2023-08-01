@@ -7,11 +7,10 @@ defmodule GodzillaCineaste.Films do
     Film,
     FilmSeries,
     FilmSeriesEntry,
-    GroupRole,
     KaijuRole,
-    PersonRole,
-    Staff,
-    Repo
+    Repo,
+    Role,
+    Staff
   }
 
   def get_adjacent_films_in_series(%Film{
@@ -37,13 +36,8 @@ defmodule GodzillaCineaste.Films do
       series_entry: [:film_series],
       synopsis: [],
       credits: [],
-      person_roles:
-        {from(pr in PersonRole, join: p in assoc(pr, :person), order_by: [pr.order, p.sort_name]),
-         [:person]},
-      group_roles:
-        {from(gr in GroupRole, join: g in assoc(gr, :group), order_by: [gr.order, g.sort_name]),
-         [:group]},
       kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
+      roles: {from(r in Role, order_by: [r.order]), [:person, :group]},
       staff: {from(s in Staff, order_by: [s.order]), [:person, :group]}
     )
   end
