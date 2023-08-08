@@ -1,44 +1,87 @@
-<.header>
-  <%= @film.title %>
-</.header>
-<p>
-  <%= Timex.format!(@film.release_date, "{D} {Mshort} {YYYY}") %>
-</p>
-<p>
-  <%= "#{@film.runtime}m" %>
-</p>
-<p>
-  <%= Enum.map_join(@film.studios, ", ", & &1.display_name) %>
-</p>
-<p>
-  <%= Enum.map_join(@film.aliases, ", ", &"#{&1.title} (#{&1.context})") %>
-</p>
-<%= if @film.original_title.original do %>
-  <p>
-    <%= "#{@film.original_title.original} (#{@film.original_title.transliteration}/#{@film.original_title.translation})" %>
-  </p>
-<% end %>
+<div class="text-center w-fit m-auto -skew-x-6 shadow-lg text-white bg-black  rounded">
+  <h1 class="font-oswald font-bold skew-x-6 tracking-wider uppercase p-2 text-4xl">
+    <%= @film.title %>
+  </h1>
+</div>
+<div class="font-oswald font-light text-stone-500 uppercase flex justify-center my-3 space-x-4">
+  <div><%= Timex.format!(@film.release_date, "{D} {Mshort} {YYYY}") %></div>
+  <div><%= "#{@film.runtime}m" %></div>
+  <div><%= Enum.map_join(@film.studios, ", ", & &1.display_name) %></div>
+</div>
+
+<div class="uppercase p-2 ">
+  <div class="font-japanese font-black tracking-wide text-lg text-center">
+    <%= @film.original_title.original %>
+  </div>
+  <div class="flex justify-center text-center space-x-4 font-oswald font-light text-stone-500">
+    <div><%= @film.original_title.transliteration %></div>
+    <div>
+      <%= @film.original_title.translation %>
+    </div>
+  </div>
+</div>
+
 <%= if @film.works do %>
   <%= for work <- @film.works do %>
-    <p>
-      <%= "Based on the #{work.format} \"#{work.title}\" by #{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
-    </p>
+    <div class="uppercase p-2 font-oswald text-center">
+      <div class="font-light text-stone-500"><%= "based on the #{work.format}" %></div>
+      <div class="font-bold text-lg tracking-wide"><%= work.title %></div>
+      <div class="font-semibold text-stone-500"><span class="font-light">by</span>
+        <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %></div>
+    </div>
   <% end %>
 <% end %>
+
+<%= if not Enum.empty?(@film.aliases) do %>
+  <div class="uppercase p-2">
+    <div class="font-oswald text-center font-semibold tracking-widest text-stone-500">
+      also known as
+    </div>
+    <%= for alias <- @film.aliases do %>
+      <div>
+        <div class="text-center font-oswald font-bold text-lg"><%= alias.title %></div>
+        <div class="text-center font-oswald font-light text-stone-500">
+          <%= alias.context %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
 <%= if @film.series_entry do %>
-  <p>
-    <%= "#{@film.series_entry.film_series.name} Series No. #{@film.series_entry.entry_number}" %>
-  </p>
-  <%= if @previous_series_film do %>
-    <p>
-      <%= "Preceded by #{@previous_series_film.title} (#{@previous_series_film.release_date.year})" %>
-    </p>
-  <% end %>
-  <%= if @next_series_film do %>
-    <p>
-      <%= "Followed by #{@next_series_film.title} (#{@next_series_film.release_date.year})" %>
-    </p>
-  <% end %>
+  <div class="uppercase p-2">
+    <div class="font-oswald text-center font-semibold tracking-widest text-stone-500">
+      <%= "#{@film.series_entry.film_series.name} no. #{@film.series_entry.entry_number}" %>
+    </div>
+    <div class="grid grid-cols-8 gap-2 items-center">
+      <%= if @previous_series_film do %>
+        <div>
+          <.link href={~p"/films/#{@previous_series_film.slug}"}>
+            <.icon name="hero-arrow-left-circle" class="text-red-500 h-6 w-6" />
+          </.link>
+        </div>
+        <div class="col-span-6 text-center font-oswald font-bold text-lg underline decoration-red-500">
+          <.link href={~p"/films/#{@previous_series_film.slug}"}>
+            <%= @previous_series_film.title %>
+          </.link>
+        </div>
+        <div></div>
+      <% end %>
+      <%= if @next_series_film do %>
+        <div></div>
+        <div class="col-span-6 text-center font-oswald font-bold text-lg underline decoration-red-500">
+          <.link href={~p"/films/#{@next_series_film.slug}"}>
+            <%= @next_series_film.title %>
+          </.link>
+        </div>
+        <div class="text-right">
+          <.link href={~p"/films/#{@next_series_film.slug}"}>
+            <.icon name="hero-arrow-right-circle" class="text-red-500 h-6 w-6" />
+          </.link>
+        </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>
 <img
   class="rounded-lg drop-shadow-lg"

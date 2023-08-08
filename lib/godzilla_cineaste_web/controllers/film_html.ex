@@ -3,6 +3,8 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   use GodzillaCineasteWeb, :html
 
+  import GodzillaCineasteWeb.CoreComponents
+
   alias CineasteData.{
     Film,
     Group,
