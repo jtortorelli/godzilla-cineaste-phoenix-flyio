@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         japanese: ["Noto-Variable", "sans-serif"],
-        oswald: ["Oswald-Variable", "sans-serif"],
+        oswald: ["Noto-Variable", "sans-serif"],
       },
     },
   },

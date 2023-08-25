@@ -1,19 +1,19 @@
 <div class="text-center w-fit m-auto -skew-x-6 shadow-lg text-white bg-black  rounded">
-  <h1 class="font-oswald font-bold skew-x-6 tracking-wider uppercase p-2 text-4xl">
+  <h1 class="font-oswald font-black skew-x-6 tracking-wider uppercase p-2 text-4xl">
     <%= @film.title %>
   </h1>
 </div>
-<div class="font-oswald font-light text-stone-500 uppercase flex justify-center my-3 space-x-4">
+<div class="font-oswald font-semibold text-sm text-stone-500 uppercase flex justify-center my-3 space-x-4">
   <div><%= Timex.format!(@film.release_date, "{D} {Mshort} {YYYY}") %></div>
   <div><%= "#{@film.runtime}m" %></div>
   <div><%= Enum.map_join(@film.studios, ", ", & &1.display_name) %></div>
 </div>
 
 <div class="uppercase p-2 ">
-  <div class="font-japanese font-black tracking-wide text-lg text-center">
+  <div class="font-japanese font-black tracking-wide text-center">
     <%= @film.original_title.original %>
   </div>
-  <div class="flex justify-center text-center space-x-4 font-oswald font-light text-stone-500">
+  <div class="flex justify-center text-center space-x-4 font-oswald font-semibold text-sm text-stone-500">
     <div><%= @film.original_title.transliteration %></div>
     <div>
       <%= @film.original_title.translation %>
@@ -24,9 +24,9 @@
 <%= if @film.works do %>
   <%= for work <- @film.works do %>
     <div class="uppercase p-2 font-oswald text-center">
-      <div class="font-light text-stone-500"><%= "based on the #{work.format}" %></div>
-      <div class="font-bold text-lg tracking-wide"><%= work.title %></div>
-      <div class="font-semibold text-stone-500"><span class="font-light">by</span>
+      <div class="font-normal text-sm text-stone-500"><%= "based on the #{work.format}" %></div>
+      <div class="font-bold tracking-wide"><%= work.title %></div>
+      <div class="font-semibold text-stone-500"><span class="font-normal text-sm">by</span>
         <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %></div>
     </div>
   <% end %>
@@ -34,13 +34,13 @@
 
 <%= if not Enum.empty?(@film.aliases) do %>
   <div class="uppercase p-2">
-    <div class="font-oswald text-center font-semibold tracking-widest text-stone-500">
+    <div class="font-oswald text-center font-semibold  text-sm tracking-widest text-stone-500">
       also known as
     </div>
     <%= for alias <- @film.aliases do %>
       <div>
-        <div class="text-center font-oswald font-bold text-lg"><%= alias.title %></div>
-        <div class="text-center font-oswald font-light text-stone-500">
+        <div class="text-center font-oswald font-bold"><%= alias.title %></div>
+        <div class="text-center font-oswald font-normal text-sm text-stone-500">
           <%= alias.context %>
         </div>
       </div>
@@ -50,7 +50,7 @@
 
 <%= if @film.series_entry do %>
   <div class="uppercase p-2">
-    <div class="font-oswald text-center font-semibold tracking-widest text-stone-500">
+    <div class="font-oswald text-center font-semibold text-sm tracking-widest text-stone-500">
       <%= "#{@film.series_entry.film_series.name} no. #{@film.series_entry.entry_number}" %>
     </div>
     <div class="grid grid-cols-8 gap-2 items-center">
@@ -60,7 +60,7 @@
             <.icon name="hero-arrow-left-circle" class="text-red-500 h-6 w-6" />
           </.link>
         </div>
-        <div class="col-span-6 text-center font-oswald font-bold text-lg underline decoration-red-500">
+        <div class="col-span-6 text-center font-oswald font-bold underline decoration-red-500 decoration-2">
           <.link href={~p"/films/#{@previous_series_film.slug}"}>
             <%= @previous_series_film.title %>
           </.link>
@@ -69,7 +69,7 @@
       <% end %>
       <%= if @next_series_film do %>
         <div></div>
-        <div class="col-span-6 text-center font-oswald font-bold text-lg underline decoration-red-500">
+        <div class="col-span-6 text-center font-oswald font-bold underline decoration-red-500 decoration-2">
           <.link href={~p"/films/#{@next_series_film.slug}"}>
             <%= @next_series_film.title %>
           </.link>
