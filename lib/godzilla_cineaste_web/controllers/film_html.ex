@@ -40,7 +40,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     |> Enum.reverse()
   end
 
-  def display_roles(%Film{roles: roles}) do
+  def display_roles(roles) do
     roles
     |> Enum.reduce([], fn role, acc ->
       current_role = role.name
