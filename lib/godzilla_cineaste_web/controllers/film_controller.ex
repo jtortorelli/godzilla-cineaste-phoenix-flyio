@@ -17,10 +17,11 @@ defmodule GodzillaCineasteWeb.FilmController do
       {top_billed_roles, rest_of_roles} =
         Enum.split_with(film.roles, fn role -> role.top_billed end)
 
-      rest_of_roles = Enum.sort_by(rest_of_roles, fn
-        %{person: %Person{sort_name: sort_name}} -> sort_name
-        %{group: %Group{sort_name: sort_name}} -> sort_name
-      end)
+      rest_of_roles =
+        Enum.sort_by(rest_of_roles, fn
+          %{person: %Person{sort_name: sort_name}} -> sort_name
+          %{group: %Group{sort_name: sort_name}} -> sort_name
+        end)
 
       render(conn, :show,
         page_title: film.title,

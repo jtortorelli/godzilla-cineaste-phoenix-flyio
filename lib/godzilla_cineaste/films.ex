@@ -32,6 +32,7 @@ defmodule GodzillaCineaste.Films do
     |> Repo.get_by!(slug: slug)
     |> Repo.preload(
       studios: [],
+      production_committee: [],
       works: [:authors],
       series_entry: [:film_series],
       synopsis: [],
