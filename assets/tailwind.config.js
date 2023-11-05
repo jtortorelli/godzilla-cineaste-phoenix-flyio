@@ -15,6 +15,9 @@ module.exports = {
       fontFamily: {
         japanese: ["Noto-Variable", "sans-serif"],
         oswald: ["Noto-Variable", "sans-serif"],
+        display: ["Montserrat", "serif"],
+        content: ["Lora", "serif"],
+        detail: ["SourceCodePro", "monospace"]
       },
     },
   },
