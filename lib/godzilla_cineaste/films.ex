@@ -33,7 +33,7 @@ defmodule GodzillaCineaste.Films do
     |> Repo.preload(
       studios: [],
       production_committee: [],
-      works: [:authors],
+      works: [:authors, :studios],
       series_entry: [:film_series],
       synopsis: [],
       credits: [],

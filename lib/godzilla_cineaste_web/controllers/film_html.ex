@@ -82,8 +82,8 @@ defmodule GodzillaCineasteWeb.FilmHTML do
 
   def process_title(title) do
     title
-    |> String.replace("20th", "20<span class=\"align-top text-xl\">th</span>")
-    |> String.replace("3rd", "3<span class=\"align-top text-xl\">rd</span>")
+    |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
+    |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
   end
 
   embed_templates("film_html/*")
@@ -94,20 +94,20 @@ defmodule GodzillaCineasteWeb.FilmHTML do
   def display_title(assigns) do
     ~H"""
     <%= if Enum.empty?(@display_title) do %>
-      <h1 class="font-display tracking-wider uppercase p-2 text-3xl">
+      <h1 class="font-display tracking-wider uppercase p-2 text-2xl">
         <%= raw(process_title(@title)) %>
       </h1>
     <% else %>
       <h1>
         <%= for %{style: style, content: content} <- @display_title do %>
           <%= if style == :title do %>
-            <span class="font-display tracking-wider uppercase p-2 text-3xl">
+            <span class="font-display tracking-wide uppercase p-2 text-2xl">
               <%= raw(process_title(content)) %>
             </span>
             <br />
           <% end %>
           <%= if style == :subtitle do %>
-            <span class="font-display font-extrabold tracking-[.25em] uppercase p-2 text-lg text-gray-500">
+            <span class="font-display font-extrabold tracking-[.2em] uppercase p-2 text-base text-gray-500">
               <%= raw(process_title(content)) %>
             </span>
             <br />
