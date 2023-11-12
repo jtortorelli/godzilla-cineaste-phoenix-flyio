@@ -4,6 +4,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
   use GodzillaCineasteWeb, :html
 
   import GodzillaCineasteWeb.CoreComponents
+  import GodzillaCineasteWeb.FilmComponents
 
   alias CineasteData.{
     Film,
@@ -70,7 +71,7 @@ defmodule GodzillaCineasteWeb.FilmHTML do
   def display_qualifiers(%Role{qualifiers: []}), do: nil
 
   def display_qualifiers(%Role{qualifiers: qualifiers}),
-    do: "(#{Enum.join(qualifiers, ", ")})"
+    do: "#{Enum.join(qualifiers, ", ")}"
 
   def display_qualifiers(_), do: nil
 
@@ -80,41 +81,5 @@ defmodule GodzillaCineasteWeb.FilmHTML do
   def role_title(%Role{title: title}), do: title
   def role_title(_), do: nil
 
-  def process_title(title) do
-    title
-    |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
-    |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
-  end
-
   embed_templates("film_html/*")
-
-  attr :display_title, :list, default: []
-  attr :title, :string, required: true
-
-  def display_title(assigns) do
-    ~H"""
-    <%= if Enum.empty?(@display_title) do %>
-      <h1 class="font-display tracking-wider uppercase p-2 text-2xl">
-        <%= raw(process_title(@title)) %>
-      </h1>
-    <% else %>
-      <h1>
-        <%= for %{style: style, content: content} <- @display_title do %>
-          <%= if style == :title do %>
-            <span class="font-display tracking-wide uppercase p-2 text-2xl">
-              <%= raw(process_title(content)) %>
-            </span>
-            <br />
-          <% end %>
-          <%= if style == :subtitle do %>
-            <span class="font-display font-extrabold tracking-[.2em] uppercase p-2 text-base text-gray-500">
-              <%= raw(process_title(content)) %>
-            </span>
-            <br />
-          <% end %>
-        <% end %>
-      </h1>
-    <% end %>
-    """
-  end
 end
