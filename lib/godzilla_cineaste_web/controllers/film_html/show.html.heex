@@ -4,32 +4,7 @@
   previous_series_film={@previous_series_film}
   next_series_film={@next_series_film}
 />
-
-<%!-- <%= if @film.synopsis do %>
-  <div class="prose">
-    <%= raw(Earmark.as_html!(@film.synopsis.synopsis)) %>
-  </div>
-<% end %> --%>
-<div class="inline-flex items-center justify-center w-full">
-  <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-  <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
-    Staff
-  </span>
-</div>
-<div class="w-fit m-auto">
-  <div class="w-auto grid grid-cols-2 gap-1.5">
-    <%= for {role, staffs} <- display_staff(@film) do %>
-      <div class="text-left">
-        <span class="font-mono text-xs uppercase text-gray-500"><%= role %></span>
-      </div>
-      <div>
-        <span class="text-gray-700 font-content">
-          <%= raw(Enum.map_join(staffs, "<br/>", &staff_display_name(&1))) %>
-        </span>
-      </div>
-    <% end %>
-  </div>
-</div>
+<.staff film={@film} />
 
 <div class="inline-flex items-center justify-center w-full">
   <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />

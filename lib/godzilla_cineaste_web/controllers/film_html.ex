@@ -28,19 +28,6 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     |> Enum.reverse()
   end
 
-  def display_staff(%Film{staff: staff}) do
-    staff
-    |> Enum.reduce([], fn s, acc ->
-      current_role = s.role
-
-      case acc do
-        [{^current_role, ss} | rest] -> [{current_role, ss ++ [s]} | rest]
-        _ -> [{current_role, [s]} | acc]
-      end
-    end)
-    |> Enum.reverse()
-  end
-
   def display_roles(roles) do
     roles
     |> Enum.reduce([], fn role, acc ->
@@ -54,11 +41,6 @@ defmodule GodzillaCineasteWeb.FilmHTML do
     end)
     |> Enum.reverse()
   end
-
-  def staff_display_name(%Staff{person: %Person{display_name: display_name}}),
-    do: display_name
-
-  def staff_display_name(%Staff{group: %Group{display_name: display_name}}), do: display_name
 
   def role_display_name(%Role{person: %Person{display_name: display_name}}),
     do: display_name

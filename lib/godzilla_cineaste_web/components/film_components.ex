@@ -1,7 +1,9 @@
 defmodule GodzillaCineasteWeb.FilmComponents do
   use GodzillaCineasteWeb, :html
 
-  attr :film, CineasteData.Film, required: true
+  alias CineasteData.{Film, Group, Person, Staff}
+
+  attr :film, Film, required: true
 
   def display_title(assigns) do
     ~H"""
@@ -32,7 +34,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def primary_poster(assigns) do
     ~H"""
@@ -47,7 +49,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def specs(assigns) do
     ~H"""
@@ -58,7 +60,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def studios_or_production_committee(assigns) do
     ~H"""
@@ -77,7 +79,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def original_title(assigns) do
     ~H"""
@@ -100,7 +102,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def works(assigns) do
     ~H"""
@@ -128,7 +130,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
+  attr :film, Film, required: true
 
   def aliases(assigns) do
     ~H"""
@@ -150,7 +152,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film
+  attr :film, Film
   attr :direction, :atom, values: [:next, :prev], required: true
 
   def series_film_info(assigns) do
@@ -182,9 +184,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
-  attr :previous_series_film, CineasteData.Film
-  attr :next_series_film, CineasteData.Film
+  attr :film, Film, required: true
+  attr :previous_series_film, Film
+  attr :next_series_film, Film
 
   def series_info(assigns) do
     ~H"""
@@ -202,9 +204,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, CineasteData.Film, required: true
-  attr :previous_series_film, CineasteData.Film
-  attr :next_series_film, CineasteData.Film
+  attr :film, Film, required: true
+  attr :previous_series_film, Film
+  attr :next_series_film, Film
 
   def overview(assigns) do
     ~H"""
@@ -230,9 +232,59 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
+  attr :film, Film, required: true
+
+  def staff(assigns) do
+    ~H"""
+    <div class="inline-flex items-center justify-center w-full">
+      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
+      <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
+        Staff
+      </span>
+    </div>
+    <div class="w-fit m-auto">
+      <div class="w-auto grid grid-cols-2 gap-1.5">
+        <%= for {role, staffs} <- display_staff(@film) do %>
+          <div class="text-left">
+            <span class="font-mono text-xs uppercase text-gray-500"><%= role %></span>
+          </div>
+          <div>
+            <span class="text-gray-700 font-content">
+              <%= raw(Enum.map_join(staffs, "<br/>", &staff_display_name(&1))) %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    """
+  end
+
+  defp display_staff(%Film{staff: staff}) do
+    staff
+    |> Enum.reduce([], fn s, acc ->
+      current_role = s.role
+
+      case acc do
+        [{^current_role, ss} | rest] -> [{current_role, ss ++ [s]} | rest]
+        _ -> [{current_role, [s]} | acc]
+      end
+    end)
+    |> Enum.reverse()
+  end
+
   defp process_title(title) do
     title
     |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
     |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
   end
+
+  defp staff_display_name(%Staff{
+         person: %Person{display_name: display_name}
+       }),
+       do: display_name
+
+  defp staff_display_name(%Staff{
+         group: %Group{display_name: display_name}
+       }),
+       do: display_name
 end
