@@ -1,7 +1,7 @@
 defmodule GodzillaCineasteWeb.FilmComponents do
   use GodzillaCineasteWeb, :html
 
-  alias CineasteData.{Film, Group, Person, Staff}
+  alias CineasteData.{Film, Group, KaijuRole, Person, Role, Staff}
 
   attr :film, Film, required: true
 
@@ -210,12 +210,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def overview(assigns) do
     ~H"""
-    <div class="inline-flex items-center justify-center w-full">
-      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-      <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
-        Overview
-      </span>
-    </div>
+    <.named_divider name="Overview" />
     <div class="space-y-4">
       <.primary_poster film={@film} />
       <.specs film={@film} />
@@ -236,12 +231,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def staff(assigns) do
     ~H"""
-    <div class="inline-flex items-center justify-center w-full">
-      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-      <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
-        Staff
-      </span>
-    </div>
+    <.named_divider name="Staff" />
     <div class="w-fit m-auto">
       <div class="w-auto grid grid-cols-2 gap-1.5">
         <%= for {role, staffs} <- display_staff(@film) do %>
@@ -257,6 +247,135 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       </div>
     </div>
     """
+  end
+
+  attr :primary_role, Role, required: true
+  attr :secondary_roles, :list
+
+  def role(assigns) do
+    ~H"""
+    <div class="flex gap-2">
+      <div>
+        <img class="rounded-lg drop-shadow-lg" src={@primary_role.avatar_url} />
+      </div>
+      <div class="flex flex-col justify-center">
+        <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
+        <div class="font-content text-gray-500">
+          <%= @primary_role.name || @primary_role.description %>
+        </div>
+        <div class="font-content text-lg text-gray-700">
+          <%= role_display_name(@primary_role) %>
+        </div>
+        <div class="font-mono text-xs text-gray-500 uppercase">
+          <%= display_qualifiers(@primary_role) %>
+        </div>
+        <%= if role_is_uncredited?(@primary_role) do %>
+          <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
+        <% end %>
+        <%= for role <- @secondary_roles do %>
+          <div class="font-content text-lg text-gray-700"><%= role_display_name(role) %></div>
+          <div class="font-mono text-xs text-gray-500 uppercase">
+            <%= display_qualifiers(role) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    """
+  end
+
+  attr :roles, :list, default: []
+  attr :label, :string, required: true
+
+  def cast_group(assigns) do
+    ~H"""
+    <%= unless Enum.empty?(@roles) do %>
+      <.named_divider name={@label} />
+      <div class="w-96 m-auto space-y-3">
+        <%= for {_name, [primary_role | rest] = _roles} <- display_roles(@roles) do %>
+          <.role primary_role={primary_role} secondary_roles={rest} />
+        <% end %>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :film, :list, default: []
+
+  def kaiju_cast_group(assigns) do
+    ~H"""
+    <%= unless Enum.empty?(@roles) do %>
+      <.named_divider name="Kaiju, etc." />
+      <div class="w-96 m-auto space-y-3">
+        <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
+          <div class="flex gap-2">
+            <div>
+              <img class="rounded-lg drop-shadow-lg" src={first.avatar_url} />
+            </div>
+            <div class="flex flex-col justify-center">
+              <div class="font-content text-gray-500"><%= kaiju_name %></div>
+              <%= for kr <- kaiju_roles do %>
+                <div class="font-content text-lg text-gray-700">
+                  <%= role_display_name(kr) %>
+                </div>
+                <%= if kr.qualifiers do %>
+                  <div class="font-mono text-xs text-gray-500 uppercase">
+                    <%= Enum.join(kr.qualifiers, ", ") %>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :name, :string, required: true
+
+  def named_divider(assigns) do
+    ~H"""
+    <div class="inline-flex items-center justify-center text-center w-full">
+      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
+      <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
+        <%= @name %>
+      </span>
+    </div>
+    """
+  end
+
+  defp display_kaiju_roles(kaiju_roles) when is_list(kaiju_roles) do
+    kaiju_roles
+    |> Enum.reduce([], fn kr, acc ->
+      current_role = kr.name || kr.kaiju_character.display_name
+
+      case acc do
+        [{^current_role, krs} | rest] -> [{current_role, krs ++ [kr]} | rest]
+        _ -> [{current_role, [kr]} | acc]
+      end
+    end)
+    |> Enum.reverse()
+  end
+
+  defp display_qualifiers(%Role{qualifiers: []}), do: nil
+
+  defp display_qualifiers(%Role{qualifiers: qualifiers}),
+    do: "#{Enum.join(qualifiers, ", ")}"
+
+  defp display_qualifiers(_), do: nil
+
+  defp display_roles(roles) do
+    roles
+    |> Enum.reduce([], fn role, acc ->
+      current_role = role.name
+
+      case acc do
+        [{nil, _rs} | _rest] -> [{current_role, [role]} | acc]
+        [{^current_role, rs} | rest] -> [{current_role, rs ++ [role]} | rest]
+        _ -> [{current_role, [role]} | acc]
+      end
+    end)
+    |> Enum.reverse()
   end
 
   defp display_staff(%Film{staff: staff}) do
@@ -277,6 +396,22 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
     |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
   end
+
+  defp role_display_name(%Role{person: %Person{display_name: display_name}}),
+    do: display_name
+
+  defp role_display_name(%Role{group: %Group{display_name: display_name}}), do: display_name
+
+  defp role_display_name(%KaijuRole{person: %Person{display_name: display_name}}),
+    do: display_name
+
+  defp role_display_name(%KaijuRole{}), do: ""
+
+  defp role_is_uncredited?(%Role{uncredited: true}), do: true
+  defp role_is_uncredited?(_), do: false
+
+  defp role_title(%Role{title: title}), do: title
+  defp role_title(_), do: nil
 
   defp staff_display_name(%Staff{
          person: %Person{display_name: display_name}
