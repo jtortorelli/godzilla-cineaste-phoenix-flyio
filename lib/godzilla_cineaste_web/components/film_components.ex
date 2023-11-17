@@ -158,7 +158,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_film_info(assigns) do
     ~H"""
     <%= if @film do %>
-      <div class="flex justify-between items-center my-2 w-96">
+      <div class="flex gap-2 justify-between items-center my-2 max-w-96">
         <div class="w-6">
           <%= if @direction == :prev do %>
             <.link href={~p"/films/#{@film.slug}"}>
@@ -250,34 +250,70 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   end
 
   attr :primary_role, Role, required: true
-  attr :secondary_roles, :list
+  attr :secondary_roles, :list, default: []
 
   def role(assigns) do
     ~H"""
-    <div class="flex gap-2">
-      <div>
-        <img class="rounded-lg drop-shadow-lg" src={@primary_role.avatar_url} />
-      </div>
-      <div class="flex flex-col justify-center">
-        <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
-        <div class="font-content text-gray-500">
-          <%= @primary_role.name || @primary_role.description %>
+    <div>
+      <div id={"role-overview-#{@primary_role.id}"} class="flex gap-2">
+        <div class="flex items-center relative">
+          <img
+            class="h-[150px] w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+            src={@primary_role.avatar_url}
+          />
+          <%= if Enum.any?(@secondary_roles, fn sr -> sr.avatar_url end) do %>
+            <div
+              class="absolute right-1 bottom-1"
+              phx-click={
+                swap_visible_elements(
+                  "#role-overview-#{@primary_role.id}",
+                  "#role-avatars-#{@primary_role.id}"
+                )
+              }
+            >
+              <.icon name="hero-plus-circle-solid" class="h-8 w-8 text-white hover:cursor-pointer" />
+            </div>
+          <% end %>
         </div>
-        <div class="font-content text-lg text-gray-700">
-          <%= role_display_name(@primary_role) %>
-        </div>
-        <div class="font-mono text-xs text-gray-500 uppercase">
-          <%= display_qualifiers(@primary_role) %>
-        </div>
-        <%= if role_is_uncredited?(@primary_role) do %>
-          <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
-        <% end %>
-        <%= for role <- @secondary_roles do %>
-          <div class="font-content text-lg text-gray-700"><%= role_display_name(role) %></div>
-          <div class="font-mono text-xs text-gray-500 uppercase">
-            <%= display_qualifiers(role) %>
+        <div class="flex flex-col justify-center">
+          <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
+          <div class="font-content text-gray-500">
+            <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
           </div>
-        <% end %>
+          <div class="font-content text-lg text-gray-700">
+            <%= role_display_name(@primary_role) %>
+          </div>
+          <div class="font-mono text-xs text-gray-500 uppercase">
+            <%= display_qualifiers(@primary_role) %>
+          </div>
+          <%= if role_is_uncredited?(@primary_role) do %>
+            <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
+          <% end %>
+          <%= for role <- @secondary_roles do %>
+            <div class="font-content text-gray-500">
+              <%= role_display_name(role) %>
+              <span class="font-mono text-xs uppercase"><%= display_qualifiers(role) %></span>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div id={"role-avatars-#{@primary_role.id}"} class="rounded-lg bg-black/75 p-2 flex hidden">
+        <div class="flex flex-wrap gap-2">
+          <%= for avatar_url <- [@primary_role.avatar_url | Enum.map(@secondary_roles, fn sr -> sr.avatar_url end)] do %>
+            <img class="h-[134px] w-[134px] max-w-[134px] rounded-lg" src={avatar_url} />
+          <% end %>
+        </div>
+        <div
+          class="hover:cursor-pointer"
+          phx-click={
+            swap_visible_elements(
+              "#role-avatars-#{@primary_role.id}",
+              "#role-overview-#{@primary_role.id}"
+            )
+          }
+        >
+          <.icon name="hero-x-mark" class="text-white h-6 w-6" />
+        </div>
       </div>
     </div>
     """
@@ -360,7 +396,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   defp display_qualifiers(%Role{qualifiers: []}), do: nil
 
   defp display_qualifiers(%Role{qualifiers: qualifiers}),
-    do: "#{Enum.join(qualifiers, ", ")}"
+    do: "(#{Enum.join(qualifiers, ", ")})"
 
   defp display_qualifiers(_), do: nil
 
@@ -391,10 +427,29 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     |> Enum.reverse()
   end
 
+  defp swap_visible_elements(js \\ %JS{}, hide_selector, show_selector) do
+    js
+    |> JS.add_class("hidden",
+      to: hide_selector
+    )
+    |> JS.remove_class("hidden",
+      to: show_selector
+    )
+  end
+
   defp process_title(title) do
     title
     |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
     |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
+  end
+
+  defp process_role_name(role_name) do
+    role_name
+    |> String.replace("-maru", "<span class=\"italic\">-maru</span>")
+    |> String.replace("-seijin", "<span class=\"italic\">-seijin</span>")
+    |> String.replace("Gôtengô", "<span class=\"italic\">Gôtengô</span>")
+    |> String.replace("Eclair", "<span class=\"italic\">Eclair</span>")
+    |> String.replace("Karyû", "<span class=\"italic\">Karyû</span>")
   end
 
   defp role_display_name(%Role{person: %Person{display_name: display_name}}),
