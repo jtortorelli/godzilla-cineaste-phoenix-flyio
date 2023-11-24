@@ -141,7 +141,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         </div>
         <%= for alias <- @film.aliases do %>
           <div>
-            <div class="text-center font-content italic"><%= alias.title %></div>
+            <div class="text-center font-content italic text-gray-700"><%= alias.title %></div>
             <div class="text-center font-mono text-xs text-gray-500">
               <%= alias.context %>
             </div>
@@ -277,25 +277,15 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <%= if role_is_uncredited?(@primary_role) do %>
               <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
             <% end %>
-          </div>
-          <%= for role <- @secondary_roles do %>
-            <div class="grid justify-items-end">
-              <%= if role.avatar_url do %>
-                <img
-                  class="h-[75px] w-[75px] max-w-[75px] rounded-lg drop-shadow-lg"
-                  src={role.avatar_url}
-                />
-              <% end %>
-            </div>
-            <div class="flex flex-col justify-center font-content text-gray-700">
-              <div>
-                <%= role_display_name(role) %><br />
-                <span class="font-mono text-xs text-gray-500 uppercase">
-                  <%= display_qualifiers(role) %>
-                </span>
+            <%= for role <- @secondary_roles do %>
+              <div class="font-content text-gray-700 text-lg">
+                <%= role_display_name(role) %>
               </div>
-            </div>
-          <% end %>
+              <div class="font-mono text-xs text-gray-500 uppercase">
+                <%= display_qualifiers(role) %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
@@ -310,7 +300,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
       <div class="w-96 m-auto space-y-3">
-        <%= for {_name, [primary_role | rest] = _roles} <- display_roles(@roles) do %>
+        <%= for [primary_role | rest] <- display_roles(@roles) do %>
           <.role primary_role={primary_role} secondary_roles={rest} />
         <% end %>
       </div>
@@ -326,9 +316,12 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <.named_divider name="Kaiju, etc." />
       <div class="w-96 m-auto space-y-3">
         <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
-          <div class="flex gap-2">
+          <div class="flex gap-2 items-center">
             <div>
-              <img class="rounded-lg drop-shadow-lg" src={first.avatar_url} />
+              <img
+                class="w-[150px] h-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+                src={first.avatar_url}
+              />
             </div>
             <div class="flex flex-col justify-center">
               <div class="font-content text-gray-500"><%= kaiju_name %></div>
@@ -386,12 +379,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   defp display_roles(roles) do
     roles
     |> Enum.reduce([], fn role, acc ->
-      current_role = role.name
-
-      case acc do
-        [{nil, _rs} | _rest] -> [{current_role, [role]} | acc]
-        [{^current_role, rs} | rest] -> [{current_role, rs ++ [role]} | rest]
-        _ -> [{current_role, [role]} | acc]
+      if role.mergeable do
+        [previous_role | rest] = acc
+        [previous_role ++ [role] | rest]
+      else
+        [[role] | acc]
       end
     end)
     |> Enum.reverse()
