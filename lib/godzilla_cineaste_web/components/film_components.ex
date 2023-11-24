@@ -266,13 +266,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div class="flex flex-col justify-center">
             <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
             <div class="font-content text-gray-500">
-              <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
+              <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %> <%= if @primary_role.character_qualifiers do %><span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span><% end %>
             </div>
             <div class="font-content text-lg text-gray-700">
               <%= role_display_name(@primary_role) %>
             </div>
             <div class="font-mono text-xs text-gray-500 uppercase">
-              <%= display_qualifiers(@primary_role) %>
+              <%= @primary_role.role_qualifiers %>
             </div>
             <%= if role_is_uncredited?(@primary_role) do %>
               <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
@@ -282,7 +282,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 <%= role_display_name(role) %>
               </div>
               <div class="font-mono text-xs text-gray-500 uppercase">
-                <%= display_qualifiers(role) %>
+                <%= role.role_qualifiers %>
               </div>
             <% end %>
           </div>
