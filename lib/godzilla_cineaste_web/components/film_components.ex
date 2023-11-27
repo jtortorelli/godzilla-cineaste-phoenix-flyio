@@ -211,7 +211,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
-    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
       <div class="pb-4 lg:shrink-0">
         <.primary_poster film={@film} />
       </div>
@@ -236,7 +236,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def staff(assigns) do
     ~H"""
     <.named_divider name="Staff" />
-    <div class="w-96 m-auto lg:columns-2 lg:gap-x-8">
+    <div class="max-w-96 m-auto lg:columns-2 lg:gap-x-8 lg:w-fit">
       <%= for {role, staffs} <- display_staff(@film) do %>
         <div class="text-center lg:text-left lg:break-inside-avoid-column pb-1">
           <div class="">
@@ -306,7 +306,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
-      <div class="w-96 m-auto space-y-3">
+      <div class="w-96 lg:w-fit m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
         <%= for [primary_role | rest] <- display_roles(@roles) do %>
           <.role primary_role={primary_role} secondary_roles={rest} />
         <% end %>
@@ -321,7 +321,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name="Kaiju, etc." />
-      <div class="w-96 m-auto space-y-3">
+      <div class="w-96 m-auto space-y-3 lg:w-fit lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
         <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
           <div class="flex gap-2 items-center">
             <div>
