@@ -158,7 +158,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_film_info(assigns) do
     ~H"""
     <%= if @film do %>
-      <div class="flex gap-2 justify-between items-center my-2 max-w-96">
+      <div class="flex gap-2 justify-between items-center max-w-96">
         <div class="w-6">
           <%= if @direction == :prev do %>
             <.link href={~p"/films/#{@film.slug}"}>
@@ -211,18 +211,22 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
-    <div class="space-y-4">
-      <.primary_poster film={@film} />
-      <.specs film={@film} />
-      <.studios_or_production_committee film={@film} />
-      <.original_title film={@film} />
-      <.works film={@film} />
-      <.aliases film={@film} />
-      <.series_info
-        film={@film}
-        previous_series_film={@previous_series_film}
-        next_series_film={@next_series_film}
-      />
+    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center">
+      <div class="pb-4 lg:shrink-0">
+        <.primary_poster film={@film} />
+      </div>
+      <div class="space-y-4">
+        <.specs film={@film} />
+        <.original_title film={@film} />
+        <.works film={@film} />
+        <.aliases film={@film} />
+        <.series_info
+          film={@film}
+          previous_series_film={@previous_series_film}
+          next_series_film={@next_series_film}
+        />
+        <.studios_or_production_committee film={@film} />
+      </div>
     </div>
     """
   end
@@ -232,19 +236,19 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def staff(assigns) do
     ~H"""
     <.named_divider name="Staff" />
-    <div class="w-fit m-auto">
-      <div class="w-auto grid grid-cols-2 gap-1.5">
-        <%= for {role, staffs} <- display_staff(@film) do %>
-          <div class="text-left">
+    <div class="w-96 m-auto lg:columns-2 lg:gap-x-8">
+      <%= for {role, staffs} <- display_staff(@film) do %>
+        <div class="text-center lg:text-left lg:break-inside-avoid-column pb-1">
+          <div class="">
             <span class="font-mono text-xs uppercase text-gray-500"><%= role %></span>
           </div>
-          <div>
+          <div class="">
             <span class="text-gray-700 font-content">
               <%= raw(Enum.map_join(staffs, "<br/>", &staff_display_name(&1))) %>
             </span>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
     """
   end
@@ -266,7 +270,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div class="flex flex-col justify-center">
             <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
             <div class="font-content text-gray-500">
-              <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %> <%= if @primary_role.character_qualifiers do %><span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span><% end %>
+              <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
+              <%= if @primary_role.character_qualifiers do %>
+                <span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span>
+              <% end %>
             </div>
             <div class="font-content text-lg text-gray-700">
               <%= role_display_name(@primary_role) %>
