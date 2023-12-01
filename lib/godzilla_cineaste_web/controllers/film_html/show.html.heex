@@ -8,7 +8,3 @@
 <.cast_group label="Top Billed Cast" roles={@top_billed_roles} />
 <.cast_group label="Supporting Cast" roles={@rest_of_roles} />
 <.kaiju_cast_group roles={@film.kaiju_roles} />
-
-<%= if @film.credits do %>
-  <%= @film.credits.credits %>
-<% end %>

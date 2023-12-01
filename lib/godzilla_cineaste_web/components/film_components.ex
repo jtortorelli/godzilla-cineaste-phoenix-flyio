@@ -1,6 +1,8 @@
 defmodule GodzillaCineasteWeb.FilmComponents do
   use GodzillaCineasteWeb, :html
 
+  alias NimbleCSV.RFC4180, as: CSV
+
   alias CineasteData.{Film, Group, KaijuRole, Person, Role, Staff}
 
   attr :film, Film, required: true
@@ -9,14 +11,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <div class="text-center w-fit m-auto">
       <%= if Enum.empty?(@film.display_title) do %>
-        <h1 class="font-display tracking-wider uppercase p-2 text-2xl">
+        <h1 class="font-display tracking-wider uppercase p-2 text-2xl text-gray-700">
           <%= raw(process_title(@film.title)) %>
         </h1>
       <% else %>
         <h1>
           <%= for %{style: style, content: content} <- @film.display_title do %>
             <%= if style == :title do %>
-              <span class="font-display tracking-wide uppercase p-2 text-2xl">
+              <span class="font-display tracking-wide uppercase p-2 text-2xl text-gray-700">
                 <%= raw(process_title(content)) %>
               </span>
               <br />
@@ -65,7 +67,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def studios_or_production_committee(assigns) do
     ~H"""
     <div>
-      <div class="text-center font-mono uppercase text-xs text-gray-500">A Production Of</div>
+      <div class="text-center font-detail uppercase text-xs text-gray-500">A Production Of</div>
       <%= if @film.production_committee do %>
         <div class="font-content text-gray-700 text-center">
           <%= @film.production_committee.display_name %>
@@ -84,16 +86,16 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def original_title(assigns) do
     ~H"""
     <div class="text-center">
-      <div class="font-mono text-xs text-gray-500 uppercase">Original Title</div>
+      <div class="font-detail text-xs text-gray-500 uppercase">Original Title</div>
       <div class="space-y-1">
         <div class="font-serif tracking-wide text-gray-700">
           <%= @film.original_title.original %>
         </div>
-        <div class="font-mono italic text-xs text-gray-500">
+        <div class="font-detail italic text-xs text-gray-500">
           <%= @film.original_title.transliteration %>
         </div>
         <%= if @film.original_title.transliteration != @film.original_title.translation do %>
-          <div class="font-mono italic text-xs text-gray-500">
+          <div class="font-detail italic text-xs text-gray-500">
             <%= @film.original_title.translation %>
           </div>
         <% end %>
@@ -109,18 +111,18 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= if @film.works do %>
       <%= for work <- @film.works do %>
         <div class="text-center">
-          <div class="uppercase font-mono text-xs text-gray-500">
+          <div class="uppercase font-detail text-xs text-gray-500">
             <%= "based on the #{work.format}" %>
           </div>
           <div class="font-content italic text-gray-700"><%= work.title %></div>
           <%= if Enum.empty?(work.authors) do %>
             <div class="font-content text-gray-700">
-              <span class="uppercase font-mono text-xs text-gray-500">by</span>
+              <span class="uppercase font-detail text-xs text-gray-500">by</span>
               <%= "#{Enum.map_join(work.studios, ", ", & &1.display_name)}" %>
             </div>
           <% else %>
             <div class="font-content text-gray-700">
-              <span class="uppercase font-mono text-xs text-gray-500">by</span>
+              <span class="uppercase font-detail text-xs text-gray-500">by</span>
               <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
             </div>
           <% end %>
@@ -136,13 +138,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if not Enum.empty?(@film.aliases) do %>
       <div>
-        <div class="uppercase font-mono text-center text-xs text-gray-500">
+        <div class="uppercase font-detail text-center text-xs text-gray-500">
           also known as
         </div>
         <%= for alias <- @film.aliases do %>
           <div>
             <div class="text-center font-content italic text-gray-700"><%= alias.title %></div>
-            <div class="text-center font-mono text-xs text-gray-500">
+            <div class="text-center font-detail text-xs text-gray-500">
               <%= alias.context %>
             </div>
           </div>
@@ -192,7 +194,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if @film.series_entry do %>
       <div>
-        <div class="uppercase font-mono text-center text-xs text-gray-500">
+        <div class="uppercase font-detail text-center text-xs text-gray-500">
           <%= "#{@film.series_entry.film_series.name} no. #{@film.series_entry.entry_number}" %>
         </div>
         <div class="w-fit m-auto text-red-700">
@@ -240,7 +242,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <%= for {role, staffs} <- display_staff(@film) do %>
         <div class="text-center lg:text-left lg:break-inside-avoid-column pb-1">
           <div class="">
-            <span class="font-mono text-xs uppercase text-gray-500"><%= role %></span>
+            <span class="font-detail text-xs uppercase text-gray-500"><%= role %></span>
           </div>
           <div class="">
             <span class="text-gray-700 font-content">
@@ -250,6 +252,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         </div>
       <% end %>
     </div>
+    <.full_credits_modal film={@film} />
     """
   end
 
@@ -278,17 +281,17 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <div class="font-content text-lg text-gray-700">
               <%= role_display_name(@primary_role) %>
             </div>
-            <div class="font-mono text-xs text-gray-500 uppercase">
+            <div class="font-detail text-xs text-gray-500 uppercase">
               <%= @primary_role.role_qualifiers %>
             </div>
             <%= if role_is_uncredited?(@primary_role) do %>
-              <div class="font-mono text-xs text-red-700/75 uppercase">Uncredited</div>
+              <div class="font-detail text-xs text-red-700/75 uppercase">Uncredited</div>
             <% end %>
             <%= for role <- @secondary_roles do %>
               <div class="font-content text-gray-700 text-lg">
                 <%= role_display_name(role) %>
               </div>
-              <div class="font-mono text-xs text-gray-500 uppercase">
+              <div class="font-detail text-xs text-gray-500 uppercase">
                 <%= role.role_qualifiers %>
               </div>
             <% end %>
@@ -306,7 +309,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
-      <div class="w-96 lg:w-fit m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+      <div class="w-96 lg:w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
         <%= for [primary_role | rest] <- display_roles(@roles) do %>
           <.role primary_role={primary_role} secondary_roles={rest} />
         <% end %>
@@ -315,13 +318,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :film, :list, default: []
+  attr :roles, :list, default: []
 
   def kaiju_cast_group(assigns) do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name="Kaiju, etc." />
-      <div class="w-96 m-auto space-y-3 lg:w-fit lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+      <div class="w-96 m-auto space-y-3 lg:w-full lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
         <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
           <div class="flex gap-2 items-center">
             <div>
@@ -337,7 +340,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                   <%= role_display_name(kr) %>
                 </div>
                 <%= if kr.qualifiers do %>
-                  <div class="font-mono text-xs text-gray-500 uppercase">
+                  <div class="font-detail text-xs text-gray-500 uppercase">
                     <%= Enum.join(kr.qualifiers, ", ") %>
                   </div>
                 <% end %>
@@ -356,10 +359,44 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <div class="inline-flex items-center justify-center text-center w-full">
       <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-      <span class="absolute px-3 font-mono text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
+      <span class="absolute px-3 font-detail text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
         <%= @name %>
       </span>
     </div>
+    """
+  end
+
+  attr :film, Film, required: true
+
+  def full_credits_modal(assigns) do
+    ~H"""
+    <%= if @film.credits do %>
+      <div class="w-fit m-auto font-content text-red-700 hover:cursor-pointer pt-2">
+        <a phx-click={show_modal("credits-modal")}>
+          Full Cast & Crew <.icon name="hero-square-2-stack" class="h-6 w-6" />
+        </a>
+      </div>
+      <.modal id="credits-modal">
+        <div class="max-h-[80vh] overflow-y-auto">
+          <div class="font-display uppercase text-center pb-2 text-gray-700">
+            <%= @film.title %>
+            <br /><span class="text-xs text-gray-500 font-extrabold">Full Cast & Crew</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-gray-700 font-content text-sm">
+            <%= for [jpn_role, jpn_name, eng_role, eng_name] <- CSV.parse_string(@film.credits.credits, skip_headers: false) do %>
+              <div>
+                <span class="text-gray-500 font-mono text-xs"><%= jpn_role %></span> <br />
+                <span><%= eng_role %></span>
+              </div>
+              <div>
+                <span class="text-gray-500 font-mono text-xs"><%= jpn_name %></span> <br />
+                <span><%= eng_name %></span>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </.modal>
+    <% end %>
     """
   end
 
@@ -375,13 +412,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     end)
     |> Enum.reverse()
   end
-
-  defp display_qualifiers(%Role{qualifiers: []}), do: nil
-
-  defp display_qualifiers(%Role{qualifiers: qualifiers}),
-    do: "#{Enum.join(qualifiers, ", ")}"
-
-  defp display_qualifiers(_), do: nil
 
   defp display_roles(roles) do
     roles
@@ -407,16 +437,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       end
     end)
     |> Enum.reverse()
-  end
-
-  defp swap_visible_elements(js \\ %JS{}, hide_selector, show_selector) do
-    js
-    |> JS.add_class("hidden",
-      to: hide_selector
-    )
-    |> JS.remove_class("hidden",
-      to: show_selector
-    )
   end
 
   defp process_title(title) do
