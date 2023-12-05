@@ -55,7 +55,7 @@ config :godzilla_cineaste, GodzillaCineasteWeb.Endpoint,
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/godzilla_cineaste_web/.*(heex)$"
+      ~r"lib/godzilla_cineaste_web/.*(heex|ex)$"
     ]
   ]
 

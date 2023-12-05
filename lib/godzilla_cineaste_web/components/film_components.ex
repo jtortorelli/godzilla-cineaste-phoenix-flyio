@@ -201,7 +201,50 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <.series_film_info film={@previous_series_film} direction={:prev} />
           <.series_film_info film={@next_series_film} direction={:next} />
         </div>
+        <.series_modal film={@film} />
       </div>
+    <% end %>
+    """
+  end
+
+  attr :film, Film, required: true
+
+  def series_modal(assigns) do
+    ~H"""
+    <%= if @film.series_entry do %>
+      <div class="w-fit m-auto font-content text-red-700 hover:cursor-pointer pt-2">
+        <a phx-click={show_modal("series-modal")}>
+          View Series <.icon name="hero-square-2-stack" class="h-6 w-6" />
+        </a>
+      </div>
+      <.modal id="series-modal">
+        <div class="max-h-[80vh] overflow-y-auto">
+          <div class="font-display uppercase text-center pb-2 text-gray-700">
+            <%= @film.series_entry.film_series.name %>
+            <br /><span class="text-xs text-gray-500 font-extrabold">Series</span>
+          </div>
+          <div class="text-gray-700 font-content text-sm">
+            <ol class="list-decimal list-outside gap-2">
+              <%= for series_entry <- @film.series_entry.film_series.entries do %>
+                <%= if series_entry.film.id != @film.id do %>
+                  <li class="ml-8 my-1 text-red-700">
+                    <.link href={~p"/films/#{series_entry.film.slug}"} class="hover:cursor-pointer">
+                      <i>
+                        <%= series_entry.film.title %>
+                      </i>
+                      (<%= series_entry.film.release_date.year %>)
+                    </.link>
+                  </li>
+                <% else %>
+                  <li class="ml-8 my-2">
+                    <i><%= series_entry.film.title %></i> (<%= series_entry.film.release_date.year %>)
+                  </li>
+                <% end %>
+              <% end %>
+            </ol>
+          </div>
+        </div>
+      </.modal>
     <% end %>
     """
   end

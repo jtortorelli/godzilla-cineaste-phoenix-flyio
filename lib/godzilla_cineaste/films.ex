@@ -34,7 +34,7 @@ defmodule GodzillaCineaste.Films do
       studios: [],
       production_committee: [],
       works: [:authors, :studios],
-      series_entry: [:film_series],
+      series_entry: [film_series: [entries: :film]],
       synopsis: [],
       credits: [],
       kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
