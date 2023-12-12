@@ -77,7 +77,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         </div>
       <% else %>
         <div class="font-content text-center text-gray-700">
-          <%= Enum.map_join(@film.studios, ", ", & &1.display_name) %>
+          <%= Enum.map_join(@film.studios, ", ", &(&1.better_display_name || &1.display_name)) %>
         </div>
       <% end %>
     </div>
@@ -92,7 +92,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           </div>
           <div class="grid grid-cols-2 gap-2 text-gray-700 font-content text-sm">
             <%= for studio <- @film.production_committee.studios do %>
-              <div><%= studio.display_name %></div>
+              <div><%= studio.better_display_name || studio.display_name %></div>
             <% end %>
           </div>
         </div>
@@ -338,6 +338,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <div class="font-content text-gray-500">
               <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
               <%= if @primary_role.character_qualifiers do %>
+                <br />
                 <span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span>
               <% end %>
             </div>
