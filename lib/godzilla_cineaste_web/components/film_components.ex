@@ -69,8 +69,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <div>
       <div class="text-center font-detail uppercase text-xs text-gray-500">A Production Of</div>
       <%= if @film.production_committee do %>
-        <div class="font-content text-gray-700 text-center">
-          <%= @film.production_committee.display_name %>
+        <div class="font-content text-red-700 hover:cursor-pointer text-center">
+          <a phx-click={show_modal("film-production-committee-modal")}>
+            <%= @film.production_committee.display_name %>
+            <.icon name="hero-square-2-stack" class="h-6 w-6" />
+          </a>
         </div>
       <% else %>
         <div class="font-content text-center text-gray-700">
@@ -78,6 +81,23 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         </div>
       <% end %>
     </div>
+    <%= if @film.production_committee do %>
+      <.modal id="film-production-committee-modal">
+        <div class="max-h-[80vh] overflow-y-auto">
+          <div class="font-display uppercase text-center pb-2 text-gray-700">
+            <%= @film.title %><br />
+            <span class="text-xs text-gray-500 font-extrabold">
+              Production Committee
+            </span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-gray-700 font-content text-sm">
+            <%= for studio <- @film.production_committee.studios do %>
+              <div><%= studio.display_name %></div>
+            <% end %>
+          </div>
+        </div>
+      </.modal>
+    <% end %>
     """
   end
 
