@@ -108,14 +108,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <div class="text-center">
       <div class="font-detail text-xs text-gray-500 uppercase">Original Title</div>
       <div class="space-y-1">
-        <div class="font-serif tracking-wide text-gray-700">
-          <%= @film.original_title.original %>
+        <div class="font-japanese tracking-wide text-gray-700">
+          <%= raw(@film.original_title.original) %>
         </div>
-        <div class="font-detail italic text-xs text-gray-500">
+        <div class="font-content italic text-xs text-gray-500">
           <%= @film.original_title.transliteration %>
         </div>
         <%= if @film.original_title.transliteration != @film.original_title.translation do %>
-          <div class="font-detail italic text-xs text-gray-500">
+          <div class="font-content italic text-xs text-gray-500">
             <%= @film.original_title.translation %>
           </div>
         <% end %>
@@ -270,12 +270,29 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   end
 
   attr :film, Film, required: true
+
+  def blurb(assigns) do
+    ~H"""
+    <%= if @film.tagline && @film.pitch do %>
+      <div class="pb-4 m-auto text-center font-content text-gray-700 flex flex-col items-center">
+        <div class="w-96 italic text-lg"><%= @film.tagline %></div>
+        <div class="inline-flex items-center justify-center text-center w-full">
+          <hr class="w-64 h-px my-1 border-0 rounded bg-gray-400" />
+        </div>
+        <div class="w-96 text-sm"><%= @film.pitch %></div>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :film, Film, required: true
   attr :previous_series_film, Film
   attr :next_series_film, Film
 
   def overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
+    <.blurb film={@film} />
     <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
       <div class="pb-4 lg:shrink-0">
         <.primary_poster film={@film} />
@@ -301,7 +318,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def staff(assigns) do
     ~H"""
     <.named_divider name="Staff" />
-    <div class="max-w-96 m-auto lg:columns-2 lg:gap-x-8 lg:w-fit">
+    <div class="max-w-96 m-auto lg:columns-3 lg:gap-x-8 lg:w-fit">
       <%= for {role, staffs} <- display_staff(@film) do %>
         <div class="text-center lg:text-left lg:break-inside-avoid-column pb-1">
           <div class="">

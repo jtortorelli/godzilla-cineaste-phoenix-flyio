@@ -13,11 +13,10 @@ module.exports = {
         brand: "#FD4F00",
       },
       fontFamily: {
-        japanese: ["Noto-Variable", "sans-serif"],
-        oswald: ["Noto-Variable", "sans-serif"],
+        japanese: ["NotoSerifJP", "sans-serif"],
         display: ["Montserrat", "serif"],
-        content: ["Lora", "serif"],
-        detail: ["SourceCodePro", "monospace"]
+        content: ["CrimsonPro", "serif"],
+        detail: ["SourceCodePro", "monospace"],
       },
     },
   },
@@ -29,25 +28,28 @@ module.exports = {
     //     <div class="phx-click-loading:animate-ping">
     //
     plugin(({ addVariant }) =>
-      addVariant("phx-no-feedback", [".phx-no-feedback&", ".phx-no-feedback &"])
+      addVariant("phx-no-feedback", [
+        ".phx-no-feedback&",
+        ".phx-no-feedback &",
+      ]),
     ),
     plugin(({ addVariant }) =>
       addVariant("phx-click-loading", [
         ".phx-click-loading&",
         ".phx-click-loading &",
-      ])
+      ]),
     ),
     plugin(({ addVariant }) =>
       addVariant("phx-submit-loading", [
         ".phx-submit-loading&",
         ".phx-submit-loading &",
-      ])
+      ]),
     ),
     plugin(({ addVariant }) =>
       addVariant("phx-change-loading", [
         ".phx-change-loading&",
         ".phx-change-loading &",
-      ])
+      ]),
     ),
 
     // Embeds Heroicons (https://heroicons.com) into your app.css bundle
@@ -87,7 +89,7 @@ module.exports = {
             };
           },
         },
-        { values }
+        { values },
       );
     }),
   ],
