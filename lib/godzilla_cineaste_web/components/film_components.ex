@@ -273,12 +273,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def blurb(assigns) do
     ~H"""
-    <%= if @film.tagline && @film.pitch do %>
+    <%= if @film.pitch do %>
       <div class="pb-4 m-auto text-center font-content text-gray-700 flex flex-col items-center">
-        <div class="w-96 italic text-lg"><%= @film.tagline %></div>
-        <div class="inline-flex items-center justify-center text-center w-full">
-          <hr class="w-64 h-px my-1 border-0 rounded bg-gray-400" />
-        </div>
         <div class="w-96 text-sm"><%= @film.pitch %></div>
       </div>
     <% end %>
