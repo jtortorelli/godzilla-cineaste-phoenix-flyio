@@ -322,7 +322,16 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           </div>
           <div class="">
             <span class="text-gray-700 font-content">
-              <%= raw(Enum.map_join(staffs, "<br/>", &staff_display_name(&1))) %>
+              <%= raw(
+                Enum.map_join(staffs, "<br/>", fn staff ->
+                  if has_disambig_chars?(staff) do
+                    staff_display_name(staff) <>
+                      ~s| <span class="text-xs">(<span class="font-japanese">#{staff.person.disambig_chars}</span>)</span>|
+                  else
+                    staff_display_name(staff)
+                  end
+                end)
+              ) %>
             </span>
           </div>
         </div>
@@ -357,6 +366,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             </div>
             <div class="font-content text-lg text-gray-700">
               <%= role_display_name(@primary_role) %>
+              <%= if has_disambig_chars?(@primary_role) do %>
+                <span class="text-xs">
+                  (<span class="font-japanese"><%= @primary_role.person.disambig_chars %></span>)
+                </span>
+              <% end %>
             </div>
             <div class="font-detail text-xs text-gray-500 uppercase">
               <%= @primary_role.role_qualifiers %>
@@ -540,6 +554,12 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     do: display_name
 
   defp role_display_name(%KaijuRole{}), do: ""
+
+  defp has_disambig_chars?(%{person: %Person{disambig_chars: disambig_chars}})
+       when is_binary(disambig_chars),
+       do: true
+
+  defp has_disambig_chars?(_), do: false
 
   defp role_is_uncredited?(%Role{uncredited: true}), do: true
   defp role_is_uncredited?(_), do: false
