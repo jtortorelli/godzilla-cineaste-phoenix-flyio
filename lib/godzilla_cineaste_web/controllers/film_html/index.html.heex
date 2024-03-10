@@ -1,9 +1,36 @@
+<div class="text-center w-fit m-auto">
+  <h1 class="font-display tracking-wider, uppercase p-4 text-2xl text-gray-700">Films</h1>
+</div>
 <div>
-  <ul>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <%= for film <- @films do %>
-      <li>
-        <.link href={~p"/films/#{film.slug}"}><%= film.title %></.link>
-      </li>
+      <div class="grid grid-cols-[101px_auto] items-center gap-3">
+        <div>
+          <.link href={~p"/films/#{film.slug}"}>
+            <.primary_poster film={film} height={150} width={101} />
+          </.link>
+        </div>
+        <div>
+          <.link href={~p"/films/#{film.slug}"}>
+            <div>
+              <%= if Enum.empty?(film.display_title) do %>
+                <div class="font-content italic text-xl text-gray-700"><%= film.title %></div>
+              <% else %>
+                <%= for %{style: style, content: content} <- film.display_title do %>
+                  <%= if style == :title do %>
+                    <div class="font-content italic text-xl text-gray-700"><%= content %></div>
+                  <% end %>
+                  <%= if style == :subtitle do %>
+                    <div class="font-content italic text-gray-500"><%= content %></div>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="font-detail text-red-700 text-sm"><%= film.release_date.year %></div>
+          </.link>
+        </div>
+      </div>
     <% end %>
-  </ul>
+    <div></div>
+  </div>
 </div>

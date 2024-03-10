@@ -37,14 +37,16 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   end
 
   attr :film, Film, required: true
+  attr :height, :integer, default: 400
+  attr :width, :integer, default: 270
 
   def primary_poster(assigns) do
     ~H"""
     <div class="text-center w-fit m-auto">
       <img
         class="rounded-lg drop-shadow-lg"
-        height="400"
-        width="270"
+        height={@height}
+        width={@width}
         src={Enum.find_value(@film.poster_urls, fn pu -> if pu.primary, do: pu.url end)}
       />
     </div>
