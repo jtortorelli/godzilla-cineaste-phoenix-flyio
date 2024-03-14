@@ -18,7 +18,7 @@ defmodule GodzillaCineasteWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    get "/films", FilmController, :index
+    live "/films", FilmsLive
     get "/films/:slug", FilmController, :show
   end
 

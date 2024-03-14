@@ -52,11 +52,25 @@ defmodule GodzillaCineaste.Films do
     |> Repo.one()
   end
 
-  def list_films do
+  def list_films(search_term \\ nil) do
     Film
     |> from()
     |> where([f], f.showcased)
     |> order_by([f], f.sort_title)
+    |> maybe_filter_by_search_term(search_term)
     |> Repo.all()
+  end
+
+  defp maybe_filter_by_search_term(query, nil), do: query
+
+  defp maybe_filter_by_search_term(query, search_term) do
+    subquery =
+      Film
+      |> from()
+      |> join(:cross, [f], a in fragment("jsonb_array_elements(?)", f.aliases))
+      |> where([f, a], fragment("? ->> 'title' ilike ?", a, ^search_term))
+      |> select([f, a], f.id)
+
+    where(query, [f], ilike(f.title, ^search_term) or f.id in subquery(subquery))
   end
 end
