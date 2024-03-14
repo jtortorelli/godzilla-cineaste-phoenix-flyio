@@ -68,9 +68,14 @@ defmodule GodzillaCineaste.Films do
       Film
       |> from()
       |> join(:cross, [f], a in fragment("jsonb_array_elements(?)", f.aliases))
-      |> where([f, a], fragment("? ->> 'title' ilike ?", a, ^search_term))
+      |> where([f, a], fragment("unaccent(? ->> 'title') ilike unaccent(?)", a, ^search_term))
       |> select([f, a], f.id)
 
-    where(query, [f], ilike(f.title, ^search_term) or f.id in subquery(subquery))
+    where(
+      query,
+      [f],
+      ilike(fragment("unaccent(?)", f.title), fragment("unaccent(?)", ^search_term)) or
+        f.id in subquery(subquery)
+    )
   end
 end
