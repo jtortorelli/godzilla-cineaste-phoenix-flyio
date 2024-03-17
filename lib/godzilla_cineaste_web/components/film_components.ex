@@ -353,20 +353,20 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         <div class="grid grid-cols-[150px_auto] gap-2">
           <div class="grid justify-items-end">
             <img
-              class="h-[150px] w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+              class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
               src={@primary_role.avatar_url}
             />
           </div>
           <div class="flex flex-col justify-center">
             <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
-            <div class="font-content text-gray-500">
+            <div class="font-content text-gray-500 sm:text-base text-sm">
               <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
               <%= if @primary_role.character_qualifiers do %>
                 <br />
                 <span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span>
               <% end %>
             </div>
-            <div class="font-content text-lg text-gray-700">
+            <div class="font-content sm:text-lg text-gray-700">
               <%= role_display_name(@primary_role) %>
               <%= if has_disambig_chars?(@primary_role) do %>
                 <span class="text-xs">
@@ -395,18 +395,63 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
+  def expand_cast_group(js \\ %JS{}, q) do
+    js
+    |> JS.hide(to: ".trunc-#{q}-cast")
+    |> JS.hide(to: ".expand-#{q}-cast")
+    |> JS.show(to: ".full-#{q}-cast")
+    |> JS.show(to: ".collapse-#{q}-cast")
+  end
+
+  def collapse_cast_group(js \\ %JS{}, q) do
+    js
+    |> JS.hide(to: ".full-#{q}-cast")
+    |> JS.hide(to: ".collapse-#{q}-cast")
+    |> JS.show(to: ".trunc-#{q}-cast")
+    |> JS.show(to: ".expand-#{q}-cast")
+  end
+
   attr :roles, :list, default: []
   attr :label, :string, required: true
+  attr :q, :atom
 
   def cast_group(assigns) do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
-      <div class="w-96 lg:w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
-        <%= for [primary_role | rest] <- display_roles(@roles) do %>
-          <.role primary_role={primary_role} secondary_roles={rest} />
-        <% end %>
+      <div class={"trunc-#{@q}-cast"}>
+        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+          <%= for [primary_role | rest] <- Enum.take(display_roles(@roles), 6) do %>
+            <.role primary_role={primary_role} secondary_roles={rest} />
+          <% end %>
+        </div>
       </div>
+      <div class={"full-#{@q}-cast hidden"}>
+        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+          <%= for [primary_role | rest] <- display_roles(@roles) do %>
+            <.role primary_role={primary_role} secondary_roles={rest} />
+          <% end %>
+        </div>
+      </div>
+      <%= if length(@roles) > 6 do %>
+        <div class={"expand-#{@q}-cast text-center pt-6"}>
+          <button
+            class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
+            phx-click={expand_cast_group(@q)}
+          >
+            <%= "+#{length(@roles) - 6} more" %>
+            <.icon name="hero-chevron-down-solid" />
+          </button>
+        </div>
+        <div class={"hidden collapse-#{@q}-cast text-center pt-6"}>
+          <button
+            class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
+            phx-click={collapse_cast_group(@q)}
+          >
+            Show less <.icon name="hero-chevron-up-solid" />
+          </button>
+        </div>
+      <% end %>
     <% end %>
     """
   end
@@ -417,31 +462,79 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name="Kaiju, etc." />
-      <div class="w-96 m-auto space-y-3 lg:w-full lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
-        <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
-          <div class="flex gap-2 items-center">
-            <div>
-              <img
-                class="w-[150px] h-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
-                src={first.avatar_url}
-              />
-            </div>
-            <div class="flex flex-col justify-center">
-              <div class="font-content text-gray-500"><%= kaiju_name %></div>
-              <%= for kr <- kaiju_roles do %>
-                <div class="font-content text-lg text-gray-700">
-                  <%= role_display_name(kr) %>
-                </div>
-                <%= if kr.qualifiers do %>
-                  <div class="font-detail text-xs text-gray-500 uppercase">
-                    <%= Enum.join(kr.qualifiers, ", ") %>
+      <div class="trunc-kaiju-cast">
+        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+          <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- Enum.take(display_kaiju_roles(@roles), 6) do %>
+            <div class="grid grid-cols-[150px_auto] gap-2">
+              <div class="grid justify-items-end">
+                <img
+                  class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+                  src={first.avatar_url}
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="font-content text-gray-500 text-sm sm:text-base"><%= kaiju_name %></div>
+                <%= for kr <- kaiju_roles do %>
+                  <div class="font-content sm:text-lg text-gray-700">
+                    <%= role_display_name(kr) %>
                   </div>
+                  <%= if kr.qualifiers do %>
+                    <div class="font-detail text-xs text-gray-500 uppercase">
+                      <%= Enum.join(kr.qualifiers, ", ") %>
+                    </div>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
+      <div class="full-kaiju-cast hidden">
+        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+          <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
+            <div class="grid grid-cols-[150px_auto] gap-2">
+              <div class="grid justify-items-end">
+                <img
+                  class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+                  src={first.avatar_url}
+                />
+              </div>
+              <div class="flex flex-col justify-center">
+                <div class="font-content text-gray-500 text-sm sm:text-base"><%= kaiju_name %></div>
+                <%= for kr <- kaiju_roles do %>
+                  <div class="font-content sm:text-lg text-gray-700">
+                    <%= role_display_name(kr) %>
+                  </div>
+                  <%= if kr.qualifiers do %>
+                    <div class="font-detail text-xs text-gray-500 uppercase">
+                      <%= Enum.join(kr.qualifiers, ", ") %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <%= if length(@roles) > 6 do %>
+        <div class="expand-kaiju-cast text-center pt-6">
+          <button
+            class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
+            phx-click={expand_cast_group(:kaiju)}
+          >
+            <%= "+#{length(@roles) - 6} more" %>
+            <.icon name="hero-chevron-down-solid" />
+          </button>
+        </div>
+        <div class="hidden collapse-kaiju-cast text-center pt-6">
+          <button
+            class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
+            phx-click={collapse_cast_group(:kaiju)}
+          >
+            Show less <.icon name="hero-chevron-up-solid" />
+          </button>
+        </div>
+      <% end %>
     <% end %>
     """
   end

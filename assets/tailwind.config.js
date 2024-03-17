@@ -16,7 +16,7 @@ module.exports = {
         japanese: ["NotoSerifJP", "sans-serif"],
         display: ["Montserrat", "serif"],
         content: ["CrimsonPro", "serif"],
-        detail: ["SourceCodePro", "monospace"],
+        detail: ["SonoMono", "monospace"],
       },
     },
   },

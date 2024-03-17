@@ -113,6 +113,14 @@
 }
 
 @font-face {
+  font-family: "SonoMono";
+  src: url("../fonts/Sono-VariableFont_MONO_wght.ttf") format("truetype");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "NotoSerifJP";
   src: url("../fonts/NotoSerifJP-ExtraLight.otf") format("opentype");
   font-weight: 200;
