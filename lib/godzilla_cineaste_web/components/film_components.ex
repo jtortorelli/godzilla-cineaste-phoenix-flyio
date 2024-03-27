@@ -539,19 +539,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :name, :string, required: true
-
-  def named_divider(assigns) do
-    ~H"""
-    <div class="inline-flex items-center justify-center text-center w-full">
-      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-      <span class="absolute px-3 font-detail text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
-        <%= @name %>
-      </span>
-    </div>
-    """
-  end
-
   attr :film, Film, required: true
 
   def full_credits_modal(assigns) do

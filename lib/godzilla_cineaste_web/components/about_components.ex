@@ -12,6 +12,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
   end
 
   attr :time, :string, required: true
+  slot :inner_block, required: true
 
   def timeline_node(assigns) do
     ~H"""
@@ -32,8 +33,8 @@ defmodule GodzillaCineasteWeb.AboutComponents do
     <div class="text-center w-fit m-auto">
       <h1 class="font-display tracking-wider uppercase p-4 text-2xl text-gray-700">About</h1>
     </div>
-    <div class="text-xs font-extrabold font-display uppercase w-fit m-auto text-center  text-gray-500">
-      <ul class="flex flex-wrap -mb-px">
+    <div class="text-sm font-extrabold font-display uppercase w-fit m-auto text-center  text-gray-500">
+      <div class="flex flex-col sm:flex-row">
         <.about_section_link active={@active_section == :gist} href={~p"/about"} title="The Gist" />
         <.about_section_link
           active={@active_section == :history}
@@ -45,7 +46,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
           href={~p"/about/acknowledgements"}
           title="Acknowledgements"
         />
-      </ul>
+      </div>
     </div>
     """
   end
@@ -59,14 +60,92 @@ defmodule GodzillaCineasteWeb.AboutComponents do
     inactive_classes = "hover:text-gray-700"
 
     ~H"""
-    <li class="me-2">
+    <div>
       <a
         href={@href}
-        class={"inline-block p-4 rounded-t-lg #{if @active, do: active_classes, else: inactive_classes}"}
+        class={"inline-block p-1 px-4 rounded-t-lg #{if @active, do: active_classes, else: inactive_classes}"}
       >
         <%= @title %>
       </a>
-    </li>
+    </div>
+    """
+  end
+
+  attr :title, :string, required: true
+  attr :subtitle, :string, default: nil
+  attr :alias, :string, default: nil
+  attr :domain, :string, default: nil
+  attr :url, :string, default: nil
+  attr :author, :string, default: nil
+  attr :image_url, :string, default: nil
+  attr :isbn, :string, default: nil
+  attr :history, :string, default: nil
+  slot :works, default: nil
+
+  def acknowledgement_card(assigns) do
+    ~H"""
+    <div class="p-5">
+      <%= if @image_url do %>
+        <div class="lg:h-[150px] flex lg:items-center justify-center">
+          <div>
+            <.maybe_link_url url={@url}>
+              <img class="max-h-[150px] max-w-xs rounded-lg drop-shadow-lg" src={@image_url} />
+            </.maybe_link_url>
+          </div>
+        </div>
+      <% end %>
+      <div class="text-center">
+        <div class="font-content text-gray-700">
+          <.maybe_link_url url={@url}>
+            <%= @title %>
+          </.maybe_link_url>
+        </div>
+        <%= if @subtitle do %>
+          <div class="font-content text-gray-700 text-sm">
+            <%= @subtitle %>
+          </div>
+        <% end %>
+        <%= if @alias do %>
+          <div class="font-content text-sm text-gray-500">aka <%= @alias %></div>
+        <% end %>
+        <%= if @domain do %>
+          <div class="font-detail text-red-500 text-xs">
+            <.maybe_link_url url={@url}>
+              <%= @domain %>
+            </.maybe_link_url>
+          </div>
+        <% end %>
+        <%= if @history do %>
+          <div class="font-content text-sm text-gray-700"><%= @history %></div>
+        <% end %>
+        <%= if @isbn do %>
+          <div class="font-detail text-red-500 text-xs">
+            ISBN: <%= @isbn %>
+          </div>
+        <% end %>
+        <%= if @author do %>
+          <div class="font-content text-sm text-gray-700"><%= @author %></div>
+        <% end %>
+        <%= if @works do %>
+          <div class="font-content text-sm text-gray-500">
+            <%= render_slot(@works) %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    """
+  end
+
+  attr :url, :string, default: nil
+  slot :inner_block, required: true
+
+  def maybe_link_url(assigns) do
+    ~H"""
+    <%= if @url do %>
+      <a href={@url}><%= render_slot(@inner_block) %></a>
+    <% else %>
+      <%= render_slot(@inner_block) %>
+    <% end %>
     """
   end
 end
