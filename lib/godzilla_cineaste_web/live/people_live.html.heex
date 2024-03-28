@@ -1,0 +1,20 @@
+<div class="text-center w-fit m-auto">
+  <h1 class="font-display tracking-wider uppercase p-4 text-2xl text-gray-700">People</h1>
+</div>
+<div class="pb-6">
+  <div class="relative drop-shadow-lg">
+    <div class="absolute inset-y-0 start-0 flex pl-4 items-center ps-3 pointer-events-none text-red-700">
+      <.icon name="hero-magnifying-glass-solid" />
+    </div>
+    <input
+      type="search"
+      id="default-search"
+      class="font-content block w-full p-4 pl-12 ps-10 text-base text-red-700 border-none rounded-lg"
+      phx-keydown="people_search_change"
+      phx-debounce="200"
+    />
+  </div>
+</div>
+<%= for p <- @people do %>
+  <%= p.display_name %>
+<% end %>

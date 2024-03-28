@@ -23,6 +23,7 @@ defmodule GodzillaCineasteWeb.Router do
     get "/about/acknowledgements", AboutController, :acknowledgements
     live "/films", FilmsLive
     get "/films/:slug", FilmController, :show
+    live "/people", PeopleLive
   end
 
   # Other scopes may use custom stacks.
