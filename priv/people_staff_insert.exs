@@ -1,4 +1,4 @@
-alias CineasteData.{Film, Person, PersonStaff, Repo}
+alias GodzillaCineaste.{Film, Person, PersonStaff, Repo}
 
 # enter film slug here
 # e.g. godzilla-1954

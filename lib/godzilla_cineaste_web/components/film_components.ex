@@ -3,7 +3,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   alias NimbleCSV.RFC4180, as: CSV
 
-  alias CineasteData.{Film, Group, KaijuRole, Person, Role, Staff}
+  alias GodzillaCineaste.{Film, Group, KaijuRole, Person, Role, Staff}
 
   attr :film, Film, required: true
 

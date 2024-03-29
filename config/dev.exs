@@ -1,7 +1,7 @@
 import Config
 
 # Configure your database
-config :cineaste_data, CineasteData.Repo,
+config :godzilla_cineaste, GodzillaCineaste.Repo,
   url: System.get_env("DATABASE_URL"),
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,

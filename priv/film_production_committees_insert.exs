@@ -1,5 +1,5 @@
 alias NimbleCSV.RFC4180, as: CSV
-alias CineasteData.{Film, ProductionCommittee, ProductionCommitteeStudio, Repo, Studio}
+alias GodzillaCineaste.{Film, ProductionCommittee, ProductionCommitteeStudio, Repo, Studio}
 
 # "priv/production_committees.csv"
 # |> File.read!()

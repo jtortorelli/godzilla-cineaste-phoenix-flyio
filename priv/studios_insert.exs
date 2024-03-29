@@ -1,4 +1,4 @@
-alias CineasteData.{Repo, Studio}
+alias GodzillaCineaste.{Repo, Studio}
 
 studios = [
   %{slug: "20th-century-fox", display_name: "20th Century Fox", original_name: "20世紀フォックス"},

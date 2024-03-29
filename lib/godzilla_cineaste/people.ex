@@ -1,7 +1,7 @@
 defmodule GodzillaCineaste.People do
   import Ecto.Query
 
-  alias CineasteData.{Group, Person, Repo}
+  alias GodzillaCineaste.{Group, Person, Repo}
 
   def list_people(_search_term \\ nil) do
     person_query =

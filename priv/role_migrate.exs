@@ -1,5 +1,5 @@
 import Ecto.Query
-alias CineasteData.{Film, GroupRole, PersonRole, Repo, Role}
+alias GodzillaCineaste.{Film, GroupRole, PersonRole, Repo, Role}
 
 films = Repo.all(Film)
 

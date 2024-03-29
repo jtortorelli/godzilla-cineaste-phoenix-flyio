@@ -1,4 +1,4 @@
-alias CineasteData.{
+alias GodzillaCineaste.{
   AuthorWork,
   Film,
   FilmWork,

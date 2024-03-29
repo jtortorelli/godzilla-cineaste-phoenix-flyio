@@ -1,4 +1,4 @@
-alias CineasteData.{Film, Repo}
+alias GodzillaCineaste.{Film, Repo}
 
 original_titles = [
   {"13-assassins-2010",

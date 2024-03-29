@@ -1,4 +1,4 @@
-alias CineasteData.{Film, FilmStudio, Repo, Studio}
+alias GodzillaCineaste.{Film, FilmStudio, Repo, Studio}
 
 attrs = [
   # %{slug: "adventure-of-kigan-castle-1966", studios: ["toho", "mifune-productions"]},

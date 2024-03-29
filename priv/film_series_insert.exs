@@ -1,4 +1,4 @@
-alias CineasteData.{Film, FilmSeries, FilmSeriesEntry, Repo}
+alias GodzillaCineaste.{Film, FilmSeries, FilmSeriesEntry, Repo}
 
 series = [
   %{slug: "20th-century-boys", name: "20th Century Boys"},

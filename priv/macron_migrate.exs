@@ -1,4 +1,4 @@
-alias CineasteData.{
+alias GodzillaCineaste.{
   Film,
   FilmCredits,
   KaijuCharacter,

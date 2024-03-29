@@ -1,9 +1,7 @@
 defmodule GodzillaCineasteWeb.FilmController do
   use GodzillaCineasteWeb, :controller
 
-  alias CineasteData.{Group, Person}
-
-  alias GodzillaCineaste.Films
+  alias GodzillaCineaste.{Films, Group, Person}
 
   def index(conn, _params) do
     with films <- Films.list_films() do
