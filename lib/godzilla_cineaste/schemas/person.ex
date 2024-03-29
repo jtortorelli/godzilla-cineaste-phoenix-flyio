@@ -11,6 +11,7 @@ defmodule GodzillaCineaste.Person do
     field :sort_name, :string
     field :tenant, :integer
     field :disambig_chars, :string
+    field :avatar_url, :string
 
     has_many :kaiju_roles, KaijuRole
     has_many :roles, Role
@@ -24,7 +25,7 @@ defmodule GodzillaCineaste.Person do
   @doc false
   def changeset(person, attrs) do
     person
-    |> cast(attrs, [:slug, :display_name, :sort_name, :showcased, :tenant])
+    |> cast(attrs, [:avatar_url, :slug, :display_name, :sort_name, :showcased, :tenant])
     |> validate_required([:slug, :display_name, :sort_name, :showcased, :tenant])
   end
 end

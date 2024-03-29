@@ -10,6 +10,7 @@ defmodule GodzillaCineaste.Group do
     field :slug, :string
     field :sort_name, :string
     field :tenant, :integer
+    field :avatar_url, :string
 
     has_many :roles, Role
     has_many :staff, Staff
@@ -19,7 +20,7 @@ defmodule GodzillaCineaste.Group do
 
   def changeset(group, attrs) do
     group
-    |> cast(attrs, [:slug, :display_name, :sort_name, :showcased, :tenant])
+    |> cast(attrs, [:avatar_url, :slug, :display_name, :sort_name, :showcased, :tenant])
     |> validate_required([:slug, :display_name, :sort_name, :showcased, :tenant])
   end
 end
