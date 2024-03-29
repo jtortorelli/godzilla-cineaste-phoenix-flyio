@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Character do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.PersonRole
+  alias GodzillaCineaste.Role
 
   schema "characters" do
     field :display_name, :string
@@ -10,7 +10,7 @@ defmodule GodzillaCineaste.Character do
     field :slug, :string
     field :tenant, :integer
 
-    has_many :person_roles, PersonRole
+    has_many :roles, Role
 
     timestamps()
   end

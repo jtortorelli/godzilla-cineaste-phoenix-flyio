@@ -10,13 +10,8 @@ defmodule GodzillaCineaste.Film do
     FilmPosterUrl,
     FilmSeriesEntry,
     FilmStudio,
-    FilmSynopsis,
     FilmWork,
-    GroupRole,
-    GroupStaff,
     KaijuRole,
-    PersonRole,
-    PersonStaff,
     ProductionCommittee,
     Role,
     Staff,
@@ -32,7 +27,6 @@ defmodule GodzillaCineaste.Film do
     field :tenant, :integer
     field :title, :string
     field :pitch, :string
-    field :tagline, :string
 
     belongs_to :production_committee, ProductionCommittee
 
@@ -42,17 +36,11 @@ defmodule GodzillaCineaste.Film do
     embeds_many :display_title, FilmDisplayTitle, on_replace: :delete
 
     has_many :kaiju_roles, KaijuRole, preload_order: [asc: :order], on_replace: :delete
-    has_many :person_roles, PersonRole
-    has_many :person_staff, PersonStaff
-
-    has_many :group_roles, GroupRole
-    has_many :group_staff, GroupStaff
 
     has_many :roles, Role, preload_order: [asc: :order], on_replace: :delete
     has_many :staff, Staff, preload_order: [asc: :order], on_replace: :delete
 
     has_one :series_entry, FilmSeriesEntry
-    has_one :synopsis, FilmSynopsis
     has_one :credits, FilmCredits
 
     has_many :film_studios, FilmStudio, on_replace: :delete

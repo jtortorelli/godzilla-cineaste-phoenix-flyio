@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Group do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{GroupRole, GroupStaff}
+  alias GodzillaCineaste.{Role, Staff}
 
   schema "groups" do
     field :display_name, :string
@@ -11,8 +11,8 @@ defmodule GodzillaCineaste.Group do
     field :sort_name, :string
     field :tenant, :integer
 
-    has_many :group_roles, GroupRole
-    has_many :group_staff, GroupStaff
+    has_many :roles, Role
+    has_many :staff, Staff
 
     timestamps()
   end
