@@ -15,6 +15,18 @@
     />
   </div>
 </div>
-<%= for p <- @people do %>
-  <%= p.display_name %>
-<% end %>
+<div class="grid grid-cols-4 gap-2 font-content">
+  <%= for p <- @people do %>
+    <div class="flex flex-row items-center gap-2">
+      <div>
+        <img
+          class="h-[75px] w-[75px]  max-w-[150px] rounded-lg drop-shadow-lg"
+          src={p.avatar_url}
+        />
+      </div>
+      <div>
+        <%= p.display_name %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{AuthorWork, KaijuRole, Role, Staff, Work}
+  alias GodzillaCineaste.{AuthorWork, KaijuRole, PartialDate, Role, Staff, Work}
 
   schema "people" do
     field :display_name, :string
@@ -12,6 +12,9 @@ defmodule GodzillaCineaste.Person do
     field :tenant, :integer
     field :disambig_chars, :string
     field :avatar_url, :string
+
+    embeds_one :dob, PartialDate, on_replace: :update
+    embeds_one :dod, PartialDate, on_replace: :update
 
     has_many :kaiju_roles, KaijuRole
     has_many :roles, Role
@@ -27,5 +30,7 @@ defmodule GodzillaCineaste.Person do
     person
     |> cast(attrs, [:avatar_url, :slug, :display_name, :sort_name, :showcased, :tenant])
     |> validate_required([:slug, :display_name, :sort_name, :showcased, :tenant])
+    |> cast_embed(:dob)
+    |> cast_embed(:dod)
   end
 end
