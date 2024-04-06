@@ -33,4 +33,13 @@ defmodule GodzillaCineaste.Person do
     |> cast_embed(:dob)
     |> cast_embed(:dod)
   end
+
+  def display_date_range(person) do
+    case person do
+      %{dob: %{"year" => nil}, dod: %{"year" => nil}} -> nil
+      %{dob: %{"year" => year}, dod: %{"year" => nil, "unknown" => true}} -> "#{year} - ?"
+      %{dob: %{"year" => year}, dod: %{"year" => nil}} -> "b. #{year}"
+      %{dob: %{"year" => year}, dod: %{"year" => dod_year}} -> "#{year} - #{dod_year}"
+    end
+  end
 end

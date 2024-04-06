@@ -15,7 +15,7 @@
     />
   </div>
 </div>
-<div class="grid grid-cols-4 gap-2 font-content">
+<div class="grid grid-cols-4 gap-2 font-content text-gray-700">
   <%= for p <- @people do %>
     <div class="flex flex-row items-center gap-2">
       <div>
@@ -26,6 +26,10 @@
       </div>
       <div>
         <%= p.display_name %>
+        <br />
+        <%= if p.struct == "person" do %>
+          <span class="text-sm text-gray-500"><%= display_person_date_range(p) %></span>
+        <% end %>
       </div>
     </div>
   <% end %>
