@@ -27,7 +27,7 @@
       <div>
         <%= p.display_name %>
         <br />
-        <%= if p.struct == "person" do %>
+        <%= if p.type == :person do %>
           <span class="text-sm text-gray-500"><%= display_person_date_range(p) %></span>
         <% end %>
       </div>

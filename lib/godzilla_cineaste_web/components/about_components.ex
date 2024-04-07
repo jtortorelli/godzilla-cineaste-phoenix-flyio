@@ -1,4 +1,5 @@
 defmodule GodzillaCineasteWeb.AboutComponents do
+  @moduledoc false
   use GodzillaCineasteWeb, :html
 
   def timeline(assigns) do

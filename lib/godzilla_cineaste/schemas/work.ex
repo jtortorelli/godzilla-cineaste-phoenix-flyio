@@ -1,13 +1,14 @@
 defmodule GodzillaCineaste.Work do
+  @moduledoc false
   use Ecto.Schema
   import Ecto.Changeset
 
   alias GodzillaCineaste.{
     AuthorWork,
+    Entity,
     Film,
     FilmWork,
     Label,
-    Person,
     Publisher,
     Studio,
     StudioWork
@@ -35,7 +36,7 @@ defmodule GodzillaCineaste.Work do
     belongs_to :publisher, Publisher
     belongs_to :label, Label
 
-    many_to_many :authors, Person, join_through: AuthorWork
+    many_to_many :authors, Entity, join_through: AuthorWork
     many_to_many :films, Film, join_through: FilmWork
     many_to_many :studios, Studio, join_through: StudioWork
 

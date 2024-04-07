@@ -1,8 +1,9 @@
 defmodule GodzillaCineaste.Role do
+  @moduledoc false
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{Character, Film, Group, Person}
+  alias GodzillaCineaste.{Character, Entity, Film}
 
   schema "roles" do
     field :actor_alias, :string
@@ -20,8 +21,7 @@ defmodule GodzillaCineaste.Role do
 
     belongs_to :film, Film
     belongs_to :character, Character
-    belongs_to :person, Person
-    belongs_to :group, Group
+    belongs_to :entity, Entity
 
     timestamps()
   end
@@ -39,19 +39,17 @@ defmodule GodzillaCineaste.Role do
       :title,
       :film_id,
       :character_id,
-      :person_id,
-      :group_id,
+      :entity_id,
       :top_billed,
       :mergeable,
       :role_qualifiers,
       :character_qualifiers
     ])
-    |> validate_required([:order, :uncredited, :film_id, :top_billed])
+    |> validate_required([:order, :uncredited, :film_id, :top_billed, :entity_id])
     |> validate_identifying_info()
     |> assoc_constraint(:film)
     |> assoc_constraint(:character)
-    |> assoc_constraint(:person)
-    |> assoc_constraint(:group)
+    |> assoc_constraint(:entity)
   end
 
   def changeset(role, attrs, position) do
@@ -66,20 +64,18 @@ defmodule GodzillaCineaste.Role do
       :title,
       :film_id,
       :character_id,
-      :person_id,
-      :group_id,
+      :entity_id,
       :top_billed,
       :mergeable,
       :role_qualifiers,
       :character_qualifiers
     ])
     |> change(order: position)
-    |> validate_required([:order, :uncredited, :film_id])
+    |> validate_required([:order, :uncredited, :film_id, :entity_id])
     |> validate_identifying_info()
     |> assoc_constraint(:film)
     |> assoc_constraint(:character)
-    |> assoc_constraint(:person)
-    |> assoc_constraint(:group)
+    |> assoc_constraint(:entity)
   end
 
   defp validate_identifying_info(changeset) do

@@ -1,4 +1,5 @@
 defmodule GodzillaCineaste.ProductionCommitteeStudio do
+  @moduledoc false
   use Ecto.Schema
   import Ecto.Changeset
 
