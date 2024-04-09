@@ -7,6 +7,7 @@ defmodule GodzillaCineaste.Entity do
     field :avatar_url, :string
     field :display_name, :string
     field :metadata, :map, default: %{}
+    field :profession, :string
     field :showcased, :boolean, default: false
     field :slug, :string
     field :sort_name, :string
@@ -22,6 +23,7 @@ defmodule GodzillaCineaste.Entity do
       :avatar_url,
       :display_name,
       :metadata,
+      :profession,
       :showcased,
       :slug,
       :sort_name,

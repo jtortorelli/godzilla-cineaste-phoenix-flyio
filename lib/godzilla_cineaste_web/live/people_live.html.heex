@@ -27,8 +27,14 @@
       <div>
         <%= p.display_name %>
         <br />
+        <%= if p.profession do %>
+          <span class="text-sm text-gray-500"><%= p.profession %></span>
+          <br />
+        <% end %>
         <%= if p.type == :person do %>
-          <span class="text-sm text-gray-500"><%= display_person_date_range(p) %></span>
+          <span class="font-detail text-xs text-red-700">
+            <%= display_person_date_range(p) %>
+          </span>
         <% end %>
       </div>
     </div>

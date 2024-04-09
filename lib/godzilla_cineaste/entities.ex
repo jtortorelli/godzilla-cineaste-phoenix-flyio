@@ -15,9 +15,9 @@ defmodule GodzillaCineaste.Entities do
   def display_date_range(%Entity{type: :person, metadata: metadata}) do
     case metadata do
       %{"dob" => %{"year" => nil}, "dod" => %{"year" => nil}} -> nil
-      %{"dob" => %{"year" => year}, "dod" => %{"year" => nil, "unknown" => true}} -> "#{year} - ?"
+      %{"dob" => %{"year" => year}, "dod" => %{"year" => nil, "unknown" => true}} -> "#{year}-?"
       %{"dob" => %{"year" => year}, "dod" => %{"year" => nil}} -> "b. #{year}"
-      %{"dob" => %{"year" => year}, "dod" => %{"year" => dod_year}} -> "#{year} - #{dod_year}"
+      %{"dob" => %{"year" => year}, "dod" => %{"year" => dod_year}} -> "#{year}-#{dod_year}"
       true -> nil
     end
   end
