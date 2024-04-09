@@ -5,7 +5,7 @@ defmodule GodzillaCineasteWeb.PeopleLive do
 
   def mount(_params, _session, socket) do
     people = Entities.list_entities()
-    {:ok, assign(socket, people: people)}
+    {:ok, assign(socket, people: people, page_title: "People")}
   end
 
   def handle_event("people_search_change", %{"value" => _value}, socket) do

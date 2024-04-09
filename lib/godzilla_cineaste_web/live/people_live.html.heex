@@ -19,23 +19,27 @@
   <%= for p <- @people do %>
     <div class="flex flex-row items-center gap-2">
       <div>
-        <img
-          class="h-[75px] w-[75px]  max-w-[150px] rounded-lg drop-shadow-lg"
-          src={p.avatar_url}
-        />
+        <.link href={~p"/people/#{p.slug}"}>
+          <img
+            class="h-[75px] w-[75px]  max-w-[150px] rounded-lg drop-shadow-lg"
+            src={p.avatar_url}
+          />
+        </.link>
       </div>
       <div>
-        <%= p.display_name %>
-        <br />
-        <%= if p.profession do %>
-          <span class="text-sm text-gray-500"><%= p.profession %></span>
+        <.link href={~p"/people/#{p.slug}"}>
+          <%= p.display_name %>
           <br />
-        <% end %>
-        <%= if p.type == :person do %>
-          <span class="font-detail text-xs text-red-700">
-            <%= display_person_date_range(p) %>
-          </span>
-        <% end %>
+          <%= if p.profession do %>
+            <span class="text-sm text-gray-500"><%= p.profession %></span>
+            <br />
+          <% end %>
+          <%= if p.type == :person do %>
+            <span class="font-detail text-xs text-red-700">
+              <%= display_person_date_range(p) %>
+            </span>
+          <% end %>
+        </.link>
       </div>
     </div>
   <% end %>

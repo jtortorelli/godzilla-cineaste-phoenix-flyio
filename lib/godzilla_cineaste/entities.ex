@@ -23,4 +23,9 @@ defmodule GodzillaCineaste.Entities do
   end
 
   def display_date_range(_entity), do: nil
+
+  def get_entity_by_slug!(slug) do
+    Entity
+    |> Repo.get_by!(slug: slug)
+  end
 end

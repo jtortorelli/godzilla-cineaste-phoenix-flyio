@@ -20,12 +20,12 @@
     <%= for film <- @films do %>
       <div class="grid grid-cols-[101px_auto] items-center gap-3">
         <div>
-          <.link href={"/films/#{film.slug}"}>
+          <.link href={~p"/films/#{film.slug}"}>
             <.primary_poster film={film} height={150} width={101} />
           </.link>
         </div>
         <div>
-          <.link href={"/films/#{film.slug}"}>
+          <.link href={~p"/films/#{film.slug}"}>
             <div>
               <%= if Enum.empty?(film.display_title) do %>
                 <div class="font-content italic text-xl text-gray-700"><%= film.title %></div>

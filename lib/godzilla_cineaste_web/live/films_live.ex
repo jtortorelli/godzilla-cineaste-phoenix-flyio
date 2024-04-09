@@ -7,7 +7,7 @@ defmodule GodzillaCineasteWeb.FilmsLive do
 
   def mount(_params, _session, socket) do
     films = Films.list_films()
-    {:ok, assign(socket, films: films)}
+    {:ok, assign(socket, films: films, page_title: "Films")}
   end
 
   def handle_event("film_search_change", %{"value" => value}, socket) do
