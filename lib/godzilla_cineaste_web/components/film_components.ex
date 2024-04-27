@@ -4,7 +4,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   alias NimbleCSV.RFC4180, as: CSV
 
-  alias GodzillaCineaste.{Entity, Film, KaijuRole, Role}
+  alias GodzillaCineaste.{Film, Group, KaijuRole, Person, Role, Staff}
 
   attr :film, Film, required: true
 
@@ -328,10 +328,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               <%= raw(
                 Enum.map_join(staffs, "<br/>", fn staff ->
                   if has_disambig_chars?(staff) do
-                    staff.entity.display_name <>
-                      ~s| <span class="text-xs">(<span class="font-japanese">#{staff.entity.metadata["disambig_chars"]}</span>)</span>|
+                    staff_display_name(staff) <>
+                      ~s| <span class="text-xs">(<span class="font-japanese">#{staff.person.disambig_chars}</span>)</span>|
                   else
-                    staff.entity.display_name
+                    staff_display_name(staff)
                   end
                 end)
               ) %>
@@ -368,10 +368,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               <% end %>
             </div>
             <div class="font-content sm:text-lg text-gray-700">
-              <%= @primary_role.entity.display_name %>
+              <%= role_display_name(@primary_role) %>
               <%= if has_disambig_chars?(@primary_role) do %>
                 <span class="text-xs">
-                  (<span class="font-japanese"><%= @primary_role.entity.metadata["disambig_chars"] %></span>)
+                  (<span class="font-japanese"><%= @primary_role.person.disambig_chars %></span>)
                 </span>
               <% end %>
             </div>
@@ -383,7 +383,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <% end %>
             <%= for role <- @secondary_roles do %>
               <div class="font-content text-gray-700 text-lg">
-                <%= role.entity.display_name %>
+                <%= role_display_name(role) %>
               </div>
               <div class="font-detail text-xs text-gray-500 uppercase">
                 <%= role.role_qualifiers %>
@@ -628,12 +628,17 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     |> String.replace("Karyû", "<span class=\"italic\">Karyû</span>")
   end
 
-  defp role_display_name(%KaijuRole{entity: %Entity{display_name: display_name}}),
+  defp role_display_name(%Role{person: %Person{display_name: display_name}}),
+    do: display_name
+
+  defp role_display_name(%Role{group: %Group{display_name: display_name}}), do: display_name
+
+  defp role_display_name(%KaijuRole{person: %Person{display_name: display_name}}),
     do: display_name
 
   defp role_display_name(%KaijuRole{}), do: ""
 
-  defp has_disambig_chars?(%{entity: %Entity{metadata: %{"disambig_chars" => disambig_chars}}})
+  defp has_disambig_chars?(%{person: %Person{disambig_chars: disambig_chars}})
        when is_binary(disambig_chars),
        do: true
 
@@ -644,4 +649,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   defp role_title(%Role{title: title}), do: title
   defp role_title(_), do: nil
+
+  defp staff_display_name(%Staff{
+         person: %Person{display_name: display_name}
+       }),
+       do: display_name
+
+  defp staff_display_name(%Staff{
+         group: %Group{display_name: display_name}
+       }),
+       do: display_name
 end

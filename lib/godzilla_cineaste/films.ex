@@ -36,9 +36,9 @@ defmodule GodzillaCineaste.Films do
       works: [:authors, :studios],
       series_entry: [film_series: [entries: :film]],
       credits: [],
-      kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:entity, :kaiju_character]},
-      roles: {from(r in Role, order_by: [r.order]), [:entity]},
-      staff: {from(s in Staff, order_by: [s.order]), [:entity]}
+      kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
+      roles: {from(r in Role, order_by: [r.order]), [:person, :group]},
+      staff: {from(s in Staff, order_by: [s.order]), [:person, :group]}
     )
   end
 

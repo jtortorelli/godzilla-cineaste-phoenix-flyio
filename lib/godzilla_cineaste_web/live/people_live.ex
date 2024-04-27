@@ -1,10 +1,10 @@
 defmodule GodzillaCineasteWeb.PeopleLive do
   use GodzillaCineasteWeb, :live_view
 
-  alias GodzillaCineaste.{Entities}
+  alias GodzillaCineaste.{People, Person}
 
   def mount(_params, _session, socket) do
-    people = Entities.list_entities()
+    people = People.list_people()
     {:ok, assign(socket, people: people, page_title: "People")}
   end
 
@@ -13,6 +13,6 @@ defmodule GodzillaCineasteWeb.PeopleLive do
   end
 
   def display_person_date_range(person) do
-    Entities.display_date_range(person)
+    Person.display_date_range(person)
   end
 end

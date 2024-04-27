@@ -3,7 +3,7 @@ defmodule GodzillaCineaste.KaijuRole do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{Entity, Film, KaijuCharacter, KaijuVariant}
+  alias GodzillaCineaste.{Film, KaijuCharacter, KaijuVariant, Person}
 
   schema "kaiju_roles" do
     field :actor_alias, :string
@@ -13,10 +13,10 @@ defmodule GodzillaCineaste.KaijuRole do
     field :qualifiers, {:array, :string}
     field :uncredited, :boolean, default: false
 
-    belongs_to :entity, Entity
     belongs_to :film, Film
     belongs_to :kaiju_character, KaijuCharacter
     belongs_to :kaiju_variant, KaijuVariant
+    belongs_to :person, Person
 
     timestamps()
   end
@@ -32,15 +32,15 @@ defmodule GodzillaCineaste.KaijuRole do
       :kaiju_variant_id,
       :name,
       :order,
-      :entity_id,
       :qualifiers,
-      :uncredited
+      :uncredited,
+      :person_id
     ])
     |> validate_required([:film_id, :name, :order, :uncredited])
     |> assoc_constraint(:film)
     |> assoc_constraint(:kaiju_character)
     |> assoc_constraint(:kaiju_variant)
-    |> assoc_constraint(:entity)
+    |> assoc_constraint(:person)
   end
 
   def changeset(kaiju_role, attrs, position) do
@@ -52,7 +52,8 @@ defmodule GodzillaCineaste.KaijuRole do
       :kaiju_character_id,
       :kaiju_variant_id,
       :name,
-      :uncredited
+      :uncredited,
+      :person_id
     ])
     |> cast(attrs, [:qualifiers], empty_values: [])
     |> change(order: position)
@@ -60,5 +61,6 @@ defmodule GodzillaCineaste.KaijuRole do
     |> assoc_constraint(:film)
     |> assoc_constraint(:kaiju_character)
     |> assoc_constraint(:kaiju_variant)
+    |> assoc_constraint(:person_id)
   end
 end

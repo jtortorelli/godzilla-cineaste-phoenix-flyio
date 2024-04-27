@@ -3,7 +3,8 @@ defmodule GodzillaCineaste.Role do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{Character, Entity, Film}
+  alias GodzillaCineaste.Person
+  alias GodzillaCineaste.{Character, Film, Group, Person}
 
   schema "roles" do
     field :actor_alias, :string
@@ -21,7 +22,8 @@ defmodule GodzillaCineaste.Role do
 
     belongs_to :film, Film
     belongs_to :character, Character
-    belongs_to :entity, Entity
+    belongs_to :person, Person
+    belongs_to :group, Group
 
     timestamps()
   end
@@ -31,25 +33,32 @@ defmodule GodzillaCineaste.Role do
     |> cast(attrs, [
       :actor_alias,
       :avatar_url,
+      :character_id,
+      :character_qualifiers,
       :description,
+      :film_id,
+      :group_id,
+      :mergeable,
       :name,
       :order,
-      :uncredited,
+      :person_id,
       :qualifiers,
-      :title,
-      :film_id,
-      :character_id,
-      :entity_id,
-      :top_billed,
-      :mergeable,
       :role_qualifiers,
-      :character_qualifiers
+      :uncredited,
+      :title,
+      :top_billed
     ])
-    |> validate_required([:order, :uncredited, :film_id, :top_billed, :entity_id])
+    |> validate_required([
+      :order,
+      :uncredited,
+      :film_id,
+      :top_billed
+    ])
     |> validate_identifying_info()
     |> assoc_constraint(:film)
     |> assoc_constraint(:character)
-    |> assoc_constraint(:entity)
+    |> assoc_constraint(:person)
+    |> assoc_constraint(:group)
   end
 
   def changeset(role, attrs, position) do
@@ -64,18 +73,20 @@ defmodule GodzillaCineaste.Role do
       :title,
       :film_id,
       :character_id,
-      :entity_id,
       :top_billed,
       :mergeable,
       :role_qualifiers,
-      :character_qualifiers
+      :character_qualifiers,
+      :person_id,
+      :group_id
     ])
     |> change(order: position)
-    |> validate_required([:order, :uncredited, :film_id, :entity_id])
+    |> validate_required([:order, :uncredited, :film_id])
     |> validate_identifying_info()
     |> assoc_constraint(:film)
     |> assoc_constraint(:character)
-    |> assoc_constraint(:entity)
+    |> assoc_constraint(:person)
+    |> assoc_constraint(:group)
   end
 
   defp validate_identifying_info(changeset) do

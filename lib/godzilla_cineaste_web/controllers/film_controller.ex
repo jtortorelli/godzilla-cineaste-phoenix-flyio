@@ -1,7 +1,7 @@
 defmodule GodzillaCineasteWeb.FilmController do
   use GodzillaCineasteWeb, :controller
 
-  alias GodzillaCineaste.Films
+  alias GodzillaCineaste.{Films, Group, Person}
 
   def index(conn, _params) do
     with films <- Films.list_films() do
@@ -16,7 +16,10 @@ defmodule GodzillaCineasteWeb.FilmController do
         Enum.split_with(film.roles, fn role -> role.top_billed end)
 
       rest_of_roles =
-        Enum.sort_by(rest_of_roles, & &1.entity.sort_name)
+        Enum.sort_by(rest_of_roles, fn
+          %{person: %Person{sort_name: sort_name}} -> sort_name
+          %{group: %Group{sort_name: sort_name}} -> sort_name
+        end)
 
       render(conn, :show,
         page_title: film.title,
