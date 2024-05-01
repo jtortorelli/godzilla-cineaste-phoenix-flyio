@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.PartialDate
+  alias GodzillaCineaste.{PartialDate, PersonAlternateName}
 
   schema "people" do
     field :slug, :string
@@ -17,6 +17,9 @@ defmodule GodzillaCineaste.Person do
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update
+
+    embeds_many :alternate_names, PersonAlternateName, on_replace: :delete
+
     timestamps()
   end
 
@@ -37,6 +40,7 @@ defmodule GodzillaCineaste.Person do
     |> unique_constraint([:slug])
     |> cast_embed(:dob)
     |> cast_embed(:dod)
+    |> cast_embed(:alternate_names)
   end
 
   def display_date_range(person) do
@@ -46,5 +50,9 @@ defmodule GodzillaCineaste.Person do
       %{dob: %{"year" => year}, dod: %{"year" => nil}} -> "b. #{year}"
       %{dob: %{"year" => year}, dod: %{"year" => dod_year}} -> "#{year}-#{dod_year}"
     end
+  end
+
+  def birth_name(%__MODULE__{alternate_names: alternate_names}) do
+    Enum.find(alternate_names, &(&1.category == :"birth name"))
   end
 end
