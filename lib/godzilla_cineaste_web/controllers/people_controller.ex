@@ -5,7 +5,8 @@ defmodule GodzillaCineasteWeb.PeopleController do
 
   def show(conn, %{"slug" => slug}) do
     entity = People.get_entity_by_slug!(slug)
+    cards = People.build_cards(entity)
 
-    render(conn, :show, entity: entity, page_title: entity.display_name)
+    render(conn, :show, entity: entity, cards: cards, page_title: entity.display_name)
   end
 end

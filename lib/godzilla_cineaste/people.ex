@@ -1,6 +1,6 @@
 defmodule GodzillaCineaste.People do
   import Ecto.Query
-  alias GodzillaCineaste.{Group, Person, Repo}
+  alias GodzillaCineaste.{Group, PartialDate, Person, Repo}
 
   def list_people(_search_term \\ nil) do
     person_query =
@@ -48,6 +48,30 @@ defmodule GodzillaCineaste.People do
   def get_entity_by_slug!(slug) do
     with nil <- Repo.get_by(Person, slug: slug) do
       Repo.get_by!(Group, slug: slug)
+    end
+  end
+
+  def build_cards(%Person{} = person) do
+    [
+      build_birth_card(person)
+    ]
+    |> List.flatten()
+    |> Enum.sort_by(& &1.date, Date)
+  end
+
+  defp build_birth_card(%Person{} = person) do
+    if Person.has_birth_date?(person) do
+      [
+        %{
+          type: :birth,
+          date: PartialDate.initialize_date(person.dob),
+          birth_name: Person.birth_name(person),
+          birth_date: PartialDate.display_date(person.dob),
+          birth_place: Person.display_birth_place(person)
+        }
+      ]
+    else
+      []
     end
   end
 end
