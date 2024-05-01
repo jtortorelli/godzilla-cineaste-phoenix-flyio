@@ -59,6 +59,8 @@ defmodule GodzillaCineaste.People do
     |> Enum.sort_by(& &1.date, Date)
   end
 
+  def build_cards(_), do: []
+
   defp build_birth_card(%Person{} = person) do
     if Person.has_birth_date?(person) do
       [
