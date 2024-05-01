@@ -1,6 +1,6 @@
 defmodule GodzillaCineaste.People do
   import Ecto.Query
-  alias GodzillaCineaste.{Group, PartialDate, Person, Repo}
+  alias GodzillaCineaste.{Group, PartialDate, Person, PersonAlternateName, Repo}
 
   def list_people(_search_term \\ nil) do
     person_query =
@@ -63,11 +63,15 @@ defmodule GodzillaCineaste.People do
 
   defp build_birth_card(%Person{} = person) do
     if Person.has_birth_date?(person) do
+      %PersonAlternateName{name: name, japanese_name: japanese_name} =
+        Person.birth_name(person)
+
       [
         %{
           type: :birth,
           date: PartialDate.initialize_date(person.dob),
-          birth_name: Person.birth_name(person),
+          birth_name: name,
+          japanese_birth_name: japanese_name,
           birth_date: PartialDate.display_date(person.dob),
           birth_place: Person.display_birth_place(person)
         }

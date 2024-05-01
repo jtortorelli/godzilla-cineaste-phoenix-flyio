@@ -10,7 +10,7 @@
 <div class="text-center w-fit m-auto">
   <img class="rounded-lg drop-shadow-lg" src={@entity.avatar_url} />
 </div>
-<div>
+<div class="mt-4">
   <%= for card <- @cards do %>
     <.entity_card card={card} />
   <% end %>

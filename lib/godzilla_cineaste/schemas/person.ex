@@ -61,7 +61,7 @@ defmodule GodzillaCineaste.Person do
   end
 
   def birth_name(%__MODULE__{alternate_names: alternate_names}) do
-    Enum.find(alternate_names, &(&1.category == :"birth name"))
+    Enum.find(alternate_names, &(&1.category == :birth_name)) || %PersonAlternateName{}
   end
 
   def display_birth_place(%__MODULE__{
