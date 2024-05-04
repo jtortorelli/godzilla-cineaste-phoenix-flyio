@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{PartialDate, PersonAlternateName}
+  alias GodzillaCineaste.{PartialDate, PersonAlternateName, Place}
 
   schema "people" do
     field :slug, :string
@@ -21,6 +21,9 @@ defmodule GodzillaCineaste.Person do
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update
+
+    embeds_one :birth_place, Place, on_replace: :update
+    embeds_one :death_place, Place, on_replace: :update
 
     embeds_many :alternate_names, PersonAlternateName, on_replace: :delete
 
@@ -49,6 +52,8 @@ defmodule GodzillaCineaste.Person do
     |> cast_embed(:dob)
     |> cast_embed(:dod)
     |> cast_embed(:alternate_names)
+    |> cast_embed(:birth_place)
+    |> cast_embed(:death_place)
   end
 
   def display_date_range(person) do
