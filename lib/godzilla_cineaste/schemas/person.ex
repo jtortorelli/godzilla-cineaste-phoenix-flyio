@@ -14,10 +14,6 @@ defmodule GodzillaCineaste.Person do
     field :profession, :string
     field :avatar_url, :string
     field :japanese_name, :string
-    field :birth_ward, :string
-    field :birth_city, :string
-    field :birth_country_subdivision, :string
-    field :birth_country, :string
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update
@@ -41,11 +37,7 @@ defmodule GodzillaCineaste.Person do
       :disambig_chars,
       :profession,
       :avatar_url,
-      :japanese_name,
-      :birth_ward,
-      :birth_city,
-      :birth_country_subdivision,
-      :birth_country
+      :japanese_name
     ])
     |> validate_required([:slug, :display_name, :showcased, :tenant])
     |> unique_constraint([:slug])
@@ -70,11 +62,13 @@ defmodule GodzillaCineaste.Person do
   end
 
   def display_birth_place(%__MODULE__{
-        birth_city: birth_city,
-        birth_country_subdivision: birth_country_subdivision,
-        birth_country: birth_country
+        birth_place: %Place{
+          city: city,
+          country_subdivision: country_subdivision,
+          country: country
+        }
       }) do
-    [birth_city, birth_country_subdivision, birth_country]
+    [city, country_subdivision, country]
     |> Enum.reject(&is_nil/1)
     |> Enum.join(", ")
   end
