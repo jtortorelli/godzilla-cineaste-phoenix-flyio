@@ -16,12 +16,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <%= if @birth_name do %>
         <div class="text-center font-content text-lg text-gray-700"><%= @birth_name %></div>
         <%= if @japanese_birth_name do %>
-          <div class="text-center font-japanese text-sm text-gray-500"><%= @japanese_birth_name %></div>
+          <div class="text-center font-japanese text-xs text-gray-500"><%= @japanese_birth_name %></div>
         <% end %>
       <% end %>
       <div class="text-center font-content text-lg text-gray-700"><%= @birth_date %></div>
       <%= if @birth_place do %>
-        <div class="text-center font-detail text-gray-500 text-sm"><%= @birth_place %></div>
+        <div class="text-center font-detail uppercase text-gray-500 text-xs"><%= @birth_place %></div>
       <% end %>
     </div>
     """
