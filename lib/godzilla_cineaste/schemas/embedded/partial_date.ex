@@ -31,4 +31,12 @@ defmodule GodzillaCineaste.PartialDate do
   end
 
   def display_date(%__MODULE__{}), do: nil
+
+  def diff_from_now(%__MODULE__{} = partial_date) do
+    Timex.diff(Timex.now(), initialize_date(partial_date), :years)
+  end
+
+  def diff(%__MODULE__{} = start_date, %__MODULE__{} = end_date) do
+    Timex.diff(initialize_date(end_date), initialize_date(start_date), :years)
+  end
 end

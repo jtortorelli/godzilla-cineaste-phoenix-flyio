@@ -61,18 +61,36 @@ defmodule GodzillaCineaste.Person do
     Enum.find(alternate_names, &(&1.category == :birth_name)) || %PersonAlternateName{}
   end
 
-  def display_birth_place(%__MODULE__{
-        birth_place: %Place{
-          city: city,
-          country_subdivision: country_subdivision,
-          country: country
-        }
-      }) do
-    [city, country_subdivision, country]
-    |> Enum.reject(&is_nil/1)
-    |> Enum.join(", ")
-  end
-
   def has_birth_date?(%__MODULE__{dob: %PartialDate{year: year}}) when is_integer(year), do: true
   def has_birth_date?(%__MODULE__{}), do: false
+
+  def has_death_date?(%__MODULE__{dod: %PartialDate{year: year}}) when is_integer(year), do: true
+  def has_death_date?(%__MODULE__{}), do: false
+
+  def unknown_death_date?(%__MODULE__{dod: %PartialDate{unknown: true}}), do: true
+  def unknown_death_date?(%__MODULE__{}), do: false
+
+  def status(%__MODULE__{} = person) do
+    cond do
+      is_struct(person.dob) and is_nil(person.dod) ->
+        :alive
+
+      is_struct(person.dob) and is_struct(person.dod) and unknown_death_date?(person) ->
+        :deceased_unknown_date
+
+      is_struct(person.dob) and is_struct(person.dod) ->
+        :deceased
+
+      true ->
+        :unknown
+    end
+  end
+
+  def age(%__MODULE__{} = person) do
+    case status(person) do
+      :alive -> PartialDate.diff_from_now(person.dob)
+      :deceased -> PartialDate.diff(person.dob, person.dod)
+      _ -> nil
+    end
+  end
 end

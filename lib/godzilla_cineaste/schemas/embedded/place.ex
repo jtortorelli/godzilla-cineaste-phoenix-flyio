@@ -12,4 +12,14 @@ defmodule GodzillaCineaste.Place do
   def changeset(place, attrs) do
     cast(place, attrs, [:city, :country_subdivision, :country])
   end
+
+  def display_place(%__MODULE__{
+        city: city,
+        country_subdivision: country_subdivision,
+        country: country
+      }) do
+    [city, country_subdivision, country]
+    |> Enum.reject(&is_nil/1)
+    |> Enum.join(", ")
+  end
 end

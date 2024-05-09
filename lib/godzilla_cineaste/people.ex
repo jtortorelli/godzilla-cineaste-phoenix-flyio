@@ -1,6 +1,6 @@
 defmodule GodzillaCineaste.People do
   import Ecto.Query
-  alias GodzillaCineaste.{Group, PartialDate, Person, PersonAlternateName, Repo}
+  alias GodzillaCineaste.{Group, PartialDate, Person, PersonAlternateName, Place, Repo}
 
   def list_people(_search_term \\ nil) do
     person_query =
@@ -53,7 +53,8 @@ defmodule GodzillaCineaste.People do
 
   def build_cards(%Person{} = person) do
     [
-      build_birth_card(person)
+      build_birth_card(person),
+      build_death_card(person)
     ]
     |> List.flatten()
     |> Enum.sort_by(& &1.date, Date)
@@ -73,7 +74,30 @@ defmodule GodzillaCineaste.People do
           birth_name: name,
           japanese_birth_name: japanese_name,
           birth_date: PartialDate.display_date(person.dob),
-          birth_place: Person.display_birth_place(person)
+          birth_place: Place.display_place(person.birth_place)
+        }
+      ]
+    else
+      []
+    end
+  end
+
+  defp build_death_card(%Person{} = person) do
+    if Person.has_death_date?(person) || Person.unknown_death_date?(person) do
+      {date, death_date} =
+        if Person.has_death_date?(person) do
+          {PartialDate.initialize_date(person.dod), PartialDate.display_date(person.dod)}
+        else
+          {Timex.now(), "Unknown Date"}
+        end
+
+      [
+        %{
+          type: :death,
+          date: date,
+          death_date: death_date,
+          death_place: Place.display_place(person.death_place),
+          age: Person.age(person)
         }
       ]
     else
