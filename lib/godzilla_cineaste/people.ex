@@ -1,6 +1,17 @@
 defmodule GodzillaCineaste.People do
   import Ecto.Query
-  alias GodzillaCineaste.{Group, PartialDate, Person, PersonAlternateName, Place, Repo}
+
+  alias GodzillaCineaste.{
+    Film,
+    Group,
+    PartialDate,
+    Person,
+    PersonAlternateName,
+    Place,
+    Repo,
+    Role,
+    Staff
+  }
 
   def list_people(_search_term \\ nil) do
     person_query =
@@ -54,6 +65,7 @@ defmodule GodzillaCineaste.People do
   def build_cards(%Person{} = person) do
     [
       build_birth_card(person),
+      build_role_cards(person),
       build_death_card(person)
     ]
     |> List.flatten()
@@ -103,5 +115,36 @@ defmodule GodzillaCineaste.People do
     else
       []
     end
+  end
+
+  defp build_role_cards(%Person{} = person) do
+    %Person{roles: roles, staff: staff} = Repo.preload(person, roles: :film, staff: :film)
+
+    (roles ++ staff)
+    |> Enum.group_by(& &1.film_id)
+    |> Enum.map(fn {_k, v} -> build_role_card(v) end)
+  end
+
+  defp build_role_card(values) do
+    [%{film: %Film{} = film} | _] = values
+
+    %{roles: roles, staff: staff} =
+      values
+      |> Enum.reduce(%{staff: [], roles: []}, fn
+        %Role{} = v, acc -> Map.put(acc, :roles, [v | acc.roles])
+        %Staff{} = v, acc -> Map.put(acc, :staff, [v | acc.staff])
+      end)
+      |> Enum.map(fn {k, v} -> {k, Enum.sort_by(v, & &1.order)} end)
+      |> Enum.into(%{})
+
+    %{
+      type: :film,
+      date: film.release_date,
+      film_title: film.title,
+      film_release_date: Film.display_release_date(film),
+      film_poster_url: Film.primary_poster_url(film),
+      roles: roles,
+      staff: staff
+    }
   end
 end

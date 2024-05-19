@@ -107,4 +107,12 @@ defmodule GodzillaCineaste.Film do
     )
     |> assoc_constraint(:production_committee)
   end
+
+  def display_release_date(%__MODULE__{} = film) do
+    Timex.format!(film.release_date, "{D} {Mshort} {YYYY}")
+  end
+
+  def primary_poster_url(%__MODULE__{} = film) do
+    Enum.find_value(film.poster_urls, fn pu -> if pu.primary, do: pu.url end)
+  end
 end

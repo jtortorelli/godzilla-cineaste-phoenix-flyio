@@ -48,7 +48,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         class="rounded-lg drop-shadow-lg"
         height={@height}
         width={@width}
-        src={Enum.find_value(@film.poster_urls, fn pu -> if pu.primary, do: pu.url end)}
+        src={Film.primary_poster_url(@film)}
       />
     </div>
     """
@@ -60,7 +60,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <div class="text-gray-700 font-content flex justify-center space-x-8">
       <div><%= "#{@film.runtime}m" %></div>
-      <div><%= Timex.format!(@film.release_date, "{D} {Mshort} {YYYY}") %></div>
+      <div><%= Film.display_release_date(@film) %></div>
     </div>
     """
   end
@@ -361,7 +361,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div class="flex flex-col justify-center">
             <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
             <div class="font-content text-gray-500 sm:text-base text-sm">
-              <%= raw(process_role_name(@primary_role.name || @primary_role.description)) %>
+              <%= raw(Role.process_role_name(@primary_role.name || @primary_role.description)) %>
               <%= if @primary_role.character_qualifiers do %>
                 <br />
                 <span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span>
@@ -617,15 +617,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     title
     |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
     |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
-  end
-
-  defp process_role_name(role_name) do
-    role_name
-    |> String.replace("-maru", "<span class=\"italic\">-maru</span>")
-    |> String.replace("-seijin", "<span class=\"italic\">-seijin</span>")
-    |> String.replace("Gôtengô", "<span class=\"italic\">Gôtengô</span>")
-    |> String.replace("Eclair", "<span class=\"italic\">Eclair</span>")
-    |> String.replace("Karyû", "<span class=\"italic\">Karyû</span>")
   end
 
   defp role_display_name(%Role{person: %Person{display_name: display_name}}),

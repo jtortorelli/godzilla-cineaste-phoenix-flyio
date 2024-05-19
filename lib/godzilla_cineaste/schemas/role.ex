@@ -89,6 +89,19 @@ defmodule GodzillaCineaste.Role do
     |> assoc_constraint(:group)
   end
 
+  def role_display_name(%__MODULE__{} = role) do
+    [role.title, process_role_name(role.name || role.description)] |> Enum.join(" ")
+  end
+
+  def process_role_name(role_name) do
+    role_name
+    |> String.replace("-maru", "<span class=\"italic\">-maru</span>")
+    |> String.replace("-seijin", "<span class=\"italic\">-seijin</span>")
+    |> String.replace("Gôtengô", "<span class=\"italic\">Gôtengô</span>")
+    |> String.replace("Eclair", "<span class=\"italic\">Eclair</span>")
+    |> String.replace("Karyû", "<span class=\"italic\">Karyû</span>")
+  end
+
   defp validate_identifying_info(changeset) do
     case apply_changes(changeset) do
       %{name: nil, description: nil} ->

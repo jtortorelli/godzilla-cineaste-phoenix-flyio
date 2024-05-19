@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{PartialDate, PersonAlternateName, Place}
+  alias GodzillaCineaste.{PartialDate, PersonAlternateName, Place, Role, Staff}
 
   schema "people" do
     field :slug, :string
@@ -14,6 +14,9 @@ defmodule GodzillaCineaste.Person do
     field :profession, :string
     field :avatar_url, :string
     field :japanese_name, :string
+
+    has_many :roles, Role
+    has_many :staff, Staff
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update
