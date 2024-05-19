@@ -12,7 +12,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     ~H"""
     <div class="shadow-lg rounded-lg p-4 bg-yellow-200 w-64">
       <div class="flex items-end gap-2 mb-2">
-        <div><.icon name="hero-cake-solid text-gray-500 h-4 w-4" /></div>
+        <div><.icon name="hero-sun text-gray-500 h-4 w-4" /></div>
         <div class="font-display uppercase font-extrabold text-gray-500 text-sm">Born</div>
       </div>
       <%= if @birth_name do %>
