@@ -10,22 +10,18 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   def birth_card(assigns) do
     ~H"""
-    <div class="shadow-lg rounded-lg p-4 bg-yellow-200 w-64">
-      <div class="flex items-end gap-2 mb-2">
-        <div><.icon name="hero-sun text-gray-500 h-4 w-4" /></div>
-        <div class="font-display uppercase font-extrabold text-gray-500 text-sm">Born</div>
-      </div>
+    <div class="p-4 w-64">
       <%= if @birth_name do %>
-        <div class="text-center font-content text-lg text-gray-700"><%= @birth_name %></div>
+        <div class="font-content text-lg text-gray-700"><%= @birth_name %></div>
         <%= if @japanese_birth_name do %>
-          <div class="text-center font-japanese text-xs text-gray-500">
+          <div class="font-japanese text-xs text-gray-500">
             <%= @japanese_birth_name %>
           </div>
         <% end %>
       <% end %>
-      <div class="text-center font-content text-lg text-gray-700"><%= @birth_date %></div>
+      <div class="font-content text-lg text-gray-700"><%= @birth_date %></div>
       <%= if @birth_place do %>
-        <div class="text-center font-detail uppercase text-gray-500 text-xs"><%= @birth_place %></div>
+        <div class="font-detail uppercase text-gray-500 text-xs"><%= @birth_place %></div>
       <% end %>
     </div>
     """
@@ -37,17 +33,13 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   def death_card(assigns) do
     ~H"""
-    <div class="shadow-lg rounded-lg p-4 bg-black w-64">
-      <div class="flex items-end gap-2 mb-2">
-        <div><.icon name="hero-moon-solid text-white h-4 w-4" /></div>
-        <div class="font-display uppercase font-extrabold text-white text-sm">Died</div>
-      </div>
-      <div class="text-center font-content text-lg text-white"><%= @death_date %></div>
+    <div class="p-4 w-64">
+      <div class="font-content text-lg"><%= @death_date %></div>
       <%= if @age do %>
-        <div class="text-center font-content text-white">Aged <%= @age %></div>
+        <div class="font-content">Aged <%= @age %></div>
       <% end %>
       <%= if @death_place do %>
-        <div class="text-center font-detail uppercase text-white text-xs"><%= @death_place %></div>
+        <div class="font-detail uppercase text-xs"><%= @death_place %></div>
       <% end %>
     </div>
     """
@@ -61,39 +53,35 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   def film_card(assigns) do
     ~H"""
-    <div class="shadow-lg rounded-lg p-4 w-64">
-      <div class="flex items-end gap-2 mb-2">
-        <div><.icon name="hero-film-solid" class="w-6 h-6 text-red-700" /></div>
-        <div class="font-display uppercase font-extrabold text-red-700 text-sm">Film</div>
+    <div class="p-4 w-64">
+      <div class="font-content text-lg italic"><%= @film_title %></div>
+      <div class="font-detail text-red-700 text-xs uppercase">
+        <%= @film_release_date %>
       </div>
-      <div><img src={@film_poster_url} class="rounded-l-lg h-44" /></div>
-      <div class="p-4">
-        <div class="text-center font-detail text-red-700 text-xs uppercase">
-          <%= @film_release_date %>
-        </div>
-        <%= unless Enum.empty?(@staff) do %>
-        <% end %>
-        <%= unless Enum.empty?(@roles) do %>
-          <div class="text-center font-content text-gray-700">Actor</div>
-          <div class="text-center font-detail text-gray-500 text-xs uppercase">as</div>
-          <%= for r <- @roles do %>
-            <div class="text-center font-content text-gray-700">
-              <%= raw(Role.role_display_name(r)) %>
-              <%= if r.character_qualifiers do %>
-                <span class="text-sm">(<%= r.character_qualifiers %>)</span>
-              <% end %>
+      <div>
+        <img src={@film_poster_url} class="rounded-lg h-44" />
+      </div>
+      <%= unless Enum.empty?(@staff) do %>
+      <% end %>
+      <%= unless Enum.empty?(@roles) do %>
+        <div class="font-detail text-gray-500 text-xs uppercase">as</div>
+        <%= for r <- @roles do %>
+          <div class="font-content text-gray-700">
+            <%= raw(Role.role_display_name(r)) %>
+            <%= if r.character_qualifiers do %>
+              <span class="text-sm">(<%= r.character_qualifiers %>)</span>
+            <% end %>
+          </div>
+          <%= if r.role_qualifiers do %>
+            <div class="text-xs font-detail text-gray-500 uppercase">
+              <%= r.role_qualifiers %>
             </div>
-            <%= if r.role_qualifiers do %>
-              <div class="text-center text-xs font-detail text-gray-500 uppercase">
-                <%= r.role_qualifiers %>
-              </div>
-            <% end %>
-            <%= if r.uncredited do %>
-              <div class="text-center text-xs font-detail text-red-700 uppercase">Uncredited</div>
-            <% end %>
+          <% end %>
+          <%= if r.uncredited do %>
+            <div class="text-xs font-detail text-red-700 uppercase">Uncredited</div>
           <% end %>
         <% end %>
-      </div>
+      <% end %>
     </div>
     """
   end
@@ -120,6 +108,57 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           roles={@card.roles}
           staff={@card.staff}
         />
+      <% _ -> %>
+    <% end %>
+    """
+  end
+
+  attr :card_type, :atom, required: true
+
+  def timeline_node(assigns) do
+    ~H"""
+    <li class="relative mb-6 sm:mb-0">
+      <div class="flex items-center">
+        <.timeline_node_icon card_type={@card_type} />
+        <div class="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
+      </div>
+      <div class="mt-3 mb-3 sm:pe-8">
+        <%= render_slot(@inner_block) %>
+      </div>
+    </li>
+    """
+  end
+
+  def timeline(assigns) do
+    ~H"""
+    <div class="mt-8">
+      <ol class="items-start sm:flex sm:flex-wrap">
+        <%= render_slot(@inner_block) %>
+      </ol>
+    </div>
+    """
+  end
+
+  attr :card_type, :atom, required: true
+
+  def timeline_node_icon(assigns) do
+    ~H"""
+    <%= case @card_type  do %>
+      <% :birth -> %>
+        <div class="drop-shadow-lg z-10 flex items-center gap-2 text-gray-500 justify-center rounded-full ring-8 ring-yellow-200 bg-yellow-200 shrink-0">
+          <.icon name="hero-sun" />
+          <div class="font-display font-extrabold uppercase text-xs">Born</div>
+        </div>
+      <% :death -> %>
+        <div class="drop-shadow-lg z-10 flex items-center gap-2 text-white justify-center rounded-full ring-8 ring-black bg-black shrink-0">
+          <.icon name="hero-moon-solid" />
+          <div class="font-display text-white font-extrabold uppercase text-xs">Died</div>
+        </div>
+      <% :film -> %>
+        <div class="drop-shadow-lg z-10 flex items-center gap-2 text-white justify-center rounded-full ring-8 ring-red-700 bg-red-700 shrink-0">
+          <.icon name="hero-film" />
+          <div class="font-display font-extrabold uppercase text-xs">Film</div>
+        </div>
       <% _ -> %>
     <% end %>
     """

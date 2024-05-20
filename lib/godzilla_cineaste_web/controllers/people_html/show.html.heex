@@ -10,8 +10,10 @@
 <div class="text-center w-fit m-auto">
   <img class="rounded-lg drop-shadow-lg" src={@entity.avatar_url} />
 </div>
-<div class="mt-4 justify-center flex flex-col gap-4">
+<.timeline>
   <%= for card <- @cards do %>
-    <.entity_card card={card} />
+    <.timeline_node card_type={card.type}>
+      <.entity_card card={card} />
+    </.timeline_node>
   <% end %>
-</div>
+</.timeline>
