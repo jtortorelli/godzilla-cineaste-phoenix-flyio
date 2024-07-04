@@ -53,9 +53,9 @@ defmodule GodzillaCineaste.Person do
 
   def display_date_range(person) do
     case person do
-      %{dob: %{"year" => nil}, dod: %{"year" => nil}} -> nil
+      %{dob: nil} -> nil
       %{dob: %{"year" => year}, dod: %{"year" => nil, "unknown" => true}} -> "#{year}-?"
-      %{dob: %{"year" => year}, dod: %{"year" => nil}} -> "b. #{year}"
+      %{dob: %{"year" => year}, dod: nil} -> "b. #{year}"
       %{dob: %{"year" => year}, dod: %{"year" => dod_year}} -> "#{year}-#{dod_year}"
     end
   end
@@ -75,7 +75,7 @@ defmodule GodzillaCineaste.Person do
 
   def status(%__MODULE__{} = person) do
     cond do
-      is_struct(person.dob) and is_nil(person.dod) ->
+      is_struct(person.dob) and is_nil(person.dod.year) and is_nil(person.dod.unknown) ->
         :alive
 
       is_struct(person.dob) and is_struct(person.dod) and unknown_death_date?(person) ->

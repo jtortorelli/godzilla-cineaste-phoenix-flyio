@@ -4,6 +4,7 @@ defmodule GodzillaCineaste.People do
   alias GodzillaCineaste.{
     Film,
     Group,
+    KaijuRole,
     PartialDate,
     Person,
     PersonAlternateName,
@@ -62,89 +63,44 @@ defmodule GodzillaCineaste.People do
     end
   end
 
-  def build_cards(%Person{} = person) do
-    [
-      build_birth_card(person),
-      build_role_cards(person),
-      build_death_card(person)
+  def get_selected_filmography_by_entity!(%Person{id: person_id}) do
+    role_subquery = from(r in Role, where: r.person_id == ^person_id, select: r.film_id)
+    staff_subquery = from(s in Staff, where: s.person_id == ^person_id, select: s.film_id)
+
+    kaiju_role_subquery =
+      from(kr in KaijuRole, where: kr.person_id == ^person_id, select: kr.film_id)
+
+    assocs = [
+      staff: from(s in Staff, where: s.person_id == ^person_id, order_by: s.order),
+      roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order)
     ]
-    |> List.flatten()
-    |> Enum.sort_by(& &1.date, Date)
+
+    Film
+    |> from(as: :film)
+    |> where(
+      [film: f],
+      f.id in subquery(role_subquery) or f.id in subquery(staff_subquery) or
+        f.id in subquery(kaiju_role_subquery)
+    )
+    |> order_by([film: f], f.release_date)
+    |> preload(^assocs)
+    |> Repo.all()
   end
 
-  def build_cards(_), do: []
+  def get_selected_filmography_by_entity!(%Group{id: group_id}) do
+    role_subquery = from(r in Role, where: r.group_id == ^group_id, select: r.film_id)
+    staff_subquery = from(s in Staff, where: s.group_id == ^group_id, select: s.film_id)
 
-  defp build_birth_card(%Person{} = person) do
-    if Person.has_birth_date?(person) do
-      %PersonAlternateName{name: name, japanese_name: japanese_name} =
-        Person.birth_name(person)
+    assocs = [
+      staff: from(s in Staff, where: s.group_id == ^group_id, order_by: s.order),
+      roles: from(r in Role, where: r.group_id == ^group_id, order_by: r.order)
+    ]
 
-      [
-        %{
-          type: :birth,
-          date: PartialDate.initialize_date(person.dob),
-          birth_name: name,
-          japanese_birth_name: japanese_name,
-          birth_date: PartialDate.display_date(person.dob),
-          birth_place: Place.display_place(person.birth_place)
-        }
-      ]
-    else
-      []
-    end
-  end
-
-  defp build_death_card(%Person{} = person) do
-    if Person.has_death_date?(person) || Person.unknown_death_date?(person) do
-      {date, death_date} =
-        if Person.has_death_date?(person) do
-          {PartialDate.initialize_date(person.dod), PartialDate.display_date(person.dod)}
-        else
-          {Timex.now(), "Unknown Date"}
-        end
-
-      [
-        %{
-          type: :death,
-          date: date,
-          death_date: death_date,
-          death_place: Place.display_place(person.death_place),
-          age: Person.age(person)
-        }
-      ]
-    else
-      []
-    end
-  end
-
-  defp build_role_cards(%Person{} = person) do
-    %Person{roles: roles, staff: staff} = Repo.preload(person, roles: :film, staff: :film)
-
-    (roles ++ staff)
-    |> Enum.group_by(& &1.film_id)
-    |> Enum.map(fn {_k, v} -> build_role_card(v) end)
-  end
-
-  defp build_role_card(values) do
-    [%{film: %Film{} = film} | _] = values
-
-    %{roles: roles, staff: staff} =
-      values
-      |> Enum.reduce(%{staff: [], roles: []}, fn
-        %Role{} = v, acc -> Map.put(acc, :roles, [v | acc.roles])
-        %Staff{} = v, acc -> Map.put(acc, :staff, [v | acc.staff])
-      end)
-      |> Enum.map(fn {k, v} -> {k, Enum.sort_by(v, & &1.order)} end)
-      |> Enum.into(%{})
-
-    %{
-      type: :film,
-      date: film.release_date,
-      film_title: film.title,
-      film_release_date: Film.display_release_date(film),
-      film_poster_url: Film.primary_poster_url(film),
-      roles: roles,
-      staff: staff
-    }
+    Film
+    |> from(as: :film)
+    |> where([film: f], f.id in subquery(role_subquery) or f.id in subquery(staff_subquery))
+    |> order_by([film: f], f.release_date)
+    |> preload(^assocs)
+    |> Repo.all()
   end
 end
