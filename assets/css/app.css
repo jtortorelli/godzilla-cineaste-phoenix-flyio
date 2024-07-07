@@ -4,174 +4,191 @@
 
 /* This file is for your main application CSS */
 @font-face {
-  font-family: "Noto-Variable";
-  src: url("../fonts/Noto-Variable.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "Noto-Variable";
+    src: url("../fonts/Noto-Variable.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "SourceCodePro";
-  src: url("../fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "SourceCodePro";
+    src: url("../fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "SourceCodePro";
-  src: url("../fonts/SourceCodePro-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "SourceCodePro";
+    src: url("../fonts/SourceCodePro-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "Lora";
-  src: url("../fonts/Lora-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "Lora";
+    src: url("../fonts/Lora-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Lora";
-  src: url("../fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "Lora";
+    src: url("../fonts/Lora-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "PlayfairDisplay";
+    src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "CrimsonPro";
-  src: url("../fonts/CrimsonPro-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "CrimsonPro";
+    src: url("../fonts/CrimsonPro-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "CrimsonPro";
-  src: url("../fonts/CrimsonPro-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "CrimsonPro";
+    src: url("../fonts/CrimsonPro-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "SplineSansMono";
-  src: url("../fontsSplineSansMono-VariableFont_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "Petrona";
+    src: url("../fonts/Petrona-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "SplineSansMono";
-  src: url("../fonts/SplineSansMono-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: italic;
+    font-family: "Petrona";
+    src: url("../fonts/Petrona-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "SonoMono";
-  src: url("../fonts/Sono-VariableFont_MONO_wght.ttf") format("truetype");
-  font-weight: 100 200 300 400 500 600 700 800 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "SplineSansMono";
+    src: url("../fontsSplineSansMono-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-ExtraLight.otf") format("opentype");
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
+    font-family: "SplineSansMono";
+    src: url("../fonts/SplineSansMono-Italic-VariableFont_wght.ttf")
+        format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-Light.otf") format("opentype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
+    font-family: "SonoMono";
+    src: url("../fonts/Sono-VariableFont_MONO_wght.ttf") format("truetype");
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Light.otf") format("opentype");
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-SemiBold.otf") format("opentype");
-  font-weight: 600;
-  font-display: swap;
-  font-style: normal;
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "NotoSerifJP";
-  src: url("../fonts/NotoSerifJP-Black.otf") format("opentype");
-  font-weight: 900;
-  font-display: swap;
-  font-style: normal;
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Black.otf") format("opentype");
+    font-weight: 900;
+    font-display: swap;
+    font-style: normal;
 }

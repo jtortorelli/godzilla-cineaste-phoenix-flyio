@@ -15,7 +15,7 @@ module.exports = {
       fontFamily: {
         japanese: ["NotoSerifJP", "sans-serif"],
         display: ["Montserrat", "serif"],
-        content: ["CrimsonPro", "serif"],
+        content: ["Petrona", "serif"],
         detail: ["SonoMono", "monospace"],
       },
     },

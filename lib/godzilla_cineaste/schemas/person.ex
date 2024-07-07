@@ -54,6 +54,7 @@ defmodule GodzillaCineaste.Person do
   def display_date_range(person) do
     case person do
       %{dob: nil} -> nil
+      %{dob: %{"year" => nil}} -> nil
       %{dob: %{"year" => year}, dod: %{"year" => nil, "unknown" => true}} -> "#{year}-?"
       %{dob: %{"year" => year}, dod: nil} -> "b. #{year}"
       %{dob: %{"year" => year}, dod: %{"year" => dod_year}} -> "#{year}-#{dod_year}"

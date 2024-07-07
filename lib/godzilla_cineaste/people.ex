@@ -5,10 +5,7 @@ defmodule GodzillaCineaste.People do
     Film,
     Group,
     KaijuRole,
-    PartialDate,
     Person,
-    PersonAlternateName,
-    Place,
     Repo,
     Role,
     Staff
