@@ -8,7 +8,8 @@ defmodule GodzillaCineaste.People do
     Person,
     Repo,
     Role,
-    Staff
+    Staff,
+    Work
   }
 
   def list_people(_search_term \\ nil) do
@@ -67,9 +68,19 @@ defmodule GodzillaCineaste.People do
     kaiju_role_subquery =
       from(kr in KaijuRole, where: kr.person_id == ^person_id, select: kr.film_id)
 
+    author_subquery =
+      from(w in Work,
+        join: f in assoc(w, :films),
+        join: a in assoc(w, :authors),
+        where: a.id == ^person_id,
+        select: f.id
+      )
+
     assocs = [
       staff: from(s in Staff, where: s.person_id == ^person_id, order_by: s.order),
-      roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order)
+      roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order),
+      kaiju_roles: from(kr in KaijuRole, where: kr.person_id == ^person_id, order_by: kr.order),
+      works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id)
     ]
 
     Film
@@ -77,7 +88,7 @@ defmodule GodzillaCineaste.People do
     |> where(
       [film: f],
       f.id in subquery(role_subquery) or f.id in subquery(staff_subquery) or
-        f.id in subquery(kaiju_role_subquery)
+        f.id in subquery(kaiju_role_subquery) or f.id in subquery(author_subquery)
     )
     |> order_by([film: f], f.release_date)
     |> preload(^assocs)

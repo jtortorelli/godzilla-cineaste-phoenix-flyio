@@ -1,7 +1,7 @@
 defmodule GodzillaCineasteWeb.PeopleComponents do
   use GodzillaCineasteWeb, :html
 
-  alias GodzillaCineaste.{Film, PartialDate, Person, PersonAlternateName, Place, Role}
+  alias GodzillaCineaste.{Film, KaijuRole, PartialDate, Person, PersonAlternateName, Place, Role}
 
   attr :display_name, :string, required: true
   attr :japanese_name, :string, required: true
@@ -12,7 +12,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <h1 class="font-display tracking-wider uppercase text-2xl text-gray-700 p-4">
         <%= @display_name %>
         <br />
-        <span class="font-japanese uppercase p-2 text-base text-gray-500 tracking-[.2em] font-extrabold">
+        <span class="font-japanese uppercase p-2 text-base text-gray-500 tracking-[.2em] font-bold">
           <%= @japanese_name %>
         </span>
       </h1>
@@ -60,6 +60,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             <% end %>
           </div>
         <% end %>
+        <%= if Person.unknown_death_date?(@person) do %>
+          <div>
+            <div class="font-detail uppercase text-red-700 text-sm">died</div>
+            <div class="font-content text-gray-700">Unknown Date</div>
+          </div>
+        <% end %>
       </div>
     </div>
     """
@@ -70,9 +76,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_filmography(assigns) do
     ~H"""
     <.named_divider name="Selected Filmography" />
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
       <%= for f <- @selected_filmography do %>
-        <div class="flex items-center gap-2">
+        <div class="flex flex-row sm:flex-col sm:w-36 items-center gap-3">
           <div class="shrink-0">
             <img
               class="rounded-lg drop-shadow-lg"
@@ -81,19 +87,25 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
               src={Film.primary_poster_url(f)}
             />
           </div>
-          <div>
-            <div class="font-content italic text-lg text-gray-700"><%= f.title %></div>
+          <div class="sm:text-center">
+            <div class="font-content italic text-sm text-gray-700"><%= f.title %></div>
             <div class="font-detail text-xs text-red-700"><%= f.release_date.year %></div>
-            <%= if length(f.staff) > 0 do %>
-              <%= for s <- f.staff do %>
-                <div class="font-content text-gray-700"><%= s.role %></div>
-              <% end %>
+            <%= unless Enum.empty?(f.staff) and Enum.empty?(f.works) do %>
+              <div class="font-content text-sm text-gray-700">
+                <%= staff(f) %>
+              </div>
             <% end %>
-            <%= if length(f.roles) > 0 do %>
-              <div class="font-detail text-xs text-gray-500 uppercase">appearing as</div>
-              <%= for r <- f.roles do %>
-                <div class="font-content text-gray-700"><%= Role.role_display_name(r) %></div>
-              <% end %>
+            <%= unless Enum.empty?(f.kaiju_roles) and Enum.empty?(f.roles) do %>
+              <div class="font-detail text-xs text-red-700 uppercase">
+                appearing
+                <%= if Enum.any?(f.kaiju_roles ++ f.roles, & &1.uncredited) do %>
+                  uncredited
+                <% end %>
+                as
+              </div>
+              <div class="font-content text-sm text-gray-700">
+                <%= Enum.map_join(f.kaiju_roles ++ f.roles, ", ", &role_display_name(&1)) %>
+              </div>
             <% end %>
           </div>
         </div>
@@ -113,5 +125,24 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <% end %>
     <% end %>
     """
+  end
+
+  defp role_display_name(%Role{qualifiers: []} = role), do: Role.role_display_name(role)
+
+  defp role_display_name(%Role{qualifiers: qualifiers} = role),
+    do: "#{Role.role_display_name(role)} (#{Enum.join(qualifiers, ", ")})"
+
+  defp role_display_name(%KaijuRole{name: name, qualifiers: []}), do: name
+
+  defp role_display_name(%KaijuRole{name: name, qualifiers: qualifiers}),
+    do: "#{name} (#{Enum.join(qualifiers, ",")})"
+
+  defp staff(%Film{staff: staff, works: works}) do
+    case {staff, works} do
+      {[], []} -> []
+      {staff, []} -> Enum.map_join(staff, ", ", & &1.role)
+      {[], works} -> ["Original Work"]
+      _ -> ["Original Work" | Enum.map(staff, & &1.role)] |> Enum.join(", ")
+    end
   end
 end
