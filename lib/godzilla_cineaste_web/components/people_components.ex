@@ -97,14 +97,13 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             <% end %>
             <%= unless Enum.empty?(f.kaiju_roles) and Enum.empty?(f.roles) do %>
               <div class="font-detail text-xs text-red-700 uppercase">
-                appearing
                 <%= if Enum.any?(f.kaiju_roles ++ f.roles, & &1.uncredited) do %>
                   uncredited
                 <% end %>
                 as
               </div>
               <div class="font-content text-sm text-gray-700">
-                <%= Enum.map_join(f.kaiju_roles ++ f.roles, ", ", &role_display_name(&1)) %>
+                <%= raw(Enum.map_join(f.kaiju_roles ++ f.roles, ", ", &role_display_name(&1))) %>
               </div>
             <% end %>
           </div>
@@ -141,7 +140,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     case {staff, works} do
       {[], []} -> []
       {staff, []} -> Enum.map_join(staff, ", ", & &1.role)
-      {[], works} -> ["Original Work"]
+      {[], _works} -> ["Original Work"]
       _ -> ["Original Work" | Enum.map(staff, & &1.role)] |> Enum.join(", ")
     end
   end
