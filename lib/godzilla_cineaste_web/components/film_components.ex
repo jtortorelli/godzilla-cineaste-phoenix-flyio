@@ -347,12 +347,12 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  attr :entity, :map, required: true
+  attr :entity, :map
   slot :inner_block, required: true
 
   def showcase_link(assigns) do
     ~H"""
-    <%= if showcased?(@entity) do %>
+    <%= if is_struct(@entity) and showcased?(@entity) do %>
       <.link
         href={get_link(@entity)}
         class="underline decoration-gray-300 decoration-1 underline-offset-1 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
@@ -680,6 +680,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   defp get_entity(%{person: %Person{} = person}), do: person
   defp get_entity(%{group: %Group{} = group}), do: group
+  defp get_entity(_), do: nil
 
   defp showcased?(%Group{showcased: true}), do: true
   defp showcased?(%Person{showcased: true}), do: true
