@@ -325,22 +325,43 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           </div>
           <div class="">
             <span class="text-gray-700 font-content">
-              <%= raw(
-                Enum.map_join(staffs, "<br/>", fn staff ->
-                  if has_disambig_chars?(staff) do
-                    staff_display_name(staff) <>
-                      ~s| <span class="text-xs">(<span class="font-japanese">#{staff.person.disambig_chars}</span>)</span>|
-                  else
-                    staff_display_name(staff)
-                  end
-                end)
-              ) %>
+              <%= for staff <- staffs do %>
+                <.showcase_link entity={get_entity(staff)}>
+                  <%= raw(
+                    if has_disambig_chars?(staff) do
+                      staff_display_name(staff) <>
+                        ~s| <span class="text-xs">(<span class="font-japanese">#{staff.person.disambig_chars}</span>)</span>|
+                    else
+                      staff_display_name(staff)
+                    end
+                  ) %>
+                </.showcase_link>
+                <br />
+              <% end %>
             </span>
           </div>
         </div>
       <% end %>
     </div>
     <.full_credits_modal film={@film} />
+    """
+  end
+
+  attr :entity, :map, required: true
+  slot :inner_block, required: true
+
+  def showcase_link(assigns) do
+    ~H"""
+    <%= if showcased?(@entity) do %>
+      <.link
+        href={get_link(@entity)}
+        class="underline decoration-gray-300 decoration-1 underline-offset-1 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+      >
+        <%= render_slot(@inner_block) %>
+      </.link>
+    <% else %>
+      <%= render_slot(@inner_block) %>
+    <% end %>
     """
   end
 
@@ -368,12 +389,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               <% end %>
             </div>
             <div class="font-content sm:text-lg text-gray-700">
-              <%= role_display_name(@primary_role) %>
-              <%= if has_disambig_chars?(@primary_role) do %>
-                <span class="text-xs">
-                  (<span class="font-japanese"><%= @primary_role.person.disambig_chars %></span>)
-                </span>
-              <% end %>
+              <.showcase_link entity={get_entity(@primary_role)}>
+                <%= role_display_name(@primary_role) %>
+                <%= if has_disambig_chars?(@primary_role) do %>
+                  <span class="text-xs">
+                    (<span class="font-japanese"><%= @primary_role.person.disambig_chars %></span>)
+                  </span>
+                <% end %>
+              </.showcase_link>
             </div>
             <div class="font-detail text-xs text-gray-500 uppercase">
               <%= @primary_role.role_qualifiers %>
@@ -383,7 +406,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <% end %>
             <%= for role <- @secondary_roles do %>
               <div class="font-content text-gray-700 text-lg">
-                <%= role_display_name(role) %>
+                <.showcase_link entity={get_entity(role)}>
+                  <%= role_display_name(role) %>
+                </.showcase_link>
               </div>
               <div class="font-detail text-xs text-gray-500 uppercase">
                 <%= role.role_qualifiers %>
@@ -477,7 +502,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 <div class="font-content text-gray-500 text-sm sm:text-base"><%= kaiju_name %></div>
                 <%= for kr <- kaiju_roles do %>
                   <div class="font-content sm:text-lg text-gray-700">
-                    <%= role_display_name(kr) %>
+                    <.showcase_link entity={get_entity(kr)}>
+                      <%= role_display_name(kr) %>
+                    </.showcase_link>
                   </div>
                   <%= if kr.qualifiers do %>
                     <div class="font-detail text-xs text-gray-500 uppercase">
@@ -650,4 +677,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
          group: %Group{display_name: display_name}
        }),
        do: display_name
+
+  defp get_entity(%{person: %Person{} = person}), do: person
+  defp get_entity(%{group: %Group{} = group}), do: group
+
+  defp showcased?(%Group{showcased: true}), do: true
+  defp showcased?(%Person{showcased: true}), do: true
+  defp showcased?(_), do: false
+
+  defp get_link(%Group{slug: slug}), do: ~p"/people/#{slug}"
+  defp get_link(%Person{slug: slug}), do: ~p"/people/#{slug}"
 end
