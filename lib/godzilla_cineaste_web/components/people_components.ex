@@ -88,7 +88,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             />
           </div>
           <div class="sm:text-center">
-            <div class="font-content italic text-sm text-gray-700"><%= f.title %></div>
+            <div class="font-content italic text-sm text-gray-700">
+              <.showcase_link film={f}><%= f.title %></.showcase_link>
+            </div>
             <div class="font-detail text-xs text-red-700"><%= f.release_date.year %></div>
             <%= unless Enum.empty?(f.staff) and Enum.empty?(f.works) do %>
               <div class="font-content text-sm text-gray-700">
@@ -110,6 +112,24 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         </div>
       <% end %>
     </div>
+    """
+  end
+
+  attr :film, Film, required: true
+  slot :inner_block, required: true
+
+  def showcase_link(assigns) do
+    ~H"""
+    <%= if @film.showcased do %>
+      <.link
+        href={~p"/films/#{@film.slug}"}
+        class="underline decoration-gray-300 decoration-1 underline-offset-1 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+      >
+        <%= render_slot(@inner_block) %>
+      </.link>
+    <% else %>
+      <%= render_slot(@inner_block) %>
+    <% end %>
     """
   end
 
