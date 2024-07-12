@@ -12,7 +12,7 @@ defmodule GodzillaCineaste.People do
     Work
   }
 
-  def list_people(_search_term \\ nil) do
+  def list_people(search_term \\ nil) do
     person_query =
       from p in Person,
         select: %{
@@ -44,7 +44,7 @@ defmodule GodzillaCineaste.People do
 
     ordered_query = from s in subquery(group_query), order_by: s.sort_name
 
-    Repo.all(ordered_query)
+    ordered_query |> maybe_filter_by_search_term(search_term) |> Repo.all()
   end
 
   def get_person_by_slug!(slug) do
@@ -110,5 +110,15 @@ defmodule GodzillaCineaste.People do
     |> order_by([film: f], f.release_date)
     |> preload(^assocs)
     |> Repo.all()
+  end
+
+  defp maybe_filter_by_search_term(query, nil), do: query
+
+  defp maybe_filter_by_search_term(query, search_term) do
+    where(
+      query,
+      [s],
+      ilike(fragment("unaccent(?)", s.display_name), fragment("unaccent(?)", ^search_term))
+    )
   end
 end

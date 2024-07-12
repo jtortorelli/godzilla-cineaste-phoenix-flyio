@@ -8,8 +8,15 @@ defmodule GodzillaCineasteWeb.PeopleLive do
     {:ok, assign(socket, people: people, page_title: "People")}
   end
 
-  def handle_event("people_search_change", %{"value" => _value}, socket) do
-    {:noreply, socket}
+  def handle_event("people_search_change", %{"value" => value}, socket) do
+    search_term =
+      value
+      |> String.trim()
+      |> String.replace_prefix("", "%")
+      |> String.replace_suffix("", "%")
+
+    people = People.list_people(search_term)
+    {:noreply, assign(socket, people: people)}
   end
 
   def display_person_date_range(person) do
