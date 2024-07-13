@@ -16,6 +16,7 @@ defmodule GodzillaCineaste.People do
     person_query =
       from p in Person,
         select: %{
+          id: p.id,
           slug: p.slug,
           display_name: p.display_name,
           sort_name: p.sort_name,
@@ -30,6 +31,7 @@ defmodule GodzillaCineaste.People do
     group_query =
       from g in Group,
         select: %{
+          id: g.id,
           slug: g.slug,
           display_name: g.display_name,
           sort_name: g.sort_name,
@@ -115,10 +117,20 @@ defmodule GodzillaCineaste.People do
   defp maybe_filter_by_search_term(query, nil), do: query
 
   defp maybe_filter_by_search_term(query, search_term) do
+    alternate_name_subquery =
+      Person
+      |> from()
+      |> join(:cross, [p], a in fragment("jsonb_array_elements(?)", p.alternate_names))
+      |> where([p, a], fragment("unaccent(? ->> 'name') ilike unaccent(?)", a, ^search_term))
+      |> select([p, a], p.id)
+
+    person = "person"
+
     where(
       query,
       [s],
-      ilike(fragment("unaccent(?)", s.display_name), fragment("unaccent(?)", ^search_term))
+      ilike(fragment("unaccent(?)", s.display_name), fragment("unaccent(?)", ^search_term)) or
+        (s.struct == ^person and s.id in subquery(alternate_name_subquery))
     )
   end
 end
