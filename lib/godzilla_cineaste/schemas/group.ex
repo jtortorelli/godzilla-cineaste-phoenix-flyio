@@ -2,6 +2,8 @@ defmodule GodzillaCineaste.Group do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias GodzillaCineaste.GroupMember
+
   schema "groups" do
     field :slug, :string
     field :display_name, :string
@@ -11,6 +13,9 @@ defmodule GodzillaCineaste.Group do
     field :profession, :string
     field :avatar_url, :string
     field :japanese_name, :string
+
+    many_to_many :members, Person, join_through: GroupMember
+
     timestamps()
   end
 

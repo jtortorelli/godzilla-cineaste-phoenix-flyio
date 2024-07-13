@@ -2,7 +2,15 @@ defmodule GodzillaCineaste.Person do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.{PartialDate, PersonAlternateName, Place, Role, Staff}
+  alias GodzillaCineaste.{
+    Group,
+    GroupMember,
+    PartialDate,
+    PersonAlternateName,
+    Place,
+    Role,
+    Staff
+  }
 
   schema "people" do
     field :slug, :string
@@ -25,6 +33,8 @@ defmodule GodzillaCineaste.Person do
     embeds_one :death_place, Place, on_replace: :update
 
     embeds_many :alternate_names, PersonAlternateName, on_replace: :delete
+
+    many_to_many :groups, Group, join_through: GroupMember
 
     timestamps()
   end

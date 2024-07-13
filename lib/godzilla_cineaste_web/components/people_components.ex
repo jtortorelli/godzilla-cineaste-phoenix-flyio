@@ -1,7 +1,16 @@
 defmodule GodzillaCineasteWeb.PeopleComponents do
   use GodzillaCineasteWeb, :html
 
-  alias GodzillaCineaste.{Film, KaijuRole, PartialDate, Person, PersonAlternateName, Place, Role}
+  alias GodzillaCineaste.{
+    Film,
+    Group,
+    KaijuRole,
+    PartialDate,
+    Person,
+    PersonAlternateName,
+    Place,
+    Role
+  }
 
   attr :display_name, :string, required: true
   attr :japanese_name, :string, required: true
@@ -68,6 +77,33 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <% end %>
       </div>
     </div>
+    """
+  end
+
+  attr :group, Group, required: true
+
+  def group_overview(assigns) do
+    ~H"""
+    <.named_divider name="Overview" />
+    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
+      <div class="text-center w-fit m-auto">
+        <img class="rounded-lg drop-shadow-lg" src={@group.avatar_url} />
+      </div>
+    </div>
+    """
+  end
+
+  attr :group, Group, required: true
+
+  def group_members(assigns) do
+    ~H"""
+    """
+  end
+
+  attr :selected_filmography, :list, required: true
+
+  def group_filmography(assigns) do
+    ~H"""
     """
   end
 
