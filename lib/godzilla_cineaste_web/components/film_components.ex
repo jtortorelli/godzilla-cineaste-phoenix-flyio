@@ -670,9 +670,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   defp role_is_uncredited?(%Role{uncredited: true}), do: true
   defp role_is_uncredited?(_), do: false
 
-  defp role_title(%Role{title: title}), do: title
-  defp role_title(_), do: nil
-
   defp staff_display_name(%Staff{
          person: %Person{display_name: display_name}
        }),

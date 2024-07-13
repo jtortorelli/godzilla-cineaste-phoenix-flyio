@@ -71,54 +71,106 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     """
   end
 
+  attr :film, Film, required: true
+
+  def person_filmography_entry(assigns) do
+    ~H"""
+    <div class="flex flex-row sm:flex-col sm:w-36 items-center gap-3">
+      <div class="shrink-0">
+        <img
+          class="rounded-lg drop-shadow-lg min-h-[150px]"
+          height={150}
+          width={101}
+          src={Film.primary_poster_url(@film)}
+        />
+      </div>
+      <div class="sm:text-center">
+        <div class="font-content text-sm text-gray-700">
+          <.showcase_link film={@film}>
+            <span class="italic"><%= @film.title %></span> (<%= @film.release_date.year %>)
+          </.showcase_link>
+        </div>
+        <%= unless Enum.empty?(@film.staff) and Enum.empty?(@film.works) do %>
+          <div class="font-content text-sm text-gray-700">
+            <%= staff(@film) %>
+          </div>
+        <% end %>
+        <%= unless Enum.empty?(@film.kaiju_roles) and Enum.empty?(@film.roles) do %>
+          <div class="font-detail text-xs text-red-700 uppercase">
+            <%= if Enum.any?(@film.kaiju_roles ++ @film.roles, & &1.uncredited) do %>
+              uncredited
+            <% end %>
+            as
+          </div>
+          <div class="font-content text-sm text-gray-700">
+            <%= for r <- @film.kaiju_roles ++ @film.roles do %>
+              <%= role_display_name(r) %><br />
+              <%= for q <- r.qualifiers do %>
+                <span class="text-xs font-detail uppercase text-gray-500"><%= q %></span> <br />
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    """
+  end
+
   attr :selected_filmography, :list, required: true
 
   def person_filmography(assigns) do
     ~H"""
     <.named_divider name="Selected Filmography" />
-    <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-      <%= for f <- @selected_filmography do %>
-        <div class="flex flex-row sm:flex-col sm:w-36 items-center gap-3">
-          <div class="shrink-0">
-            <img
-              class="rounded-lg drop-shadow-lg min-h-[150px]"
-              height={150}
-              width={101}
-              src={Film.primary_poster_url(f)}
-            />
-          </div>
-          <div class="sm:text-center">
-            <div class="font-content text-sm text-gray-700">
-              <.showcase_link film={f}>
-                <span class="italic"><%= f.title %></span> (<%= f.release_date.year %>)
-              </.showcase_link>
-            </div>
-            <%= unless Enum.empty?(f.staff) and Enum.empty?(f.works) do %>
-              <div class="font-content text-sm text-gray-700">
-                <%= staff(f) %>
-              </div>
-            <% end %>
-            <%= unless Enum.empty?(f.kaiju_roles) and Enum.empty?(f.roles) do %>
-              <div class="font-detail text-xs text-red-700 uppercase">
-                <%= if Enum.any?(f.kaiju_roles ++ f.roles, & &1.uncredited) do %>
-                  uncredited
-                <% end %>
-                as
-              </div>
-              <div class="font-content text-sm text-gray-700">
-                <%= for r <- f.kaiju_roles ++ f.roles do %>
-                  <%= role_display_name(r) %><br />
-                  <%= for q <- r.qualifiers do %>
-                    <span class="text-xs font-detail uppercase text-gray-500"><%= q %></span> <br />
-                  <% end %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+    <div class="trunc-filmography">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+        <%= for f <- Enum.take(@selected_filmography, 6) do %>
+          <.person_filmography_entry film={f} />
+        <% end %>
+      </div>
     </div>
+    <div class="full-filmography hidden">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+        <%= for f <- @selected_filmography do %>
+          <.person_filmography_entry film={f} />
+        <% end %>
+      </div>
+    </div>
+    <%= if length(@selected_filmography) > 6 do %>
+      <div class="expand-filmography text-center pt-6">
+        <button
+          class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
+          phx-click={expand_filmography()}
+        >
+          <%= "+#{length(@selected_filmography) - 6} more" %>
+          <.icon name="hero-chevron-down-solid" />
+        </button>
+      </div>
+      <div class="hidden collapse-filmography text-center pt-6">
+        <button
+          class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
+          phx-click={collapse_filmography()}
+        >
+          Show less <.icon name="hero-chevron-up-solid" />
+        </button>
+      </div>
+    <% end %>
     """
+  end
+
+  def expand_filmography(js \\ %JS{}) do
+    js
+    |> JS.hide(to: ".trunc-filmography")
+    |> JS.hide(to: ".expand-filmography")
+    |> JS.show(to: ".full-filmography")
+    |> JS.show(to: ".collapse-filmography")
+  end
+
+  def collapse_filmography(js \\ %JS{}) do
+    js
+    |> JS.hide(to: ".full-filmography")
+    |> JS.hide(to: ".collapse-filmography")
+    |> JS.show(to: ".trunc-filmography")
+    |> JS.show(to: ".expand-filmography")
   end
 
   attr :film, Film, required: true
