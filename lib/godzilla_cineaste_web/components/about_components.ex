@@ -90,7 +90,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
         <div class="lg:h-[150px] flex lg:items-center justify-center">
           <div>
             <.maybe_link_url url={@url}>
-              <img class="max-h-[150px] max-w-xs rounded-lg drop-shadow-lg" src={@image_url} />
+              <img class="max-w-[150px] max-h-[150px] max-w-xs" src={@image_url} />
             </.maybe_link_url>
           </div>
         </div>
