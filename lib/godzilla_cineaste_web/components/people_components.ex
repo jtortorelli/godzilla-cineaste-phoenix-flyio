@@ -123,7 +123,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <%= if @film.showcased do %>
       <.link
         href={~p"/films/#{@film.slug}"}
-        class="underline decoration-gray-300 decoration-1 underline-offset-1 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+        class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
         <%= render_slot(@inner_block) %>
       </.link>

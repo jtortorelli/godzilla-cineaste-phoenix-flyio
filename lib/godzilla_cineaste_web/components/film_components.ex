@@ -355,7 +355,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= if is_struct(@entity) and showcased?(@entity) do %>
       <.link
         href={get_link(@entity)}
-        class="underline decoration-gray-300 decoration-1 underline-offset-1 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+        class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
         <%= render_slot(@inner_block) %>
       </.link>
@@ -372,23 +372,22 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <div>
       <div id={"role-overview-#{@primary_role.id}"}>
-        <div class="grid grid-cols-[150px_auto] gap-2">
-          <div class="grid justify-items-end">
+        <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
+          <div class="shrink-0">
             <img
-              class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+              class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
               src={@primary_role.avatar_url}
             />
           </div>
-          <div class="flex flex-col justify-center">
-            <div class="font-content text-sm text-gray-500"><%= role_title(@primary_role) %></div>
-            <div class="font-content text-gray-500 sm:text-base text-sm">
-              <%= raw(Role.process_role_name(@primary_role.name || @primary_role.description)) %>
+          <div class="flex flex-col sm:items-center">
+            <div class="font-detail sm:text-center text-gray-500  text-xs">
+              <%= raw(Role.process_role_name(Role.role_display_name(@primary_role))) %>
               <%= if @primary_role.character_qualifiers do %>
                 <br />
-                <span class="text-sm">(<%= @primary_role.character_qualifiers %>)</span>
+                <span class="text-xs">(<%= @primary_role.character_qualifiers %>)</span>
               <% end %>
             </div>
-            <div class="font-content sm:text-lg text-gray-700">
+            <div class="font-content sm:text-center text-gray-700">
               <.showcase_link entity={get_entity(@primary_role)}>
                 <%= role_display_name(@primary_role) %>
                 <%= if has_disambig_chars?(@primary_role) do %>
@@ -446,26 +445,26 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
       <div class={"trunc-#{@q}-cast"}>
-        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
-          <%= for [primary_role | rest] <- Enum.take(display_roles(@roles), 6) do %>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+          <%= for [primary_role | rest] <- Enum.take(display_roles(@roles), 7) do %>
             <.role primary_role={primary_role} secondary_roles={rest} />
           <% end %>
         </div>
       </div>
       <div class={"full-#{@q}-cast hidden"}>
-        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
           <%= for [primary_role | rest] <- display_roles(@roles) do %>
             <.role primary_role={primary_role} secondary_roles={rest} />
           <% end %>
         </div>
       </div>
-      <%= if length(@roles) > 6 do %>
+      <%= if length(@roles) > 7 do %>
         <div class={"expand-#{@q}-cast text-center pt-6"}>
           <button
             class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
             phx-click={expand_cast_group(@q)}
           >
-            <%= "+#{length(@roles) - 6} more" %>
+            <%= "+#{length(@roles) - 7} more" %>
             <.icon name="hero-chevron-down-solid" />
           </button>
         </div>
@@ -489,19 +488,19 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name="Kaiju, etc." />
       <div class="trunc-kaiju-cast">
-        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
-          <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- Enum.take(display_kaiju_roles(@roles), 6) do %>
-            <div class="grid grid-cols-[150px_auto] gap-2">
-              <div class="grid justify-items-end">
+        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+          <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- Enum.take(display_kaiju_roles(@roles), 7) do %>
+            <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
+              <div class="shrink-0">
                 <img
-                  class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+                  class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
                   src={first.avatar_url}
                 />
               </div>
-              <div class="flex flex-col justify-center">
-                <div class="font-content text-gray-500 text-sm sm:text-base"><%= kaiju_name %></div>
+              <div class="flex flex-col sm:items-center">
+                <div class="font-detail text-gray-500 text-xs"><%= kaiju_name %></div>
                 <%= for kr <- kaiju_roles do %>
-                  <div class="font-content sm:text-lg text-gray-700">
+                  <div class="font-content sm:text-center text-gray-700">
                     <.showcase_link entity={get_entity(kr)}>
                       <%= role_display_name(kr) %>
                     </.showcase_link>
@@ -518,20 +517,22 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         </div>
       </div>
       <div class="full-kaiju-cast hidden">
-        <div class="w-full m-auto space-y-3 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-4">
+        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
           <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
-            <div class="grid grid-cols-[150px_auto] gap-2">
-              <div class="grid justify-items-end">
+            <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
+              <div class="shrink-0">
                 <img
-                  class="h-[75px] w-[75px] sm:h-[150px] sm:w-[150px] max-w-[150px] rounded-lg drop-shadow-lg"
+                  class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
                   src={first.avatar_url}
                 />
               </div>
-              <div class="flex flex-col justify-center">
-                <div class="font-content text-gray-500 text-sm sm:text-base"><%= kaiju_name %></div>
+              <div class="flex flex-col sm:items-center">
+                <div class="font-detail text-gray-500 text-xs"><%= kaiju_name %></div>
                 <%= for kr <- kaiju_roles do %>
-                  <div class="font-content sm:text-lg text-gray-700">
-                    <%= role_display_name(kr) %>
+                  <div class="font-content sm:text-center text-gray-700">
+                    <.showcase_link entity={get_entity(kr)}>
+                      <%= role_display_name(kr) %>
+                    </.showcase_link>
                   </div>
                   <%= if kr.qualifiers do %>
                     <div class="font-detail text-xs text-gray-500 uppercase">
@@ -544,13 +545,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <% end %>
         </div>
       </div>
-      <%= if length(@roles) > 6 do %>
+      <%= if length(@roles) > 7 do %>
         <div class="expand-kaiju-cast text-center pt-6">
           <button
             class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
             phx-click={expand_cast_group(:kaiju)}
           >
-            <%= "+#{length(@roles) - 6} more" %>
+            <%= "+#{length(@roles) - 7} more" %>
             <.icon name="hero-chevron-down-solid" />
           </button>
         </div>
