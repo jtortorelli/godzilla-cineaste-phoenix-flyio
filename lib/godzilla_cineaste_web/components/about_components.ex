@@ -34,7 +34,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
     <div class="text-center w-fit m-auto">
       <h1 class="font-display tracking-wider uppercase p-4 text-2xl text-gray-700">About</h1>
     </div>
-    <div class="text-sm font-extrabold font-display uppercase w-fit m-auto text-center  text-gray-500">
+    <div class="text-sm font-extrabold font-display uppercase w-fit m-auto text-center text-gray-500 pb-4">
       <div class="flex flex-col sm:flex-row">
         <.about_section_link active={@active_section == :gist} href={~p"/about"} title="The Gist" />
         <.about_section_link
