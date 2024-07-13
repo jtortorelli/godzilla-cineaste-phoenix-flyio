@@ -184,7 +184,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if @film do %>
       <div class="flex gap-2 justify-between items-center max-w-96">
-        <div class="w-6">
+        <div class="w-6 text-red-700">
           <%= if @direction == :prev do %>
             <.link href={~p"/films/#{@film.slug}"}>
               <.icon name="hero-arrow-left-circle" class="h-6 w-6" />
@@ -192,12 +192,15 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <% end %>
         </div>
         <div class="text-center font-content">
-          <.link href={~p"/films/#{@film.slug}"}>
+          <.link
+            href={~p"/films/#{@film.slug}"}
+            class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+          >
             <span class="italic"><%= @film.title %></span>
             <span class="text-sm">(<%= @film.release_date.year %>)</span>
           </.link>
         </div>
-        <div class="w-6">
+        <div class="text-red-700 w-6">
           <%= if @direction == :next do %>
             <.link href={~p"/films/#{@film.slug}"}>
               <.icon name="hero-arrow-right-circle" class="h-6 w-6" />
@@ -217,14 +220,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if @film.series_entry do %>
       <div>
+        <.series_modal film={@film} />
         <div class="uppercase font-detail text-center text-xs text-gray-500">
-          <%= "#{@film.series_entry.film_series.name} no. #{@film.series_entry.entry_number}" %>
+          <%= "no. #{@film.series_entry.entry_number}" %>
         </div>
-        <div class="w-fit m-auto text-red-700">
+        <div class="w-fit m-auto">
           <.series_film_info film={@previous_series_film} direction={:prev} />
           <.series_film_info film={@next_series_film} direction={:next} />
         </div>
-        <.series_modal film={@film} />
       </div>
     <% end %>
     """
@@ -235,9 +238,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_modal(assigns) do
     ~H"""
     <%= if @film.series_entry do %>
-      <div class="w-fit m-auto font-content text-red-700 hover:cursor-pointer pt-2">
+      <div class="w-fit m-auto font-detail text-xs uppercase text-red-700 hover:cursor-pointer pt-2">
         <a phx-click={show_modal("series-modal")}>
-          View Series <.icon name="hero-square-2-stack" class="h-6 w-6" />
+          <%= @film.series_entry.film_series.name %> Series
+          <.icon name="hero-square-2-stack" class="h-4 w-4" />
         </a>
       </div>
       <.modal id="series-modal">
@@ -404,7 +408,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               <div class="font-detail text-xs text-red-700/75 uppercase">Uncredited</div>
             <% end %>
             <%= for role <- @secondary_roles do %>
-              <div class="font-content text-gray-700 text-lg">
+              <div class="font-content text-gray-700">
                 <.showcase_link entity={get_entity(role)}>
                   <%= role_display_name(role) %>
                 </.showcase_link>
@@ -573,9 +577,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def full_credits_modal(assigns) do
     ~H"""
     <%= if @film.credits do %>
-      <div class="w-fit m-auto font-content text-red-700 hover:cursor-pointer pt-2">
+      <div class="w-fit m-auto font-detail uppercase text-xs text-red-700 hover:cursor-pointer pt-2">
         <a phx-click={show_modal("credits-modal")}>
-          Full Cast & Crew <.icon name="hero-square-2-stack" class="h-6 w-6" />
+          Full Cast & Crew <.icon name="hero-square-2-stack" class="h-4 w-4" />
         </a>
       </div>
       <.modal id="credits-modal">

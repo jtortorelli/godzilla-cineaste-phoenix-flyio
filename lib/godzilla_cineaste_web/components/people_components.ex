@@ -81,17 +81,18 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <div class="flex flex-row sm:flex-col sm:w-36 items-center gap-3">
           <div class="shrink-0">
             <img
-              class="rounded-lg drop-shadow-lg"
+              class="rounded-lg drop-shadow-lg min-h-[150px]"
               height={150}
               width={101}
               src={Film.primary_poster_url(f)}
             />
           </div>
           <div class="sm:text-center">
-            <div class="font-content italic text-sm text-gray-700">
-              <.showcase_link film={f}><%= f.title %></.showcase_link>
+            <div class="font-content text-sm text-gray-700">
+              <.showcase_link film={f}>
+                <span class="italic"><%= f.title %></span> (<%= f.release_date.year %>)
+              </.showcase_link>
             </div>
-            <div class="font-detail text-xs text-red-700"><%= f.release_date.year %></div>
             <%= unless Enum.empty?(f.staff) and Enum.empty?(f.works) do %>
               <div class="font-content text-sm text-gray-700">
                 <%= staff(f) %>
@@ -105,7 +106,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
                 as
               </div>
               <div class="font-content text-sm text-gray-700">
-                <%= raw(Enum.map_join(f.kaiju_roles ++ f.roles, ", ", &role_display_name(&1))) %>
+                <%= for r <- f.kaiju_roles ++ f.roles do %>
+                  <%= role_display_name(r) %><br />
+                  <%= for q <- r.qualifiers do %>
+                    <span class="text-xs font-detail uppercase text-gray-500"><%= q %></span> <br />
+                  <% end %>
+                <% end %>
               </div>
             <% end %>
           </div>
@@ -146,15 +152,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     """
   end
 
-  defp role_display_name(%Role{qualifiers: []} = role), do: Role.role_display_name(role)
+  defp role_display_name(%Role{} = role), do: Role.role_display_name(role)
 
-  defp role_display_name(%Role{qualifiers: qualifiers} = role),
-    do: "#{Role.role_display_name(role)} (#{Enum.join(qualifiers, ", ")})"
-
-  defp role_display_name(%KaijuRole{name: name, qualifiers: []}), do: name
-
-  defp role_display_name(%KaijuRole{name: name, qualifiers: qualifiers}),
-    do: "#{name} (#{Enum.join(qualifiers, ",")})"
+  defp role_display_name(%KaijuRole{name: name}), do: name
 
   defp staff(%Film{staff: staff, works: works}) do
     case {staff, works} do
