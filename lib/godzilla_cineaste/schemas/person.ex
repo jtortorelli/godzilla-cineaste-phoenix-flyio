@@ -67,6 +67,7 @@ defmodule GodzillaCineaste.Person do
       %{dob: %{"year" => nil}} -> nil
       %{dob: %{"year" => year}, dod: %{"year" => nil, "unknown" => true}} -> "#{year}-?"
       %{dob: %{"year" => year}, dod: nil} -> "b. #{year}"
+      %{dob: %{"year" => year}, dod: %{"year" => nil}} -> "b. #{year}"
       %{dob: %{"year" => year}, dod: %{"year" => dod_year}} -> "#{year}-#{dod_year}"
     end
   end

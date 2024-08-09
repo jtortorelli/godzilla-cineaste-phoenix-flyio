@@ -39,4 +39,14 @@ defmodule GodzillaCineaste.PartialDate do
   def diff(%__MODULE__{} = start_date, %__MODULE__{} = end_date) do
     Timex.diff(initialize_date(end_date), initialize_date(start_date), :years)
   end
+
+  def display_date_range(from, to) do
+    case {from, to} do
+      {nil, _} -> nil
+      {%{year: nil}, _} -> nil
+      {%{year: year}, %{year: nil, unknown: true}} -> "#{year}-?"
+      {%{year: year}, nil} -> "#{year}-Present"
+      {%{year: year}, %{year: to_year}} -> "#{year}-#{to_year}"
+    end
+  end
 end

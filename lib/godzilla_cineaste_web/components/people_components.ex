@@ -31,6 +31,56 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   attr :person, Person, required: true
 
+  def person_birth_date(assigns) do
+    ~H"""
+    <%= if Person.has_birth_date?(@person) do %>
+      <div>
+        <div class="font-detail uppercase text-red-700 text-sm">born</div>
+        <.birth_name birth_name={Person.birth_name(@person)} />
+        <div class="font-content text-gray-700">
+          <%= PartialDate.display_date(@person.dob) %>
+          <%= if Person.status(@person) == :alive do %>
+            (<%= Person.age(@person) %>)
+          <% end %>
+        </div>
+        <%= if @person.birth_place do %>
+          <div class="font-detail text-gray-500 uppercase text-xs">
+            <%= Place.display_place(@person.birth_place) %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :person, Person, required: true
+
+  def person_death_date(assigns) do
+    ~H"""
+    <%= if Person.has_death_date?(@person) do %>
+      <div>
+        <div class="font-detail uppercase text-red-700 text-sm">died</div>
+        <div class="font-content text-gray-700">
+          <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
+        </div>
+        <%= if @person.death_place do %>
+          <div class="font-detail text-gray-500 uppercase text-xs">
+            <%= Place.display_place(@person.death_place) %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <%= if Person.unknown_death_date?(@person) do %>
+      <div>
+        <div class="font-detail uppercase text-red-700 text-sm">died</div>
+        <div class="font-content text-gray-700">Unknown Date</div>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :person, Person, required: true
+
   def person_overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
@@ -39,44 +89,23 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
       </div>
       <div class="text-center w-fit m-auto flex flex-col gap-2">
-        <%= if Person.has_birth_date?(@person) do %>
-          <div>
-            <div class="font-detail uppercase text-red-700 text-sm">born</div>
-            <.birth_name birth_name={Person.birth_name(@person)} />
-            <div class="font-content text-gray-700">
-              <%= PartialDate.display_date(@person.dob) %>
-              <%= if Person.status(@person) == :alive do %>
-                (<%= Person.age(@person) %>)
-              <% end %>
-            </div>
-            <%= if @person.birth_place do %>
-              <div class="font-detail text-gray-500 uppercase text-xs">
-                <%= Place.display_place(@person.birth_place) %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-        <%= if Person.has_death_date?(@person) do %>
-          <div>
-            <div class="font-detail uppercase text-red-700 text-sm">died</div>
-            <div class="font-content text-gray-700">
-              <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
-            </div>
-            <%= if @person.death_place do %>
-              <div class="font-detail text-gray-500 uppercase text-xs">
-                <%= Place.display_place(@person.death_place) %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-        <%= if Person.unknown_death_date?(@person) do %>
-          <div>
-            <div class="font-detail uppercase text-red-700 text-sm">died</div>
-            <div class="font-content text-gray-700">Unknown Date</div>
-          </div>
-        <% end %>
+        <.person_birth_date person={@person} />
+        <.person_death_date person={@person} />
       </div>
     </div>
+    """
+  end
+
+  attr :group, Group, required: true
+
+  def group_active_period(assigns) do
+    ~H"""
+    <%= if PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) do %>
+      <div class="font-detail uppercase text-xs text-red-700">active period</div>
+      <div class="font-content text-gray-700">
+        <%= PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) %>
+      </div>
+    <% end %>
     """
   end
 
@@ -87,7 +116,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <.named_divider name="Overview" />
     <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
       <div class="text-center w-fit m-auto">
-        <img class="rounded-lg drop-shadow-lg" src={@group.avatar_url} />
+        <img class="rounded-lg drop-shadow-lg mb-2" src={@group.avatar_url} />
+      </div>
+      <div class="text-center">
+        <.group_active_period group={@group} />
       </div>
     </div>
     """
@@ -97,13 +129,22 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   def group_members(assigns) do
     ~H"""
-    """
-  end
-
-  attr :selected_filmography, :list, required: true
-
-  def group_filmography(assigns) do
-    ~H"""
+    <%= unless Enum.empty?(@group.members) do %>
+      <.named_divider name="Members" />
+      <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
+        <%= for member <- @group.members do %>
+          <div class="text-center flex flex-col gap-3">
+            <div class="font-content text-gray-700"><%= member.display_name %></div>
+            <div>
+              <.person_birth_date person={member} />
+            </div>
+            <div>
+              <.person_death_date person={member} />
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     """
   end
 

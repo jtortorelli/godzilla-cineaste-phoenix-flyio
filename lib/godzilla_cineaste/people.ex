@@ -59,7 +59,7 @@ defmodule GodzillaCineaste.People do
 
   def get_entity_by_slug!(slug) do
     with nil <- Repo.get_by(Person, slug: slug) do
-      Repo.get_by!(Group, slug: slug)
+      Repo.get_by!(Group, slug: slug) |> Repo.preload(:members)
     end
   end
 
@@ -103,7 +103,9 @@ defmodule GodzillaCineaste.People do
 
     assocs = [
       staff: from(s in Staff, where: s.group_id == ^group_id, order_by: s.order),
-      roles: from(r in Role, where: r.group_id == ^group_id, order_by: r.order)
+      roles: from(r in Role, where: r.group_id == ^group_id, order_by: r.order),
+      kaiju_roles: from(kr in KaijuRole, where: false),
+      works: from(w in Work, where: false)
     ]
 
     Film

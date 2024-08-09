@@ -2,7 +2,7 @@ defmodule GodzillaCineaste.Group do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.GroupMember
+  alias GodzillaCineaste.{GroupMember, PartialDate, Person}
 
   schema "groups" do
     field :slug, :string
@@ -14,7 +14,10 @@ defmodule GodzillaCineaste.Group do
     field :avatar_url, :string
     field :japanese_name, :string
 
-    many_to_many :members, Person, join_through: GroupMember
+    embeds_one :active_period_start, PartialDate, on_replace: :update
+    embeds_one :active_period_end, PartialDate, on_replace: :update
+
+    many_to_many :members, Person, join_through: GroupMember, preload_order: [asc: :sort_name]
 
     timestamps()
   end
@@ -33,5 +36,7 @@ defmodule GodzillaCineaste.Group do
     ])
     |> validate_required([:slug, :display_name, :showcased, :tenant])
     |> unique_constraint([:slug])
+    |> cast_embed(:active_period_start)
+    |> cast_embed(:active_period_end)
   end
 end
