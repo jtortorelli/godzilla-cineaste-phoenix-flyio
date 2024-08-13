@@ -54,7 +54,9 @@ defmodule GodzillaCineaste.MixProject do
       {:bandit, ">= 0.6.2"},
       {:timex, "~> 3.7"},
       {:credo, "~> 1.6"},
-      {:nimble_csv, "~> 1.1"}
+      {:nimble_csv, "~> 1.1"},
+      {:tabler_icons,
+       github: "tabler/tabler-icons", sparse: "icons", app: false, compile: false, depth: 1}
     ]
   end
 

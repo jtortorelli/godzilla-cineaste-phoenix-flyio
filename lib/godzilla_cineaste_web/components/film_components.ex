@@ -56,10 +56,25 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   attr :film, Film, required: true
 
-  def specs(assigns) do
+  def runtime(assigns) do
     ~H"""
-    <div class="text-gray-700 font-content flex justify-center space-x-8">
+    <div class="text-gray-700 font-content flex items-center gap-1">
+      <div>
+        <.icon name="tabler-stopwatch" class="h-5 w-4 text-gray-500" />
+      </div>
       <div><%= "#{@film.runtime}m" %></div>
+    </div>
+    """
+  end
+
+  attr :film, Film, required: true
+
+  def release_date(assigns) do
+    ~H"""
+    <div class="text-gray-700 font-content flex items-center gap-1">
+      <div>
+        <.icon name="tabler-calendar-event" class="h-5 w-4 text-gray-500" />
+      </div>
       <div><%= Film.display_release_date(@film) %></div>
     </div>
     """
@@ -69,20 +84,25 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def studios_or_production_committee(assigns) do
     ~H"""
-    <div>
-      <div class="text-center font-detail uppercase text-xs text-gray-500">A Production Of</div>
-      <%= if @film.production_committee do %>
-        <div class="font-content text-red-700 hover:cursor-pointer text-center">
-          <a phx-click={show_modal("film-production-committee-modal")}>
-            <%= @film.production_committee.display_name %>
-            <.icon name="hero-square-2-stack" class="h-6 w-6" />
-          </a>
+    <div class="">
+      <div class="font-content text-gray-700 flex gap-1 items-baseline">
+        <div><.icon name="tabler-buildings" class="text-gray-500 h-5 w-4" /></div>
+        <div>
+          <%= if @film.production_committee do %>
+            <div class="font-content text-red-700 hover:cursor-pointer">
+              <a phx-click={show_modal("film-production-committee-modal")}>
+                Production Committee <.icon name="tabler-layers-subtract" class="h-5 w-4" />
+              </a>
+            </div>
+          <% else %>
+            <div class="font-content text-gray-700">
+              <%= for studio <- @film.studios do %>
+                <%= studio.better_display_name || studio.display_name %><br />
+              <% end %>
+            </div>
+          <% end %>
         </div>
-      <% else %>
-        <div class="font-content text-center text-gray-700">
-          <%= Enum.map_join(@film.studios, ", ", &(&1.better_display_name || &1.display_name)) %>
-        </div>
-      <% end %>
+      </div>
     </div>
     <%= if @film.production_committee do %>
       <.modal id="film-production-committee-modal">
@@ -108,8 +128,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def original_title(assigns) do
     ~H"""
-    <div class="text-center">
-      <div class="font-detail text-xs text-gray-500 uppercase">Original Title</div>
+    <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+      <div>
+        <.icon name="tabler-language" class="text-gray-500 h-5 w-4" />
+      </div>
       <div class="space-y-1">
         <div class="font-japanese tracking-wide text-gray-700">
           <%= raw(@film.original_title.original) %>
@@ -133,22 +155,23 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if @film.works do %>
       <%= for work <- @film.works do %>
-        <div class="text-center">
-          <div class="uppercase font-detail text-xs text-gray-500">
-            <%= "based on the #{work.format}" %>
+        <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+          <div><.icon name="tabler-book" class="text-gray-500 h-4 w-4" /></div>
+          <div>
+            <div class="font-content italic text-gray-700"><%= work.title %></div>
+            <div class="uppercase font-detail text-xs text-gray-500"><%= work.format %></div>
+            <%= if Enum.empty?(work.authors) do %>
+              <div class="font-content text-gray-700">
+                <span class="uppercase font-detail text-xs text-gray-500">by</span>
+                <%= "#{Enum.map_join(work.studios, ", ", & &1.display_name)}" %>
+              </div>
+            <% else %>
+              <div class="font-content text-gray-700">
+                <span class="uppercase font-detail text-xs text-gray-500">by</span>
+                <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
+              </div>
+            <% end %>
           </div>
-          <div class="font-content italic text-gray-700"><%= work.title %></div>
-          <%= if Enum.empty?(work.authors) do %>
-            <div class="font-content text-gray-700">
-              <span class="uppercase font-detail text-xs text-gray-500">by</span>
-              <%= "#{Enum.map_join(work.studios, ", ", & &1.display_name)}" %>
-            </div>
-          <% else %>
-            <div class="font-content text-gray-700">
-              <span class="uppercase font-detail text-xs text-gray-500">by</span>
-              <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
-            </div>
-          <% end %>
         </div>
       <% end %>
     <% end %>
@@ -160,15 +183,15 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def aliases(assigns) do
     ~H"""
     <%= if not Enum.empty?(@film.aliases) do %>
-      <div>
-        <div class="uppercase font-detail text-center text-xs text-gray-500">
-          also known as
-        </div>
+      <div class="space-y-1">
         <%= for alias <- @film.aliases do %>
-          <div>
-            <div class="text-center font-content italic text-gray-700"><%= alias.title %></div>
-            <div class="text-center font-detail text-xs text-gray-500">
-              <%= alias.context %>
+          <div class="lg:break-inside-avoid-column flex gap-1 items-baseline">
+            <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
+            <div>
+              <div class="font-content italic text-gray-700"><%= alias.title %></div>
+              <div class="font-detail text-xs text-gray-500">
+                <%= alias.context %>
+              </div>
             </div>
           </div>
         <% end %>
@@ -183,29 +206,22 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_film_info(assigns) do
     ~H"""
     <%= if @film do %>
-      <div class="flex gap-2 justify-between items-center max-w-96">
-        <div class="w-6 text-red-700">
+      <div class="flex gap-1 items-baseline font-content">
+        <div>
           <%= if @direction == :prev do %>
-            <.link href={~p"/films/#{@film.slug}"}>
-              <.icon name="hero-arrow-left-circle" class="h-6 w-6" />
-            </.link>
+            <.icon name="tabler-square-rounded-arrow-left" class="text-gray-500 h-5 w-4" />
+          <% else %>
+            <.icon name="tabler-square-rounded-arrow-right" class="text-gray-500 h-5 w-4" />
           <% end %>
         </div>
-        <div class="text-center font-content">
+        <div>
           <.link
             href={~p"/films/#{@film.slug}"}
-            class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+            class="text-gray-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
           >
-            <span class="italic"><%= @film.title %></span>
+            <span class="italic text-wrap"><%= @film.title %></span>
             <span class="text-sm">(<%= @film.release_date.year %>)</span>
           </.link>
-        </div>
-        <div class="text-red-700 w-6">
-          <%= if @direction == :next do %>
-            <.link href={~p"/films/#{@film.slug}"}>
-              <.icon name="hero-arrow-right-circle" class="h-6 w-6" />
-            </.link>
-          <% end %>
         </div>
       </div>
     <% end %>
@@ -219,15 +235,28 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_info(assigns) do
     ~H"""
     <%= if @film.series_entry do %>
-      <div>
+      <div class="lg:break-inside-avoid-column space-y-1">
+        <div class="text-gray-700 flex font-content gap-1 items-baseline">
+          <div><.icon name="tabler-affiliate" class="text-gray-500 h-5 w-4" /></div>
+          <div class="flex gap-1 items-baseline">
+            <div>
+              <i><%= @film.series_entry.film_series.name %></i>
+              Series No. <%= @film.series_entry.entry_number %>
+            </div>
+            <div>
+              <a phx-click={show_modal("series-modal")}>
+                <.icon
+                  name="tabler-layers-subtract"
+                  class="pl-1 text-red-700 hover:cursor-pointer h-5 w-4"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <.series_modal film={@film} />
-        <div class="uppercase font-detail text-center text-xs text-gray-500">
-          <%= "no. #{@film.series_entry.entry_number}" %>
-        </div>
-        <div class="w-fit m-auto">
-          <.series_film_info film={@previous_series_film} direction={:prev} />
-          <.series_film_info film={@next_series_film} direction={:next} />
-        </div>
+        <.series_film_info film={@previous_series_film} direction={:prev} />
+        <.series_film_info film={@next_series_film} direction={:next} />
       </div>
     <% end %>
     """
@@ -238,12 +267,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def series_modal(assigns) do
     ~H"""
     <%= if @film.series_entry do %>
-      <div class="w-fit m-auto font-detail text-xs uppercase text-red-700 hover:cursor-pointer pt-2">
-        <a phx-click={show_modal("series-modal")}>
-          <%= @film.series_entry.film_series.name %> Series
-          <.icon name="hero-square-2-stack" class="h-4 w-4" />
-        </a>
-      </div>
       <.modal id="series-modal">
         <div class="max-h-[80vh] overflow-y-auto">
           <div class="font-display uppercase text-center pb-2 text-gray-700">
@@ -296,12 +319,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <.named_divider name="Overview" />
     <.blurb film={@film} />
-    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
+    <div class="lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:justify-center lg:items-center lg:max-w-2xl m-auto">
       <div class="pb-4 lg:shrink-0">
         <.primary_poster film={@film} />
       </div>
-      <div class="space-y-4">
-        <.specs film={@film} />
+      <div class="text-sm m-auto w-fit space-y-3 h-full">
+        <.release_date film={@film} />
+        <.runtime film={@film} />
         <.original_title film={@film} />
         <.works film={@film} />
         <.aliases film={@film} />
