@@ -126,13 +126,28 @@ defmodule GodzillaCineaste.People do
       |> where([p, a], fragment("unaccent(? ->> 'name') ilike unaccent(?)", a, ^search_term))
       |> select([p, a], p.id)
 
+    group_member_subquery =
+      Group
+      |> from()
+      |> join(:left, [g], p in assoc(g, :members))
+      |> join(:cross, [g, m], a in fragment("jsonb_array_elements(?)", m.alternate_names))
+      |> where(
+        [g, m, a],
+        ilike(fragment("unaccent(?)", m.display_name), fragment("unaccent(?)", ^search_term)) or
+          fragment("unaccent(? ->> 'name') ilike unaccent(?)", a, ^search_term)
+      )
+      |> select([g, m, a], g.id)
+
     person = "person"
+
+    group = "group"
 
     where(
       query,
       [s],
       ilike(fragment("unaccent(?)", s.display_name), fragment("unaccent(?)", ^search_term)) or
-        (s.struct == ^person and s.id in subquery(alternate_name_subquery))
+        (s.struct == ^person and s.id in subquery(alternate_name_subquery)) or
+        (s.struct == ^group and s.id in subquery(group_member_subquery))
     )
   end
 end
