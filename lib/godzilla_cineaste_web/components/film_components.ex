@@ -352,7 +352,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <span class="font-detail text-xs uppercase text-gray-500"><%= role %></span>
           </div>
           <div class="">
-            <span class="text-gray-700 font-content">
+            <span class="text-gray-700 text-sm font-content">
               <%= for staff <- staffs do %>
                 <.showcase_link entity={get_entity(staff)}>
                   <%= raw(
@@ -408,14 +408,16 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             />
           </div>
           <div class="flex flex-col sm:items-center">
-            <div class="font-detail sm:text-center text-gray-500  text-xs">
+            <div class="font-content sm:text-center text-gray-500 text-xs">
               <%= raw(Role.process_role_name(Role.role_display_name(@primary_role))) %>
               <%= if @primary_role.character_qualifiers do %>
                 <br />
-                <span class="text-xs">(<%= @primary_role.character_qualifiers %>)</span>
+                <span class="text-xs font-detail">
+                  <%= @primary_role.character_qualifiers %>
+                </span>
               <% end %>
             </div>
-            <div class="font-content sm:text-center text-gray-700">
+            <div class="font-content text-sm sm:text-center text-gray-700">
               <.showcase_link entity={get_entity(@primary_role)}>
                 <%= role_display_name(@primary_role) %>
                 <%= if has_disambig_chars?(@primary_role) do %>
@@ -426,19 +428,23 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               </.showcase_link>
             </div>
             <div class="font-detail text-xs text-gray-500 uppercase">
-              <%= @primary_role.role_qualifiers %>
+              <%= if @primary_role.role_qualifiers  do %>
+                <.qualifier_icon qualifier={@primary_role.role_qualifiers} />
+              <% end %>
+              <%= if role_is_uncredited?(@primary_role) do %>
+                <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
+              <% end %>
             </div>
-            <%= if role_is_uncredited?(@primary_role) do %>
-              <div class="font-detail text-xs text-red-700/75 uppercase">Uncredited</div>
-            <% end %>
             <%= for role <- @secondary_roles do %>
-              <div class="font-content text-gray-700">
+              <div class="font-content text-gray-700 text-sm">
                 <.showcase_link entity={get_entity(role)}>
                   <%= role_display_name(role) %>
                 </.showcase_link>
               </div>
               <div class="font-detail text-xs text-gray-500 uppercase">
-                <%= role.role_qualifiers %>
+                <%= if role.role_qualifiers do %>
+                  <.qualifier_icon qualifier={role.role_qualifiers} />
+                <% end %>
               </div>
             <% end %>
           </div>
@@ -493,7 +499,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             phx-click={expand_cast_group(@q)}
           >
             <%= "+#{length(@roles) - 7} more" %>
-            <.icon name="hero-chevron-down-solid" />
+            <.icon name="tabler-chevron-down" />
           </button>
         </div>
         <div class={"hidden collapse-#{@q}-cast text-center pt-6"}>
@@ -501,7 +507,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
             phx-click={collapse_cast_group(@q)}
           >
-            Show less <.icon name="hero-chevron-up-solid" />
+            Show less <.icon name="tabler-chevron-up" />
           </button>
         </div>
       <% end %>
@@ -526,16 +532,18 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 />
               </div>
               <div class="flex flex-col sm:items-center">
-                <div class="font-detail text-gray-500 text-xs"><%= kaiju_name %></div>
+                <div class="font-content text-gray-500 text-xs"><%= kaiju_name %></div>
                 <%= for kr <- kaiju_roles do %>
-                  <div class="font-content sm:text-center text-gray-700">
+                  <div class="font-content sm:text-center text-sm text-gray-700">
                     <.showcase_link entity={get_entity(kr)}>
                       <%= role_display_name(kr) %>
                     </.showcase_link>
                   </div>
                   <%= if kr.qualifiers do %>
                     <div class="font-detail text-xs text-gray-500 uppercase">
-                      <%= Enum.join(kr.qualifiers, ", ") %>
+                      <%= for q <- kr.qualifiers do %>
+                        <.qualifier_icon qualifier={q} />
+                      <% end %>
                     </div>
                   <% end %>
                 <% end %>
@@ -557,14 +565,16 @@ defmodule GodzillaCineasteWeb.FilmComponents do
               <div class="flex flex-col sm:items-center">
                 <div class="font-detail text-gray-500 text-xs"><%= kaiju_name %></div>
                 <%= for kr <- kaiju_roles do %>
-                  <div class="font-content sm:text-center text-gray-700">
+                  <div class="font-content text-sm sm:text-center text-gray-700">
                     <.showcase_link entity={get_entity(kr)}>
                       <%= role_display_name(kr) %>
                     </.showcase_link>
                   </div>
                   <%= if kr.qualifiers do %>
                     <div class="font-detail text-xs text-gray-500 uppercase">
-                      <%= Enum.join(kr.qualifiers, ", ") %>
+                      <%= for q <- kr.qualifiers do %>
+                        <.qualifier_icon qualifier={q} />
+                      <% end %>
                     </div>
                   <% end %>
                 <% end %>
@@ -580,7 +590,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             phx-click={expand_cast_group(:kaiju)}
           >
             <%= "+#{length(@roles) - 7} more" %>
-            <.icon name="hero-chevron-down-solid" />
+            <.icon name="tabler-chevron-down" />
           </button>
         </div>
         <div class="hidden collapse-kaiju-cast text-center pt-6">
@@ -588,7 +598,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
             phx-click={collapse_cast_group(:kaiju)}
           >
-            Show less <.icon name="hero-chevron-up-solid" />
+            Show less <.icon name="tabler-chevron-up" />
           </button>
         </div>
       <% end %>
@@ -603,7 +613,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <%= if @film.credits do %>
       <div class="w-fit m-auto font-detail uppercase text-xs text-red-700 hover:cursor-pointer pt-2">
         <a phx-click={show_modal("credits-modal")}>
-          Full Cast & Crew <.icon name="hero-square-2-stack" class="h-4 w-4" />
+          Full Cast & Crew <.icon name="tabler-layers-subtract" class="h-4 w-4" />
         </a>
       </div>
       <.modal id="credits-modal">
@@ -626,6 +636,31 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           </div>
         </div>
       </.modal>
+    <% end %>
+    """
+  end
+
+  attr :qualifier, :string, required: true
+
+  def qualifier_icon(assigns) do
+    ~H"""
+    <%= case @qualifier do %>
+      <% "Suit Actor" -> %>
+        <.icon name="tabler-meeple" class="h-4 w-4" />
+      <% "Puppet" -> %>
+        <.icon name="tabler-mood-happy" class="h-4 w-4" />
+      <% "CGI" -> %>
+        <.icon name="tabler-server" class="h-4 w-4" />
+      <% "Voice" -> %>
+        <.icon name="tabler-microphone-2" class="h-4 w-4" />
+      <% "Motion Capture" -> %>
+        <.icon name="tabler-stretching-2" class="h-4 w-4" />
+      <% "Stock Footage" -> %>
+        <.icon name="tabler-recycle" class="h-4 w-4" />
+      <% "Photo" -> %>
+        <.icon name="tabler-photo" class="h-4 w-4" />
+      <% "American Version" -> %>
+        <.icon name="tabler-world" class="h-4 w-4" />
     <% end %>
     """
   end

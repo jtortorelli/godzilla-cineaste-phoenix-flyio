@@ -88,7 +88,7 @@ defmodule GodzillaCineasteWeb.CoreComponents do
                   class="-m-3 flex-none p-3 text-red-700"
                   aria-label={gettext("close")}
                 >
-                  <.icon name="hero-x-mark-solid" class="h-6 w-6" />
+                  <.icon name="tabler-x" class="h-6 w-6" />
                 </button>
               </div>
               <div id={"#{@id}-content"}>

@@ -219,7 +219,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           phx-click={expand_filmography()}
         >
           <%= "+#{length(@selected_filmography) - 6} more" %>
-          <.icon name="hero-chevron-down-solid" />
+          <.icon name="tabler-chevron-down" />
         </button>
       </div>
       <div class="hidden collapse-filmography text-center pt-6">
@@ -227,7 +227,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
           phx-click={collapse_filmography()}
         >
-          Show less <.icon name="hero-chevron-up-solid" />
+          Show less <.icon name="tabler-chevron-up" />
         </button>
       </div>
     <% end %>
