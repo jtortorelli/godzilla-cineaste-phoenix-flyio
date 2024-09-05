@@ -34,20 +34,24 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_birth_date(assigns) do
     ~H"""
     <%= if Person.has_birth_date?(@person) do %>
-      <div>
-        <div class="font-detail uppercase text-red-700 text-sm">born</div>
-        <.birth_name birth_name={Person.birth_name(@person)} />
-        <div class="font-content text-gray-700">
-          <%= PartialDate.display_date(@person.dob) %>
-          <%= if Person.status(@person) == :alive do %>
-            (<%= Person.age(@person) %>)
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div>
+          <.icon name="tabler-sun-high" class="text-gray-500 h-5 w-4" />
+        </div>
+        <div class="space-y-1">
+          <div class="font-content text-gray-700">
+            <%= PartialDate.display_date(@person.dob) %>
+            <%= if Person.status(@person) == :alive do %>
+              (<%= Person.age(@person) %>)
+            <% end %>
+          </div>
+          <.birth_name birth_name={Person.birth_name(@person)} />
+          <%= if @person.birth_place do %>
+            <div class="font-content text-gray-500 text-xs">
+              <%= Place.display_place(@person.birth_place) %>
+            </div>
           <% end %>
         </div>
-        <%= if @person.birth_place do %>
-          <div class="font-detail text-gray-500 uppercase text-xs">
-            <%= Place.display_place(@person.birth_place) %>
-          </div>
-        <% end %>
       </div>
     <% end %>
     """
@@ -58,21 +62,23 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_death_date(assigns) do
     ~H"""
     <%= if Person.has_death_date?(@person) do %>
-      <div>
-        <div class="font-detail uppercase text-red-700 text-sm">died</div>
-        <div class="font-content text-gray-700">
-          <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
-        </div>
-        <%= if @person.death_place do %>
-          <div class="font-detail text-gray-500 uppercase text-xs">
-            <%= Place.display_place(@person.death_place) %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
+        <div class="space-y-1">
+          <div class="font-content text-gray-700">
+            <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
+            <%= if @person.death_place do %>
+              <div class="font-content text-gray-500 text-xs">
+                <%= Place.display_place(@person.death_place) %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       </div>
     <% end %>
     <%= if Person.unknown_death_date?(@person) do %>
-      <div>
-        <div class="font-detail uppercase text-red-700 text-sm">died</div>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
         <div class="font-content text-gray-700">Unknown Date</div>
       </div>
     <% end %>
@@ -88,7 +94,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="text-center w-fit m-auto">
         <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
       </div>
-      <div class="text-center w-fit m-auto flex flex-col gap-2">
+      <div class="w-fit m-auto flex flex-col gap-2">
         <.person_birth_date person={@person} />
         <.person_death_date person={@person} />
       </div>
@@ -133,8 +139,8 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <.named_divider name="Members" />
       <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
         <%= for member <- @group.members do %>
-          <div class="text-center flex flex-col gap-3">
-            <div class="font-content text-gray-700"><%= member.display_name %></div>
+          <div class="flex flex-col gap-3">
+            <div class="text-center font-content text-gray-700"><%= member.display_name %></div>
             <div>
               <.person_birth_date person={member} />
             </div>
@@ -273,9 +279,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def birth_name(assigns) do
     ~H"""
     <%= if @birth_name.name do %>
-      <div class="font-content text-gray-700"><%= @birth_name.name %></div>
+      <div class="font-content text-gray-500 text-xs"><%= @birth_name.name %></div>
       <%= if @birth_name.japanese_name do %>
-        <div class="font-japanese text-gray-500 text-sm"><%= @birth_name.japanese_name %></div>
+        <div class="font-japanese text-gray-500 text-xs"><%= @birth_name.japanese_name %></div>
       <% end %>
     <% end %>
     """

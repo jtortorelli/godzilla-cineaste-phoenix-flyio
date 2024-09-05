@@ -667,7 +667,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
 
   def icon_legend(assigns) do
     ~H"""
-    <.named_divider name="icon legend" subdued={true}/>
+    <.named_divider name="icon legend" subdued={true} />
     <div class="rounded-lg  p-4 bg-gray-100  font-detail text-gray-700 text-sm   uppercase flex flex-wrap gap-8 justify-center">
       <div>
         <.icon name="tabler-server" class="h-4 w-4" />: CGI
@@ -696,7 +696,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <div>
         <.icon name="tabler-microphone-2" class="h-4 w-4" />: Voice
       </div>
-      </div>
+    </div>
     """
   end
 
