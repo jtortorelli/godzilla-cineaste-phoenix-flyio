@@ -645,23 +645,58 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def qualifier_icon(assigns) do
     ~H"""
     <%= case @qualifier do %>
-      <% "Suit Actor" -> %>
-        <.icon name="tabler-meeple" class="h-4 w-4" />
-      <% "Puppet" -> %>
-        <.icon name="tabler-mood-happy" class="h-4 w-4" />
       <% "CGI" -> %>
         <.icon name="tabler-server" class="h-4 w-4" />
-      <% "Voice" -> %>
-        <.icon name="tabler-microphone-2" class="h-4 w-4" />
       <% "Motion Capture" -> %>
         <.icon name="tabler-stretching-2" class="h-4 w-4" />
-      <% "Stock Footage" -> %>
-        <.icon name="tabler-recycle" class="h-4 w-4" />
-      <% "Photo" -> %>
-        <.icon name="tabler-photo" class="h-4 w-4" />
       <% "American Version" -> %>
         <.icon name="tabler-world" class="h-4 w-4" />
+      <% "Photo" -> %>
+        <.icon name="tabler-photo" class="h-4 w-4" />
+      <% "Puppet" -> %>
+        <.icon name="tabler-mood-happy" class="h-4 w-4" />
+      <% "Stock Footage" -> %>
+        <.icon name="tabler-recycle" class="h-4 w-4" />
+      <% "Suit Actor" -> %>
+        <.icon name="tabler-meeple" class="h-4 w-4" />
+      <% "Voice" -> %>
+        <.icon name="tabler-microphone-2" class="h-4 w-4" />
     <% end %>
+    """
+  end
+
+  def icon_legend(assigns) do
+    ~H"""
+    <.named_divider name="icon legend" subdued={true}/>
+    <div class="rounded-lg  p-4 bg-gray-100  font-detail text-gray-700 text-sm   uppercase flex flex-wrap gap-8 justify-center">
+      <div>
+        <.icon name="tabler-server" class="h-4 w-4" />: CGI
+      </div>
+      <div>
+        <.icon name="tabler-stretching-2" class="h-4 w-4" />: Motion Capture
+      </div>
+      <div>
+        <.icon name="tabler-world" class="h-4 w-4" />: Overseas Cast
+      </div>
+      <div>
+        <.icon name="tabler-photo" class="h-4 w-4" />: Photo
+      </div>
+      <div>
+        <.icon name="tabler-mood-happy" class="h-4 w-4" />: Puppet
+      </div>
+      <div>
+        <.icon name="tabler-recycle" class="h-4 w-4" />: Stock Footage
+      </div>
+      <div>
+        <.icon name="tabler-meeple" class="h-4 w-4" />: Suit Actor
+      </div>
+      <div class="text-red-700">
+        <.icon name="tabler-id-off" class="h-4 w-4" />: Uncredited
+      </div>
+      <div>
+        <.icon name="tabler-microphone-2" class="h-4 w-4" />: Voice
+      </div>
+      </div>
     """
   end
 

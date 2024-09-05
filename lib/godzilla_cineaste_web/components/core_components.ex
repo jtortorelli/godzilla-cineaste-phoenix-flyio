@@ -20,12 +20,13 @@ defmodule GodzillaCineasteWeb.CoreComponents do
   import GodzillaCineasteWeb.Gettext
 
   attr :name, :string, required: true
+  attr :subdued, :boolean, default: false
 
   def named_divider(assigns) do
     ~H"""
     <div class="inline-flex items-center justify-center text-center w-full">
-      <hr class="w-96 h-px my-8 border-0 rounded bg-red-700" />
-      <span class="absolute px-3 font-detail text-sm uppercase text-red-700 -translate-x-1/2 bg-white left-1/2">
+      <hr class={["w-96 h-px my-8 border-0 rounded", @subdued && "bg-gray-500", !@subdued && "bg-red-700"]} />
+      <span class={["absolute px-3 font-detail text-sm uppercase -translate-x-1/2 bg-white left-1/2", @subdued && "text-gray-500", !@subdued && "text-red-700"]}>
         <%= @name %>
       </span>
     </div>
