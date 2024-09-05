@@ -154,11 +154,36 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     """
   end
 
+  attr :qualifier, :string, required: true
+
+  def qualifier_icon(assigns) do
+    ~H"""
+    <%= case @qualifier do %>
+      <% "CGI" -> %>
+        <.icon name="tabler-server" class="h-3 w-3" />
+      <% "Motion Capture" -> %>
+        <.icon name="tabler-stretching-2" class="h-3 w-3" />
+      <% "American Version" -> %>
+        <.icon name="tabler-world" class="h-3 w-3" />
+      <% "Photo" -> %>
+        <.icon name="tabler-photo" class="h-3 w-3" />
+      <% "Puppet" -> %>
+        <.icon name="tabler-mood-happy" class="h-3 w-3" />
+      <% "Stock Footage" -> %>
+        <.icon name="tabler-recycle" class="h-3 w-3" />
+      <% "Suit Actor" -> %>
+        <.icon name="tabler-meeple" class="h-3 w-3" />
+      <% "Voice" -> %>
+        <.icon name="tabler-microphone-2" class="h-3 w-3" />
+    <% end %>
+    """
+  end
+
   attr :film, Film, required: true
 
   def person_filmography_entry(assigns) do
     ~H"""
-    <div class="flex flex-row sm:flex-col sm:w-36 items-center gap-3">
+    <div class="flex flex-row w-60 items-start gap-3">
       <div class="shrink-0">
         <img
           class="rounded-lg drop-shadow-lg min-h-[150px]"
@@ -167,32 +192,44 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           src={Film.primary_poster_url(@film)}
         />
       </div>
-      <div class="sm:text-center">
-        <div class="font-content text-sm text-gray-700">
+      <div>
+        <div class="font-content text-xs text-gray-500"><%= @film.release_date.year %></div>
+        <div class="font-content text-sm text-gray-700 mb-1">
           <.showcase_link film={@film}>
-            <span class="italic"><%= @film.title %></span> (<%= @film.release_date.year %>)
+            <span class="italic"><%= @film.title %></span>
           </.showcase_link>
         </div>
         <%= unless Enum.empty?(@film.staff) and Enum.empty?(@film.works) do %>
-          <div class="font-content text-sm text-gray-700">
-            <%= staff(@film) %>
-          </div>
+          <%= for s <- staff(@film) do %>
+            <div class="font-content text-xs text-gray-500 flex">
+              <div>
+                <.icon name="tabler-chair-director" class="h-4 w-4" />
+              </div>
+              <div>
+                <%= s %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
         <%= unless Enum.empty?(@film.kaiju_roles) and Enum.empty?(@film.roles) do %>
-          <div class="font-detail text-xs text-red-700 uppercase">
-            <%= if Enum.any?(@film.kaiju_roles ++ @film.roles, & &1.uncredited) do %>
-              uncredited
-            <% end %>
-            as
-          </div>
-          <div class="font-content text-sm text-gray-700">
-            <%= for r <- @film.kaiju_roles ++ @film.roles do %>
-              <%= role_display_name(r) %><br />
+          <%= for r <- @film.kaiju_roles ++ @film.roles do %>
+            <div class="font-content text-xs text-gray-500 flex gap-1">
+              <div>
+                <.icon name="tabler-masks-theater" class="h-4 w-4" />
+              </div>
+              <div>
+              <div>
+                <%= raw(role_display_name(r)) %>
+              </div>
               <%= for q <- r.qualifiers do %>
-                <span class="text-xs font-detail uppercase text-gray-500"><%= q %></span> <br />
+                <.qualifier_icon qualifier={q} />
               <% end %>
-            <% end %>
-          </div>
+              <%= if r.uncredited do %>
+                <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
+              <% end %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
@@ -205,26 +242,26 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     ~H"""
     <.named_divider name="Selected Filmography" />
     <div class="trunc-filmography">
-      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-        <%= for f <- Enum.take(@selected_filmography, 6) do %>
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
+        <%= for f <- Enum.take(@selected_filmography, 8) do %>
           <.person_filmography_entry film={f} />
         <% end %>
       </div>
     </div>
     <div class="full-filmography hidden">
-      <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
         <%= for f <- @selected_filmography do %>
           <.person_filmography_entry film={f} />
         <% end %>
       </div>
     </div>
-    <%= if length(@selected_filmography) > 6 do %>
+    <%= if length(@selected_filmography) > 8 do %>
       <div class="expand-filmography text-center pt-6">
         <button
           class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
           phx-click={expand_filmography()}
         >
-          <%= "+#{length(@selected_filmography) - 6} more" %>
+          <%= "+#{length(@selected_filmography) - 8} more" %>
           <.icon name="tabler-chevron-down" />
         </button>
       </div>
@@ -294,9 +331,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   defp staff(%Film{staff: staff, works: works}) do
     case {staff, works} do
       {[], []} -> []
-      {staff, []} -> Enum.map_join(staff, ", ", & &1.role)
+      {staff, []} -> Enum.map(staff, & &1.role)
       {[], _works} -> ["Original Work"]
-      _ -> ["Original Work" | Enum.map(staff, & &1.role)] |> Enum.join(", ")
+      _ -> ["Original Work" | Enum.map(staff, & &1.role)]
     end
   end
 end
