@@ -225,13 +225,30 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           </.showcase_link>
         </div>
         <%= unless Enum.empty?(@film.staff) and Enum.empty?(@film.works) do %>
-          <%= for s <- staff(@film) do %>
+          <%= unless Enum.empty?(@film.works) do %>
             <div class="font-content text-xs text-gray-500 flex">
               <div>
                 <.icon name="tabler-chair-director" class="h-4 w-4" />
               </div>
               <div>
-                <%= s %>
+                Original Work
+              </div>
+            </div>
+          <% end %>
+          <%= for s <- @film.staff do %>
+            <div class="font-content text-xs text-gray-500 flex">
+              <div>
+                <.icon name="tabler-chair-director" class="h-4 w-4" />
+              </div>
+              <div>
+                <div>
+                  <%= s.role %>
+                </div>
+                <%= if s.staff_alias do %>
+                  <div>
+                    <.icon name="tabler-at" class="h-3 w-3" /><%= s.staff_alias %>
+                  </div>
+                <% end %>
               </div>
             </div>
           <% end %>
@@ -355,13 +372,4 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   defp role_display_name(%Role{} = role), do: Role.role_display_name(role)
 
   defp role_display_name(%KaijuRole{name: name}), do: name
-
-  defp staff(%Film{staff: staff, works: works}) do
-    case {staff, works} do
-      {[], []} -> []
-      {staff, []} -> Enum.map(staff, & &1.role)
-      {[], _works} -> ["Original Work"]
-      _ -> ["Original Work" | Enum.map(staff, & &1.role)]
-    end
-  end
 end

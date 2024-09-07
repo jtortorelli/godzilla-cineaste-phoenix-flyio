@@ -365,6 +365,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                   ) %>
                 </.showcase_link>
                 <br />
+                <%= if staff.staff_alias do %>
+                  <span class="text-gray-500 text-xs">
+                    <.icon name="tabler-at" class="h-3 w-3" /><%= staff.staff_alias %>
+                  </span>
+                <% end %>
               <% end %>
             </span>
           </div>
