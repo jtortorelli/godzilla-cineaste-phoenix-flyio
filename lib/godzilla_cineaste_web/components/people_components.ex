@@ -115,6 +115,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           <%= if a.japanese_name do %>
             <div class="font-content text-gray-500 text-xs"><%= a.japanese_name %></div>
           <% end %>
+          <%= if a.context do %>
+            <div class="font-content text-gray-500 text-xs"><%= a.context %></div>
+          <% end %>
+          <%= if a.category == :mistranslation do %>
+            <div class="font-content text-gray-500 text-xs">Mistranslation</div>
+          <% end %>
         </div>
       </div>
     <% end %>
@@ -240,6 +246,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
                 <div>
                   <%= raw(role_display_name(r)) %>
                 </div>
+                <%= if r.actor_alias do %>
+                  <.icon name="tabler-at" class="h-3 w-3" /><%= r.actor_alias %>
+                <% end %>
                 <%= for q <- r.qualifiers do %>
                   <.qualifier_icon qualifier={q} />
                 <% end %>

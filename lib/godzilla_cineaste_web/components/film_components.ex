@@ -427,6 +427,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 <% end %>
               </.showcase_link>
             </div>
+            <%= if @primary_role.actor_alias do %>
+              <div class="font-content text-xs text-gray-500">
+                <.icon name="tabler-at" class="text-gray-500 h-3 w-3" /><%= @primary_role.actor_alias %>
+              </div>
+            <% end %>
             <div class="font-detail text-xs text-gray-500 uppercase">
               <%= if @primary_role.role_qualifiers  do %>
                 <.qualifier_icon qualifier={@primary_role.role_qualifiers} />
