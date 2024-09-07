@@ -97,8 +97,27 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="w-fit m-auto flex flex-col gap-2">
         <.person_birth_date person={@person} />
         <.person_death_date person={@person} />
+        <.person_aliases person={@person} />
       </div>
     </div>
+    """
+  end
+
+  attr :person, Person, required: true
+
+  def person_aliases(assigns) do
+    ~H"""
+    <%= for a <- Person.aliases(@person) do %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
+        <div>
+          <div class="font-content text-gray-700"><%= a.name %></div>
+          <%= if a.japanese_name do %>
+            <div class="font-content text-gray-500 text-xs"><%= a.japanese_name %></div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
     """
   end
 
@@ -218,15 +237,15 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
                 <.icon name="tabler-masks-theater" class="h-4 w-4" />
               </div>
               <div>
-              <div>
-                <%= raw(role_display_name(r)) %>
-              </div>
-              <%= for q <- r.qualifiers do %>
-                <.qualifier_icon qualifier={q} />
-              <% end %>
-              <%= if r.uncredited do %>
-                <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
-              <% end %>
+                <div>
+                  <%= raw(role_display_name(r)) %>
+                </div>
+                <%= for q <- r.qualifiers do %>
+                  <.qualifier_icon qualifier={q} />
+                <% end %>
+                <%= if r.uncredited do %>
+                  <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
+                <% end %>
               </div>
             </div>
           <% end %>

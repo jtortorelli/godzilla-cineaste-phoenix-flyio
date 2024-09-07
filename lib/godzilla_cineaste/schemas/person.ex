@@ -76,6 +76,10 @@ defmodule GodzillaCineaste.Person do
     Enum.find(alternate_names, &(&1.category == :birth_name)) || %PersonAlternateName{}
   end
 
+  def aliases(%__MODULE__{alternate_names: alternate_names}) do
+    Enum.reject(alternate_names, &(&1.category == :birth_name))
+  end
+
   def has_birth_date?(%__MODULE__{dob: %PartialDate{year: year}}) when is_integer(year), do: true
   def has_birth_date?(%__MODULE__{}), do: false
 
