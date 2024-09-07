@@ -352,8 +352,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <span class="font-detail text-xs uppercase text-gray-500"><%= role %></span>
           </div>
           <div class="">
-            <span class="text-gray-700 text-sm font-content">
-              <%= for staff <- staffs do %>
+            <%= for staff <- staffs do %>
+              <div class="text-gray-700 text-sm font-content">
                 <.showcase_link entity={get_entity(staff)}>
                   <%= raw(
                     if has_disambig_chars?(staff) do
@@ -370,8 +370,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                     <.icon name="tabler-at" class="h-3 w-3" /><%= staff.staff_alias %>
                   </span>
                 <% end %>
-              <% end %>
-            </span>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>
