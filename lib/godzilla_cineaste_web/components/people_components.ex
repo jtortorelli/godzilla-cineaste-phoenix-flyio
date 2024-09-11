@@ -94,7 +94,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="text-center w-fit m-auto">
         <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
       </div>
-      <div class="w-fit m-auto flex flex-col gap-2">
+      <div class="w-fit text-sm m-auto flex flex-col gap-2">
         <.person_birth_date person={@person} />
         <.person_death_date person={@person} />
         <.person_aliases person={@person} />
@@ -149,7 +149,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="text-center w-fit m-auto">
         <img class="rounded-lg drop-shadow-lg mb-2" src={@group.avatar_url} />
       </div>
-      <div class="text-center">
+      <div class="text-center text-sm">
         <.group_active_period group={@group} />
       </div>
     </div>
@@ -164,8 +164,8 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <.named_divider name="Members" />
       <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
         <%= for member <- @group.members do %>
-          <div class="flex flex-col gap-3">
-            <div class="text-center font-content text-gray-700"><%= member.display_name %></div>
+          <div class="flex flex-col text-sm gap-3">
+            <div class="text-center text-base font-content text-gray-700"><%= member.display_name %></div>
             <div>
               <.person_birth_date person={member} />
             </div>

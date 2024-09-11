@@ -159,17 +159,19 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div><.icon name="tabler-book" class="text-gray-500 h-4 w-4" /></div>
           <div>
             <div class="font-content italic text-gray-700"><%= work.title %></div>
-            <div class="uppercase font-detail text-xs text-gray-500"><%= work.format %></div>
+            <div class="uppercase font-detail text-xs text-gray-500"><%= work.format %> by</div>
             <%= if Enum.empty?(work.authors) do %>
-              <div class="font-content text-gray-700">
-                <span class="uppercase font-detail text-xs text-gray-500">by</span>
-                <%= "#{Enum.map_join(work.studios, ", ", & &1.display_name)}" %>
-              </div>
+              <%= for s <- work.studios do %>
+                <div class="font-content text-gray-700">
+                  <%= s.display_name %>
+                </div>
+              <% end %>
             <% else %>
+            <%= for a <- work.authors do %>
               <div class="font-content text-gray-700">
-                <span class="uppercase font-detail text-xs text-gray-500">by</span>
-                <%= "#{Enum.map_join(work.authors, ", ", & &1.display_name)}" %>
+                <.showcase_link entity={a}><%= a.display_name %></.showcase_link>
               </div>
+              <% end %>
             <% end %>
           </div>
         </div>
