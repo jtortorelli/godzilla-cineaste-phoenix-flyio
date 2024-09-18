@@ -58,7 +58,7 @@ defmodule GodzillaCineaste.People do
   end
 
   def get_entity_by_slug!(slug) do
-    with nil <- Repo.get_by(Person, slug: slug) do
+    with nil <- Repo.get_by(Person, slug: slug) |> Repo.preload(relationships: [:relative]) do
       Repo.get_by!(Group, slug: slug) |> Repo.preload(:members)
     end
   end

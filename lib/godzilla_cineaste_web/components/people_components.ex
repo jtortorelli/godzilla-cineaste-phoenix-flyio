@@ -98,6 +98,8 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <.person_birth_date person={@person} />
         <.person_death_date person={@person} />
         <.person_aliases person={@person} />
+        <.person_spouses person={@person} />
+        <.person_family person={@person} />
       </div>
     </div>
     """
@@ -120,6 +122,49 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           <% end %>
           <%= if a.category == :mistranslation do %>
             <div class="font-content text-gray-500 text-xs">Mistranslation</div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :person, Person, required: true
+
+  def person_spouses(assigns) do
+    ~H"""
+    <%= for relationship <- spouses(@person) do %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-chart-circles" class="text-gray-500 h-5 w-5" /></div>
+        <div>
+          <div class="font-content text-gray-500">
+            <.person_showcase_link person={relationship.relative}>
+              <%= relationship.relative.display_name %>
+            </.person_showcase_link>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :person, Person, required: true
+
+  def person_family(assigns) do
+    ~H"""
+    <%= unless Enum.empty?(family(@person)) do %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-users-group" class="text-gray-500 h-5 w-5" /></div>
+        <div>
+          <%= for relationship <- family(@person) do %>
+            <div class="font-content text-gray-500">
+              <.person_showcase_link person={relationship.relative}>
+                <%= relationship.relative.display_name %>
+              </.person_showcase_link>
+            </div>
+            <div class="font-content text-gray-500 text-xs capitalize">
+              <%= relationship.relationship |> Atom.to_string() |> String.replace("_", "-") %>
+            </div>
           <% end %>
         </div>
       </div>
@@ -165,7 +210,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
         <%= for member <- @group.members do %>
           <div class="flex flex-col text-sm gap-3">
-            <div class="text-center text-base font-content text-gray-700"><%= member.display_name %></div>
+            <div class="text-center text-base font-content text-gray-700">
+              <%= member.display_name %>
+            </div>
             <div>
               <.person_birth_date person={member} />
             </div>
@@ -220,9 +267,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div>
         <div class="font-content text-xs text-gray-500"><%= @film.release_date.year %></div>
         <div class="font-content text-sm text-gray-700 mb-1">
-          <.showcase_link film={@film}>
+          <.film_showcase_link film={@film}>
             <span class="italic"><%= @film.title %></span>
-          </.showcase_link>
+          </.film_showcase_link>
         </div>
         <%= unless Enum.empty?(@film.staff) and Enum.empty?(@film.works) do %>
           <%= unless Enum.empty?(@film.works) do %>
@@ -341,11 +388,29 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   attr :film, Film, required: true
   slot :inner_block, required: true
 
-  def showcase_link(assigns) do
+  def film_showcase_link(assigns) do
     ~H"""
     <%= if @film.showcased do %>
       <.link
         href={~p"/films/#{@film.slug}"}
+        class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+      >
+        <%= render_slot(@inner_block) %>
+      </.link>
+    <% else %>
+      <%= render_slot(@inner_block) %>
+    <% end %>
+    """
+  end
+
+  attr :person, Person, required: true
+  slot :inner_block, required: true
+
+  def person_showcase_link(assigns) do
+    ~H"""
+    <%= if @person.showcased do %>
+      <.link
+        href={~p"/people/#{@person.slug}"}
         class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
         <%= render_slot(@inner_block) %>
@@ -372,4 +437,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   defp role_display_name(%Role{} = role), do: Role.role_display_name(role)
 
   defp role_display_name(%KaijuRole{name: name}), do: name
+
+  defp spouses(%Person{} = person) do
+    person.relationships |> Enum.filter(&(&1.relationship == :spouse)) |> Enum.sort_by(& &1.order)
+  end
+
+  defp family(%Person{} = person) do
+    person.relationships |> Enum.filter(&(&1.relationship != :spouse)) |> Enum.sort_by(& &1.order)
+  end
 end

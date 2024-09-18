@@ -8,6 +8,7 @@ defmodule GodzillaCineaste.Person do
     PartialDate,
     PersonAlternateName,
     Place,
+    Relationship,
     Role,
     Staff
   }
@@ -25,6 +26,7 @@ defmodule GodzillaCineaste.Person do
 
     has_many :roles, Role
     has_many :staff, Staff
+    has_many :relationships, Relationship, foreign_key: :self_id
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update
