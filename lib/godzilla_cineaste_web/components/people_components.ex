@@ -20,10 +20,6 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <div class="text-center w-fit m-auto">
       <h1 class="font-display tracking-wider uppercase text-2xl text-gray-700 p-4">
         <%= @display_name %>
-        <br />
-        <span class="font-japanese uppercase p-2 text-base text-gray-500 tracking-[.2em] font-bold">
-          <%= @japanese_name %>
-        </span>
       </h1>
     </div>
     """
@@ -90,11 +86,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
-    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
-      <div class="text-center w-fit m-auto">
+    <div class="flex flex-col justify-center lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
+      <div class="pb-4 lg:shrink-0 h-full w-fit m-auto">
         <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
       </div>
-      <div class="w-fit text-sm m-auto flex flex-col gap-2">
+      <div class="text-sm m-auto space-y-3 h-full">
+        <.japanese_name japanese_name={@person.japanese_name} />
         <.person_birth_date person={@person} />
         <.person_death_date person={@person} />
         <.person_aliases person={@person} />
@@ -102,6 +99,19 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <.person_family person={@person} />
       </div>
     </div>
+    """
+  end
+
+  attr :japanese_name, :string
+
+  def japanese_name(assigns) do
+    ~H"""
+    <%= if @japanese_name do %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-language" class="text-gray-500 h-5 w-4" /></div>
+        <div class="font-japanese text-gray-700"><%= @japanese_name %></div>
+      </div>
+    <% end %>
     """
   end
 
@@ -177,9 +187,11 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def group_active_period(assigns) do
     ~H"""
     <%= if PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) do %>
-      <div class="font-detail uppercase text-xs text-red-700">active period</div>
-      <div class="font-content text-gray-700">
-        <%= PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) %>
+      <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+        <div><.icon name="tabler-calendar-time" class="text-gray-500 h-5 w-4" /></div>
+        <div class="font-content text-gray-700">
+          <%= PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) %>
+        </div>
       </div>
     <% end %>
     """
@@ -190,11 +202,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def group_overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
-    <div class="lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
-      <div class="text-center w-fit m-auto">
+    <div class="flex flex-col lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
+      <div class="pb-4 lg:shrink-0 h-full w-fit m-auto">
         <img class="rounded-lg drop-shadow-lg mb-2" src={@group.avatar_url} />
       </div>
-      <div class="text-center text-sm">
+      <div class="text-sm m-auto space-y-3 h-full">
+        <.japanese_name japanese_name={@group.japanese_name} />
         <.group_active_period group={@group} />
       </div>
     </div>
@@ -207,10 +220,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     ~H"""
     <%= unless Enum.empty?(@group.members) do %>
       <.named_divider name="Members" />
-      <div class="flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
+      <div class="w-96 m-auto sm:w-fit flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
         <%= for member <- @group.members do %>
           <div class="flex flex-col text-sm gap-3">
-            <div class="text-center text-base font-content text-gray-700">
+            <div class="sm:text-center text-base font-content text-gray-700">
               <%= member.display_name %>
             </div>
             <div>
@@ -333,56 +346,14 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_filmography(assigns) do
     ~H"""
     <.named_divider name="Selected Filmography" />
-    <div class="trunc-filmography">
-      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
-        <%= for f <- Enum.take(@selected_filmography, 8) do %>
-          <.person_filmography_entry film={f} />
-        <% end %>
-      </div>
-    </div>
-    <div class="full-filmography hidden">
-      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4">
+    <div class="full-filmography">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
         <%= for f <- @selected_filmography do %>
           <.person_filmography_entry film={f} />
         <% end %>
       </div>
     </div>
-    <%= if length(@selected_filmography) > 8 do %>
-      <div class="expand-filmography text-center pt-6">
-        <button
-          class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
-          phx-click={expand_filmography()}
-        >
-          <%= "+#{length(@selected_filmography) - 8} more" %>
-          <.icon name="tabler-chevron-down" />
-        </button>
-      </div>
-      <div class="hidden collapse-filmography text-center pt-6">
-        <button
-          class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
-          phx-click={collapse_filmography()}
-        >
-          Show less <.icon name="tabler-chevron-up" />
-        </button>
-      </div>
-    <% end %>
     """
-  end
-
-  def expand_filmography(js \\ %JS{}) do
-    js
-    |> JS.hide(to: ".trunc-filmography")
-    |> JS.hide(to: ".expand-filmography")
-    |> JS.show(to: ".full-filmography")
-    |> JS.show(to: ".collapse-filmography")
-  end
-
-  def collapse_filmography(js \\ %JS{}) do
-    js
-    |> JS.hide(to: ".full-filmography")
-    |> JS.hide(to: ".collapse-filmography")
-    |> JS.show(to: ".trunc-filmography")
-    |> JS.show(to: ".expand-filmography")
   end
 
   attr :film, Film, required: true

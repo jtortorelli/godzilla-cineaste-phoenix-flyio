@@ -167,10 +167,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 </div>
               <% end %>
             <% else %>
-            <%= for a <- work.authors do %>
-              <div class="font-content text-gray-700">
-                <.showcase_link entity={a}><%= a.display_name %></.showcase_link>
-              </div>
+              <%= for a <- work.authors do %>
+                <div class="font-content text-gray-700">
+                  <.showcase_link entity={a}><%= a.display_name %></.showcase_link>
+                </div>
               <% end %>
             <% end %>
           </div>
@@ -347,9 +347,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
   def staff(assigns) do
     ~H"""
     <.named_divider name="Staff" />
-    <div class="max-w-96 m-auto lg:columns-3 lg:gap-x-8 lg:w-fit">
+    <div class="max-w-96 m-auto lg:columns-3 lg:gap-x-8 w-fit">
       <%= for {role, staffs} <- display_staff(@film) do %>
-        <div class="text-center lg:text-left lg:break-inside-avoid-column pb-1">
+        <div class="lg:text-center text-left lg:break-inside-avoid-column pb-1">
           <div class="">
             <span class="font-detail text-xs uppercase text-gray-500"><%= role %></span>
           </div>
@@ -466,22 +466,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     """
   end
 
-  def expand_cast_group(js \\ %JS{}, q) do
-    js
-    |> JS.hide(to: ".trunc-#{q}-cast")
-    |> JS.hide(to: ".expand-#{q}-cast")
-    |> JS.show(to: ".full-#{q}-cast")
-    |> JS.show(to: ".collapse-#{q}-cast")
-  end
-
-  def collapse_cast_group(js \\ %JS{}, q) do
-    js
-    |> JS.hide(to: ".full-#{q}-cast")
-    |> JS.hide(to: ".collapse-#{q}-cast")
-    |> JS.show(to: ".trunc-#{q}-cast")
-    |> JS.show(to: ".expand-#{q}-cast")
-  end
-
   attr :roles, :list, default: []
   attr :label, :string, required: true
   attr :q, :atom
@@ -490,39 +474,13 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name={@label} />
-      <div class={"trunc-#{@q}-cast"}>
-        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-          <%= for [primary_role | rest] <- Enum.take(display_roles(@roles), 7) do %>
-            <.role primary_role={primary_role} secondary_roles={rest} />
-          <% end %>
-        </div>
-      </div>
-      <div class={"full-#{@q}-cast hidden"}>
-        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+      <div class={"full-#{@q}-cast"}>
+        <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
           <%= for [primary_role | rest] <- display_roles(@roles) do %>
             <.role primary_role={primary_role} secondary_roles={rest} />
           <% end %>
         </div>
       </div>
-      <%= if length(@roles) > 7 do %>
-        <div class={"expand-#{@q}-cast text-center pt-6"}>
-          <button
-            class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
-            phx-click={expand_cast_group(@q)}
-          >
-            <%= "+#{length(@roles) - 7} more" %>
-            <.icon name="tabler-chevron-down" />
-          </button>
-        </div>
-        <div class={"hidden collapse-#{@q}-cast text-center pt-6"}>
-          <button
-            class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
-            phx-click={collapse_cast_group(@q)}
-          >
-            Show less <.icon name="tabler-chevron-up" />
-          </button>
-        </div>
-      <% end %>
     <% end %>
     """
   end
@@ -533,39 +491,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= unless Enum.empty?(@roles) do %>
       <.named_divider name="Kaiju, etc." />
-      <div class="trunc-kaiju-cast">
-        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
-          <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- Enum.take(display_kaiju_roles(@roles), 7) do %>
-            <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
-              <div class="shrink-0">
-                <img
-                  class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
-                  src={first.avatar_url}
-                />
-              </div>
-              <div class="flex flex-col sm:items-center">
-                <div class="font-content text-gray-500 text-xs"><%= kaiju_name %></div>
-                <%= for kr <- kaiju_roles do %>
-                  <div class="font-content sm:text-center text-sm text-gray-700">
-                    <.showcase_link entity={get_entity(kr)}>
-                      <%= role_display_name(kr) %>
-                    </.showcase_link>
-                  </div>
-                  <%= if kr.qualifiers do %>
-                    <div class="font-detail text-xs text-gray-500 uppercase">
-                      <%= for q <- kr.qualifiers do %>
-                        <.qualifier_icon qualifier={q} />
-                      <% end %>
-                    </div>
-                  <% end %>
-                <% end %>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="full-kaiju-cast hidden">
-        <div class="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-4">
+      <div class="full-kaiju-cast">
+        <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
           <%= for {kaiju_name, [first | _rest] = kaiju_roles} <- display_kaiju_roles(@roles) do %>
             <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
               <div class="shrink-0">
@@ -595,25 +522,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <% end %>
         </div>
       </div>
-      <%= if length(@roles) > 7 do %>
-        <div class="expand-kaiju-cast text-center pt-6">
-          <button
-            class="bg-red-700 text-white text-sm uppercase font-detail rounded-lg w-full sm:w-auto h-12 drop-shadow-lg px-4"
-            phx-click={expand_cast_group(:kaiju)}
-          >
-            <%= "+#{length(@roles) - 7} more" %>
-            <.icon name="tabler-chevron-down" />
-          </button>
-        </div>
-        <div class="hidden collapse-kaiju-cast text-center pt-6">
-          <button
-            class="text-red-700 text-sm  uppercase font-detail rounded-lg w-full sm:w-auto h-12 shadow-lg px-4"
-            phx-click={collapse_cast_group(:kaiju)}
-          >
-            Show less <.icon name="tabler-chevron-up" />
-          </button>
-        </div>
-      <% end %>
     <% end %>
     """
   end
@@ -674,41 +582,6 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <% "Voice" -> %>
         <.icon name="tabler-microphone-2" class="h-4 w-4" />
     <% end %>
-    """
-  end
-
-  def icon_legend(assigns) do
-    ~H"""
-    <.named_divider name="icon legend" subdued={true} />
-    <div class="rounded-lg  p-4 bg-gray-100  font-detail text-gray-700 text-sm   uppercase flex flex-wrap gap-8 justify-center">
-      <div>
-        <.icon name="tabler-server" class="h-4 w-4" />: CGI
-      </div>
-      <div>
-        <.icon name="tabler-stretching-2" class="h-4 w-4" />: Motion Capture
-      </div>
-      <div>
-        <.icon name="tabler-world" class="h-4 w-4" />: Overseas Cast
-      </div>
-      <div>
-        <.icon name="tabler-photo" class="h-4 w-4" />: Photo
-      </div>
-      <div>
-        <.icon name="tabler-mood-happy" class="h-4 w-4" />: Puppet
-      </div>
-      <div>
-        <.icon name="tabler-recycle" class="h-4 w-4" />: Stock Footage
-      </div>
-      <div>
-        <.icon name="tabler-meeple" class="h-4 w-4" />: Suit Actor
-      </div>
-      <div class="text-red-700">
-        <.icon name="tabler-id-off" class="h-4 w-4" />: Uncredited
-      </div>
-      <div>
-        <.icon name="tabler-microphone-2" class="h-4 w-4" />: Voice
-      </div>
-    </div>
     """
   end
 
