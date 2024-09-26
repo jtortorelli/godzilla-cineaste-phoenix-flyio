@@ -23,6 +23,7 @@ defmodule GodzillaCineaste.Person do
     field :profession, :string
     field :avatar_url, :string
     field :japanese_name, :string
+    field :cause_of_death, :string
 
     has_many :roles, Role
     has_many :staff, Staff
@@ -52,7 +53,8 @@ defmodule GodzillaCineaste.Person do
       :disambig_chars,
       :profession,
       :avatar_url,
-      :japanese_name
+      :japanese_name,
+      :cause_of_death
     ])
     |> validate_required([:slug, :display_name, :showcased, :tenant])
     |> unique_constraint([:slug])
