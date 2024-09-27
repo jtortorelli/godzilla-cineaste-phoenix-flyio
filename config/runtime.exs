@@ -52,9 +52,9 @@ if config_env() == :prod do
   port = String.to_integer(System.get_env("PORT") || "4000")
 
   config :godzilla_cineaste, GodzillaCineasteWeb.Endpoint,
-    url: [host: host, port: 443, scheme: "https"],
+    url: [host: "godzillacineaste.net", port: 443, scheme: "https"],
     check_origin: [
-      host,
+      "https://#{host}:443",
       "https://godzillacineaste.net:443",
       "https://www.godzillacineaste.net:443"
     ],
