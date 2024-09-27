@@ -63,12 +63,17 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <div class="space-y-1">
           <div class="font-content text-gray-700">
             <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
-            <%= if @person.death_place do %>
-              <div class="font-content text-gray-500 text-xs">
-                <%= Place.display_place(@person.death_place) %>
-              </div>
-            <% end %>
           </div>
+          <%= if @person.death_place do %>
+            <div class="font-content text-gray-500 text-xs">
+              <%= Place.display_place(@person.death_place) %>
+            </div>
+          <% end %>
+          <%= if @person.cause_of_death do %>
+            <div class="font-content text-gray-500 text-xs">
+              <%= @person.cause_of_death %>
+            </div>
+          <% end %>
         </div>
       </div>
     <% end %>
