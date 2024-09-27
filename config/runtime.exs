@@ -53,6 +53,11 @@ if config_env() == :prod do
 
   config :godzilla_cineaste, GodzillaCineasteWeb.Endpoint,
     url: [host: host, port: 443, scheme: "https"],
+    check_origin: [
+      host,
+      "https://godzillacineaste.net:443",
+      "https://www.godzillacineaste.net:443"
+    ],
     http: [
       # Enable IPv6 and bind on all interfaces.
       # Set it to  {0, 0, 0, 0, 0, 0, 0, 1} for local network only access.
