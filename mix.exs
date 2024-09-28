@@ -56,7 +56,12 @@ defmodule GodzillaCineaste.MixProject do
       {:credo, "~> 1.6"},
       {:nimble_csv, "~> 1.1"},
       {:tabler_icons,
-       github: "tabler/tabler-icons", sparse: "icons", app: false, compile: false, depth: 1}
+       github: "tabler/tabler-icons",
+       tag: "v3.19.0",
+       sparse: "icons",
+       app: false,
+       compile: false,
+       depth: 1}
     ]
   end
 
