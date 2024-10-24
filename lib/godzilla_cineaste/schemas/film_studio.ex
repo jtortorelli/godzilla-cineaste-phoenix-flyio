@@ -16,6 +16,7 @@ defmodule GodzillaCineaste.FilmStudio do
     |> cast(attrs, [:film_id, :studio_id])
     |> validate_required([:studio_id])
     |> assoc_constraint(:studio)
+    |> assoc_constraint(:film)
   end
 
   def changeset(film_studio, attrs, _position) do
