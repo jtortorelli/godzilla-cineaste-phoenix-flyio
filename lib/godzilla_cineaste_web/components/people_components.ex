@@ -9,7 +9,8 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     Person,
     PersonAlternateName,
     Place,
-    Role
+    Role,
+    TVSeries
   }
 
   attr :display_name, :string, required: true
@@ -269,9 +270,22 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     """
   end
 
-  attr :film, Film, required: true
+  attr :entry, :any, required: true
 
   def person_filmography_entry(assigns) do
+    ~H"""
+    <%= case @entry do %>
+      <% %Film{} -> %>
+        <.person_filmography_film_entry film={@entry} />
+      <% %TVSeries{} -> %>
+        <.person_filmography_tv_series_entry tv_series={@entry} />
+    <% end %>
+    """
+  end
+
+  attr :film, Film, required: true
+
+  def person_filmography_film_entry(assigns) do
     ~H"""
     <div class="flex flex-row w-60 items-start gap-3">
       <div class="shrink-0">
@@ -283,63 +297,118 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         />
       </div>
       <div>
-        <div class="font-content text-xs text-gray-500"><%= @film.release_date.year %></div>
+        <div class="font-content text-xs text-gray-500 flex items-baseline gap-1">
+          <div>
+            <.icon name="tabler-movie" class="h-5 w-4" />
+          </div>
+          <div>
+            <%= @film.release_date.year %>
+          </div>
+        </div>
         <div class="font-content text-sm text-gray-700 mb-1">
           <.film_showcase_link film={@film}>
             <span class="italic"><%= @film.title %></span>
           </.film_showcase_link>
         </div>
-        <%= unless Enum.empty?(@film.staff) and Enum.empty?(@film.works) do %>
-          <%= unless Enum.empty?(@film.works) do %>
-            <div class="font-content text-xs text-gray-500 flex">
-              <div>
-                <.icon name="tabler-chair-director" class="h-4 w-4" />
-              </div>
-              <div>
-                Original Work
-              </div>
+        <%= unless Enum.empty?(@film.works) do %>
+          <div class="font-content text-xs text-gray-500 flex">
+            <div>
+              <.icon name="tabler-chair-director" class="h-4 w-4" />
             </div>
-          <% end %>
-          <%= for s <- @film.staff do %>
-            <div class="font-content text-xs text-gray-500 flex">
-              <div>
-                <.icon name="tabler-chair-director" class="h-4 w-4" />
-              </div>
-              <div>
-                <div>
-                  <%= s.role %>
-                </div>
-                <%= if s.staff_alias do %>
-                  <div>
-                    <.icon name="tabler-at" class="h-3 w-3" /><%= s.staff_alias %>
-                  </div>
-                <% end %>
-              </div>
+            <div>
+              Original Work
             </div>
-          <% end %>
+          </div>
         <% end %>
-        <%= unless Enum.empty?(@film.kaiju_roles) and Enum.empty?(@film.roles) do %>
-          <%= for r <- @film.kaiju_roles ++ @film.roles do %>
-            <div class="font-content text-xs text-gray-500 flex gap-1">
+        <%= for s <- @film.staff do %>
+          <div class="font-content text-xs text-gray-500 flex">
+            <div>
+              <.icon name="tabler-chair-director" class="h-4 w-4" />
+            </div>
+            <div>
               <div>
-                <.icon name="tabler-masks-theater" class="h-4 w-4" />
+                <%= s.role %>
               </div>
-              <div>
+              <%= if s.staff_alias do %>
                 <div>
-                  <%= raw(role_display_name(r)) %>
+                  <.icon name="tabler-at" class="h-3 w-3" /><%= s.staff_alias %>
                 </div>
-                <%= if r.actor_alias do %>
-                  <.icon name="tabler-at" class="h-3 w-3" /><%= r.actor_alias %>
-                <% end %>
-                <%= for q <- r.qualifiers do %>
-                  <.qualifier_icon qualifier={q} />
-                <% end %>
-                <%= if r.uncredited do %>
-                  <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
-                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <%= for r <- @film.kaiju_roles ++ @film.roles do %>
+          <div class="font-content text-xs text-gray-500 flex gap-1">
+            <div>
+              <.icon name="tabler-masks-theater" class="h-4 w-4" />
+            </div>
+            <div>
+              <div>
+                <%= raw(role_display_name(r)) %>
+              </div>
+              <%= if r.actor_alias do %>
+                <.icon name="tabler-at" class="h-3 w-3" /><%= r.actor_alias %>
+              <% end %>
+              <%= for q <- r.qualifiers do %>
+                <.qualifier_icon qualifier={q} />
+              <% end %>
+              <%= if r.uncredited do %>
+                <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    """
+  end
+
+  attr :tv_series, TVSeries, required: true
+
+  def person_filmography_tv_series_entry(assigns) do
+    ~H"""
+    <div class="flex flex-row w-60 items-start gap-3">
+      <div class="shrink-0">
+        <img class="rounded-lg drop-shadow-lg" width={101} src={@tv_series.title_card_url} />
+      </div>
+      <div>
+        <div class="font-content text-xs text-gray-500 flex items-baseline gap-1">
+          <div>
+            <.icon name="tabler-device-tv-old" class="h-5 w-4" />
+          </div>
+          <div>
+            <%= @tv_series.first_air_date.year %>
+          </div>
+        </div>
+        <div class="font-content text-sm text-gray-700 mb-1">
+          <span class="italic"><%= @tv_series.title %></span>
+        </div>
+        <%= for s <- @tv_series.main_staff do %>
+          <div class="font-content text-xs text-gray-500 flex">
+            <div>
+              <.icon name="tabler-chair-director" class="h-4 w-4" />
+            </div>
+            <div>
+              <div>
+                <%= s.role %>
               </div>
             </div>
-          <% end %>
+          </div>
+        <% end %>
+        <%= for r <- @tv_series.main_cast do %>
+          <div class="font-content text-xs text-gray-500 flex gap-1">
+            <div>
+              <.icon name="tabler-masks-theater" class="h-4 w-4" />
+            </div>
+            <div>
+              <div>
+                <%= r.name %>
+              </div>
+              <div>
+                <%= r.num_of_episodes %> <%= if r.num_of_episodes > 1, do: "Episodes", else: "Episode" %>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
@@ -353,8 +422,8 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <.named_divider name="Selected Filmography" />
     <div class="full-filmography">
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
-        <%= for f <- @selected_filmography do %>
-          <.person_filmography_entry film={f} />
+        <%= for entry <- @selected_filmography do %>
+          <.person_filmography_entry entry={entry} />
         <% end %>
       </div>
     </div>

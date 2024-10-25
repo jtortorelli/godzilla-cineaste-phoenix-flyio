@@ -10,7 +10,9 @@ defmodule GodzillaCineaste.Person do
     Place,
     Relationship,
     Role,
-    Staff
+    Staff,
+    TVSeriesMainCast,
+    TVSeriesMainStaff
   }
 
   schema "people" do
@@ -28,6 +30,9 @@ defmodule GodzillaCineaste.Person do
     has_many :roles, Role
     has_many :staff, Staff
     has_many :relationships, Relationship, foreign_key: :self_id
+
+    has_many :tv_series_main_cast, TVSeriesMainCast
+    has_many :tv_series_main_staff, TVSeriesMainStaff
 
     embeds_one :dob, PartialDate, on_replace: :update
     embeds_one :dod, PartialDate, on_replace: :update

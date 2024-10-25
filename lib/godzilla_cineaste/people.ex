@@ -9,6 +9,9 @@ defmodule GodzillaCineaste.People do
     Repo,
     Role,
     Staff,
+    TVSeries,
+    TVSeriesMainCast,
+    TVSeriesMainStaff,
     Work
   }
 
@@ -67,6 +70,18 @@ defmodule GodzillaCineaste.People do
     role_subquery = from(r in Role, where: r.person_id == ^person_id, select: r.film_id)
     staff_subquery = from(s in Staff, where: s.person_id == ^person_id, select: s.film_id)
 
+    tv_main_cast_subquery =
+      from(tvmc in TVSeriesMainCast,
+        where: tvmc.person_id == ^person_id,
+        select: tvmc.tv_series_id
+      )
+
+    tv_main_staff_subquery =
+      from(tvms in TVSeriesMainStaff,
+        where: tvms.person_id == ^person_id,
+        select: tvms.tv_series_id
+      )
+
     kaiju_role_subquery =
       from(kr in KaijuRole, where: kr.person_id == ^person_id, select: kr.film_id)
 
@@ -78,23 +93,49 @@ defmodule GodzillaCineaste.People do
         select: f.id
       )
 
-    assocs = [
+    film_assocs = [
       staff: from(s in Staff, where: s.person_id == ^person_id, order_by: s.order),
       roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order),
       kaiju_roles: from(kr in KaijuRole, where: kr.person_id == ^person_id, order_by: kr.order),
       works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id)
     ]
 
-    Film
-    |> from(as: :film)
-    |> where(
-      [film: f],
-      f.id in subquery(role_subquery) or f.id in subquery(staff_subquery) or
-        f.id in subquery(kaiju_role_subquery) or f.id in subquery(author_subquery)
-    )
-    |> order_by([film: f], f.release_date)
-    |> preload(^assocs)
-    |> Repo.all()
+    tv_series_assocs = [
+      main_cast:
+        from(tvmc in TVSeriesMainCast, where: tvmc.person_id == ^person_id, order_by: tvmc.order),
+      main_staff:
+        from(tvms in TVSeriesMainStaff, where: tvms.person_id == ^person_id, order_by: tvms.order)
+    ]
+
+    films =
+      Film
+      |> from(as: :film)
+      |> where(
+        [film: f],
+        f.id in subquery(role_subquery) or f.id in subquery(staff_subquery) or
+          f.id in subquery(kaiju_role_subquery) or f.id in subquery(author_subquery)
+      )
+      |> order_by([film: f], f.release_date)
+      |> preload(^film_assocs)
+      |> Repo.all()
+
+    tv_series =
+      TVSeries
+      |> from(as: :tv_series)
+      |> where(
+        [tv_series: tvs],
+        tvs.id in subquery(tv_main_cast_subquery) or tvs.id in subquery(tv_main_staff_subquery)
+      )
+      |> order_by([tv_series: tvs], tvs.first_air_date)
+      |> preload(^tv_series_assocs)
+      |> Repo.all()
+
+    mapper = fn
+      %Film{release_date: release_date} -> release_date
+      %TVSeries{first_air_date: first_air_date} -> first_air_date
+    end
+
+    Enum.sort_by(films ++ tv_series, mapper)
   end
 
   def get_selected_filmography_by_entity!(%Group{id: group_id}) do
