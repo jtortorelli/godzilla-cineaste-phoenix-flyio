@@ -135,7 +135,7 @@ defmodule GodzillaCineaste.People do
       %TVSeries{first_air_date: first_air_date} -> first_air_date
     end
 
-    Enum.sort_by(films ++ tv_series, mapper)
+    Enum.sort_by(films ++ tv_series, mapper, Date)
   end
 
   def get_selected_filmography_by_entity!(%Group{id: group_id}) do
