@@ -4,6 +4,8 @@ defmodule GodzillaCineaste.Film do
   import Ecto.Changeset
 
   alias GodzillaCineaste.{
+    AwardNomination,
+    AwardNominationFilm,
     FilmAlias,
     FilmCredits,
     FilmDisplayTitle,
@@ -47,6 +49,7 @@ defmodule GodzillaCineaste.Film do
     has_many :film_studios, FilmStudio, on_replace: :delete
     has_many :studios, through: [:film_studios, :studio]
     many_to_many :works, Work, join_through: FilmWork
+    many_to_many :award_nominations, AwardNomination, join_through: AwardNominationFilm
 
     timestamps()
   end

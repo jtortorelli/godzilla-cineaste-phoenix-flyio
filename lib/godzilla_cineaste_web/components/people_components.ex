@@ -358,6 +358,22 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             </div>
           </div>
         <% end %>
+        <%= for nomination <- @film.award_nominations do %>
+          <div class="font-content text-xs text-amber-600 flex gap-1">
+            <div>
+              <.icon
+                name={if nomination.won, do: "tabler-trophy-filled", else: "tabler-trophy"}
+                class="h-4 w-4"
+              />
+            </div>
+            <div>
+              <div>
+                <%= get_ordinal(nomination.category.ceremony.ordinal) %> <%= nomination.category.ceremony.award.nickname %>s
+              </div>
+              <div><%= nomination.category.name %></div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
     """
@@ -489,5 +505,18 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
 
   defp family(%Person{} = person) do
     person.relationships |> Enum.filter(&(&1.relationship != :spouse)) |> Enum.sort_by(& &1.order)
+  end
+
+  defp get_ordinal(number) when number in [11, 12, 13], do: "#{number}th"
+
+  defp get_ordinal(number) when number > 0 do
+    last_digit = number |> Integer.digits() |> Enum.reverse() |> List.first()
+
+    case last_digit do
+      1 -> "#{number}st"
+      2 -> "#{number}nd"
+      3 -> "#{number}rd"
+      _ -> "#{number}th"
+    end
   end
 end

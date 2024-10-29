@@ -3,6 +3,8 @@ defmodule GodzillaCineaste.Person do
   import Ecto.Changeset
 
   alias GodzillaCineaste.{
+    AwardNomination,
+    AwardNominationPerson,
     Group,
     GroupMember,
     PartialDate,
@@ -43,6 +45,7 @@ defmodule GodzillaCineaste.Person do
     embeds_many :alternate_names, PersonAlternateName, on_replace: :delete
 
     many_to_many :groups, Group, join_through: GroupMember
+    many_to_many :award_nominations, AwardNomination, join_through: AwardNominationPerson
 
     timestamps()
   end

@@ -2,6 +2,7 @@ defmodule GodzillaCineaste.People do
   import Ecto.Query
 
   alias GodzillaCineaste.{
+    AwardNomination,
     Film,
     Group,
     KaijuRole,
@@ -97,7 +98,17 @@ defmodule GodzillaCineaste.People do
       staff: from(s in Staff, where: s.person_id == ^person_id, order_by: s.order),
       roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order),
       kaiju_roles: from(kr in KaijuRole, where: kr.person_id == ^person_id, order_by: kr.order),
-      works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id)
+      works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id),
+      award_nominations: {
+        from(nominations in AwardNomination,
+          join: people in assoc(nominations, :people),
+          where: people.id == ^person_id,
+          join: category in assoc(nominations, :category),
+          join: ceremony in assoc(category, :ceremony),
+          order_by: [ceremony.held_at, category.order]
+        ),
+        [category: [ceremony: :award]]
+      }
     ]
 
     tv_series_assocs = [
