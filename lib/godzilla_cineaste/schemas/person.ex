@@ -9,6 +9,7 @@ defmodule GodzillaCineaste.Person do
     GroupMember,
     PartialDate,
     PersonAlternateName,
+    PersonTrivia,
     Place,
     Relationship,
     Role,
@@ -46,6 +47,8 @@ defmodule GodzillaCineaste.Person do
 
     many_to_many :groups, Group, join_through: GroupMember
     many_to_many :award_nominations, AwardNomination, join_through: AwardNominationPerson
+
+    has_one :trivia, PersonTrivia
 
     timestamps()
   end
