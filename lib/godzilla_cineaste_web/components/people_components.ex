@@ -94,7 +94,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <.named_divider name="Overview" />
     <div class="flex flex-col justify-center lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto mb-1">
       <div class="pb-4 lg:shrink-0 h-full w-fit m-auto">
-        <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
+        <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} height="200px" width="200px" />
       </div>
       <div class="text-sm m-auto space-y-3 h-full">
         <.japanese_name japanese_name={@person.japanese_name} />
