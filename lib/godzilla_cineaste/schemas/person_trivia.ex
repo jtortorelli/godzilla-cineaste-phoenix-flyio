@@ -5,7 +5,7 @@ defmodule GodzillaCineaste.PersonTrivia do
   alias GodzillaCineaste.Person
 
   schema "people_trivia" do
-    field :trivia, {:array, :binary}
+    field :trivia, {:array, :binary}, default: []
 
     belongs_to :person, Person
 

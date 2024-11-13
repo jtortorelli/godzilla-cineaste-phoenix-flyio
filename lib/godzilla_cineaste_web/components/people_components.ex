@@ -92,9 +92,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def person_overview(assigns) do
     ~H"""
     <.named_divider name="Overview" />
-    <div class="flex flex-col justify-center lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto">
+    <div class="flex flex-col justify-center lg:grid lg:grid-flow-col lg:auto-cols-auto lg:gap-4 lg:items-center lg:justify-center lg:max-w-2xl m-auto mb-1">
       <div class="pb-4 lg:shrink-0 h-full w-fit m-auto">
-        <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} />
+        <img class="rounded-lg drop-shadow-lg" src={@person.avatar_url} height="200px" width="200px" />
       </div>
       <div class="text-sm m-auto space-y-3 h-full">
         <.japanese_name japanese_name={@person.japanese_name} />
@@ -105,6 +105,21 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <.person_family person={@person} />
       </div>
     </div>
+    <.person_trivia person={@person} />
+    """
+  end
+
+  attr :person, Person, required: true
+
+  def person_trivia(assigns) do
+    ~H"""
+    <%= if @person.trivia && !Enum.empty?(@person.trivia.trivia) do %>
+      <%= for t <- @person.trivia.trivia do %>
+        <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
+          <%= raw(t) %>
+        </div>
+      <% end %>
+    <% end %>
     """
   end
 
