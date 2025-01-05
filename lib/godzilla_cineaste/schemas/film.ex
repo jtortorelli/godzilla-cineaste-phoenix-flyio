@@ -112,7 +112,7 @@ defmodule GodzillaCineaste.Film do
   end
 
   def display_release_date(%__MODULE__{} = film) do
-    Timex.format!(film.release_date, "{D} {Mshort} {YYYY}")
+    Calendar.strftime(film.release_date, "%-d %b %Y")
   end
 
   def primary_poster_url(%__MODULE__{} = film) do

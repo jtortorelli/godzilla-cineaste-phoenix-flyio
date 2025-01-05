@@ -52,7 +52,6 @@ defmodule GodzillaCineaste.MixProject do
       {:jason, "~> 1.4"},
       {:plug_cowboy, "~> 2.5"},
       {:bandit, ">= 0.6.2"},
-      {:timex, "~> 3.7"},
       {:credo, "~> 1.7"},
       {:nimble_csv, "~> 1.1"},
       {:tabler_icons,

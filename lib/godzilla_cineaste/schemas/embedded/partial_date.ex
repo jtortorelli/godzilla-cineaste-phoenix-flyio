@@ -22,22 +22,32 @@ defmodule GodzillaCineaste.PartialDate do
     year
   end
 
-  def display_date(%__MODULE__{year: year, month: month, day: nil}) do
-    "#{Timex.month_shortname(month)} #{year}"
+  def display_date(%__MODULE__{year: year, month: month, day: nil} = date)
+      when is_integer(year) and is_integer(month) do
+    date |> initialize_date() |> Calendar.strftime("%b %Y")
   end
 
-  def display_date(%__MODULE__{year: year, month: month, day: day}) do
-    Date.new!(year, month, day) |> Timex.format!("{D} {Mshort} {YYYY}")
+  def display_date(%__MODULE__{year: year, month: month, day: day} = date)
+      when is_integer(year) and is_integer(month) and is_integer(day) do
+    date |> initialize_date() |> Calendar.strftime("%-d %b %Y")
   end
 
   def display_date(%__MODULE__{}), do: nil
 
   def diff_from_now(%__MODULE__{} = partial_date) do
-    Timex.diff(Timex.now(), initialize_date(partial_date), :years)
+    partial_date
+    |> initialize_date()
+    |> then(&Date.diff(Date.utc_today(), &1))
+    |> div(365)
   end
 
   def diff(%__MODULE__{} = start_date, %__MODULE__{} = end_date) do
-    Timex.diff(initialize_date(end_date), initialize_date(start_date), :years)
+    start_date = initialize_date(start_date)
+    end_date = initialize_date(end_date)
+
+    end_date
+    |> Date.diff(start_date)
+    |> div(365)
   end
 
   def display_date_range(from, to) do
