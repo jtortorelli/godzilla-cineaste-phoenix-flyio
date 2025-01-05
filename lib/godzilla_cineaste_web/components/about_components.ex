@@ -81,7 +81,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
   attr :image_url, :string, default: nil
   attr :isbn, :string, default: nil
   attr :history, :string, default: nil
-  slot :works, default: nil
+  slot :works, required: false
 
   def acknowledgement_card(assigns) do
     ~H"""
