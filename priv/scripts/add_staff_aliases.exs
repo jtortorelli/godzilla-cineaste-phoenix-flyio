@@ -16,7 +16,13 @@ film_slugs = [
 
 for slug <- film_slugs do
   %{id: film_id} = Repo.get_by!(Film, slug: slug)
-  staffs = Staff |> from() |> where([r], r.film_id == ^film_id and r.person_id == ^person_id) |> Repo.all()
+
+  staffs =
+    Staff
+    |> from()
+    |> where([r], r.film_id == ^film_id and r.person_id == ^person_id)
+    |> Repo.all()
+
   for s <- staffs do
     s |> Staff.changeset(%{staff_alias: alias}) |> Repo.update!()
   end

@@ -8,5 +8,4 @@ alias GodzillaCineaste.{Person, Repo}
   person = Repo.get_by!(Person, slug: slug)
   changeset = Person.changeset(person, %{cause_of_death: cause})
   Repo.update!(changeset)
-  end
-)
+end)
