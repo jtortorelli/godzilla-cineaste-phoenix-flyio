@@ -2,6 +2,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   use GodzillaCineasteWeb, :html
 
   alias GodzillaCineaste.{
+    AwardNomination,
     Film,
     Group,
     KaijuRole,
@@ -20,7 +21,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     ~H"""
     <div class="text-center w-fit m-auto">
       <h1 class="font-display tracking-wider uppercase text-2xl text-gray-700 p-4">
-        <%= @display_name %>
+        {@display_name}
       </h1>
     </div>
     """
@@ -37,15 +38,15 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         </div>
         <div class="space-y-1">
           <div class="font-content text-gray-700">
-            <%= PartialDate.display_date(@person.dob) %>
+            {PartialDate.display_date(@person.dob)}
             <%= if Person.status(@person) == :alive do %>
-              (<%= Person.age(@person) %>)
+              ({Person.age(@person)})
             <% end %>
           </div>
           <.birth_name birth_name={Person.birth_name(@person)} />
           <%= if @person.birth_place do %>
             <div class="font-content text-gray-500 text-xs">
-              <%= Place.display_place(@person.birth_place) %>
+              {Place.display_place(@person.birth_place)}
             </div>
           <% end %>
         </div>
@@ -63,16 +64,16 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
         <div class="space-y-1">
           <div class="font-content text-gray-700">
-            <%= PartialDate.display_date(@person.dod) %> (<%= Person.age(@person) %>)
+            {PartialDate.display_date(@person.dod)} ({Person.age(@person)})
           </div>
           <%= if @person.death_place do %>
             <div class="font-content text-gray-500 text-xs">
-              <%= Place.display_place(@person.death_place) %>
+              {Place.display_place(@person.death_place)}
             </div>
           <% end %>
           <%= if @person.cause_of_death do %>
             <div class="font-content text-gray-500 text-xs">
-              <%= @person.cause_of_death %>
+              {@person.cause_of_death}
             </div>
           <% end %>
         </div>
@@ -116,7 +117,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <%= if @person.trivia && !Enum.empty?(@person.trivia.trivia) do %>
       <%= for t <- @person.trivia.trivia do %>
         <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
-          <%= raw(t) %>
+          {raw(t)}
         </div>
       <% end %>
     <% end %>
@@ -130,7 +131,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     <%= if @japanese_name do %>
       <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
         <div><.icon name="tabler-language" class="text-gray-500 h-5 w-4" /></div>
-        <div class="font-japanese text-gray-700"><%= @japanese_name %></div>
+        <div class="font-japanese text-gray-700">{@japanese_name}</div>
       </div>
     <% end %>
     """
@@ -144,12 +145,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
         <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
         <div>
-          <div class="font-content text-gray-700"><%= a.name %></div>
+          <div class="font-content text-gray-700">{a.name}</div>
           <%= if a.japanese_name do %>
-            <div class="font-content text-gray-500 text-xs"><%= a.japanese_name %></div>
+            <div class="font-content text-gray-500 text-xs">{a.japanese_name}</div>
           <% end %>
           <%= if a.context do %>
-            <div class="font-content text-gray-500 text-xs"><%= a.context %></div>
+            <div class="font-content text-gray-500 text-xs">{a.context}</div>
           <% end %>
           <%= if a.category == :mistranslation do %>
             <div class="font-content text-gray-500 text-xs">Mistranslation</div>
@@ -170,7 +171,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <div>
           <div class="font-content text-gray-500">
             <.person_showcase_link person={relationship.relative}>
-              <%= relationship.relative.display_name %>
+              {relationship.relative.display_name}
             </.person_showcase_link>
           </div>
         </div>
@@ -190,11 +191,11 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
           <%= for relationship <- family(@person) do %>
             <div class="font-content text-gray-500">
               <.person_showcase_link person={relationship.relative}>
-                <%= relationship.relative.display_name %>
+                {relationship.relative.display_name}
               </.person_showcase_link>
             </div>
             <div class="font-content text-gray-500 text-xs capitalize">
-              <%= relationship.relationship |> Atom.to_string() |> String.replace("_", "-") %>
+              {relationship.relationship |> Atom.to_string() |> String.replace("_", "-")}
             </div>
           <% end %>
         </div>
@@ -211,7 +212,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
       <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
         <div><.icon name="tabler-calendar-time" class="text-gray-500 h-5 w-4" /></div>
         <div class="font-content text-gray-700">
-          <%= PartialDate.display_date_range(@group.active_period_start, @group.active_period_end) %>
+          {PartialDate.display_date_range(@group.active_period_start, @group.active_period_end)}
         </div>
       </div>
     <% end %>
@@ -245,7 +246,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         <%= for member <- @group.members do %>
           <div class="flex flex-col text-sm gap-3">
             <div class="sm:text-center text-base font-content text-gray-700">
-              <%= member.display_name %>
+              {member.display_name}
             </div>
             <div>
               <.person_birth_date person={member} />
@@ -317,12 +318,12 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             <.icon name="tabler-movie" class="h-5 w-4" />
           </div>
           <div>
-            <%= @film.release_date.year %>
+            {@film.release_date.year}
           </div>
         </div>
         <div class="font-content text-sm text-gray-700 mb-1">
           <.film_showcase_link film={@film}>
-            <span class="italic"><%= @film.title %></span>
+            <span class="italic">{@film.title}</span>
           </.film_showcase_link>
         </div>
         <%= unless Enum.empty?(@film.works) do %>
@@ -342,11 +343,11 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             </div>
             <div>
               <div>
-                <%= s.role %>
+                {s.role}
               </div>
               <%= if s.staff_alias do %>
                 <div>
-                  <.icon name="tabler-at" class="h-3 w-3" /><%= s.staff_alias %>
+                  <.icon name="tabler-at" class="h-3 w-3" />{s.staff_alias}
                 </div>
               <% end %>
             </div>
@@ -359,10 +360,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             </div>
             <div>
               <div>
-                <%= raw(role_display_name(r)) %>
+                {raw(role_display_name(r))}
               </div>
               <%= if r.actor_alias do %>
-                <.icon name="tabler-at" class="h-3 w-3" /><%= r.actor_alias %>
+                <.icon name="tabler-at" class="h-3 w-3" />{r.actor_alias}
               <% end %>
               <%= for q <- r.qualifiers do %>
                 <.qualifier_icon qualifier={q} />
@@ -370,22 +371,6 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
               <%= if r.uncredited do %>
                 <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
               <% end %>
-            </div>
-          </div>
-        <% end %>
-        <%= for nomination <- @film.award_nominations do %>
-          <div class="font-content text-xs text-amber-600 flex gap-1">
-            <div>
-              <.icon
-                name={if nomination.won, do: "tabler-trophy-filled", else: "tabler-trophy"}
-                class="h-4 w-4"
-              />
-            </div>
-            <div>
-              <div>
-                <%= get_ordinal(nomination.category.ceremony.ordinal) %> <%= nomination.category.ceremony.award.nickname %>s
-              </div>
-              <div><%= nomination.category.name %></div>
             </div>
           </div>
         <% end %>
@@ -408,11 +393,11 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             <.icon name="tabler-device-tv-old" class="h-5 w-4" />
           </div>
           <div>
-            <%= @tv_series.first_air_date.year %>
+            {@tv_series.first_air_date.year}
           </div>
         </div>
         <div class="font-content text-sm text-gray-700 mb-1">
-          <span class="italic"><%= @tv_series.title %></span>
+          <span class="italic">{@tv_series.title}</span>
         </div>
         <%= for s <- @tv_series.main_staff do %>
           <div class="font-content text-xs text-gray-500 flex">
@@ -421,7 +406,7 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             </div>
             <div>
               <div>
-                <%= s.role %>
+                {s.role}
               </div>
             </div>
           </div>
@@ -433,10 +418,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
             </div>
             <div>
               <div>
-                <%= r.name %>
+                {r.name}
               </div>
               <div>
-                <%= r.num_of_episodes %> <%= if r.num_of_episodes > 1, do: "Episodes", else: "Episode" %>
+                {r.num_of_episodes} {if r.num_of_episodes > 1, do: "Episodes", else: "Episode"}
               </div>
             </div>
           </div>
@@ -461,6 +446,49 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
     """
   end
 
+  attr :accolades, :list, required: true
+
+  def person_accolades(assigns) do
+    ~H"""
+    <%= if !Enum.empty?(@accolades) do %>
+      <.named_divider name="Accolades" />
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
+        <%= for accolade <- @accolades do %>
+          <.accolade accolade={accolade} />
+        <% end %>
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :accolade, AwardNomination, required: true
+
+  def accolade(assigns) do
+    ~H"""
+    <div class={"font-content text-xs gap-1 #{if @accolade.won, do: "text-amber-600", else: "text-gray-700"}"}>
+      <div class="flex items-end gap-1">
+        <div>
+          <.icon
+            name={if @accolade.won, do: "tabler-award-filled", else: "tabler-award"}
+            class="h-4 w-4"
+          />
+        </div>
+        <div class={"uppercase font-detail #{if !@accolade.won, do: "text-gray-500"}"}>
+          {if @accolade.won, do: "Won", else: "Nominated"}
+        </div>
+      </div>
+      <div>
+        <div>
+          {get_ordinal(@accolade.category.ceremony.ordinal)} {@accolade.category.ceremony.award.nickname ||
+            @accolade.category.ceremony.award.name}s
+        </div>
+        <div>{@accolade.category.name}</div>
+        <div class="italic">{@accolade.films |> Enum.map(& &1.title) |> Enum.join(", ")}</div>
+      </div>
+    </div>
+    """
+  end
+
   attr :film, Film, required: true
   slot :inner_block, required: true
 
@@ -471,10 +499,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         href={~p"/films/#{@film.slug}"}
         class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
-        <%= render_slot(@inner_block) %>
+        {render_slot(@inner_block)}
       </.link>
     <% else %>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     <% end %>
     """
   end
@@ -489,10 +517,10 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
         href={~p"/people/#{@person.slug}"}
         class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
-        <%= render_slot(@inner_block) %>
+        {render_slot(@inner_block)}
       </.link>
     <% else %>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     <% end %>
     """
   end
@@ -502,9 +530,9 @@ defmodule GodzillaCineasteWeb.PeopleComponents do
   def birth_name(assigns) do
     ~H"""
     <%= if @birth_name.name do %>
-      <div class="font-content text-gray-500 text-xs"><%= @birth_name.name %></div>
+      <div class="font-content text-gray-500 text-xs">{@birth_name.name}</div>
       <%= if @birth_name.japanese_name do %>
-        <div class="font-japanese text-gray-500 text-xs"><%= @birth_name.japanese_name %></div>
+        <div class="font-japanese text-gray-500 text-xs">{@birth_name.japanese_name}</div>
       <% end %>
     <% end %>
     """

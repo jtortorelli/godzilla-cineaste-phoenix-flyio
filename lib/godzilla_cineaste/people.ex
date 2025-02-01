@@ -68,6 +68,24 @@ defmodule GodzillaCineaste.People do
     end
   end
 
+  def get_accolades_by_entity!(%Person{id: person_id}) do
+    query =
+      from(nominations in AwardNomination,
+        join: people in assoc(nominations, :people),
+        join: films in assoc(nominations, :films),
+        join: category in assoc(nominations, :category),
+        join: ceremony in assoc(category, :ceremony),
+        where: people.id == ^person_id,
+        order_by: [films.release_date, ceremony.held_at, category.order]
+      )
+
+    preloads = [:films, category: [ceremony: :award]]
+
+    query |> preload(^preloads) |> Repo.all()
+  end
+
+  def get_accolades_by_entity!(%Group{}), do: []
+
   def get_selected_filmography_by_entity!(%Person{id: person_id}) do
     role_subquery = from(r in Role, where: r.person_id == ^person_id, select: r.film_id)
     staff_subquery = from(s in Staff, where: s.person_id == ^person_id, select: s.film_id)
@@ -99,17 +117,7 @@ defmodule GodzillaCineaste.People do
       staff: from(s in Staff, where: s.person_id == ^person_id, order_by: s.order),
       roles: from(r in Role, where: r.person_id == ^person_id, order_by: r.order),
       kaiju_roles: from(kr in KaijuRole, where: kr.person_id == ^person_id, order_by: kr.order),
-      works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id),
-      award_nominations: {
-        from(nominations in AwardNomination,
-          join: people in assoc(nominations, :people),
-          where: people.id == ^person_id,
-          join: category in assoc(nominations, :category),
-          join: ceremony in assoc(category, :ceremony),
-          order_by: [ceremony.held_at, category.order]
-        ),
-        [category: [ceremony: :award]]
-      }
+      works: from(w in Work, join: a in assoc(w, :authors), where: a.id == ^person_id)
     ]
 
     tv_series_assocs = [
