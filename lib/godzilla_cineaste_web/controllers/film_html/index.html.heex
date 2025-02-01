@@ -14,19 +14,19 @@
           <.link href={~p"/films/#{film.slug}"}>
             <div>
               <%= if Enum.empty?(film.display_title) do %>
-                <div class="font-content italic text-xl text-gray-700"><%= film.title %></div>
+                <div class="font-content italic text-xl text-gray-700">{film.title}</div>
               <% else %>
                 <%= for %{style: style, content: content} <- film.display_title do %>
                   <%= if style == :title do %>
-                    <div class="font-content italic text-xl text-gray-700"><%= content %></div>
+                    <div class="font-content italic text-xl text-gray-700">{content}</div>
                   <% end %>
                   <%= if style == :subtitle do %>
-                    <div class="font-content italic text-gray-500"><%= content %></div>
+                    <div class="font-content italic text-gray-500">{content}</div>
                   <% end %>
                 <% end %>
               <% end %>
             </div>
-            <div class="font-detail text-red-700 text-sm"><%= film.release_date.year %></div>
+            <div class="font-detail text-red-700 text-sm">{film.release_date.year}</div>
           </.link>
         </div>
       </div>

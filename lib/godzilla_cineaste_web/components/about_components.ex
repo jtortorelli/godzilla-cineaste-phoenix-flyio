@@ -6,7 +6,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
     ~H"""
     <div>
       <ol class="relative border-l border-red-700">
-        <%= render_slot(@inner_block) %>
+        {render_slot(@inner_block)}
       </ol>
     </div>
     """
@@ -20,8 +20,8 @@ defmodule GodzillaCineasteWeb.AboutComponents do
     <li class="mb-10 ml-4">
       <div class="flex flex-col">
         <div class="absolute w-3 h-3 rounded-full bg-red-700 -left-1.5 border border-white"></div>
-        <time class="mb-1 text-sm font-detail leading-none text-gray-500"><%= @time %></time>
-        <p class="mb-4 font-content text-justify text-gray-700"><%= render_slot(@inner_block) %></p>
+        <time class="mb-1 text-sm font-detail leading-none text-gray-500">{@time}</time>
+        <p class="mb-4 font-content text-justify text-gray-700">{render_slot(@inner_block)}</p>
       </div>
     </li>
     """
@@ -66,7 +66,7 @@ defmodule GodzillaCineasteWeb.AboutComponents do
         href={@href}
         class={"inline-block p-1 px-4 rounded-t-lg #{if @active, do: active_classes, else: inactive_classes}"}
       >
-        <%= @title %>
+        {@title}
       </a>
     </div>
     """
@@ -98,38 +98,38 @@ defmodule GodzillaCineasteWeb.AboutComponents do
       <div class="text-center">
         <div class="font-content text-gray-700">
           <.maybe_link_url url={@url}>
-            <%= @title %>
+            {@title}
           </.maybe_link_url>
         </div>
         <%= if @subtitle do %>
           <div class="font-content text-gray-700 text-sm">
-            <%= @subtitle %>
+            {@subtitle}
           </div>
         <% end %>
         <%= if @alias do %>
-          <div class="font-content text-sm text-gray-500">aka <%= @alias %></div>
+          <div class="font-content text-sm text-gray-500">aka {@alias}</div>
         <% end %>
         <%= if @domain do %>
           <div class="font-detail text-red-500 text-xs">
             <.maybe_link_url url={@url}>
-              <%= @domain %>
+              {@domain}
             </.maybe_link_url>
           </div>
         <% end %>
         <%= if @history do %>
-          <div class="font-content text-sm text-gray-700"><%= @history %></div>
+          <div class="font-content text-sm text-gray-700">{@history}</div>
         <% end %>
         <%= if @isbn do %>
           <div class="font-detail text-red-500 text-xs">
-            ISBN: <%= @isbn %>
+            ISBN: {@isbn}
           </div>
         <% end %>
         <%= if @author do %>
-          <div class="font-content text-sm text-gray-700"><%= @author %></div>
+          <div class="font-content text-sm text-gray-700">{@author}</div>
         <% end %>
         <%= if @works do %>
           <div class="font-content text-sm text-gray-500">
-            <%= render_slot(@works) %>
+            {render_slot(@works)}
           </div>
         <% end %>
       </div>
@@ -143,9 +143,9 @@ defmodule GodzillaCineasteWeb.AboutComponents do
   def maybe_link_url(assigns) do
     ~H"""
     <%= if @url do %>
-      <a href={@url}><%= render_slot(@inner_block) %></a>
+      <a href={@url}>{render_slot(@inner_block)}</a>
     <% else %>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     <% end %>
     """
   end

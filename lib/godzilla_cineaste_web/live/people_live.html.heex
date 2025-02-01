@@ -29,14 +29,14 @@
       <div class="sm:text-center">
         <.link href={~p"/people/#{p.slug}"}>
           <div class="font-content text-sm">
-            <%= p.display_name %>
+            {p.display_name}
           </div>
           <%= if p.profession do %>
-            <div class="font-detail text-xs text-gray-500"><%= p.profession %></div>
+            <div class="font-detail text-xs text-gray-500">{p.profession}</div>
           <% end %>
           <%= if p.struct == "person" do %>
             <div class="font-detail text-xs text-red-700">
-              <%= display_person_date_range(p) %>
+              {display_person_date_range(p)}
             </div>
           <% end %>
         </.link>

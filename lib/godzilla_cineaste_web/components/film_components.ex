@@ -13,20 +13,20 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     <div class="text-center w-fit m-auto">
       <%= if Enum.empty?(@film.display_title) do %>
         <h1 class="font-display tracking-wider uppercase p-2 text-2xl text-gray-700">
-          <%= raw(process_title(@film.title)) %>
+          {raw(process_title(@film.title))}
         </h1>
       <% else %>
         <h1>
           <%= for %{style: style, content: content} <- @film.display_title do %>
             <%= if style == :title do %>
               <span class="font-display tracking-wide uppercase p-2 text-2xl text-gray-700">
-                <%= raw(process_title(content)) %>
+                {raw(process_title(content))}
               </span>
               <br />
             <% end %>
             <%= if style == :subtitle do %>
               <span class="font-display font-extrabold tracking-[.2em] uppercase p-2 text-base text-gray-500">
-                <%= raw(process_title(content)) %>
+                {raw(process_title(content))}
               </span>
               <br />
             <% end %>
@@ -62,7 +62,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <div>
         <.icon name="tabler-stopwatch" class="h-5 w-4 text-gray-500" />
       </div>
-      <div><%= "#{@film.runtime}m" %></div>
+      <div>{"#{@film.runtime}m"}</div>
     </div>
     """
   end
@@ -75,7 +75,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <div>
         <.icon name="tabler-calendar-event" class="h-5 w-4 text-gray-500" />
       </div>
-      <div><%= Film.display_release_date(@film) %></div>
+      <div>{Film.display_release_date(@film)}</div>
     </div>
     """
   end
@@ -97,7 +97,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <% else %>
             <div class="font-content text-gray-700">
               <%= for studio <- @film.studios do %>
-                <%= studio.better_display_name || studio.display_name %><br />
+                {studio.better_display_name || studio.display_name}<br />
               <% end %>
             </div>
           <% end %>
@@ -108,14 +108,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <.modal id="film-production-committee-modal">
         <div class="max-h-[80vh] overflow-y-auto">
           <div class="font-display uppercase text-center pb-2 text-gray-700">
-            <%= @film.title %><br />
+            {@film.title}<br />
             <span class="text-xs text-gray-500 font-extrabold">
               Production Committee
             </span>
           </div>
           <div class="grid grid-cols-2 gap-2 text-gray-700 font-content text-sm">
             <%= for studio <- @film.production_committee.studios do %>
-              <div><%= studio.better_display_name || studio.display_name %></div>
+              <div>{studio.better_display_name || studio.display_name}</div>
             <% end %>
           </div>
         </div>
@@ -134,14 +134,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       </div>
       <div class="space-y-1">
         <div class="font-japanese tracking-wide text-gray-700">
-          <%= raw(@film.original_title.original) %>
+          {raw(@film.original_title.original)}
         </div>
         <div class="font-content italic text-xs text-gray-500">
-          <%= @film.original_title.transliteration %>
+          {@film.original_title.transliteration}
         </div>
         <%= if @film.original_title.transliteration != @film.original_title.translation do %>
           <div class="font-content italic text-xs text-gray-500">
-            <%= @film.original_title.translation %>
+            {@film.original_title.translation}
           </div>
         <% end %>
       </div>
@@ -158,18 +158,18 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
           <div><.icon name="tabler-book" class="text-gray-500 h-4 w-4" /></div>
           <div>
-            <div class="font-content italic text-gray-700"><%= work.title %></div>
-            <div class="uppercase font-detail text-xs text-gray-500"><%= work.format %> by</div>
+            <div class="font-content italic text-gray-700">{work.title}</div>
+            <div class="uppercase font-detail text-xs text-gray-500">{work.format} by</div>
             <%= if Enum.empty?(work.authors) do %>
               <%= for s <- work.studios do %>
                 <div class="font-content text-gray-700">
-                  <%= s.display_name %>
+                  {s.display_name}
                 </div>
               <% end %>
             <% else %>
               <%= for a <- work.authors do %>
                 <div class="font-content text-gray-700">
-                  <.showcase_link entity={a}><%= a.display_name %></.showcase_link>
+                  <.showcase_link entity={a}>{a.display_name}</.showcase_link>
                 </div>
               <% end %>
             <% end %>
@@ -190,9 +190,9 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div class="lg:break-inside-avoid-column flex gap-1 items-baseline">
             <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
             <div>
-              <div class="font-content italic text-gray-700"><%= alias.title %></div>
+              <div class="font-content italic text-gray-700">{alias.title}</div>
               <div class="font-detail text-xs text-gray-500">
-                <%= alias.context %>
+                {alias.context}
               </div>
             </div>
           </div>
@@ -221,8 +221,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             href={~p"/films/#{@film.slug}"}
             class="text-gray-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
           >
-            <span class="italic text-wrap"><%= @film.title %></span>
-            <span class="text-sm">(<%= @film.release_date.year %>)</span>
+            <span class="italic text-wrap">{@film.title}</span>
+            <span class="text-sm">({@film.release_date.year})</span>
           </.link>
         </div>
       </div>
@@ -242,8 +242,8 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           <div><.icon name="tabler-affiliate" class="text-gray-500 h-5 w-4" /></div>
           <div class="flex gap-1 items-baseline">
             <div>
-              <i><%= @film.series_entry.film_series.name %></i>
-              Series No. <%= @film.series_entry.entry_number %>
+              <i>{@film.series_entry.film_series.name}</i>
+              Series No. {@film.series_entry.entry_number}
             </div>
             <div>
               <a phx-click={show_modal("series-modal")}>
@@ -272,7 +272,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <.modal id="series-modal">
         <div class="max-h-[80vh] overflow-y-auto">
           <div class="font-display uppercase text-center pb-2 text-gray-700">
-            <%= @film.series_entry.film_series.name %>
+            {@film.series_entry.film_series.name}
             <br /><span class="text-xs text-gray-500 font-extrabold">Series</span>
           </div>
           <div class="text-gray-700 font-content text-sm">
@@ -282,14 +282,14 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                   <li class="ml-8 my-1 text-red-700">
                     <.link href={~p"/films/#{series_entry.film.slug}"} class="hover:cursor-pointer">
                       <i>
-                        <%= series_entry.film.title %>
+                        {series_entry.film.title}
                       </i>
-                      (<%= series_entry.film.release_date.year %>)
+                      ({series_entry.film.release_date.year})
                     </.link>
                   </li>
                 <% else %>
                   <li class="ml-8 my-2">
-                    <i><%= series_entry.film.title %></i> (<%= series_entry.film.release_date.year %>)
+                    <i>{series_entry.film.title}</i> ({series_entry.film.release_date.year})
                   </li>
                 <% end %>
               <% end %>
@@ -307,7 +307,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
     ~H"""
     <%= if @film.pitch do %>
       <div class="pb-4 m-auto text-center font-content text-gray-700 flex flex-col items-center">
-        <div class="w-96 text-sm"><%= @film.pitch %></div>
+        <div class="w-96 text-sm">{@film.pitch}</div>
       </div>
     <% end %>
     """
@@ -351,25 +351,25 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <%= for {role, staffs} <- display_staff(@film) do %>
         <div class="lg:text-center text-left lg:break-inside-avoid-column pb-1">
           <div class="">
-            <span class="font-detail text-xs uppercase text-gray-500"><%= role %></span>
+            <span class="font-detail text-xs uppercase text-gray-500">{role}</span>
           </div>
           <div class="">
             <%= for staff <- staffs do %>
               <div class="text-gray-700 text-sm font-content">
                 <.showcase_link entity={get_entity(staff)}>
-                  <%= raw(
+                  {raw(
                     if has_disambig_chars?(staff) do
                       staff_display_name(staff) <>
                         ~s| <span class="text-xs">(<span class="font-japanese">#{staff.person.disambig_chars}</span>)</span>|
                     else
                       staff_display_name(staff)
                     end
-                  ) %>
+                  )}
                 </.showcase_link>
                 <br />
                 <%= if staff.staff_alias do %>
                   <span class="text-gray-500 text-xs">
-                    <.icon name="tabler-at" class="h-3 w-3" /><%= staff.staff_alias %>
+                    <.icon name="tabler-at" class="h-3 w-3" />{staff.staff_alias}
                   </span>
                 <% end %>
               </div>
@@ -392,10 +392,10 @@ defmodule GodzillaCineasteWeb.FilmComponents do
         href={get_link(@entity)}
         class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
       >
-        <%= render_slot(@inner_block) %>
+        {render_slot(@inner_block)}
       </.link>
     <% else %>
-      <%= render_slot(@inner_block) %>
+      {render_slot(@inner_block)}
     <% end %>
     """
   end
@@ -416,17 +416,17 @@ defmodule GodzillaCineasteWeb.FilmComponents do
           </div>
           <div class="flex flex-col sm:items-center">
             <div class="font-content sm:text-center text-gray-500 text-xs">
-              <%= raw(Role.process_role_name(Role.role_display_name(@primary_role))) %>
+              {raw(Role.process_role_name(Role.role_display_name(@primary_role)))}
               <%= if @primary_role.character_qualifiers do %>
                 <br />
                 <span class="text-xs font-detail">
-                  <%= @primary_role.character_qualifiers %>
+                  {@primary_role.character_qualifiers}
                 </span>
               <% end %>
             </div>
             <div class="font-content text-sm sm:text-center text-gray-700">
               <.showcase_link entity={get_entity(@primary_role)}>
-                <%= role_display_name(@primary_role) %>
+                {role_display_name(@primary_role)}
                 <%= if has_disambig_chars?(@primary_role) do %>
                   <span class="text-xs">
                     (<span class="font-japanese"><%= @primary_role.person.disambig_chars %></span>)
@@ -436,7 +436,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             </div>
             <%= if @primary_role.actor_alias do %>
               <div class="font-content text-xs text-gray-500">
-                <.icon name="tabler-at" class="text-gray-500 h-3 w-3" /><%= @primary_role.actor_alias %>
+                <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{@primary_role.actor_alias}
               </div>
             <% end %>
             <div class="font-detail text-xs text-gray-500 uppercase">
@@ -450,7 +450,7 @@ defmodule GodzillaCineasteWeb.FilmComponents do
             <%= for role <- @secondary_roles do %>
               <div class="font-content text-gray-700 text-sm">
                 <.showcase_link entity={get_entity(role)}>
-                  <%= role_display_name(role) %>
+                  {role_display_name(role)}
                 </.showcase_link>
               </div>
               <div class="font-detail text-xs text-gray-500 uppercase">
@@ -502,11 +502,11 @@ defmodule GodzillaCineasteWeb.FilmComponents do
                 />
               </div>
               <div class="flex flex-col sm:items-center">
-                <div class="font-detail text-gray-500 text-xs"><%= kaiju_name %></div>
+                <div class="font-detail text-gray-500 text-xs">{kaiju_name}</div>
                 <%= for kr <- kaiju_roles do %>
                   <div class="font-content text-sm sm:text-center text-gray-700">
                     <.showcase_link entity={get_entity(kr)}>
-                      <%= role_display_name(kr) %>
+                      {role_display_name(kr)}
                     </.showcase_link>
                   </div>
                   <%= if kr.qualifiers do %>
@@ -539,18 +539,18 @@ defmodule GodzillaCineasteWeb.FilmComponents do
       <.modal id="credits-modal">
         <div class="max-h-[80vh] overflow-y-auto">
           <div class="font-display uppercase text-center pb-2 text-gray-700">
-            <%= @film.title %>
+            {@film.title}
             <br /><span class="text-xs text-gray-500 font-extrabold">Full Cast & Crew</span>
           </div>
           <div class="grid grid-cols-2 gap-2 text-gray-700 font-content text-sm">
             <%= for [jpn_role, jpn_name, eng_role, eng_name] <- CSV.parse_string(@film.credits.credits, skip_headers: false) do %>
               <div>
-                <span class="text-gray-500 font-mono text-xs"><%= jpn_role %></span> <br />
-                <span><%= eng_role %></span>
+                <span class="text-gray-500 font-mono text-xs">{jpn_role}</span> <br />
+                <span>{eng_role}</span>
               </div>
               <div>
-                <span class="text-gray-500 font-mono text-xs"><%= jpn_name %></span> <br />
-                <span><%= eng_name %></span>
+                <span class="text-gray-500 font-mono text-xs">{jpn_name}</span> <br />
+                <span>{eng_name}</span>
               </div>
             <% end %>
           </div>

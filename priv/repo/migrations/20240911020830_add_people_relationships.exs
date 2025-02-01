@@ -9,7 +9,7 @@ defmodule GodzillaCineaste.Repo.Migrations.AddPeopleRelationships do
       add :order, :integer, default: 0
 
       timestamps()
-  end
+    end
 
     create unique_index(:relationships, [:self_id, :relative_id])
   end

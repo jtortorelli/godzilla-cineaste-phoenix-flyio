@@ -55,7 +55,7 @@ defmodule GodzillaCineaste.Film do
   end
 
   @doc false
-  def changeset(film, attrs \\ %{}) do
+  def changeset(film, attrs \\ %{}, _metadata \\ []) do
     film
     |> cast(attrs, [
       :slug,

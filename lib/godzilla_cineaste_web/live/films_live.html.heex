@@ -27,9 +27,9 @@
         <div class="sm:text-center">
           <.link href={~p"/films/#{film.slug}"}>
             <div class="font-content italic text-sm text-gray-700">
-              <%= film.title %>
+              {film.title}
             </div>
-            <div class="font-detail text-red-700 text-xs"><%= film.release_date.year %></div>
+            <div class="font-detail text-red-700 text-xs">{film.release_date.year}</div>
           </.link>
         </div>
       </div>
