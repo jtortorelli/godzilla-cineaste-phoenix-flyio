@@ -46,6 +46,12 @@ defmodule GodzillaCineasteWeb.Router do
 
       live_dashboard "/dashboard", metrics: GodzillaCineasteWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
+
+      scope "/admin" do
+        live "/", GodzillaCineasteWeb.AdminLive
+        live "/people", GodzillaCineasteWeb.AdminPeopleLive
+        live "/people/:slug", GodzillaCineasteWeb.AdminPersonLive
+      end
     end
   end
 end
