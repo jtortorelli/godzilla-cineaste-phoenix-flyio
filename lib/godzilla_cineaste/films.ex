@@ -3,6 +3,8 @@ defmodule GodzillaCineaste.Films do
 
   import Ecto.Query
 
+  alias GodzillaCineaste.Library
+
   alias GodzillaCineaste.{
     Film,
     FilmSeries,
@@ -12,6 +14,22 @@ defmodule GodzillaCineaste.Films do
     Role,
     Staff
   }
+
+  def get_film(slug) do
+    Library.get_film(slug)
+  end
+
+  def get_film_credits(slug) do
+    Library.get_film_credits(slug)
+  end
+
+  def get_film_series(slug) do
+    Library.get_film_series(slug)
+  end
+
+  def list_films do
+    Library.list_films()
+  end
 
   def get_adjacent_films_in_series(%Film{
         series_entry: %FilmSeriesEntry{
