@@ -25,6 +25,11 @@ defmodule GodzillaCineasteWeb.Router do
     get "/films/:slug", FilmController, :show
     live "/people", PeopleLive
     get "/people/:slug", PeopleController, :show
+
+    scope "/v2" do
+      live "/films", Films.IndexLive
+      live "/films/:slug", Films.ShowLive
+    end
   end
 
   # Other scopes may use custom stacks.
