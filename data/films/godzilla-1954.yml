@@ -20,9 +20,10 @@ series:
   title: Godzilla
   slug: godzilla
   entry_number: 1
-  next_entry_title: Godzilla Raids Again
-  next_entry_year: 1955
-  next_entry_slug: godzilla-raids-again-1955
+  next_entry:
+    title: Godzilla Raids Again
+    year: 1955
+    slug: godzilla-raids-again-1955
 staff:
   - role: Director
     people:
