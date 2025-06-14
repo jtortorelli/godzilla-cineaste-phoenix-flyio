@@ -14,6 +14,7 @@ defmodule GodzillaCineaste.Application do
       GodzillaCineaste.Repo,
       # Start the PubSub system
       {Phoenix.PubSub, name: GodzillaCineaste.PubSub},
+      {GodzillaCineaste.Library, []},
       # Start Finch
       {Finch, name: GodzillaCineaste.Finch},
       # Start the Endpoint (http/https)
