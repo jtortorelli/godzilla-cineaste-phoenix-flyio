@@ -251,7 +251,7 @@ supporting_cast:
 kaiju:
   - name: Godzilla
     avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-1954/kaiju-avatars/haruo-nakajima-0.jpg
-    portrayal:
+    portrayals:
       - type: suit actor
         people:
           - name: Nakajima Haruo

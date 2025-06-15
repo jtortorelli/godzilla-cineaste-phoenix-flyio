@@ -391,8 +391,49 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
         <% end %>
       </div>
     <% end %>
-
-    <%!-- <.kaiju_cast_group roles={@film.kaiju_roles} /> --%>
+    <%= if @film["kaiju"] do %>
+      <.named_divider name="kaiju, etc." />
+      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
+        <%= for kaiju <- @film["kaiju"] do %>
+          <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
+            <div class="shrink-0">
+              <img
+                class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
+                src={kaiju["avatar_url"]}
+              />
+            </div>
+            <div class="flex flex-col sm:items-center">
+              <div class="font-content text-gray-500 text-xs">{kaiju["name"]}</div>
+              <%= for portrayal <- kaiju["portrayals"] do %>
+                <%= if portrayal["people"] do %>
+                  <%= for person <- portrayal["people"] do %>
+                    <div class="font-content text-sm sm:text-center text-gray-700">
+                      <%= if person["slug"] do %>
+                        <.link
+                          class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+                          href={~p"/v2/people/#{person["slug"]}"}
+                        >
+                          {person["name"]}
+                        </.link>
+                      <% else %>
+                        {person["name"]}
+                      <% end %>
+                      <div class="font-detail text-xs text-gray-500 uppercase">
+                        <.qualifier_icon_v2 qualifier={portrayal["type"]} />
+                      </div>
+                    </div>
+                  <% end %>
+                <% else %>
+                  <div class="font-detail text-xs text-gray-500 uppercase">
+                    <.qualifier_icon qualifier={portrayal["type"]} />
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     """
   end
 
@@ -457,22 +498,22 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
 
   def qualifier_icon_v2(assigns) do
     ~H"""
-    <%= case @qualifier do %>
-      <% "CGI" -> %>
+    <%= case String.downcase(@qualifier) do %>
+      <% "cgi" -> %>
         <.icon name="tabler-server" class="h-4 w-4" />
-      <% "Motion Capture" -> %>
+      <% "motion capture" -> %>
         <.icon name="tabler-stretching-2" class="h-4 w-4" />
-      <% "American Version" -> %>
+      <% "american version" -> %>
         <.icon name="tabler-world" class="h-4 w-4" />
-      <% "Photo" -> %>
+      <% "photo" -> %>
         <.icon name="tabler-photo" class="h-4 w-4" />
-      <% "Puppet" -> %>
+      <% "puppet" -> %>
         <.icon name="tabler-mood-happy" class="h-4 w-4" />
-      <% "Stock Footage" -> %>
+      <% "stock footage" -> %>
         <.icon name="tabler-recycle" class="h-4 w-4" />
-      <% "Suit Actor" -> %>
+      <% "suit actor" -> %>
         <.icon name="tabler-meeple" class="h-4 w-4" />
-      <% "Voice" -> %>
+      <% "voice" -> %>
         <.icon name="tabler-microphone-2" class="h-4 w-4" />
     <% end %>
     """
