@@ -54,6 +54,7 @@ defmodule GodzillaCineaste.MixProject do
       {:bandit, ">= 0.6.2"},
       {:yaml_elixir, "~> 2.11"},
       {:nimble_csv, "~> 1.2"},
+      {:ymlr, "~> 5.1"},
       {:tabler_icons,
        github: "tabler/tabler-icons",
        tag: "v3.19.0",

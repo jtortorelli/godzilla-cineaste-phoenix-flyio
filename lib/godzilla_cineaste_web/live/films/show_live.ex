@@ -1,6 +1,5 @@
 defmodule GodzillaCineasteWeb.Films.ShowLive do
   use GodzillaCineasteWeb, :live_view
-  import GodzillaCineasteWeb.FilmComponents
 
   @impl true
   def mount(_params, _session, socket) do
@@ -139,7 +138,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
               </div>
             </div>
 
-            <.series_modal_v2 series={@series} />
+            <.series_modal series={@series} />
             <%= if @film["series"]["previous_entry"] do %>
               <div class="flex gap-1 items-baseline font-content">
                 <div>
@@ -150,9 +149,9 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                     href={~p"/v2/films/#{@film["series"]["previous_entry"]["slug"]}"}
                     class="text-gray-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
                   >
-                    <span class="italic text-wrap">{@film["previous_entry"]["title"]}</span>
+                    <span class="italic text-wrap">{@film["series"]["previous_entry"]["title"]}</span>
                     <span class="text-sm">
-                      ({@film["previous_entry"]["year"]})
+                      ({@film["series"]["previous_entry"]["year"]})
                     </span>
                   </.link>
                 </div>
@@ -243,7 +242,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
       <a phx-click={show_modal("credits-modal")} class="uppercase">
         Full Cast & Crew <.icon name="tabler-layers-subtract" class="h-4 w-4" />
       </a>
-      <.full_credits_modal_v2 film={@film} credits={@credits} />
+      <.full_credits_modal film={@film} credits={@credits} />
     </div>
     <.named_divider name="top billed cast" />
     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
@@ -294,7 +293,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
             <% end %>
             <div class="font-detail text-xs text-gray-500 uppercase">
               <%= if cast["role_qualifiers"]  do %>
-                <.qualifier_icon_v2 qualifier={cast["role_qualifiers"]} />
+                <.qualifier_icon qualifier={cast["role_qualifiers"]} />
               <% end %>
               <%= if cast["uncredited"] do %>
                 <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
@@ -367,7 +366,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
               <% end %>
               <div class="font-detail text-xs text-gray-500 uppercase">
                 <%= if cast["role_qualifiers"]  do %>
-                  <.qualifier_icon_v2 qualifier={cast["role_qualifiers"]} />
+                  <.qualifier_icon qualifier={cast["role_qualifiers"]} />
                 <% end %>
                 <%= if cast["uncredited"] do %>
                   <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
@@ -419,7 +418,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                         {person["name"]}
                       <% end %>
                       <div class="font-detail text-xs text-gray-500 uppercase">
-                        <.qualifier_icon_v2 qualifier={portrayal["type"]} />
+                        <.qualifier_icon qualifier={portrayal["type"]} />
                       </div>
                     </div>
                   <% end %>
@@ -437,7 +436,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
     """
   end
 
-  def series_modal_v2(assigns) do
+  def series_modal(assigns) do
     ~H"""
     <.modal id="series-modal">
       <div class="max-h-[80vh] overflow-y-auto">
@@ -471,7 +470,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
     """
   end
 
-  def full_credits_modal_v2(assigns) do
+  def full_credits_modal(assigns) do
     ~H"""
     <.modal id="credits-modal">
       <div class="max-h-[80vh] overflow-y-auto">
@@ -496,7 +495,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
     """
   end
 
-  def qualifier_icon_v2(assigns) do
+  def qualifier_icon(assigns) do
     ~H"""
     <%= case String.downcase(@qualifier) do %>
       <% "cgi" -> %>
