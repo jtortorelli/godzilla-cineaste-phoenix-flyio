@@ -1,0 +1,225 @@
+---
+runtime: 87
+title: Ebirah, Horror of the Deep
+aliases:
+  - alias: Godzilla vs. the Sea Monster
+    context: American Theatrical Release
+release_date: 1966-12-17
+staff:
+  - role: Director
+    people:
+      - name: Fukuda Jun
+        slug: fukuda-jun
+  - role: SFX Director
+    people:
+      - name: Tsuburaya Eiji
+        slug: tsuburaya-eiji
+  - role: Producer
+    people:
+      - name: Tanaka Tomoyuki
+        slug: tanaka-tomoyuki
+  - role: Screenplay
+    people:
+      - name: Sekizawa Shin'ichi
+        slug: sekizawa-shinichi
+  - role: Photography
+    people:
+      - name: Yamada Kazuo
+  - role: Art
+    people:
+      - name: Kita Takeo
+        slug: kita-takeo
+  - role: Sound
+    people:
+      - name: Yoshizawa Shôichi
+  - role: Lighting
+    people:
+      - name: Onda Norikazu
+  - role: Music
+    people:
+      - name: Satô Masaru
+        slug: sato-masaru
+  - role: Editor
+    people:
+      - name: Fujii Ryôhei
+  - role: SFX Co-Director
+    people:
+      - name: Arikawa Sadamasa
+        slug: arikawa-sadamasa
+  - role: SFX Art
+    people:
+      - name: Inoue Yasuyuki
+        slug: inoue-yasuyuki
+  - role: SFX Assistant Director
+    people:
+      - name: Nakano Teruyoshi
+        slug: nakano-teruyoshi
+translation: Godzilla Ebirah Mothra Great Duel in the South Seas
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/posters/godzilla-vs-the-sea-monster-1966.jpg
+japanese_title: ゴジラ・エビラ・モスラ 南海の大決闘
+transliteration: Gojira Ebira Mosura Nankai No Daikettô
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Godzilla
+  slug: godzilla
+  entry_number: 7
+  previous_entry:
+    title: Invasion of Astro-Monster
+    year: 1965
+    slug: invasion-of-astro-monster-1965
+  next_entry:
+    title: Son of Godzilla
+    year: 1967
+    slug: son-of-godzilla-1967
+top_billed_cast:
+  - name: Takarada Akira
+    role: Yoshimura
+    slug: takarada-akira
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/akira-takarada-0.jpg
+  - name: Mizuno Kumi
+    role: Dayo
+    slug: mizuno-kumi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/kumi-mizuno-0.jpg
+  - name: Hirata Akihiko
+    role: Captain Yamato
+    slug: hirata-akihiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/akihiko-hirata-0.jpg
+  - name: Tazaki Jun
+    role: Red Bamboo Commander
+    slug: tazaki-jun
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/jun-tazaki-0.jpg
+  - name: Sunazuka Hideo
+    role: Nita
+    slug: sunazuka-hideo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/hideo-sunazuka-0.jpg
+  - name: Tôgin Chôtarô
+    role: Ichino
+    slug: togin-chotaro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/chotaro-togin-0.jpg
+  - name: Ibuki Tôru
+    role: Yata
+    slug: ibuki-toru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/toru-ibuki-0.jpg
+  - name: Watanabe Tôru
+    role: Ryôta
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/toru-watanabe-0.jpg
+  - name: Amamoto Hideyo
+    role: Red Bamboo Officer
+    slug: amamoto-hideyo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/hideyo-amamoto-0.jpg
+  - name: Sawamura Ikio
+    role: Captive Islander
+    slug: sawamura-ikio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/ikio-sawamura-0.jpg
+  - name: Itô Hisaya
+    role: Red Bamboo Scientist
+    slug: ito-hisaya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/hisaya-ito-0.jpg
+  - name: Ishida Shigeki
+    role: Newspaper Editor
+    slug: ishida-shigeki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/shigeki-ishida-0.jpg
+  - name: Hirose Shôichi
+    role: Escaped Islander
+    slug: hirose-shoichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/shoichi-hirose-0.jpg
+  - name: Suzuki Kazuo
+    role: Escaped Islander
+    slug: suzuki-kazuo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/kazuo-suzuki-0.jpg
+  - name: Sada Yutaka
+    role: Villager
+    slug: sada-yutaka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/yutaka-sada-0.jpg
+  - name: Honma Noriko
+    role: Medium
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/noriko-honma-0.jpg
+  - name: Nakakita Chieko
+    role: "Yata's & Ryota's Mother"
+    slug: nakakita-chieko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/chieko-nakakita-0.jpg
+  - name: Ikeda Seiji
+    role: Villager
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/seiji-ikeda-0.jpg
+  - name: Okabe Tadashi
+    role: Red Bamboo Scientist
+    slug: okabe-tadashi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/tadashi-okabe-0.jpg
+  - name: Ômae Wataru
+    role: Reporter
+    slug: omae-wataru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/wataru-omae-0.jpg
+  - name: Maruyama Ken'ichirô
+    role: Reporter
+    slug: maruyama-kenichiro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/kenichiro-maruyama-0.jpg
+  - name: Ogata Rinsaku
+    role: Red Bamboo Soldier
+    slug: ogata-rinsaku
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/rinsaku-ogata-0.jpg
+  - name: Katsube Yoshio
+    role: Captive Islander
+    slug: katsube-yoshio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/yoshio-katsube-0.jpg
+  - name: Katsube Yoshio
+    role: Red Bamboo Soldier
+    slug: katsube-yoshio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/yoshio-katsube-1.jpg
+  - name: Shibuya Hideo
+    role: Policeman
+    slug: shibuya-hideo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/hideo-shibuya-0.jpg
+  - name: The Bambi Pair
+    role: The Shobijin
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/the-bambi-pair-0.jpg
+supporting_cast:
+  - name: Echigo Ken
+    role: Red Bamboo Soldier
+    slug: echigo-ken
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/ken-echigo-0.jpg
+    uncredited: true
+  - name: Gondô Yukihiko
+    role: Red Bamboo Soldier
+    slug: gondo-yukihiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/yukihiko-gondo-0.jpg
+    uncredited: true
+  - name: Kuno Seishirô
+    role: Youth at Dance Contest
+    slug: kuno-seishiro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/seishiro-kuno-0.jpg
+    uncredited: true
+  - name: Natsuki Junpei
+    role: Captive Islander
+    slug: natsuki-junpei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/junpei-natsuki-0.jpg
+    uncredited: true
+  - name: Suzukawa Jirô
+    role: Captive Islander
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/jiro-suzukawa-0.jpg
+    uncredited: true
+  - name: Tsubono Kamayuki
+    role: Captive Islander
+    slug: tsubono-kamayuki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/cast-avatars/kamayuki-tsubono-0.jpg
+    uncredited: true
+kaiju:
+  - name: Godzilla
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/kaiju-avatars/haruo-nakajima-0.jpg?t=2023-09-01T02%3A33%3A42.166Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Nakajima Haruo
+            slug: nakajima-haruo
+  - name: Ebirah
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/kaiju-avatars/hiroshi-sekita-0.jpg?t=2023-09-01T02%3A33%3A49.190Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Sekita Hiroshi
+            slug: sekita-hiroshi
+  - name: Mothra
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/kaiju-avatars/02398.jpg?t=2023-09-16T20%3A45%3A18.341Z
+    portrayals:
+      - type: Puppet
