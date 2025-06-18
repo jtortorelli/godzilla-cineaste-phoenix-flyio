@@ -1,6 +1,8 @@
 alias GodzillaCineaste.{Film, Films, Group, Person, Role}
 
-film = Films.get_film_by_slug!("godzilla-raids-again-1955")
+slug = "son-of-godzilla-1967"
+
+film = Films.get_film_by_slug!(slug)
 
 {:ok, previous_film, next_film} = Films.get_adjacent_films_in_series(film)
 
@@ -20,6 +22,19 @@ display_staff = fn %Film{staff: staff} ->
     case acc do
       [{^current_role, ss} | rest] -> [{current_role, ss ++ [s]} | rest]
       _ -> [{current_role, [s]} | acc]
+    end
+  end)
+  |> Enum.reverse()
+end
+
+display_kaiju_roles = fn roles ->
+  film.kaiju_roles
+  |> Enum.reduce([], fn kr, acc ->
+    current_role = kr.name || kr.kaiju_character.display_name
+
+    case acc do
+      [{^current_role, krs} | rest] -> [{current_role, krs ++ [kr]} | rest]
+      _ -> [{current_role, [kr]} | acc]
     end
   end)
   |> Enum.reverse()
@@ -86,11 +101,21 @@ map = %{
     Enum.map(top_billed_roles, fn role ->
       %{
         role: Role.role_display_name(role) |> String.trim(),
-        name: role.person.display_name,
-        avatar_url: role.avatar_url
+        name:
+          (role.person && role.person.display_name) || (role.group && role.group.display_name),
+        avatar_url: role.avatar_url,
+        qualifiers: role.role_qualifiers || []
       }
-      |> then(&if role.person.showcased, do: Map.put(&1, :slug, role.person.slug), else: &1)
+      |> then(
+        &if role.person && role.person.showcased,
+          do: Map.put(&1, :slug, role.person.slug),
+          else: &1
+      )
+      |> then(
+        &if role.group && role.group.showcased, do: Map.put(&1, :slug, role.group.slug), else: &1
+      )
       |> then(&if role.actor_alias, do: Map.put(&1, :alias, role.actor_alias), else: &1)
+      |> then(&if &1.qualifiers == [], do: Map.delete(&1, :qualifiers), else: &1)
     end),
   supporting_cast:
     Enum.map(rest_of_roles, fn role ->
@@ -98,13 +123,27 @@ map = %{
         role: Role.role_display_name(role) |> String.trim(),
         name: role.person.display_name,
         uncredited: role.uncredited,
-        avatar_url: role.avatar_url
+        avatar_url: role.avatar_url,
+        qualifiers: role.role_qualifiers || []
       }
       |> then(&if role.person.showcased, do: Map.put(&1, :slug, role.person.slug), else: &1)
       |> then(&if role.actor_alias, do: Map.put(&1, :alias, role.actor_alias), else: &1)
+      |> then(&if &1.qualifiers == [], do: Map.delete(&1, :qualifiers), else: &1)
+    end),
+  kaiju:
+    Enum.map(display_kaiju_roles.(film.kaiju_roles), fn {kaiju_name, [first | _] = kaiju_roles} ->
+      %{
+        name: kaiju_name,
+        avatar_url: first.avatar_url,
+        portrayals: []
+      }
     end)
 }
 
 map
 |> Ymlr.document!()
-|> IO.puts()
+|> then(&File.write!("data/films/#{slug}.yml", &1))
+
+if film.credits do
+  File.write!("data/credits/#{slug}.csv", film.credits.credits)
+end

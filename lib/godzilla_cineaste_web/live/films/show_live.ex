@@ -292,8 +292,8 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
               </div>
             <% end %>
             <div class="font-detail text-xs text-gray-500 uppercase">
-              <%= if cast["role_qualifiers"]  do %>
-                <.qualifier_icon qualifier={cast["role_qualifiers"]} />
+              <%= if cast["qualifiers"]  do %>
+                <.qualifier_icon qualifier={cast["qualifiers"]} />
               <% end %>
               <%= if cast["uncredited"] do %>
                 <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
@@ -365,8 +365,8 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                 </div>
               <% end %>
               <div class="font-detail text-xs text-gray-500 uppercase">
-                <%= if cast["role_qualifiers"]  do %>
-                  <.qualifier_icon qualifier={cast["role_qualifiers"]} />
+                <%= if cast["qualifiers"]  do %>
+                  <.qualifier_icon qualifier={cast["qualifiers"]} />
                 <% end %>
                 <%= if cast["uncredited"] do %>
                   <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
