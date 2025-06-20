@@ -1,0 +1,74 @@
+---
+runtime: 70
+title: Assault Girls
+aliases: []
+release_date: 2009-12-19
+staff:
+  - role: Director
+    people:
+      - name: Oshii Mamoru
+  - role: Screenplay
+    people:
+      - name: Oshii Mamoru
+  - role: Music
+    people:
+      - name: Kawai Kenji
+        slug: kawai-kenji
+  - role: Photography
+    people:
+      - name: Yuasa Hiroaki
+      - name: Satô Atsuki
+  - role: Editor
+    people:
+      - name: Satô Atsuki
+  - role: VFX Supervisor
+    people:
+      - name: Satô Atsuki
+  - role: Lighting
+    people:
+      - name: Seki Teruhisa
+  - role: Art
+    people:
+      - name: Kurokawa Michitoshi
+  - role: Sound
+    people:
+      - name: Wakabayashi Kazuhiro
+  - role: Key Art Design
+    people:
+      - name: Higuchi Shinji
+        slug: higuchi-shinji
+translation:
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/posters/assault-girls-2009.jpg
+japanese_title: ASSAULT GIRLS
+transliteration:
+original_works: []
+studios:
+  - deiz
+  - Geneon Universal Entertainment
+series:
+top_billed_cast:
+  - name: Kuroki Meisa
+    role: Gray
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/cast-avatars/meisa-kuroki-0.jpg
+    character_qualifiers:
+  - name: Kikuchi Rinko
+    role: Lucifer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/cast-avatars/rinko-kikuchi-0.jpg
+    character_qualifiers:
+  - name: Saeki Hinako
+    role: Colonel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/cast-avatars/hinako-saeki-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Fujiki Yoshikatsu
+    role: Jäger
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/cast-avatars/yoshikatsu-fujiki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ian Moore
+    role: Gamemaster
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/cast-avatars/ian-moore-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+    uncredited: false
+kaiju: []

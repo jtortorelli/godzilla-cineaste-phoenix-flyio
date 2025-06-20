@@ -316,7 +316,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
         <%!-- <.role primary_role={primary_role} secondary_roles={rest} /> --%>
       <% end %>
     </div>
-    <%= if @film["supporting_cast"] do %>
+    <%= if @film["supporting_cast"] && not Enum.empty?(@film["supporting_cast"]) do %>
       <.named_divider name="supporting cast" />
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
         <%= for cast <- @film["supporting_cast"] do %>
@@ -390,7 +390,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
         <% end %>
       </div>
     <% end %>
-    <%= if @film["kaiju"] do %>
+    <%= if @film["kaiju"] && not Enum.empty?(@film["kaiju"]) do %>
       <.named_divider name="kaiju, etc." />
       <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
         <%= for kaiju <- @film["kaiju"] do %>
