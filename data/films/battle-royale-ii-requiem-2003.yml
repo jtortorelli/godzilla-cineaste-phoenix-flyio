@@ -1,0 +1,334 @@
+---
+runtime: 133
+title: 'Battle Royale II: Requiem'
+aliases: []
+release_date: 2003-07-05
+staff:
+  - role: Director
+    people:
+      - name: Fukasaku Kinji
+      - name: Fukasaku Kenta
+  - role: Screenplay
+    people:
+      - name: Fukasaku Kenta
+      - name: Kida Norio
+  - role: Music
+    people:
+      - name: Amano Masamichi
+  - role: Photography
+    people:
+      - name: Fujisawa Jun'ichi
+  - role: Lighting
+    people:
+      - name: Ono Akira
+  - role: Art
+    people:
+      - name: Isomi Toshihiro
+  - role: Sound
+    people:
+      - name: Andô Kunio
+  - role: Editor
+    people:
+      - name: Abe Hirohide
+translation: Battle Royale II Requiem
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/posters/battle-royale-ii-requiem-2003.jpg
+japanese_title: バトル・ロワイアルII <ruby>鎮魂歌<rt>レクイエム</rt></ruby>
+transliteration: Batoru Rowaiaru II Chinkonka (Rekuiemu)
+original_works:
+  - format: novel
+    title: Battle Royale
+    slug: battle-royale
+    authors:
+      - name: Takami Kôshun
+        slug:
+studios:
+  - Fukasaku Group
+  - Gaga Communications, Inc.
+  - Nippan Group Holdings, Inc.
+  - Sega Corporation
+  - Toei Co., Ltd.
+  - Toei Advertising, Ltd.
+  - Toei Video Co., Ltd.
+  - TOKYO FM Broadcasting Co., Ltd.
+  - TV Asahi Corporation
+  - WOWOW, Inc.
+series:
+  title: Battle Royale
+  slug: battle-royale
+  entry_number: 2
+  previous_entry:
+    title: Battle Royale
+    year: 2000
+    slug: battle-royale-2000
+  next_entry:
+top_billed_cast:
+  - name: Fujiwara Tatsuya
+    role: Nanahara Shûya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/tatsuya-fujiwara-0.jpg
+    character_qualifiers:
+  - name: Maeda Ai
+    role: Kitano Shiori
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ai-maeda-0.jpg
+    character_qualifiers:
+  - name: Oshinari Shûgo
+    role: Aoi Takuma
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/shugo-oshinari-0.jpg
+    character_qualifiers:
+  - name: Sakai Ayana
+    role: Asakura Nao
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ayana-sakai-0.jpg
+    character_qualifiers:
+  - name: Suenaga Haruka
+    role: Kuze Haruka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/haruka-suenaga-0.jpg
+    character_qualifiers:
+  - name: Ishigaki Yûma
+    role: Sakai Mitsugu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yuma-ishigaki-0.jpg
+    character_qualifiers:
+  - name: Kanbe Miyuki
+    role: Kakei Kyôko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/miyuki-kanbe-0.jpg
+    character_qualifiers:
+  - name: Kikawada Masaya
+    role: Makimura Shintarô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/masaya-kikawada-0.jpg
+    character_qualifiers:
+  - name: Maki Yôko
+    role: Hayata Maki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yoko-maki-0.jpg
+    character_qualifiers:
+  - name: Itô Yûki
+    role: Kurosawa Ryô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yuki-ito-0.jpg
+    character_qualifiers:
+  - name: Katô Natsuki
+    role: Sakurai Saki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/natsuki-kato-0.jpg
+    character_qualifiers:
+  - name: Maeda Aki
+    role: Nakagawa Noriko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/aki-maeda-0.jpg
+    character_qualifiers:
+  - name: Takeuchi Riki
+    role: Riki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/riki-takeuchi-0.jpg
+    character_qualifiers:
+  - name: Chiba Shin'ichi
+    role: Mimura Makio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/shinichi-chiba-0.jpg
+    character_qualifiers:
+  - name: Tsugawa Masahiko
+    role: Prime Minister
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/masahiko-tsugawa-0.jpg
+    character_qualifiers:
+  - name: Mita Yoshiko
+    role: Takuma's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yoshiko-mita-0.jpg
+    character_qualifiers:
+  - name: Beat Takeshi
+    role: Kitano
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takeshi-kitano-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Aja
+    role: Fukuda Kazumi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/aja-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Aoki Munetaka
+    role: Nanami Jun
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/munetaka-aoki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Arama Riasu
+    role: Nîmi Rena
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/riasu-arama-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ebina Seiichi
+    role: Morishima Tatsurô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/seiichi-ebina-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Fujihira Ryôji
+    role: Shibaki Masami
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ryoji-fujihira-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hanada Ayumi
+    role: Hata Ryôko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ayumi-hanada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Harada Kenji
+    role: Jô Naoki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kenji-harada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hasebe Hitomi
+    role: Motomura Asuka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/hitomi-hasebu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ikeyama Takaaki
+    role: Hosaka Yasuaki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takaaki-ikeyama-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ishii Asuka
+    role: Nosaka Maho
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/asuka-ishii-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Iwamura Ai
+    role: Mai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ai-iwamura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kamijô Kôtarô
+    role: Maezono Kenji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kotaru-kamijo-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kanazawa Minami
+    role: Natsukawa Yuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/minami-kanazawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katsuji Ryô
+    role: Sakurai Haruya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ryo-katsuji-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katsura Asami
+    role: Shindô Risa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/asami-katsura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kikuchi Mika
+    role: Yagi Ayane
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/mika-kikuchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kubota Musashi
+    role: Mukai Wataru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/musashi-kubota-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsumoto Maika
+    role: Matsuki Shiho
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/maika-matsumoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsumoto Michiho
+    role: Shioda Sanae
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/michiho-matsumoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Miyao Chisato
+    role: Yano Hibiki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/chisato-miyao-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Morimoto Yûko
+    role: Yûki Kana
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yuko-morimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Moriuchi Aiko
+    role: Ikeda Miki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/akio-moriuchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Murata Mitsu
+    role: Kazama Sôji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/mitsu-murata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nakagawa Ami
+    role: Totsuka Honami
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/ami-nakagawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nayuki Kayo
+    role: Yoshiyama Eri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kayo-nayuki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sakaguchi Rika
+    role: Mifune Yuka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/rika-sakaguchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sakamoto Makoto
+    role: Kasai Osamu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/makoto-sakamoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Satô Shôko
+    role: Sagisawa Nozomi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/shoko-sato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shibaki Takeru
+    role: Urabe Shûgo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takeru-shibaki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shimizu Sae
+    role: Yazawa Ai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/sae-shimizu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tamura Kei
+    role: Hasegawa Tatsuhiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kei-tamura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tanaka Tomoyasu
+    role: Taguchi Masakatsu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takeshi-tanaka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Taniguchi Takashi
+    role: Special Forces Captain Sakomizu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takashi-taniguchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Toyonaga Toshiyuki
+    role: Hikasa Shôta
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/toshiyuki-toyonaga-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Wada Sôkô
+    role: Imakire Satoshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/toshihiro-wada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamada Kôta
+    role: Shimura Tetsuya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kota-yamada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamamoto Kazuki
+    role: Miyadai Yôsuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/kazuki-yamamoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yanagisawa Nana
+    role: Hasuda Mayu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/nana-yanagisawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yanagisawa Takahiko
+    role: Tosa Shirô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/takahiko-yanagisawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yûki Yasutaka
+    role: Minamoto Kiyoshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-royale-ii-requiem-2003/cast-avatars/yasutake-yuboku-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

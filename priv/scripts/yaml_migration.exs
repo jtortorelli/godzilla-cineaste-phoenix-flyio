@@ -1,7 +1,7 @@
 alias GodzillaCineaste.{Film, Films, Group, Person, Role}
 
-slugs = [
-]
+slugs = ~w(
+)
 
 Enum.each(slugs, fn slug ->
   film = Films.get_film_by_slug!(slug)

@@ -85,17 +85,26 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                     </div>
                   <% end %>
                 <% else %> --%>
-                <%= for a <- work["authors"] do %>
-                  <div class="font-content text-gray-700">
-                    <%= if a["slug"] do %>
-                      <.link
-                        class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                        href={~p"/v2/people/#{a["slug"]}"}
-                      >
+                <%= if work["authors"] && not Enum.empty?(work["authors"]) do %>
+                  <%= for a <- work["authors"] do %>
+                    <div class="font-content text-gray-700">
+                      <%= if a["slug"] do %>
+                        <.link
+                          class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+                          href={~p"/v2/people/#{a["slug"]}"}
+                        >
+                          {a["name"]}
+                        </.link>
+                      <% else %>
                         {a["name"]}
-                      </.link>
-                    <% else %>
-                      {a["name"]}
+                      <% end %>
+                    </div>
+                  <% end %>
+                <% end %>
+                <%= if work["studios"] && not Enum.empty?(work["studios"]) do %>
+                  <div class="font-content text-gray-700">
+                    <%= for studio <- work["studios"] do %>
+                      {studio["name"]}<br />
                     <% end %>
                   </div>
                 <% end %>
