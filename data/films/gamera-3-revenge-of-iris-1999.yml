@@ -1,0 +1,237 @@
+---
+runtime: 108
+title: "Gamera 3: Revenge of Iris"
+aliases:
+  - alias: "The Absolute Guardian of the Universe - Gamera 3: Incomplete Struggle"
+    context: Japanese Title Card
+release_date: 1999-03-06
+staff:
+  - role: Director
+    people:
+      - name: Kaneko Shûsuke
+  - role: SFX Director
+    people:
+      - name: Higuchi Shinji
+        slug: higuchi-shinji
+  - role: Executive Producer
+    people:
+      - name: Tokuma Yasuyoshi
+  - role: Screenplay
+    people:
+      - name: Itô Kazunori
+      - name: Kaneko Shûsuke
+  - role: Music
+    people:
+      - name: Ôtani Kô
+  - role: Photography
+    people:
+      - name: Tozawa Jun'ichi
+  - role: Art
+    people:
+      - name: Oikawa Ichi
+  - role: Sound
+    people:
+      - name: Hashimoto Yasuo
+  - role: Lighting
+    people:
+      - name: Yoshisumi Sôsuke
+  - role: Editor
+    people:
+      - name: Tomita Isao
+  - role: Monster Modeling
+    people:
+      - name: Haraguchi Tomoo
+  - role: SFX Assistant Director
+    people:
+      - name: Kamiya Makoto
+        slug: kamiya-makoto
+      - name: Kikuchi Yûichi
+  - role: Physical FX
+    people:
+      - name: Onoue Katsurô
+        slug: onoue-katsuro
+  - role: Monster Design
+    people:
+      - name: Higuchi Shinji
+        slug: higuchi-shinji
+translation: Gamera 3 Evil God (Iris) Awakening
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/posters/gamera-3-revenge-of-iris-1999.jpg
+japanese_title: ガメラ3 <ruby>邪神<rt>イリス</rt></ruby>覚醒
+transliteration: Gamera 3 Jashin (Irisu) Kakusei
+original_works: []
+studios:
+  - Daiei Film Co., Ltd.
+  - Hakuhodo, Inc.
+  - Nippan Group Holdings, Inc.
+  - Nippon Television Network Corporation
+  - Tokuma Shoten Publishing Co., Ltd.
+series:
+  title: Gamera
+  slug: gamera
+  entry_number: 11
+  previous_entry:
+    title: "Gamera 2: Attack of Legion"
+    year: 1996
+    slug: gamera-2-attack-of-legion-1996
+  next_entry:
+    title: Gamera the Brave
+    year: 2006
+    slug: gamera-the-brave-2006
+top_billed_cast:
+  - name: Nakayama Shinobu
+    role: Nagamine Mayumi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/shinobu-nakayama-0.jpg
+    character_qualifiers:
+  - name: Maeda Ai
+    role: Hirasaka Ayana
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/ai-maeda-0.jpg
+    character_qualifiers:
+  - name: Fujitani Ayako
+    role: Kusanagi Asagi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/ayako-fujitani-0.jpg
+    character_qualifiers:
+  - name: Tezuka Tôru
+    role: Kurata Shinya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/toru-tezuka-0.jpg
+    character_qualifiers:
+  - name: Hotaru Yukijirô
+    role: Ôsako Tsutomu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/yukijiro-hotaru-0.jpg
+    character_qualifiers:
+  - name: Honda Hirotarô
+    role: Saitô Masaaki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/hirotaro-honda-0.jpg
+    character_qualifiers:
+  - name: Kawazu Yûsuke
+    role: Nojiri Akio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/yusuke-kawazu-0.jpg
+    character_qualifiers:
+  - name: Koyama Yû
+    role: Moribe Tatsunari
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/yu-koyama-0.jpg
+    character_qualifiers:
+  - name: Andô Nozomi
+    role: Moribe Miyuki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/nozomi-ando-0.jpg
+    character_qualifiers:
+  - name: Tsugawa Masahiko
+    role: SDF Commander
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/masahiko-tsugawa-0.jpg
+    character_qualifiers:
+  - name: Kiyokawa Nijiko
+    role: Moribe Matriarch
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/nijiko-kiyokawa-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Hirose Masasuke
+    role: Research Vessel Chief
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/masasuke-hirose-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Horie Kei
+    role: Hinohara Shigeki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/kei-horiei-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ishibashi Tamotsu
+    role: Research Vessel Crew
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/tamotsu-ishibashi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ishimaru Kenjirô
+    role: SDF Air Personnel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/kenjiro-ishimaru-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Itô Takahiro
+    role: Hirasaka Satoru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/takahiro-ito-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kamikawa Takaya
+    role: SDF Air Personnel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/takaya-kamikawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katô Kazuko
+    role: Ayana's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/kazuko-kato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kiyosato Ryûgô
+    role: SDF Air Chief
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/ryugo-kiyosato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kôkami Shôji
+    role: Research Vessel Crew
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/shoji-kokami-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kosegawa Rita
+    role: Research Vessel Crew
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/rita-kosegawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Maeda Aki
+    role: Hirasaka Ayana
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/aki-maeda-0.jpg
+    character_qualifiers: Young
+    uncredited: false
+  - name: Mitamura Kunihiko
+    role: Ayana's Father
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/kunihiko-mitamura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nakama Yukie
+    role: Camping Girl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/yukie-nakama-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Namase Katsuhisa
+    role: Marine Insurance Clerk
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/katsuhisa-namase-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shimada Tsuyoshi
+    role: SDF Air Personnel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/tsuyoshi-shimada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Taguchi Tomorowo
+    role: Doctor
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/tomorowo-taguchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Takasugi Shunsuke
+    role: Platoon Field Commander
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/shunsuke-takasugi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Watanabe Hiroyuki
+    role: Platoon Commander
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/hiroyuki-watanabe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yashima Norito
+    role: Sakurai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/cast-avatars/norito-yashima-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju:
+  - name: Gamera
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/kaiju-avatars/hirofumi-fukuzawa-0.jpg?t=2023-09-01T02%3A43%3A09.080Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Fukuzawa Hirofumi
+  - name: Iris
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/kaiju-avatars/akira-ohashi-0.jpg?t=2023-09-01T02%3A43%3A03.715Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Ôhashi Akira
+  - name: Hyper Gyaos
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gamera-3-revenge-of-iris-1999/kaiju-avatars/hyper-gyaos.jpg?t=2023-09-17T02%3A04%3A08.563Z
+    portrayals:
+      - type: CGI

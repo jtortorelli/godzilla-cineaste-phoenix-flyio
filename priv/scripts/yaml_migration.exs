@@ -1,6 +1,7 @@
 alias GodzillaCineaste.{Film, Films, Group, Person, Role}
 
 slugs = ~w(
+
 )
 
 Enum.each(slugs, fn slug ->
@@ -76,9 +77,12 @@ Enum.each(slugs, fn slug ->
             studio.better_display_name || studio.display_name
           end),
         else:
-          Enum.map(film.production_committee.studios, fn studio ->
-            studio.better_display_name || studio.display_name
-          end)
+          if(film.production_committee && film.production_committee.studios != [],
+            do:
+              Enum.map(film.production_committee.studios, fn studio ->
+                studio.better_display_name || studio.display_name
+              end)
+          )
       ),
     series:
       if(film.series_entry,

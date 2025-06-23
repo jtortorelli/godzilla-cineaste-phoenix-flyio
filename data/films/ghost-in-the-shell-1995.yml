@@ -1,0 +1,163 @@
+---
+runtime: 85
+title: Ghost in the Shell
+aliases: []
+release_date: 1995-11-18
+staff:
+  - role: Director
+    people:
+      - name: Oshii Mamoru
+  - role: Screenplay
+    people:
+      - name: Itô Kazunori
+  - role: Art Director
+    people:
+      - name: Ogura Hiromasa
+  - role: Music
+    people:
+      - name: Kawai Kenji
+        slug: kawai-kenji
+  - role: Photography
+    people:
+      - name: Shirai Hisao
+  - role: Editor
+    people:
+      - name: Kakesu Shûichi
+  - role: Sound
+    people:
+      - name: Wakabayashi Kazuhiro
+translation: Shell Squad
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/posters/ghost-in-the-shell-1995.jpg
+japanese_title: GHOST IN THE SHELL / 攻殻機動隊
+transliteration: Ghost in the Shell / Kôkaku Kidôtai
+original_works:
+  - format: manga
+    title: Ghost in the Shell
+    slug: ghost-in-the-shell
+    authors:
+      - name: Masamune Shirô
+        slug:
+studios:
+  - Bandai Visual
+  - Kodansha Ltd.
+  - Manga Entertainment, LLC
+  - Production I.G, Inc.
+series:
+top_billed_cast:
+  - name: Tanaka Atsuko
+    role: Kusanagi Motoko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/atsuko-tanaka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôtsuka Akio
+    role: Batô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/akio-otsuka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamadera Kôichi
+    role: Togusa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/koichi-yamadera-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Nakano Yutaka
+    role: Ishikawa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/yutaka-nakano-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôki Tamio
+    role: Aramaki Daisuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/tamio-oki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Genda Tesshô
+    role: Director Nakamura
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/tessho-genda-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Naruki Masahisa
+    role: Doctor Willis
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/masahisa-naruki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamanouchi Masato
+    role: Foreign Affairs Minister
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/masato-yamanouchi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ogawa Shinji
+    role: Diplomat
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/shinji-ogawa-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Miyamoto Mitsuru
+    role: Daita Mizuho
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/mitsuru-miyamoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamaji Kazuhiro
+    role: Garbage Collector
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/kazuhiro-yamaji-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Chiba Shigeru
+    role: Garbage Collector
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/shigeru-chiba-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yanaka Hiroshi
+    role: Coroner
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/hiroshi-yanaka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Matsuo Ginzô
+    role: Ossan
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/ginzo-matsuo-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Matsuyama Takashi
+    role: Thug
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/takashi-matsuyama-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Odaka Sanryô
+    role: Engineer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/sanryo-odaka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Satô Masamichi
+    role: Pilot
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/masamichi-sato-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Hayashida Atsuko
+    role: Operator
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/atsuko-hayashida-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ueda Yûji
+    role: Communication Voice
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/yuji-ueda-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kameyama Toshiki
+    role: Sniper
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/toshiki-kameyama-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Gotô Atsushi
+    role: Commander
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/atsushi-goto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Sakamoto Maaya
+    role: Kusanagi Motoko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/maaya-sakamoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers: Girl
+  - name: Kayumi Iemasa
+    role: The Puppet Master
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/cast-avatars/iemasa-kayumi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+supporting_cast: []
+kaiju: []
