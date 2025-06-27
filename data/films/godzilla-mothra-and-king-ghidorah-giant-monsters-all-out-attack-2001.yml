@@ -1,0 +1,344 @@
+---
+runtime: 105
+title: 'Godzilla, Mothra and King Ghidorah: Giant Monsters All-Out Attack'
+aliases: []
+release_date: 2001-12-15
+staff:
+  - role: Director
+    people:
+      - name: Kaneko Shûsuke
+  - role: SFX
+    people:
+      - name: Kamiya Makoto
+        slug: kamiya-makoto
+  - role: Producer
+    people:
+      - name: Tomiyama Shôgo
+  - role: Screenplay
+    people:
+      - name: Hasegawa Keiichi
+      - name: Yokotani Masahiro
+      - name: Kaneko Shûsuke
+  - role: Music
+    people:
+      - name: Ôtani Kô
+  - role: Photography
+    people:
+      - name: Kishimoto Masahiro
+  - role: Art
+    people:
+      - name: Shimizu Takeshi
+  - role: Sound
+    people:
+      - name: Saitô Teiichi
+  - role: Lighting
+    people:
+      - name: Awakihara Tsuyoshi
+  - role: Editor
+    people:
+      - name: Tomita Isao
+  - role: SFX Assistant Director
+    people:
+      - name: Kikuchi Yûichi
+translation: Godzilla Mothra King Ghidorah Giant Monsters All-Out Attack
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/posters/gmk-2001.jpg
+japanese_title: ゴジラ・モスラ・キングギドラ 大怪獣総攻撃
+transliteration: Gojira Mosura Kingugidora Daikaijû Sôkôgeki
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Godzilla
+  slug: godzilla
+  entry_number: 25
+  previous_entry:
+    title: Godzilla vs. Megaguirus
+    year: 2000
+    slug: godzilla-vs-megaguirus-2000
+  next_entry:
+    title: Godzilla Against Mechagodzilla
+    year: 2002
+    slug: godzilla-against-mechagodzilla-2002
+top_billed_cast:
+  - name: Nîyama Chiharu
+    role: Tachibana Yuri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/chiharu-niiyama-0.jpg
+    character_qualifiers:
+  - name: Uzaki Ryûdô
+    role: Admiral Tachibana Taizô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/ryudo-uzaki-0.jpg
+    character_qualifiers:
+  - name: Kobayashi Masahiro
+    role: Takeda Mitsuaki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/masahiro-kobayashi-0.jpg
+    character_qualifiers:
+  - name: Sano Shirô
+    role: Kadokura Haruki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/shiro-sano-0.jpg
+    character_qualifiers:
+  - name: Minami Kaho
+    role: Emori Kumi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/kaho-minami-0.jpg
+    character_qualifiers:
+  - name: Ôwada Shin'ya
+    role: Lieutenant General Mikumo Katsumasa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/shinya-owada-0.jpg
+    character_qualifiers:
+  - name: Murai Kunio
+    role: Hinogaki Masato
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/kunio-murai-0.jpg
+    character_qualifiers:
+  - name: Watanabe Hiroyuki
+    role: Hirose Yû
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hiroyuki-watanabe-0.jpg
+    character_qualifiers:
+  - name: Nishina Takashi
+    role: Maruo Atsushi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takashi-nishina-0.jpg
+    character_qualifiers:
+  - name: Katsurayama Shingo
+    role: Kobayakawa Tokihiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/shingo-katsurayama-0.jpg
+    character_qualifiers:
+  - name: Fukawa Toshikazu
+    role: Colonel Miyashita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/toshikazu-fukawa-0.jpg
+    character_qualifiers:
+  - name: Nakahara Takeo
+    role: Colonel Sakita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takeo-nakahara-0.jpg
+    character_qualifiers:
+  - name: Amamoto Hideyo
+    role: Isayama Yoshitoshi
+    slug: amamoto-hideyo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hideyo-amamoto-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Hotaru Yukijirô
+    role: Suicidal Fuji Man
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/yukijiro-hotaru-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hua Rong Wong
+    role: Hakone Ropeway Tourist
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hua-rong-wong-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ikeda Kyôsuke
+    role: Boy in Hospital
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/kyosuke-ikeda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ishida Tarô
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/taro-ishida-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kakuda Nobuaki
+    role: Yokohama Soldier
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/nobuaki-kakuda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kase Ryô
+    role: Young Fisherman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/ryo-kase-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katô Kazuko
+    role: Shizuoka Teacher
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/kazuko-kato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kawahara Sabu
+    role: Truck Driver
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/sabu-kawara-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kawakita Kôichi
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/koichi-kawakita-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kondô Yoshimasa
+    role: Hakone Tourist
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/yoshimasa-kondo-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Maeda Ai
+    role: Yokohama Girl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/ai-maeda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Maeda Aki
+    role: Yokohama Girl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/aki-maeda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsuo Takashi
+    role: Police Station Webmaster
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takashi-matsuo-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Minemura Rie
+    role: Chinatown Woman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/rie-minemura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Moro Morooka
+    role: BS Digital Q Director
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/moro-morooka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Murata Takehiro
+    role: Pilot
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takehiro-murata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nakamura Katsuo
+    role: Fisherman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/katsuo-nakamura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nishioka Ryûichirô
+    role: Helicopter News Cameraman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/ryuichiro-nishioka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nukumizu Yôichi
+    role: Bonin Resort Man
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/yoichi-nukumizu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôhashi Akira
+    role: Fishery Personnel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/akira-ohashi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Okunuki Kaoru
+    role: Hakone Tourist
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/kaoru-okunuki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôta Rie
+    role: Fishery Personnel
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/rie-ota-1.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Saeki Hinako
+    role: Hakone Ropeway Tourist
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hinako-saeki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sakata Masahiko
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/masahiko-sakata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sasano Takashi
+    role: Shizuoka Taxi Driver
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takashi-sasano-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Satô Jirô
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/jiro-sato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shinohara Tomoe
+    role: Bonin Resort Girl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/tomoe-shinohara-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sugiyama Ayako
+    role: Submarine Navigator
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/ayako-sugiyama-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Suzuki Hiromi
+    role: Bonin Resort Landlady
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hiromi-suzuki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Takahashi Masaya
+    role: Bicycle Shop Owner
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/masaya-takahashi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Takemura Aimi
+    role: Bonin Resort Girl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/aimi-takemura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Taneko
+    role: Village Elder's Mistress
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/taneko-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tezuka Masaaki
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/masaaki-tezuka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tokui Yû
+    role: Helicopter News Reporter
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/yu-tokui-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tsugawa Masahiko
+    role: Cabinet Secretary
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/masahiko-tsugawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tsukamoto Takashi
+    role: Lake Ikeda Delinquent
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/takeshi-tsukamoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ueda Kôichi
+    role: Village Elder
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/koichi-ueda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Xiè Zhâorén
+    role: Chinatown Man
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/chu-yang-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamadera Kôichi
+    role: TV Producer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/koichi-yamadera-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamazaki Hajime
+    role: Village Elder's Assistant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/hajime-yamazaki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yoshida Mizuho
+    role: Yokohama Man
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/cast-avatars/mizuho-yoshida-1.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju:
+  - name: Godzilla
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/kaiju-avatars/mizuho-yoshida-0.jpg?t=2023-09-03T03%3A51%3A37.897Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Yoshida Mizuho
+  - name: Baragon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/kaiju-avatars/rie-ota-0.jpg?t=2023-09-03T03%3A51%3A42.108Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Ôta Rie
+  - name: Mothra
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/kaiju-avatars/02074.jpg?t=2023-10-01T02%3A24%3A29.711Z
+    portrayals:
+      - type: Puppet
+  - name: King Ghidorah
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-mothra-and-king-ghidorah-giant-monsters-all-out-attack-2001/kaiju-avatars/akira-ohashi-1.jpg?t=2023-09-03T03%3A51%3A32.791Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Ôhashi Akira

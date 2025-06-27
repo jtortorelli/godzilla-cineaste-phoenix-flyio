@@ -1,0 +1,136 @@
+---
+runtime: 82
+title: Godzilla vs. Megalon
+aliases: []
+release_date: 1973-03-17
+staff:
+  - role: Director
+    people:
+      - name: Fukuda Jun
+        slug: fukuda-jun
+  - role: Producer
+    people:
+      - name: Tanaka Tomoyuki
+        slug: tanaka-tomoyuki
+  - role: Story
+    people:
+      - name: Sekizawa Shin'ichi
+        slug: sekizawa-shinichi
+  - role: Screenplay
+    people:
+      - name: Fukuda Jun
+        slug: fukuda-jun
+  - role: Photography
+    people:
+      - name: Aizawa Yuzuru
+  - role: Art
+    people:
+      - name: Honda Yoshifumi
+  - role: Sound
+    people:
+      - name: Hayashi Eishirô
+  - role: Lighting
+    people:
+      - name: Morimoto Masakuni
+  - role: Music
+    people:
+      - name: Manabe Riichirô
+  - role: Editor
+    people:
+      - name: Ikeda Michiko
+  - role: SFX
+    people:
+      - name: Nakano Teruyoshi
+        slug: nakano-teruyoshi
+translation: Godzilla vs. Megalon
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/posters/godzilla-vs-megalon-1973.jpg
+japanese_title: ゴジラ対メガロ
+transliteration: Gojira Tai Megaro
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Godzilla
+  slug: godzilla
+  entry_number: 13
+  previous_entry:
+    title: Godzilla vs. Gigan
+    year: 1972
+    slug: godzilla-vs-gigan-1972
+  next_entry:
+    title: Godzilla vs. Mechagodzilla
+    year: 1974
+    slug: godzilla-vs-mechagodzilla-1974
+top_billed_cast:
+  - name: Sasaki Katsuhiko
+    role: Ibuki Gorô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/katsuhiko-sasaki-0.jpg
+    character_qualifiers:
+  - name: Hayashi Yutaka
+    role: Jinkawa Hiroshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/yutaka-hayashi-0.jpg
+    character_qualifiers:
+  - name: Kawase Hiroyuki
+    role: Ibuki Rokurô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/hiroyuki-kawase-0.jpg
+    character_qualifiers:
+  - name: Mori Kanta
+    role: Military Officer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/kanta-mori-0.jpg
+    character_qualifiers:
+  - name: Tomita Kôtarô
+    role: Seatopian Agent
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/kotaro-tomita-0.jpg
+    character_qualifiers:
+  - name: Ôtsuki Wolf
+    role: Seatopian Agent
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/wolf-otsuki-0.jpg
+    character_qualifiers:
+  - name: Mikami Sakyô
+    role: Truck Driver
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/sakyo-mikami-0.jpg
+    character_qualifiers:
+  - name: Nakajima Gen
+    role: Truck Driver
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/gen-nakajima-0.jpg
+    character_qualifiers:
+  - name: Robert Dunham
+    role: Emperor Antonio
+    slug: dunham-robert
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/robert-dunham-0.jpg
+    character_qualifiers:
+  - name: Ralph Jesser
+    role: Seatopian Lieutenant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/cast-avatars/ralph-jesser-0.jpg
+    character_qualifiers:
+supporting_cast: []
+kaiju:
+  - name: Godzilla
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/kaiju-avatars/shinji-takagi-0.jpg?t=2023-09-04T02%3A27%3A56.532Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Takagi Shinji
+  - name: Megalon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/kaiju-avatars/hideto-date-0.jpg?t=2023-09-04T02%3A27%3A44.580Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Date Hideto
+  - name: Jet-Jaguar
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/kaiju-avatars/masachika-mori-0.jpg?t=2023-09-04T02%3A27%3A52.752Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Mori Masachika
+  - name: Gigan
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/kaiju-avatars/kenpachiro-satsuma-0.jpg?t=2023-09-04T02%3A27%3A48.953Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Satsuma Kenpachirô
+            alias: Nakayama Kengo
+  - name: Anguirus
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megalon-1973/kaiju-avatars/anguirus.jpg?t=2023-10-01T02%3A56%3A14.787Z
+    portrayals:
+      - type: Suit Actor

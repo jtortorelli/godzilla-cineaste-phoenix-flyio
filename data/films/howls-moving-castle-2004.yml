@@ -1,0 +1,123 @@
+---
+runtime: 119
+title: Howl's Moving Castle
+aliases: []
+release_date: 2004-11-20
+staff:
+  - role: Director
+    people:
+      - name: Miyazaki Hayao
+        slug: miyazaki-hayao
+  - role: Producer
+    people:
+      - name: Suzuki Toshio
+  - role: Screenplay
+    people:
+      - name: Miyazaki Hayao
+        slug: miyazaki-hayao
+  - role: Music
+    people:
+      - name: Hisaishi Joe
+  - role: Art Director
+    people:
+      - name: Takeshige Yôji
+      - name: Yoshida Noboru
+  - role: Photography
+    people:
+      - name: Okui Atsushi
+  - role: Sound
+    people:
+      - name: Wakabayashi Kazuhiro
+  - role: Editor
+    people:
+      - name: Seyama Takeshi
+translation: Howl's Moving Castle
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/posters/howls-moving-castle-2004.jpg
+japanese_title: ハウルの動く城
+transliteration: Hauru No Ugokushiro
+original_works:
+  - format: novel
+    title: Howl's Moving Castle
+    slug: howls-moving-castle
+    authors:
+      - name: Diana Wynn Jones
+        slug:
+studios:
+  - Tokuma Shoten Publishing Co., Ltd.
+  - Nippon Television Network Corporation
+  - Dentsu, Inc.
+  - Buena Vista Home Entertainment
+  - d-rights, Inc.
+  - Toho Co., Ltd.
+series:
+top_billed_cast:
+  - name: Baishô Chieko
+    role: Sophie
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/chieko-baisho-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kimura Takuya
+    role: Howl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/takuya-kimura-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Miwa Akihiro
+    role: The Witch of the Waste
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/akihiro-miwa-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Gashûin Tatsuya
+    role: Calcifer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/tatsuya-gashuin-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kamiki Ryûnosuke
+    role: Markl
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/ryunosuke-kamiki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Isaki Mitsunori
+    role: Kosho
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/mitsunori-isaki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôizumi Yô
+    role: Scarecrow Turnip
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/yo-oizumi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôtsuka Akio
+    role: The King
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/akira-otsuka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Harada Daijirô
+    role: Heen
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/daijiro-harada-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Katô Haruko
+    role: Suliman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/haruko-kato-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+supporting_cast:
+  - name: Kan'no Rio
+    role: Madge
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/rio-kanno-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+    uncredited: false
+  - name: Tsuzuki Kayako
+    role: Lettie
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/yayoi-kazuki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+    uncredited: false
+  - name: Yasokawa Mayuno
+    role: Honey
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/howls-moving-castle-2004/cast-avatars/mayuno-yasokawa-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+    uncredited: false
+kaiju: []

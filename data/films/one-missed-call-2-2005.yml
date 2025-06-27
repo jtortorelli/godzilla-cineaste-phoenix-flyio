@@ -1,0 +1,145 @@
+---
+runtime: 106
+title: One Missed Call 2
+aliases: []
+release_date: 2005-02-05
+staff:
+  - role: Director
+    people:
+      - name: Tsukamoto Renpei
+  - role: Screenplay
+    people:
+      - name: Daira Miwako
+  - role: Photography
+    people:
+      - name: Kikumura Tokushô
+  - role: Lighting
+    people:
+      - name: Saiki Masaru
+  - role: Art
+    people:
+      - name: Nitta Takayuki
+  - role: Sound
+    people:
+      - name: Takizawa Osamu
+  - role: Editor
+    people:
+      - name: Ueno Sôichi
+  - role: Music
+    people:
+      - name: Endô Kôji
+translation: Incoming Call 2
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/posters/one-missed-call-2-2005.jpg
+japanese_title: 着信アリ2
+transliteration: Chakushin Ari 2
+original_works:
+  - format: novel series
+    title: One Missed Call
+    slug: one-missed-call
+    authors:
+      - name: Akimoto Yasushi
+        slug:
+studios:
+  - Kadokawa Corporation
+  - Nippon Television Network Corporation
+  - Stardust Pictures
+  - Toho Co., Ltd.
+series:
+  title: One Missed Call
+  slug: one-missed-call
+  entry_number: 2
+  previous_entry:
+    title: One Missed Call
+    year: 2003
+    slug: one-missed-call-2003
+  next_entry:
+    title: 'One Missed Call: Final'
+    year: 2006
+    slug: one-missed-call-final-2006
+top_billed_cast:
+  - name: Mimura Rie
+    role: Okudera Kyôko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/mimura-0.jpg
+    character_qualifiers:
+  - name: Yoshizawa Hisashi
+    role: Sakurai Naoto
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/hiroshi-yoshizawa-0.jpg
+    character_qualifiers:
+  - name: Ishibashi Renji
+    role: Motomiya Yûsaku
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/renji-ishibashi-0.jpg
+    character_qualifiers:
+  - name: Wanibuchi Haruko
+    role: Mizunuma Sachie
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/haruko-wanibuchi-0.jpg
+    character_qualifiers:
+  - name: Peter Ho
+    role: Yuting Chen
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/peter-ho-0.jpg
+    character_qualifiers:
+  - name: Seto Asaka
+    role: Nozoe Takako
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/asaka-seto-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Chisun
+    role: Uchiyama Madoka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/chisun-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kobayashi Toshie
+    role: Shumei Gao
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/toshie-kobayashi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Koizumi Nana
+    role: Li Li
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/nana-koizumi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Komura Yûjirô
+    role: Taiwanese Detective
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/yujiro-komura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kosuda Yasuto
+    role: Taiwanese Detective
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/yasuto-kosuda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shadow Liu
+    role: Wang Meifang
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/shadow-liu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Mashima Hidekazu
+    role: Kon'no Katsuhiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/hidekazu-mashima-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôkubo Hakobu
+    role: Wang Jianfeng
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/hakobu-okubo-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôkubo Nagisa
+    role: Nozoe Mariko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/nagisa-okubo-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôkubo Shiori
+    role: Nozoe Takako
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/shiori-okubo-0.jpg
+    character_qualifiers: Young
+    uncredited: false
+  - name: Ôshima Karen
+    role: Mizunuma Mimiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/karen-oshima-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tanimoto Hajime
+    role: Detective
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/one-missed-call-2-2005/cast-avatars/hajime-tanimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

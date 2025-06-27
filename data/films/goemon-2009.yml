@@ -1,0 +1,214 @@
+---
+runtime: 128
+title: Goemon
+aliases: []
+release_date: 2009-05-01
+staff:
+  - role: Director
+    people:
+      - name: Kiriya Kazuaki
+  - role: Screenplay
+    people:
+      - name: Kiriya Kazuaki
+      - name: Takita Tetsurô
+  - role: Producer
+    people:
+      - name: Kiriya Kazuaki
+      - name: Ichise Takashige
+  - role: Photography Director
+    people:
+      - name: Kiriya Kazuaki
+  - role: Photography
+    people:
+      - name: Tanabe Kenji
+  - role: Lighting
+    people:
+      - name: Ushiba Kenji
+  - role: Art Director
+    people:
+      - name: Hayashida Yûji
+  - role: Music
+    people:
+      - name: Matsumoto Akihiko
+  - role: Sound
+    people:
+      - name: Yano Masato
+  - role: Editor
+    people:
+      - name: Kiriya Kazuaki
+      - name: Yokoyama Chisako
+  - role: Story
+    people:
+      - name: Kiriya Kazuaki
+translation:
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/posters/goemon-2009.jpg
+japanese_title: GOEMON
+transliteration:
+original_works: []
+studios:
+  - Shochiku Co., Ltd.
+  - Warner Bros.
+  - Daiichi Shokai Co., Ltd.
+  - Kinoshita Group Co., Ltd.
+  - Eisei Gekijo Co., Ltd.
+  - Kiriya Pictures
+  - CELL
+  - TV Asahi Corporation
+  - Dentsu, Inc.
+  - Yoshimoto Kogyo Co., Ltd.
+  - Dreamkid
+  - Hot Toys
+  - Avex Entertainment, Inc.
+series:
+top_billed_cast:
+  - name: Eguchi Yôsuke
+    role: Ishikawa Goemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/yosuke-eguchi-0.jpg
+    character_qualifiers:
+  - name: Ôsawa Takao
+    role: Kirigakure Saizô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/takao-osawa-0.jpg
+    character_qualifiers:
+  - name: Hirosue Ryôko
+    role: Asai Chacha
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ryoko-hirosue-0.jpg
+    character_qualifiers:
+  - name: Gori
+    role: Sarutobi Sasuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/gori-0.jpg
+    character_qualifiers:
+  - name: Kaname Jun
+    role: Ishida Mitsunari
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/jun-kaname-0.jpg
+    character_qualifiers:
+  - name: Tamayama Tetsuji
+    role: Matahachi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/tetsuji-tamayama-0.jpg
+    character_qualifiers:
+  - name: Choi Hong-man
+    role: Ga-ô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/choi-hong-man-0.jpg
+    character_qualifiers:
+  - name: Satô Eriko
+    role: Yoshino
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/eriko-sato-0.jpg
+    character_qualifiers:
+  - name: Toda Erika
+    role: Yûgiri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/erika-toda-0.jpg
+    character_qualifiers:
+  - name: Tsuruta Mayu
+    role: Koheita's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/mayu-tsuruta-0.jpg
+    character_qualifiers:
+  - name: Ryô
+    role: Goemon's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ryo-0.jpg
+    character_qualifiers:
+  - name: Fujisawa Ema
+    role: Okichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ema-fujisawa-0.jpg
+    character_qualifiers:
+  - name: Sada Mayumi
+    role: Orin
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/mayumi-sada-0.jpg
+    character_qualifiers:
+  - name: Fukasawa Arashi
+    role: Koheita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/arashi-fukasawa-0.jpg
+    character_qualifiers:
+  - name: Fukuda Mayuko
+    role: Asai Chacha
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/mayuko-fukuda-0.jpg
+    character_qualifiers: Adolescent
+  - name: Hirota Ryôhei
+    role: Ishikawa Goemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ryohei-hirota-0.jpg
+    character_qualifiers: Young
+  - name: Tanabe Tokimasa
+    role: Ishikawa Goemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/tokimasa-tanabe-0.jpg
+    character_qualifiers: Adolescent
+  - name: Satô Takeru
+    role: Kirigakure Saizô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/takeru-sato-0.jpg
+    character_qualifiers: Adolescent
+  - name: Ebisu Yoshikazu
+    role: Soba Shop Owner
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/yoshikazu-ebisu-0.jpg
+    character_qualifiers:
+  - name: Musaka Naomasa
+    role: Bunzaemon Kinokuniya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/naomasa-musaka-0.jpg
+    character_qualifiers:
+  - name: Kohinata Fumiyo
+    role: Yashichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/fumiyo-kohinata-0.jpg
+    character_qualifiers:
+  - name: Nakamura Hachinosuke
+    role: Oda Nobunaga
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/hashinosuke-nakamura-0.jpg
+    character_qualifiers:
+  - name: Terajima Susumu
+    role: Hattori Hanzô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/susumu-terajima-0.jpg
+    character_qualifiers:
+  - name: Hira Mikijirô
+    role: Sen'no Rikyû
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/mikijiro-hira-0.jpg
+    character_qualifiers:
+  - name: Ibu Masatô
+    role: Tokugawa Ieyasu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/masato-ibu-0.jpg
+    character_qualifiers:
+  - name: Okuda Eiji
+    role: Toyotomi Hideyoshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/eiji-okuda-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Asa Kôtarô
+    role: Narrator
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/kotaro-asa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hanahara Teruko
+    role: Goemon's Nursemaid
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/teruko-hanahara-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hayashi Ryôga
+    role: Kirigakure Saizô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ryuga-hayashi-0.jpg
+    character_qualifiers: Young
+    uncredited: false
+  - name: Kiriya Kazuaki
+    role: Akechi Mitsuhide
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/kazuaki-kiriya-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kunimoto Shôken
+    role: Shinobi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/shoken-kunimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Masumoto Shôichirô
+    role: Mountain Bandit
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/shoichiro-masumoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Toyoda Kôji
+    role: Shinobi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/koji-toyoda-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamatsu Ayumi
+    role: Shinobi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/ayumi-yamatsu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yoshiie Akihito
+    role: Mitsunari's Servant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/goemon-2009/cast-avatars/akihito-toshiie-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

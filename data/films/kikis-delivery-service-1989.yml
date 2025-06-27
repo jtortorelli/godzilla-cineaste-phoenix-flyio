@@ -1,0 +1,167 @@
+---
+runtime: 102
+title: Kiki's Delivery Service
+aliases: []
+release_date: 1989-07-29
+staff:
+  - role: Director
+    people:
+      - name: Miyazaki Hayao
+        slug: miyazaki-hayao
+  - role: Screenplay
+    people:
+      - name: Miyazaki Hayao
+        slug: miyazaki-hayao
+  - role: Producer
+    people:
+      - name: Miyazaki Hayao
+        slug: miyazaki-hayao
+      - name: Tokuma Yasuyoshi
+      - name: Tsuzuki Mikihiko
+      - name: Takagi Morihisa
+  - role: Assistant Producer
+    people:
+      - name: Suzuki Toshio
+  - role: Art
+    people:
+      - name: Ôno Hiroshi
+  - role: Music
+    people:
+      - name: Hisaishi Joe
+  - role: Photography
+    people:
+      - name: Sugimura Jûrô
+  - role: Editor
+    people:
+      - name: Seyama Takeshi
+  - role: Sound
+    people:
+      - name: Asari Naoko
+translation: Witch's Express Home Delivery
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/posters/kikis-delivery-service-1989.jpg
+japanese_title: 魔女の宅急便
+transliteration: Majo No Takkyûbin
+original_works: []
+studios:
+  - Tokuma Shoten Publishing Co., Ltd.
+  - Yamato Transport Co., Ltd.
+  - Nippon Television Network Corporation
+series:
+top_billed_cast:
+  - name: Takayama Minami
+    role: Kiki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/minami-takayama-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Takayama Minami
+    role: Ursula
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/minami-takayama-1.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Sakuma Rei
+    role: Jiji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/rei-sakuma-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Nobusawa Mieko
+    role: Kokiri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/mieko-nobusawa-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Toda Keiko
+    role: Osono
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/keiko-toda-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamaguchi Kappei
+    role: Tombo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/kappei-yamaguchi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Seki Hiroko
+    role: Barsa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/hiroko-seki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Miura Kôichi
+    role: Okino
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/koichi-miura-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Katô Haruko
+    role: Madame
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/haruko-kato-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Saitô Shô
+    role: Miss Dora
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/sho-saito-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Doi Mika
+    role: Ket's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/mika-doi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Fuchizaki Yuriko
+    role: Ket
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/yuriko-fuchizaki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Sakamoto Chika
+    role: Baby
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/chika-sakamoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kobayashi Yûko
+    role: Senior Witch
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/yuko-kobayashi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Inoue Kikuko
+    role: Maki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/kikuko-inoue-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kagimoto Keiko
+    role: Madame's Granddaughter
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/keiko-kagimoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Nishimura Tomomichi
+    role: Clock Tower Caretaker
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/tomomichi-nishimura-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Taguchi Takashi
+    role: Man with Deck Brush
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/takashi-taguchi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamadera Kôichi
+    role: Policeman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/koichi-yamadera-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamadera Kôichi
+    role: Fukuo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/koichi-yamadera-1.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamadera Kôichi
+    role: Announcer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/koichi-yamadera-2.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Tsuji Shinpachi
+    role: Hotel Receptionist
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/shinpachi-tsuji-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôtsuka Akio
+    role: Airship Captain
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kikis-delivery-service-1989/cast-avatars/akio-otsuka-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+supporting_cast: []
+kaiju: []

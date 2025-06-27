@@ -1,0 +1,138 @@
+---
+runtime: 82
+title: Lake of Dracula
+aliases: []
+release_date: 1971-06-16
+staff:
+  - role: Director
+    people:
+      - name: Yamamoto Michio
+  - role: Producer
+    people:
+      - name: Tanaka Fumio
+  - role: Screenplay
+    people:
+      - name: Ogawa Ei
+      - name: Takesue Masaru
+  - role: Photography
+    people:
+      - name: Nishigaki Rokurô
+  - role: Art
+    people:
+      - name: Ikuno Shigekazu
+  - role: Sound
+    people:
+      - name: Watarai Shin
+  - role: Lighting
+    people:
+      - name: Satô Kôjirô
+  - role: Music
+    people:
+      - name: Manabe Riichirô
+  - role: Editor
+    people:
+      - name: Kondô Hisashi
+translation: Cursed Mansion Bloodthirsty Eyes
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/posters/lake-of-dracula-1971.jpg
+japanese_title: 呪いの館 血を吸う眼
+transliteration: Noroi No Yakata Chiwosu Me
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Bloodthirsty
+  slug: bloodthirsty
+  entry_number: 2
+  previous_entry:
+    title: The Vampire Doll
+    year: 1971
+    slug: vampire-doll-1970
+  next_entry:
+    title: Evil of Dracula
+    year: 1974
+    slug: evil-of-dracula-1974
+top_billed_cast:
+  - name: Takahashi Chôei
+    role: Saeki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/choei-takahashi-0.jpg
+    character_qualifiers:
+  - name: Nakasato Tsuzuru
+    role: Kashiwagi Natsuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/tsuzuru-nakasato-0.jpg
+    character_qualifiers:
+  - name: Fujita Midori
+    role: Kashiwagi Akiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/midori-fujita-0.jpg
+    character_qualifiers:
+  - name: Kishida Shin
+    role: The Vampire
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/shin-kishida-0.jpg
+    character_qualifiers:
+  - name: Takashina Kaku
+    role: Kyûsaku
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/kaku-takashina-0.jpg
+    character_qualifiers:
+  - name: Ôtaki Hideji
+    role: The Vampire's Father
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/hideji-otaki-0.jpg
+    character_qualifiers:
+  - name: Matsushita Tatsuo
+    role: Doctor
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/tatsuo-matsushita-0.jpg
+    character_qualifiers:
+  - name: Ogawa Yasuzô
+    role: Fisherman
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/yasuzo-ogawa-0.jpg
+    character_qualifiers:
+  - name: Ômae Wataru
+    role: Fisherman
+    slug: omae-wataru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/wataru-omae-0.jpg
+    character_qualifiers:
+  - name: Katsuragi Mika
+    role: Vampire Victim
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/mika-katsuragi-0.jpg
+    character_qualifiers:
+  - name: Futami Tadao
+    role: Delivery Truck Driver
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/tadao-futami-0.jpg
+    character_qualifiers:
+  - name: Tachibana Fusako
+    role: Corpse at Piano
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/fusako-tachibana-0.jpg
+    character_qualifiers:
+  - name: Kawaguchi Setsuko
+    role: Nurse
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/setsuko-kawaguchi-0.jpg
+    character_qualifiers:
+  - name: Suzuki Haruo
+    role: Policeman
+    slug: suzuki-haruo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/haruo-suzuki-0.jpg
+    character_qualifiers:
+  - name: Kihira Yoshie
+    role: Nurse
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/yoshie-kihara-0.jpg
+    character_qualifiers:
+  - name: Môri Sachiko
+    role: Nurse
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/sachiko-mori-0.jpg
+    character_qualifiers:
+  - name: Yamazoe Michiyo
+    role: Kashiwagi Akiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/michio-yamazoe-0.jpg
+    character_qualifiers: Young
+supporting_cast:
+  - name: Katô Shigeo
+    role: Coffee Shop Patron
+    slug: kato-shigeo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/shigeo-kato-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Katsube Yoshio
+    role: Coffee Shop Patron
+    slug: katsube-yoshio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/cast-avatars/yoshio-katsube-0.jpg
+    character_qualifiers:
+    uncredited: true
+kaiju: []

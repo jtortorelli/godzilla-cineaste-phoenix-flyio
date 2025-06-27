@@ -1,0 +1,135 @@
+---
+runtime: 131
+title: Mushi-shi
+aliases: []
+release_date: 2007-03-24
+staff:
+  - role: Director
+    people:
+      - name: Ôtomo Katsuhiro
+  - role: Screenplay
+    people:
+      - name: Ôtomo Katsuhiro
+      - name: Murai Sadayuki
+  - role: Photography
+    people:
+      - name: Shibanushi Takahide
+  - role: Lighting
+    people:
+      - name: Osada Tatsuya
+  - role: Art
+    people:
+      - name: Ikeya Noriyoshi
+  - role: VFX Supervisor
+    people:
+      - name: Koga Nobuaki
+  - role: Music
+    people:
+      - name: Haishima Kuniaki
+  - role: Sound
+    people:
+      - name: Ohara Yoshiya
+  - role: Editor
+    people:
+      - name: Ueno Sôichi
+translation: Mushi-shi
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/posters/mushi-shi-2007.jpg
+japanese_title: 蟲師
+transliteration: Mushi-shi
+original_works: []
+studios:
+  - Tohokushinsha Film Corporation
+  - Bandai Networks Co., Ltd.
+  - Toshiba Entertainment Corporation
+  - Pyramidfilm, Inc.
+  - Yahoo! JAPAN
+  - Tokyu Recreation Co., Ltd.
+  - Ogura, Inc.
+series:
+top_billed_cast:
+  - name: Odagiri Joe
+    role: Ginko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/joe-odagiri-0.jpg
+    character_qualifiers:
+  - name: Ômori Nao
+    role: Nijirô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/nao-omori-0.jpg
+    character_qualifiers:
+  - name: Aoi Yû
+    role: Tan'yû
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/yu-aoi-0.jpg
+    character_qualifiers:
+  - name: Lily
+    role: Shôya Hostess
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/lily-0.jpg
+    character_qualifiers:
+  - name: Ri Reisen
+    role: Tama
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/reisen-ri-0.jpg
+    character_qualifiers:
+  - name: Esumi Makiko
+    role: Nui
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/makiko-esumi-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Inada Hideyuki
+    role: Yoki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/hideyuki-inada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Inoue Keiko
+    role: Jochutake
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/keiko-inoue-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kuno Makiko
+    role: Mahi's Mother
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/makiko-kuno-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Moriyama Reia
+    role: Mahi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/reia-moriyama-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Numata Baku
+    role: Nui's Husband
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/baku-numata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôtaka Hiroo
+    role: Nui's Former Husband
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/hiro-otaka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Rintarô
+    role: Shôya Host
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/rintaro-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Rokkaku Shinji
+    role: Makino
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/shinji-rokkaku-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sakaki Hideo
+    role: Mahi's Father
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/hideo-sakaki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Taguchi Kazumasa
+    role: Sakuji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/kazumasa-taguchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tanabe Ken'ichirô
+    role: Shibayama Bunzô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/kenichiro-tanabe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Umezawa Masayo
+    role: Shôya Maid
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mushi-shi-2007/cast-avatars/masayo-umezawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

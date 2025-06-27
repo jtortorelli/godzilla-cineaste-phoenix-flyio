@@ -308,6 +308,45 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                 <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
               <% end %>
             </div>
+            <%= if cast["secondary"] do %>
+              <%= for secondary <- cast["secondary"] do %>
+                <div class="font-content text-sm sm:text-center text-gray-700">
+                  <%= if secondary["slug"] do %>
+                    <.link
+                      class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
+                      href={~p"/v2/people/#{secondary["slug"]}"}
+                    >
+                      {cast["name"]}
+                      <%= if secondary["disambig_chars"] do %>
+                        <span class="text-xs">
+                          (<span class="font-japanese">{secondary["disambig_chars"]}</span>)
+                        </span>
+                      <% end %>
+                    </.link>
+                  <% else %>
+                    {secondary["name"]}
+                    <%= if cast["disambig_chars"] do %>
+                      <span class="text-xs">
+                        (<span class="font-japanese">{secondary["disambig_chars"]}</span>)
+                      </span>
+                    <% end %>
+                  <% end %>
+                </div>
+                <%= if secondary["alias"] do %>
+                  <div class="font-content text-xs text-gray-500">
+                    <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{secondary["alias"]}
+                  </div>
+                <% end %>
+                <div class="font-detail text-xs text-gray-500 uppercase">
+                  <%= if secondary["qualifiers"]  do %>
+                    <.qualifier_icon qualifier={secondary["qualifiers"]} />
+                  <% end %>
+                  <%= if secondary["uncredited"] do %>
+                    <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
+                  <% end %>
+                </div>
+              <% end %>
+            <% end %>
             <%!-- <%= for role <- @secondary_roles do %>
               <div class="font-content text-gray-700 text-sm">
                 <.showcase_link entity={get_entity(role)}>
@@ -425,6 +464,11 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                         </.link>
                       <% else %>
                         {person["name"]}
+                      <% end %>
+                      <%= if person["alias"] do %>
+                        <div class="font-content text-xs text-gray-500">
+                          <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{person["alias"]}
+                        </div>
                       <% end %>
                       <div class="font-detail text-xs text-gray-500 uppercase">
                         <.qualifier_icon qualifier={portrayal["type"]} />
