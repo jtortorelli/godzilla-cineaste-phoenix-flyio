@@ -1,0 +1,142 @@
+---
+runtime: 101
+title: 'Shinobi: Heart Under Blade'
+aliases: []
+release_date: 2005-09-17
+staff:
+  - role: Director
+    people:
+      - name: Shimoyama Ten
+  - role: Screenplay
+    people:
+      - name: Hirata Ken'ya
+  - role: Photography
+    people:
+      - name: Chikamori Masashi
+  - role: Lighting
+    people:
+      - name: Watanabe Kôichi
+  - role: Art
+    people:
+      - name: Isomi Toshihiro
+  - role: Sound
+    people:
+      - name: Suzuki Hajime
+  - role: Editor
+    people:
+      - name: Kawase Isao
+  - role: Music
+    people:
+      - name: Iwashiro Tarô
+  - role: Action Director
+    people:
+      - name: Shimomura Yûji
+translation:
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/posters/shinobi-heart-under-blade-2005.jpg
+japanese_title: SHINOBI-HEART UNDER BLADE-
+transliteration:
+original_works:
+  - format: serialized novel
+    title: Kōga Ninja Scroll
+    slug: koga-ninja-scroll
+    authors:
+      - name: Yamada Fûtarô
+        slug:
+studios:
+  - Shochiku Co., Ltd.
+  - Nippon Television Network Corporation
+  - Eisei Gekijo Co., Ltd.
+  - Yomiuri Telecasting Corporation
+  - The Yomiuri Shimbun
+series:
+top_billed_cast:
+  - name: Nakama Yukie
+    role: Oboro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/yukie-nakama-0.jpg
+    character_qualifiers:
+  - name: Odagiri Joe
+    role: Kôga Gen'nosuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/joe-odagiri-0.jpg
+    character_qualifiers:
+  - name: Kurotani Tomoka
+    role: Kagerô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/tomoka-kurotani-0.jpg
+    character_qualifiers:
+  - name: Sawajiri Erika
+    role: Hotarubi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/erika-sawajiri-0.jpg
+    character_qualifiers:
+  - name: Ishibashi Renji
+    role: Nankôbô Tenkai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/renji-ishibashi-0.jpg
+    character_qualifiers:
+  - name: Kitamura Kazuo
+    role: Tokugawa Ieyasu
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/kazuo-kitamura-0.jpg
+    character_qualifiers:
+  - name: Shîna Kippei
+    role: Yakushiji Tenzen
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/kippei-shiina-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Itô Shun
+    role: Mino Nenki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/shun-ito-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kinoshita Hôka
+    role: Kisaragi Saemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/hoka-kinoshita-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Koga Mitsuki
+    role: Chikuma Koshirô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/mitsuki-koga-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Lily
+    role: Ogen
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/lily-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Masu Takeshi
+    role: Muroga Hyôma
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/takeshi-masu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsushige Yutaka
+    role: Hattori Hanzô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/yutaka-matsushige-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Miyoshi Kenji
+    role: Kisaragi Saemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/kenji-miyoshi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nabe Osami
+    role: Man Pulling Wagon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/osami-nabe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nagasawa Toshiya
+    role: Yagyuu Munenori
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/toshiya-nagasawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nishina Masaki
+    role: Yagyuu Jûbei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/masaki-nishina-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sakaguchi Tak
+    role: Yashamaru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/tak-sakaguchi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Terada Minoru
+    role: Kôga Danjô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/shinobi-heart-under-blade-2005/cast-avatars/minoru-terada-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

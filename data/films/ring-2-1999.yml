@@ -1,0 +1,142 @@
+---
+runtime: 95
+title: Ring 2
+aliases:
+  - alias: Ringu 2
+    context: American Home Video
+release_date: 1999-01-23
+staff:
+  - role: Director
+    people:
+      - name: Nakata Hideo
+  - role: Screenplay
+    people:
+      - name: Takahashi Hiroshi
+  - role: Photography
+    people:
+      - name: Yamamoto Hideo
+  - role: Art
+    people:
+      - name: Saitô Iwao
+  - role: Lighting
+    people:
+      - name: Ono Akira
+  - role: Music
+    people:
+      - name: Kawai Kenji
+        slug: kawai-kenji
+  - role: Editor
+    people:
+      - name: Takahashi Nobuyuki
+  - role: Sound
+    people:
+      - name: Kakizawa Kiyoshi
+translation: Ring 2
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/posters/ring-2-1999.jpg
+japanese_title: リング2
+transliteration: Ringu 2
+original_works:
+  - format: novel
+    title: Ring
+    slug: ring
+    authors:
+      - name: Suzuki Kôji
+        slug:
+studios:
+  - Kadokawa Shoten Publishing Co., Ltd.
+  - Asmik Ace, Inc.
+  - Toho Co., Ltd.
+  - Sumitomo Corporation
+  - Imagica Group, Inc.
+  - Nippan Group Holdings, Inc.
+  - Omega Project Co., Ltd.
+series:
+  title: Ring
+  slug: ring
+  entry_number: 3
+  previous_entry:
+    title: Spiral
+    year: 1998
+    slug: spiral-1998
+  next_entry:
+    title: 'Ring 0: Birthday'
+    year: 2000
+    slug: ring-0-birthday-2000
+top_billed_cast:
+  - name: Nakatani Miki
+    role: Takano Mai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/miki-nakatani-0.jpg
+    character_qualifiers:
+  - name: Satô Hitomi
+    role: Kurahashi Masami
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/hitomi-sato-0.jpg
+    character_qualifiers:
+  - name: Fukada Kyôko
+    role: Sawaguchi Kanae
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/kyoko-fukada-0.jpg
+    character_qualifiers:
+  - name: Matsushima Nanako
+    role: Asakawa Reiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/nanako-matsushima-0.jpg
+    character_qualifiers:
+  - name: Sanada Hiroyuki
+    role: Takayama Ryûji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/hiroyuki-sanada-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Ishimaru Kenjirô
+    role: Ômuta
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/kenjiro-ishimaru-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kaji Miwako
+    role: Yamamura Kazue
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/miwako-kaji-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kohinata Fumiyo
+    role: Kawajiri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/fumiyo-kohinata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Masako
+    role: Yamamura Shizuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/masako-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Muramatsu Katsumi
+    role: Asakawa Kôichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/katsumi-muramatsu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Namiki Shirô
+    role: Forensic Sculptor
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/shiro-namiki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Nishina Takashi
+    role: Forensic Photographer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/takashi-nishina-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Numata Yôichi
+    role: Yamamura Takashi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/yoichi-numata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ôtaka Rikiya
+    role: Asakawa Yôichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/rikiya-otaka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Suwa Tarô
+    role: Kakukura
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/taro-suwa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yanagi Yurei
+    role: Okazaki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/cast-avatars/yurei-yanagi-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

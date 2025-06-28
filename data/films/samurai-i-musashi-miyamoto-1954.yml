@@ -1,0 +1,200 @@
+---
+runtime: 94
+title: 'Samurai I: Musashi Miyamoto'
+aliases: []
+release_date: 1954-09-26
+staff:
+  - role: Director
+    people:
+      - name: Inagaki Hiroshi
+        slug: inagaki-hiroshi
+  - role: Dramatization
+    people:
+      - name: Hôjô Hideji
+  - role: Screenplay
+    people:
+      - name: Wakao Tokuhei
+      - name: Inagaki Hiroshi
+        slug: inagaki-hiroshi
+  - role: Photography
+    people:
+      - name: Yasumoto Jun
+  - role: Art Director
+    people:
+      - name: Itô Kisaku
+  - role: Sound
+    people:
+      - name: Mikami Chôshichirô
+  - role: Lighting
+    people:
+      - name: Mori Shigeru
+  - role: Music
+    people:
+      - name: Dan Ikuma
+        slug: dan-ikuma
+  - role: Assistant Director
+    people:
+      - name: Fukuda Jun
+        slug: fukuda-jun
+  - role: Editor
+    people:
+      - name: Ôi Hidefumi
+translation: Miyamoto Musashi
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/posters/samurai-i-musashi-miyamoto-1954.jpg
+japanese_title: 宮本武蔵
+transliteration: Miyamoto Musashi
+original_works:
+  - format: serialized novel
+    title: Musashi Miyamoto
+    slug: musashi-miyamoto
+    authors:
+      - name: Yoshikawa Eiji
+        slug:
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Musashi Miyamoto
+  slug: musashi-miyamoto
+  entry_number: 1
+  previous_entry:
+  next_entry:
+    title: 'Samurai II: Duel at Ichijoji Temple'
+    year: 1955
+    slug: samurai-ii-duel-at-ichijoji-temple-1955
+top_billed_cast:
+  - name: Mifune Toshirô
+    role: Miyamoto Musashi
+    slug: mifune-toshiro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/toshiro-mifune-0.jpg
+    character_qualifiers:
+  - name: Onoue Kurouemon
+    role: Takuan
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/kurouemon-onoue-0.jpg
+    character_qualifiers:
+  - name: Mikuni Rentarô
+    role: Matahachi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/rentaro-mikuni-0.jpg
+    character_qualifiers:
+  - name: Yachigusa Kaoru
+    role: Otsû
+    slug: yachigusa-kaoru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/kaoru-yachigusa-0.jpg
+    character_qualifiers:
+  - name: Mito Mitsuko
+    role: Okô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/mitsuko-mito-0.jpg
+    character_qualifiers:
+  - name: Okada Mariko
+    role: Akemi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/mariko-okada-0.jpg
+    character_qualifiers:
+  - name: Miyoshi Eiko
+    role: Osugi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/eiko-miyoshi-0.jpg
+    character_qualifiers:
+  - name: Hirata Akihiko
+    role: Yoshioka Seijûrô
+    slug: hirata-akihiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/akihiko-hirata-0.jpg
+    character_qualifiers:
+  - name: Abe Kusuo
+    role: Tsujikaze Tenba
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/kusuo-abe-0.jpg
+    character_qualifiers:
+  - name: Kosugi Yoshio
+    role: Aoki Tanzaemon
+    slug: kosugi-yoshio
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/yoshio-kosugi-0.jpg
+    character_qualifiers:
+  - name: Katô Daisuke
+    role: Gion Tôji
+    slug: kato-daisuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/daisuke-kato-0.jpg
+    character_qualifiers:
+  - name: Ozawa Eitarô
+    role: Ikeda Terumasa
+    slug: ozawa-eitaro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/eitaro-ozawa-0.jpg
+    character_qualifiers:
+  - name: Tani Akira
+    role: Kawarano Gonroku
+    slug: tani-akira
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/akira-tani-0.jpg
+    character_qualifiers:
+  - name: Matsuo Fumindo
+    role: Soldier
+    slug: matsuo-fumindo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/fuminto-matsuo-0.jpg
+    character_qualifiers:
+  - name: Onda Seijirô
+    role: Official
+    slug: onda-seijiro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/seijiro-onda-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Azuma Shizuko
+    role: Villager
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/shizuko-azuma-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Echigo Ken
+    role: Villager
+    slug: echigo-ken
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/ken-echigo-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Kumagai Takuzô
+    role: Villager
+    slug: kumagai-takuzo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/takuzo-kumagai-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Mukai Jun'ichirô
+    role: Ruffian
+    slug: mukai-junichiro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/junichiro-mukai-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Natsuki Junpei
+    role: Villager
+    slug: natsuki-junpei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/junpei-natsuki-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Sakamoto Haruya
+    role: Soldier
+    slug: sakamoto-haruya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/haruya-sakamoto-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Sera Akira
+    role: Villager
+    slug: sera-akira
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/akira-sera-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Suzuki Haruo
+    role: Soldier
+    slug: suzuki-haruo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/haruo-suzuki-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Tabu Kenzô
+    role: Soldier
+    slug: tabu-kenzo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/kenzo-tabu-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Tachibana Masaaki
+    role: Villager
+    slug: tachibana-masaaki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/masaaki-tachibana-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Tsutsumi Yasuhisa
+    role: Villager
+    slug: tsutsumi-yasuhisa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/cast-avatars/yasuhisa-tsutsumi-0.jpg
+    character_qualifiers:
+    uncredited: true
+kaiju: []

@@ -45,7 +45,7 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
               </.link>
             </div>
             <div class="sm:text-center">
-              <.link href={~p"/films/#{film["slug"]}"}>
+              <.link href={~p"/v2/films/#{film["slug"]}"}>
                 <div class="font-content italic text-sm text-gray-700">
                   {film["title"]}
                 </div>

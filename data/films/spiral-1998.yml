@@ -1,0 +1,107 @@
+---
+runtime: 97
+title: Spiral
+aliases:
+  - alias: Rasen
+    context: American Home Video
+release_date: 1998-01-31
+staff:
+  - role: Director
+    people:
+      - name: Îda George
+  - role: Screenplay
+    people:
+      - name: Îda George
+  - role: Photography
+    people:
+      - name: Watanabe Makoto
+  - role: Art
+    people:
+      - name: Saitô Iwao
+  - role: Lighting
+    people:
+      - name: Hosawa Shôji
+  - role: Music
+    people:
+      - name: LA FINCA
+  - role: Sound
+    people:
+      - name: Hosoi Seiji
+  - role: Editor
+    people:
+      - name: Abe Hirohide
+translation: Spiral
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/posters/rasen-1998.jpg
+japanese_title: らせん
+transliteration: Rasen
+original_works:
+  - format: novel
+    title: Spiral
+    slug: spiral
+    authors:
+      - name: Suzuki Kôji
+        slug:
+studios:
+  - Kadokawa Shoten Publishing Co., Ltd.
+  - Pony Canyon, Inc.
+  - Toho Co., Ltd.
+  - Imagica Group, Inc.
+  - Asmik Ace, Inc.
+  - Omega Project Co., Ltd.
+series:
+  title: Ring
+  slug: ring
+  entry_number: 2
+  previous_entry:
+    title: Ring
+    year: 1998
+    slug: ring-1998
+  next_entry:
+    title: Ring 2
+    year: 1999
+    slug: ring-2-1999
+top_billed_cast:
+  - name: Satô Kôichi
+    role: Andô Mitsuo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/koichi-sato-0.jpg
+    character_qualifiers:
+  - name: Nakatani Miki
+    role: Takano Mai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/miki-nakatani-0.jpg
+    character_qualifiers:
+  - name: Sanada Hiroyuki
+    role: Takayama Ryûji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/hiroyuki-sanada-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Ban Daisuke
+    role: Ikuma Heihachirô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/daisuke-ban-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsushige Yutaka
+    role: Yoshino Kenzô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/yutaka-matsushige-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Matsushima Nanako
+    role: Asakawa Reiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/nanako-matsushima-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ogi Shigemitsu
+    role: Maekawa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/shigemitsu-ogi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Saeki Hinako
+    role: Yamamura Sadako
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/hinako-saeki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tsurumi Shingo
+    role: Miyashita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/spiral-1998/cast-avatars/shingo-tsurumi-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

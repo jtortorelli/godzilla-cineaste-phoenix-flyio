@@ -1,0 +1,236 @@
+---
+runtime: 103
+title: The Return of Godzilla
+aliases:
+  - alias: Godzilla 1985
+    context: American Theatrical Release
+release_date: 1985-12-15
+staff:
+  - role: Director
+    people:
+      - name: Hashimoto Kôji
+  - role: SFX Director
+    people:
+      - name: Nakano Teruyoshi
+        slug: nakano-teruyoshi
+  - role: Producer
+    people:
+      - name: Tanaka Tomoyuki
+        slug: tanaka-tomoyuki
+  - role: Story
+    people:
+      - name: Tanaka Tomoyuki
+        slug: tanaka-tomoyuki
+  - role: Screenplay
+    people:
+      - name: Nagahara Shûichi
+  - role: Co-Producer
+    people:
+      - name: Tanaka Fumio
+  - role: Photography
+    people:
+      - name: Hara Kazutami
+  - role: Art
+    people:
+      - name: Sakuragi Akira
+  - role: Sound
+    people:
+      - name: Tanaka Nobuyuki
+  - role: Lighting
+    people:
+      - name: Kojima Shinji
+  - role: Music
+    people:
+      - name: Koroku Reijirô
+  - role: Assistant Director
+    people:
+      - name: Ôkawara Takao
+      - name: Yamashita Kenshô
+  - role: Editor
+    people:
+      - name: Kuroiwa Yoshitami
+  - role: SFX Art
+    people:
+      - name: Inoue Yasuyuki
+        slug: inoue-yasuyuki
+  - role: SFX Assistant Director
+    people:
+      - name: Asada Eiichi
+translation: Godzilla
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/posters/return-of-godzilla-1984.jpg
+japanese_title: ゴジラ
+transliteration: Gojira
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Godzilla
+  slug: godzilla
+  entry_number: 16
+  previous_entry:
+    title: Terror of Mechagodzilla
+    year: 1975
+    slug: terror-of-mechagodzilla-1975
+  next_entry:
+    title: Godzilla vs. Biollante
+    year: 1989
+    slug: godzilla-vs-biollante-1989
+top_billed_cast:
+  - name: Kobayashi Keiju
+    role: Prime Minister Mitamura Seiki
+    slug: kobayashi-keiju
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/keiju-kobayashi-0.jpg
+    character_qualifiers:
+  - name: Tanaka Ken
+    role: Maki Gorô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/ken-tanaka-0.jpg
+    character_qualifiers:
+  - name: Sawaguchi Yasuko
+    role: Okumura Naoko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/yasuko-sawaguchi-0.jpg
+    character_qualifiers:
+  - name: Takuma Shin
+    role: Okumura Hiroshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/shin-takuma-0.jpg
+    character_qualifiers:
+  - name: Takeda Tetsuya
+    role: Vagrant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/tetsuya-takeda-0.jpg
+    character_qualifiers:
+  - name: Natsuki Yôsuke
+    role: Doctor Hayashida Shin
+    slug: natsuki-yosuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/yosuke-natsuki-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Ebata Takashi
+    role: Ship's Captain
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/takashi-ebata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Emoto Takenori
+    role: Kitagawa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/takenori-emoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Dennis Falt
+    role: Soviet Submarine Captain
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/dennis-falt-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hashimoto Isao
+    role: Akiyama
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/isao-hashimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ishizaka Kôji
+    role: Power Plant Worker
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/koji-ishizaka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Luke Johnston
+    role: Colonel Kashirin
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/luke-johnston-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Alexander Kairis
+    role: Chevsky
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/alexander-kairis-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kaneko Nobuo
+    role: Minister Isomura
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/nobuo-kaneko-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katô Shigeo
+    role: Ship's Radio Operator
+    slug: kato-shigeo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/shigeo-kato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Katô Takeshi
+    role: Minister Kasaoka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/takeshi-kato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Koizumi Hiroshi
+    role: Doctor Minami
+    slug: koizumi-hiroshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/hiroshi-koizumi-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Mikimoto Shinsuke
+    role: Chief Kakurai
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/shinsuke-mikimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Mori Kanta
+    role: Minister Ôkouchi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/kanta-mori-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Morimoto Takerô
+    role: News Reader
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/takeru-morimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Murai Kunio
+    role: Henmi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/kunio-murai-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Naitô Taketoshi
+    role: Secretary Takegami
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/taketoshi-naito-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Walter Nichols
+    role: Rosenberg
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/walter-nichols-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Orimoto Junkichi
+    role: Minister Môri
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/junkichi-orimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ozawa Eitarô
+    role: Minister Kanzaki
+    slug: ozawa-eitaro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/eitaro-ozawa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Satô Kei
+    role: Editor Godô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/kei-sato-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Suzuki Mizuho
+    role: Minister Emori
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/mizuho-suzuki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tajima Yoshibumi
+    role: Minister Hidaka
+    slug: tajima-yoshibumi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/yoshibumi-tajima-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Ushio Tetsuya
+    role: Control Room Radio Operator
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/tetsuya-ushio-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yamamoto Kiyoshi
+    role: Minister Kajita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/cast-avatars/kiyoshi-yamamoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju:
+  - name: Godzilla
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/kaiju-avatars/kenpachiro-satsuma-0.jpg?t=2023-09-04T02%3A51%3A52.126Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Satsuma Kenpachirô

@@ -1,0 +1,149 @@
+---
+runtime: 117
+title: 'Parasyte: Part 2'
+aliases: []
+release_date: 2015-04-25
+staff:
+  - role: Director
+    people:
+      - name: Yamazaki Takashi
+        slug: yamazaki-takashi
+  - role: VFX
+    people:
+      - name: Yamazaki Takashi
+        slug: yamazaki-takashi
+  - role: Screenplay
+    people:
+      - name: Kosawa Ryôta
+      - name: Yamazaki Takashi
+        slug: yamazaki-takashi
+  - role: Music
+    people:
+      - name: Satô Naoki
+        slug: sato-naoki
+  - role: Photography
+    people:
+      - name: Atô Shôichi
+  - role: Lighting
+    people:
+      - name: Takakura Susumu
+  - role: Art
+    people:
+      - name: Hayashida Yûji
+      - name: Sakushima Eri
+  - role: Sound
+    people:
+      - name: Shiratori Mitsugu
+  - role: Editor
+    people:
+      - name: Hogaki Jun'nosuke
+  - role: VFX Director
+    people:
+      - name: Shibuya Kiyoko
+translation: Parasite Final Chapter
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/posters/parasyte-completion-2015.jpg
+japanese_title: 寄生獣 完結編
+transliteration: Kiseijû Kanketsu-hen
+original_works:
+  - format: manga
+    title: Parasyte
+    slug: parasyte
+    authors:
+      - name: Iwaaki Hitoshi
+        slug:
+studios:
+  - Toho Co., Ltd.
+  - Nippon Television Network Corporation
+  - Kodansha Ltd.
+  - Dentsu, Inc.
+  - Yomiuri Telecasting Corporation
+  - VAP, Inc.
+  - Robot Communications, Inc.
+  - Shirogumi, Inc.
+  - Abe Shuji, Inc.
+  - Nippan Group Holdings, Inc.
+  - KDDI Corporation
+  - GYAO Corporation
+  - The Sapporo Television Broadcasting Co.,Ltd.
+  - Miyagi Television Broadcasting Co., Ltd.
+  - Shizuoka Daiichi Television Corporation
+  - Chukyo TV Broadcasting Co., Ltd.
+  - Hiroshima Television Corporation
+  - Fukuoka Broadcasting System Corporation
+series:
+  title: Parasyte
+  slug: parasyte
+  entry_number: 2
+  previous_entry:
+    title: 'Parasyte: Part 1'
+    year: 2014
+    slug: parasyte-part-1-2014
+  next_entry:
+top_billed_cast:
+  - name: Sometani Shôta
+    role: Izumi Shin'ichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/shota-sometani-0.jpg
+    character_qualifiers:
+  - name: Fukatsu Eri
+    role: Tamiya Ryôko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/eri-fukatsu-0.jpg
+    character_qualifiers:
+  - name: Abe Sadao
+    role: Migi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/sadawo-abe-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Hashimoto Ai
+    role: Murano Satomi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/ai-hashimoto-0.jpg
+    character_qualifiers:
+  - name: Arai Hirofumi
+    role: Uragami
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/hirofumi-arai-0.jpg
+    character_qualifiers:
+  - name: Pierre Taki
+    role: Miki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/pierre-taki-0.jpg
+    character_qualifiers:
+  - name: Yamanaka Takashi
+    role: Tsuji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/takashi-yamanaka-0.jpg
+    character_qualifiers:
+  - name: Iwai Hideto
+    role: Kusano
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/hideto-iwai-0.jpg
+    character_qualifiers:
+  - name: Îda Kisuke
+    role: Mutinous Parasyte
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/kisuke-iida-0.jpg
+    character_qualifiers:
+  - name: Seki Megumi
+    role: Mutinous Parasyte
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/megumi-seki-0.jpg
+    character_qualifiers:
+  - name: Yo Kimiko
+    role: Izumi Nobuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/kimiko-yo-0.jpg
+    character_qualifiers:
+  - name: Ômori Nao
+    role: Kuramori
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/nao-omori-0.jpg
+    character_qualifiers:
+  - name: Toyohara Kôsuke
+    role: Yamagishi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/kosuke-toyohara-0.jpg
+    character_qualifiers:
+  - name: Kitamura Kazuki
+    role: Hirokawa Takeshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/kazuki-kitamura-0.jpg
+    character_qualifiers:
+  - name: Kunimura Jun
+    role: Hirama
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/jun-kunimura-0.jpg
+    character_qualifiers:
+  - name: Asano Tadanobu
+    role: Gotô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/parasyte-part-2-2015/cast-avatars/tadanobu-asano-0.jpg
+    character_qualifiers:
+supporting_cast: []
+kaiju: []

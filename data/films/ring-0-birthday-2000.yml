@@ -1,0 +1,161 @@
+---
+runtime: 99
+title: 'Ring 0: Birthday'
+aliases:
+  - alias: Ringu 0
+    context: American Home Video
+release_date: 2000-01-22
+staff:
+  - role: Director
+    people:
+      - name: Tsuruta Norio
+  - role: Screenplay
+    people:
+      - name: Takahashi Hiroshi
+  - role: Photography
+    people:
+      - name: Shibanushi Takahide
+  - role: Art
+    people:
+      - name: Yamaguchi Osamu
+  - role: Lighting
+    people:
+      - name: Watanabe Yoshimi
+  - role: Music
+    people:
+      - name: Ogata Shin'ichirô
+  - role: Sound
+    people:
+      - name: Segawa Tetsuo
+  - role: Editor
+    people:
+      - name: Sunaga Hiroshi
+  - role: Special Modeling
+    people:
+      - name: Haraguchi Tomoo
+translation: Ring 0 Birthday
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/posters/ring-0-birthday-2000.jpg
+japanese_title: リング0 バースデイ
+transliteration: Ringu Zero Bâsudei
+original_works:
+  - format: short story
+    title: Lemon Heart
+    slug: lemon-heart
+    authors:
+      - name: Suzuki Kôji
+        slug:
+studios:
+  - Kadokawa Shoten Publishing Co., Ltd.
+  - Asmik Ace, Inc.
+  - Toho Co., Ltd.
+  - Imagica Group, Inc.
+  - Nippan Group Holdings, Inc.
+  - Sumitomo Corporation
+series:
+  title: Ring
+  slug: ring
+  entry_number: 4
+  previous_entry:
+    title: Ring 2
+    year: 1999
+    slug: ring-2-1999
+  next_entry:
+top_billed_cast:
+  - name: Nakama Yukie
+    role: Yamamura Sadako
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/yukie-nakama-0.jpg
+    character_qualifiers:
+  - name: Tanabe Seiichi
+    role: Tôyama Hiroshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/seiichi-tanabe-0.jpg
+    character_qualifiers:
+  - name: Asô Kumiko
+    role: Tachihara Etsuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/kumiko-aso-0.jpg
+    character_qualifiers:
+  - name: Tanaka Yoshiko
+    role: Miyaji Akiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/yoshiko-tanaka-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Ban Daisuke
+    role: Ikuma Heihachirô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/daisuke-ban-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hashimoto Mami
+    role: Kiyomi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/mami-hashimoto-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Idemitsu Shûichirô
+    role: Ujie Mamoru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/shuichiro-idemitsu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Kimura Yasushi
+    role: Togashi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/yasushi-kimura-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Masako
+    role: Yamamura Shizuko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/masako-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Mizukami Ryûshi
+    role: Kuno Wataru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/ryushi-mizukami-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Morishita Yoshiyuki
+    role: Ôkubo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/yoshiyuki-morishita-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Murata Norio
+    role: Kodama Shûji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/norio-murata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Okunuki Kaoru
+    role: Hazuki Aiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/kaoru-okunuki-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Shimada Tsuyoshi
+    role: Photographer
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/tsuyoshi-shimada-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Takahata Atsuko
+    role: Arima Kaoru
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/junko-takahata-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tanaka Yôji
+    role: Teacher
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/yoji-tanaka-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tsunogae Kazue
+    role: Sudô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/kazue-tsunogae-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Wakamatsu Takeshi
+    role: Shigemori Yûsaku
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/takeshi-wakamatsu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Watanabe Kanji
+    role: Yûki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/kanji-watanabe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yano Kôji
+    role: Tamba Kasuhiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-0-birthday-2000/cast-avatars/koji-yano-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

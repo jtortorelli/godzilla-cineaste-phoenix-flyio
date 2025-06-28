@@ -1,0 +1,105 @@
+---
+runtime: 100
+title: Rebirth of Mothra III
+aliases: []
+release_date: 1998-12-12
+staff:
+  - role: Director
+    people:
+      - name: Yoneda Okihiro
+  - role: SFX Director
+    people:
+      - name: Suzuki Kenji
+  - role: Producer
+    people:
+      - name: Tomiyama Shôgo
+  - role: Screenplay
+    people:
+      - name: Suetani Masumi
+  - role: Music
+    people:
+      - name: Watanabe Toshiyuki
+  - role: Photography
+    people:
+      - name: Sekiguchi Yoshinori
+  - role: Art
+    people:
+      - name: Sakuragi Akira
+  - role: Sound
+    people:
+      - name: Saitô Teiichi
+  - role: Lighting
+    people:
+      - name: Awakihara Tsuyoshi
+  - role: Editor
+    people:
+      - name: Ogawa Nobuo
+  - role: Assistant Director
+    people:
+      - name: Tezuka Masaaki
+translation: Mothra 3 King Ghidorah Invades
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/posters/rebirth-of-mothra-3-1998.jpg
+japanese_title: モスラ3 キングギドラ来襲
+transliteration: Mosura 3 Kingugidora Raishû
+original_works: []
+studios:
+  - Toho Co., Ltd.
+series:
+  title: Rebirth of Mothra
+  slug: rebirth-of-mothra
+  entry_number: 3
+  previous_entry:
+    title: Rebirth of Mothra II
+    year: 1997
+    slug: rebirth-of-mothra-ii-1997
+  next_entry:
+top_billed_cast:
+  - name: Kobayashi Megumi
+    role: Moll
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/megumi-kobayashi-0.jpg
+    character_qualifiers:
+  - name: Tate Misato
+    role: Lora
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/misato-date-0.jpg
+    character_qualifiers:
+  - name: Ônita Atsushi
+    role: Sonoda Yûsuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/atsushi-onita-0.jpg
+    character_qualifiers:
+  - name: Matsuda Miyuki
+    role: Sonoda Yukie
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/miyuki-matsuda-0.jpg
+    character_qualifiers:
+  - name: Yoshizawa Takuma
+    role: Sonoda Shôta
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/takuma-yoshizawa-0.jpg
+    character_qualifiers:
+  - name: Shinozaki Kyôhei
+    role: Sonoda Junpei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/kyohei-shinozaki-0.jpg
+    character_qualifiers:
+  - name: Suzuki Ayano
+    role: Sonoda Tamako
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/ayano-suzuki-0.jpg
+    character_qualifiers:
+  - name: Hano Aki
+    role: Belvera
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/aki-hano-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Ueda Kôichi
+    role: Principal
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/cast-avatars/koichi-ueda-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju:
+  - name: Mothraleo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/kaiju-avatars/01417.jpg?t=2023-10-02T00%3A24%3A40.374Z
+    portrayals:
+      - type: Puppet
+  - name: King Ghidorah
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rebirth-of-mothra-iii-1998/kaiju-avatars/tsutomu-kitagawa-0.jpg?t=2023-09-04T02%3A48%3A11.774Z
+    portrayals:
+      - type: Suit Actor
+        people:
+          - name: Kitagawa Tsutomu
