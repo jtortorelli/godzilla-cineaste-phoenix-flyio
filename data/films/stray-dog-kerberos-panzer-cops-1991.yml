@@ -1,0 +1,79 @@
+---
+runtime: 99
+title: 'Stray Dog: Kerberos Panzer Cops'
+aliases: []
+release_date: 1991-03-23
+staff:
+  - role: Director
+    people:
+      - name: Oshii Mamoru
+  - role: Story
+    people:
+      - name: Oshii Mamoru
+  - role: Screenplay
+    people:
+      - name: Oshii Mamoru
+  - role: Photography
+    people:
+      - name: Mamiya Yôsuke
+  - role: Lighting
+    people:
+      - name: Hosaka Yoshimi
+  - role: Music
+    people:
+      - name: Kawai Kenji
+        slug: kawai-kenji
+  - role: Sound
+    people:
+      - name: Asari Naoko
+  - role: Editor
+    people:
+      - name: Morita Seiji
+  - role: Art
+    people:
+      - name: Tezuka Tsunemitsu
+translation: Kerberos -Hell's Watchdog-
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/posters/stray-dog-kerberos-panzer-cops-1991.jpg
+japanese_title: ケルベロス-地獄の番犬
+transliteration: Keruberosu -Jigoku No Banken-
+original_works: []
+studios:
+  - Bandai Co., Ltd.
+  - Fuji Television Network, Inc.
+  - Omnibus Promotion, Inc.
+series:
+  title: Kerberos
+  slug: kerberos
+  entry_number: 2
+  previous_entry:
+    title: The Red Spectacles
+    year: 1987
+    slug: red-spectacles-1987
+  next_entry:
+    title: 'Jin-Roh: The Wolf Brigade'
+    year: 2000
+    slug: jin-roh-the-wolf-brigade-2000
+top_billed_cast:
+  - name: Fujiki Yoshikatsu
+    role: Inui
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/cast-avatars/yoshikatsu-fujiki-0.jpg
+    character_qualifiers:
+  - name: Su Yi Jing
+    role: Tang Mie
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/cast-avatars/sue-eaching-0.jpg
+    character_qualifiers:
+  - name: Matsuyama Takashi
+    role: Hayashi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/cast-avatars/takashi-matsuyama-0.jpg
+    character_qualifiers:
+  - name: Chiba Shigeru
+    role: Todome Kôichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/cast-avatars/shigeru-chiba-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Tachiki Fumihiko
+    role: Assassin
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/cast-avatars/fumihiko-tachiki-0.jpg
+    character_qualifiers:
+    uncredited: false
+kaiju: []

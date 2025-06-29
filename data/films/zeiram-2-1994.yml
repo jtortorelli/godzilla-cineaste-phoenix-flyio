@@ -1,0 +1,110 @@
+---
+runtime: 100
+title: Zëiram 2
+aliases: []
+release_date: 1994-12-17
+staff:
+  - role: Director
+    people:
+      - name: Amemiya Keita
+  - role: Screenplay
+    people:
+      - name: Amemiya Keita
+      - name: Matsumoto Hajime
+  - role: Photography
+    people:
+      - name: Kidokoro Hiroshi
+  - role: Art
+    people:
+      - name: Iguchi Akihiko
+  - role: Lighting
+    people:
+      - name: Hosaka Yoshimi
+  - role: Sound
+    people:
+      - name: OHTA FACT
+  - role: Music
+    people:
+      - name: Ôta Kôichi
+  - role: Editor
+    people:
+      - name: Kon'no Haruhito
+translation: Zëiram 2
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/posters/zeiram-2-1994.jpg
+japanese_title: ゼイラム2
+transliteration: Zeiramu 2
+original_works: []
+studios:
+  - Crowd
+  - Embodiment Films
+series:
+  title: Zëiram
+  slug: zeiram
+  entry_number: 2
+  previous_entry:
+    title: Zëiram
+    year: 1991
+    slug: zeiram-1991
+  next_entry:
+top_billed_cast:
+  - name: Moriyama Yûko
+    role: Iria
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/yuko-moriyama-0.jpg
+    character_qualifiers:
+  - name: Hotaru Yukijirô
+    role: Kamiya
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/yukijiro-hotaru-0.jpg
+    character_qualifiers:
+  - name: Ida Kunihiko
+    role: Teppei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/kunihiko-ida-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Abe Mitsuo
+    role: Hagi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/mitsuo-abe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Hiraiwa Makio
+    role: Electronics Store Manager
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/makio-hiraiwa-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Inoue Kazuhiko
+    role: Bob
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/kazuhiko-inoue-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+    uncredited: false
+  - name: Kurihara Satoshi
+    role: Kanuto
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/satoshi-kurihara-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Sabu
+    role: Fujikuro
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/sabu-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Tochino Yukitomo
+    role: Murata
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/yukitomo-tochino-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Watanabe Tetsu
+    role: Taguchi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/tetsu-watanabe-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yoshida Mizuho
+    role: Yanuki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/mizuho-yoshida-0.jpg
+    character_qualifiers:
+    uncredited: false
+  - name: Yoshida Mizuho
+    role: Zëiram
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zeiram-2-1994/cast-avatars/mizuho-yoshida-1.jpg
+    qualifiers: Suit Actor
+    character_qualifiers:
+    uncredited: false
+kaiju: []

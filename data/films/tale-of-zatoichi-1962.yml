@@ -1,0 +1,147 @@
+---
+runtime: 96
+title: The Tale of Zatoichi
+aliases: []
+release_date: 1962-04-18
+staff:
+  - role: Director
+    people:
+      - name: Misumi Kenji
+  - role: Screenplay
+    people:
+      - name: Inuzuka Minoru
+  - role: Photography
+    people:
+      - name: Makiura Chikashi
+  - role: Sound
+    people:
+      - name: Ôtani Iwao
+  - role: Lighting
+    people:
+      - name: Katô Hiroya
+  - role: Art
+    people:
+      - name: Naitô Akira
+  - role: Music
+    people:
+      - name: Ifukube Akira
+        slug: ifukube-akira
+  - role: Editor
+    people:
+      - name: Suganuma Kanji
+translation: Zatôichi Story
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/posters/tale-of-zatoichi-1962.jpg
+japanese_title: 座頭市物語
+transliteration: Zatôichi Monogatari
+original_works:
+  - format: short story
+    title:
+    slug: zatoichi
+    authors:
+      - name: Shimozawa Kan
+        slug: shimozawa-kan
+studios:
+  - Daiei Film Co., Ltd.
+series:
+  title: Zatoichi
+  slug: zatoichi
+  entry_number: 1
+  previous_entry:
+  next_entry:
+    title: The Tale of Zatoichi Continues
+    year: 1962
+    slug: tale-of-zatoichi-continues-1962
+top_billed_cast:
+  - name: Katsu Shintarô
+    role: Zatôichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/shintaro-katsu-0.jpg
+    character_qualifiers:
+  - name: Banri Masayo
+    role: Otane
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/masayo-banri-0.jpg
+    character_qualifiers:
+  - name: Shimada Ryûzô
+    role: Boss Sasagawa Shigezô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/ryuzo-shimada-0.jpg
+    character_qualifiers:
+  - name: Mitamura Gen
+    role: Matsugishi Hanji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/gen-mitamura-0.jpg
+    character_qualifiers:
+  - name: Amachi Shigeru
+    role: Hirate Miki
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/shigeru-amachi-0.jpg
+    character_qualifiers:
+  - name: Minami Michirô
+    role: Tatekichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/michiro-minami-0.jpg
+    character_qualifiers:
+  - name: Yanagi Eijirô
+    role: Boss Iioka Sukegorô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/eijiro-yanagi-0.jpg
+    character_qualifiers:
+  - name: Chiba Toshio
+    role: Masakichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/toshio-chiba-0.jpg
+    character_qualifiers:
+  - name: Morita Gakuya
+    role: Seisuke
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/gakuya-morita-0.jpg
+    character_qualifiers:
+  - name: Yamaji Yoshito
+    role: Yahei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/yoshita-yamaji-0.jpg
+    character_qualifiers:
+  - name: Funaki Yôichi
+    role: Yogorô
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/yoichi-funaki-0.jpg
+    character_qualifiers:
+  - name: Onoe Eigorô
+    role: Ribei
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/eigoro-onoe-0.jpg
+    character_qualifiers:
+  - name: Môri Ikuko
+    role: Oyutaka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/ikuko-mori-0.jpg
+    character_qualifiers:
+  - name: Maki Chitose
+    role: Yoshi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/chitose-maki-0.jpg
+    character_qualifiers:
+  - name: Horikita Yukio
+    role: Kanaji
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/yukio-horikita-0.jpg
+    character_qualifiers:
+  - name: Hamada Yûji
+    role: Yasushichi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/yuji-hamada-0.jpg
+    character_qualifiers:
+  - name: Kimura Gen
+    role: Sasagawa Spy
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/gen-kimura-0.jpg
+    character_qualifiers:
+  - name: Koshikawa Ichi
+    role: Peasant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/ichi-koshikawa-0.jpg
+    character_qualifiers:
+  - name: Kobayashi Kanae
+    role: Oken
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/kanae-kobayashi-0.jpg
+    character_qualifiers:
+supporting_cast:
+  - name: Katsumura Jun
+    role: Iioka Yakuza
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/jun-katsumura-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Kuroki Gen
+    role: Iioka Yakuza
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/gen-kuroki-0.jpg
+    character_qualifiers:
+    uncredited: true
+  - name: Yoshida Yoshio
+    role: Peasant
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/cast-avatars/yoshio-yoshida-0.jpg
+    character_qualifiers:
+    uncredited: true
+kaiju: []

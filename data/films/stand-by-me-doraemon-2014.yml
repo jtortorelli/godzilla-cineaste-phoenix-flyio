@@ -1,0 +1,130 @@
+---
+runtime: 95
+title: Stand By Me, Doraemon
+aliases: []
+release_date: 2014-08-08
+staff:
+  - role: Director
+    people:
+      - name: Yagi Ryûichi
+      - name: Yamazaki Takashi
+        slug: yamazaki-takashi
+  - role: Screenplay
+    people:
+      - name: Yamazaki Takashi
+        slug: yamazaki-takashi
+  - role: Music
+    people:
+      - name: Satô Naoki
+        slug: sato-naoki
+  - role: Storyboards
+    people:
+      - name: Yagi Ryûichi
+  - role: Art Director
+    people:
+      - name: Hanafusa Makoto
+  - role: CG Supervisor
+    people:
+      - name: Suzuki Takeyuki
+translation: Stand By Me Doraemon
+poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/posters/stand-by-me-doraemon-2014.jpg
+japanese_title: STAND BY ME ドラえもん
+transliteration: Stand By Me Doraemon
+original_works:
+  - format: manga
+    title: Doraemon
+    slug: doraemon
+    authors:
+      - name: Fujiko F. Fujio
+        slug:
+studios:
+  - Fujiko Productions
+  - Shin-Ei Animation Co., Ltd.
+  - Shogakukan, Inc.
+  - ADK Holdings, Inc.
+  - TV Asahi Corporation
+  - Shogakukan-Shueisha Productions Co., Ltd.
+  - Toho Co., Ltd.
+  - Dentsu, Inc.
+  - Robot Communications, Inc.
+  - Shirogumi, Inc.
+  - Asahi Television Broadcasting Corporation
+  - Nagoya Broadcasting Network Co., Ltd.
+  - Abe Shuji, Inc.
+  - Kyushu Asahi Broadcasting Co., Ltd.
+  - Hokkaido Television Broadcasting
+  - Hiroshima Home Television Co.,Ltd.
+series:
+top_billed_cast:
+  - name: Mizuta Wasabi
+    role: Doraemon
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/wasabi-mizuta-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Ôhara Megumi
+    role: Nobita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/megumi-ohara-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kakazu Yumi
+    role: Shizuka
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/yumi-kakazu-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Kimura Subaru
+    role: Gian
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/subaru-kimura-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Seki Tomokazu
+    role: Suneo
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/tomokazu-seki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Mitsuishi Kotono
+    role: Mama
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/kotono-mitsuichi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Matsumoto Yasunori
+    role: Papa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/yasunori-matsumoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Tahara Aruno
+    role: Shizuka's Papa
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/aruno-tahara-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Takeuchi Miyako
+    role: Gian's Mama
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/miyako-takeuchi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Yamazaki Vanilla
+    role: Jaiko
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/vanilla-yamazaki-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Hagino Shihoko
+    role: Dekisugi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/shihoko-hagino-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Takagi Wataru
+    role: Teacher
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/wataru-takagi-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Matsumoto Sachi
+    role: Sewashi
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/sachi-matsumoto-0.jpg
+    qualifiers: Voice
+    character_qualifiers:
+  - name: Tsumabuki Satoshi
+    role: Nobita
+    avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stand-by-me-doraemon-2014/cast-avatars/satoshi-tsumabuki-0.jpg
+    qualifiers: Voice
+    character_qualifiers: Adult
+supporting_cast: []
+kaiju: []
