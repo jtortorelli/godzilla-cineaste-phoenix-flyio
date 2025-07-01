@@ -6,6 +6,7 @@ defmodule GodzillaCineaste.People do
     Film,
     Group,
     KaijuRole,
+    Library,
     Person,
     Repo,
     Role,
@@ -15,6 +16,10 @@ defmodule GodzillaCineaste.People do
     TVSeriesMainStaff,
     Work
   }
+
+  def list_people do
+    Library.list_people()
+  end
 
   def list_people(search_term \\ nil) do
     person_query =

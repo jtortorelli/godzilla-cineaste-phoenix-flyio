@@ -29,6 +29,8 @@ defmodule GodzillaCineasteWeb.Router do
     scope "/v2" do
       live "/films", Films.IndexLive
       live "/films/:slug", Films.ShowLive
+      live "/people", People.IndexLive
+      live "/people/:slug", People.ShowLive
     end
   end
 

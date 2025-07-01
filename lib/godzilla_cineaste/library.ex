@@ -28,17 +28,25 @@ defmodule GodzillaCineaste.Library do
     end
   end
 
-  def list_films() do
+  def list_films do
     :films
     |> :ets.tab2list()
     |> Enum.sort_by(fn {slug, _} -> slug end)
     |> Enum.map(fn {slug, film} -> Map.put(film, "slug", slug) end)
   end
 
+  def list_people do
+    :people
+    |> :ets.tab2list()
+    |> Enum.sort_by(fn {slug, _} -> slug end)
+    |> Enum.map(fn {slug, person} -> Map.put(person, "slug", slug) end)
+  end
+
   def init(_) do
     initialize_film_cache()
     initialize_film_credits_cache()
     initialize_film_series_cache()
+    initialize_people_cache()
     {:ok, []}
   end
 
@@ -75,6 +83,17 @@ defmodule GodzillaCineaste.Library do
     |> Enum.sort()
     |> Enum.map(fn path ->
       :ets.insert(:film_series, {Path.basename(path, ".yml"), YamlElixir.read_from_file!(path)})
+    end)
+  end
+
+  defp initialize_people_cache do
+    :ets.new(:people, [:set, :protected, :named_table])
+
+    "./data/people/**/*.yml"
+    |> Path.wildcard()
+    |> Enum.sort()
+    |> Enum.map(fn path ->
+      :ets.insert(:people, {Path.basename(path, ".yml"), YamlElixir.read_from_file!(path)})
     end)
   end
 end

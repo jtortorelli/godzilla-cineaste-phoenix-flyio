@@ -1,8 +1,6 @@
 defmodule GodzillaCineasteWeb.Films.IndexLive do
   use GodzillaCineasteWeb, :live_view
 
-  import GodzillaCineasteWeb.FilmComponents
-
   @impl true
   def mount(_params, _session, socket) do
     {:ok, assign(socket, films: GodzillaCineaste.Films.list_films())}

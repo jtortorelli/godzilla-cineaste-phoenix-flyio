@@ -1,0 +1,60 @@
+---
+name: Nick Adams
+type: person
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/adams-nick/85296_v9_ba.jpg?t=2024-11-01T01%3A50%3A11.779Z
+japanese_name: アダムス・ニック
+dob: 1931-07-10
+birth_name: Nicholas Aloysius Adamshock
+birth_place: Nanticoke, Pennsylvania, USA
+dod: 1968-02-07
+death_place: Los Angeles, California, USA
+cause_of_death: Drug Overdose
+spouse:
+  name: Carol Nugent
+bio:
+  - Served in the Coast Guard from 1952 through 1955.
+  - Acquainted with Jack Palance, Henry Fonda, James Dean, and Elvis Presley.
+  - Rumored to have had an affair with Mizuno Kumi, his co-star in 3 Japanese films.
+  - The circumstances of his death remain mysterious to this day.
+accolades:
+  - status: nominated
+    ceremony: 36th Oscars
+    category: Best Supporting Actor
+    film: Twilight of Honey
+works:
+  - title: The Rebel
+    year: 1959
+    format: TV Series
+    staff:
+      - role: Creator
+    roles:
+      - name: Johnny Yuma
+        episode_count: 76
+  - title: Twilight of Honor
+    year: 1963
+    format: Film
+    roles:
+      - name: Ben Brown
+  - title: Frankenstein Conquers the World
+    slug: frankenstein-conquers-the-world-1965
+    year: 1965
+    format: Film
+    roles:
+      - name: Doctor James Bowen
+  - title: Invasion of Astro-Monster
+    slug: invasion-of-astro-monster-1965
+    year: 1965
+    format: Film
+    roles:
+      - name: Astronaut Glenn
+  - title: The Killing Bottle
+    year: 1967
+    format: Film
+    roles:
+      - name: John Carter
+  - title: The Rebel and the King
+    year: 2012
+    format: Book
+    staff:
+      - role: Author
