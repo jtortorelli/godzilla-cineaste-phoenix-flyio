@@ -73,51 +73,40 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
             <% end %>
           </div>
         </div>
-        <%= if @film["original_works"] do %>
-          <%= for work <- @film["original_works"] do %>
-            <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
-              <div><.icon name="tabler-book" class="text-gray-500 h-4 w-4" /></div>
-              <div>
-                <div class="font-content italic text-gray-700">{work["title"]}</div>
-                <div class="uppercase font-detail text-xs text-gray-500">{work["format"]} by</div>
-                <%!-- <%= if Enum.empty?(work.authors) do %>
+        <%= for work <- nil_safe_iterator(@film["original_works"]) do %>
+          <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+            <div><.icon name="tabler-book" class="text-gray-500 h-4 w-4" /></div>
+            <div>
+              <div class="font-content italic text-gray-700">{work["title"]}</div>
+              <div class="uppercase font-detail text-xs text-gray-500">{work["format"]} by</div>
+              <%!-- <%= if Enum.empty?(work.authors) do %>
                   <%= for s <- work.studios do %>
                     <div class="font-content text-gray-700">
                       {s.display_name}
                     </div>
                   <% end %>
                 <% else %> --%>
-                <%= if work["authors"] && not Enum.empty?(work["authors"]) do %>
-                  <%= for a <- work["authors"] do %>
-                    <div class="font-content text-gray-700">
-                      <%= if a["slug"] do %>
-                        <.link
-                          class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                          href={~p"/v2/people/#{a["slug"]}"}
-                        >
-                          {a["name"]}
-                        </.link>
-                      <% else %>
-                        {a["name"]}
-                      <% end %>
-                    </div>
-                  <% end %>
-                <% end %>
-                <%= if work["studios"] && not Enum.empty?(work["studios"]) do %>
+              <%= if work["authors"] && not Enum.empty?(work["authors"]) do %>
+                <%= for a <- work["authors"] do %>
                   <div class="font-content text-gray-700">
-                    <%= for studio <- work["studios"] do %>
-                      {studio["name"]}<br />
-                    <% end %>
+                    <.person_showcase_link slug={a["slug"]}>{a["name"]}</.person_showcase_link>
                   </div>
                 <% end %>
-                <%!-- <% end %> --%>
-              </div>
+              <% end %>
+              <%= if work["studios"] && not Enum.empty?(work["studios"]) do %>
+                <div class="font-content text-gray-700">
+                  <%= for studio <- work["studios"] do %>
+                    {studio["name"]}<br />
+                  <% end %>
+                </div>
+              <% end %>
+              <%!-- <% end %> --%>
             </div>
-          <% end %>
+          </div>
         <% end %>
-        <%= if not Enum.empty?(@film["aliases"]) do %>
+        <%= if not Enum.empty?(nil_safe_iterator(@film["aliases"])) do %>
           <div class="space-y-1">
-            <%= for alias <- @film["aliases"] do %>
+            <%= for alias <- nil_safe_iterator(@film["aliases"]) do %>
               <div class="lg:break-inside-avoid-column flex gap-1 items-baseline">
                 <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
                 <div>
@@ -156,15 +145,12 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                   <.icon name="tabler-square-rounded-arrow-left" class="text-gray-500 h-5 w-4" />
                 </div>
                 <div>
-                  <.link
-                    href={~p"/v2/films/#{@film["series"]["previous_entry"]["slug"]}"}
-                    class="text-gray-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                  >
+                  <.film_showcase_link slug={@film["series"]["previous_entry"]["slug"]}>
                     <span class="italic text-wrap">{@film["series"]["previous_entry"]["title"]}</span>
                     <span class="text-sm">
                       ({@film["series"]["previous_entry"]["year"]})
                     </span>
-                  </.link>
+                  </.film_showcase_link>
                 </div>
               </div>
             <% end %>
@@ -174,13 +160,10 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                   <.icon name="tabler-square-rounded-arrow-right" class="text-gray-500 h-5 w-4" />
                 </div>
                 <div>
-                  <.link
-                    href={~p"/v2/films/#{@film["series"]["next_entry"]["slug"]}"}
-                    class="text-gray-700 underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                  >
+                  <.film_showcase_link slug={@film["series"]["next_entry"]["slug"]}>
                     <span class="italic text-wrap">{@film["series"]["next_entry"]["title"]}</span>
                     <span class="text-sm">({@film["series"]["next_entry"]["year"]})</span>
-                  </.link>
+                  </.film_showcase_link>
                 </div>
               </div>
             <% end %>
@@ -209,21 +192,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
           <div class="">
             <%= for person <- staff["people"] do %>
               <div class="text-gray-700 text-sm font-content">
-                <%= if person["slug"] do %>
-                  <.link
-                    class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                    href={~p"/v2/people/#{person["slug"]}"}
-                  >
-                    {raw(
-                      if person["disambig_chars"] do
-                        person["name"] <>
-                          ~s| <span class="text-xs">(<span class="font-japanese">#{person["disambig_chars"]}</span>)</span>|
-                      else
-                        person["name"]
-                      end
-                    )}
-                  </.link>
-                <% else %>
+                <.person_showcase_link slug={person["slug"]}>
                   {raw(
                     if person["disambig_chars"] do
                       person["name"] <>
@@ -232,7 +201,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                       person["name"]
                     end
                   )}
-                <% end %>
+                </.person_showcase_link>
 
                 <br />
                 <%= if person["alias"] do %>
@@ -276,26 +245,14 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
               <% end %>
             </div>
             <div class="font-content text-sm sm:text-center text-gray-700">
-              <%= if cast["slug"] do %>
-                <.link
-                  class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                  href={~p"/v2/people/#{cast["slug"]}"}
-                >
-                  {cast["name"]}
-                  <%= if cast["disambig_chars"] do %>
-                    <span class="text-xs">
-                      (<span class="font-japanese">{cast["disambig_chars"]}</span>)
-                    </span>
-                  <% end %>
-                </.link>
-              <% else %>
+              <.person_showcase_link slug={cast["slug"]}>
                 {cast["name"]}
                 <%= if cast["disambig_chars"] do %>
                   <span class="text-xs">
                     (<span class="font-japanese">{cast["disambig_chars"]}</span>)
                   </span>
                 <% end %>
-              <% end %>
+              </.person_showcase_link>
             </div>
             <%= if cast["alias"] do %>
               <div class="font-content text-xs text-gray-500">
@@ -313,26 +270,14 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
             <%= if cast["secondary"] do %>
               <%= for secondary <- cast["secondary"] do %>
                 <div class="font-content text-sm sm:text-center text-gray-700">
-                  <%= if secondary["slug"] do %>
-                    <.link
-                      class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                      href={~p"/v2/people/#{secondary["slug"]}"}
-                    >
-                      {cast["name"]}
-                      <%= if secondary["disambig_chars"] do %>
-                        <span class="text-xs">
-                          (<span class="font-japanese">{secondary["disambig_chars"]}</span>)
-                        </span>
-                      <% end %>
-                    </.link>
-                  <% else %>
+                  <.person_showcase_link slug={secondary["slug"]}>
                     {secondary["name"]}
-                    <%= if cast["disambig_chars"] do %>
+                    <%= if secondary["disambig_chars"] do %>
                       <span class="text-xs">
                         (<span class="font-japanese">{secondary["disambig_chars"]}</span>)
                       </span>
                     <% end %>
-                  <% end %>
+                  </.person_showcase_link>
                 </div>
                 <%= if secondary["alias"] do %>
                   <div class="font-content text-xs text-gray-500">
@@ -366,10 +311,10 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
         <%!-- <.role primary_role={primary_role} secondary_roles={rest} /> --%>
       <% end %>
     </div>
-    <%= if @film["supporting_cast"] && not Enum.empty?(@film["supporting_cast"]) do %>
+    <%= if not Enum.empty?(nil_safe_iterator(@film["supporting_cast"])) do %>
       <.named_divider name="supporting cast" />
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
-        <%= for cast <- @film["supporting_cast"] do %>
+        <%= for cast <- nil_safe_iterator(@film["supporting_cast"]) do %>
           <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
             <div class="shrink-0">
               <img
@@ -388,26 +333,14 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                 <% end %>
               </div>
               <div class="font-content text-sm sm:text-center text-gray-700">
-                <%= if cast["slug"] do %>
-                  <.link
-                    class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                    href={~p"/v2/people/#{cast["slug"]}"}
-                  >
-                    {cast["name"]}
-                    <%= if cast["disambig_chars"] do %>
-                      <span class="text-xs">
-                        (<span class="font-japanese">{cast["disambig_chars"]}</span>)
-                      </span>
-                    <% end %>
-                  </.link>
-                <% else %>
+                <.person_showcase_link slug={cast["slug"]}>
                   {cast["name"]}
                   <%= if cast["disambig_chars"] do %>
                     <span class="text-xs">
                       (<span class="font-japanese">{cast["disambig_chars"]}</span>)
                     </span>
                   <% end %>
-                <% end %>
+                </.person_showcase_link>
               </div>
               <%= if cast["alias"] do %>
                 <div class="font-content text-xs text-gray-500">
@@ -440,10 +373,10 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
         <% end %>
       </div>
     <% end %>
-    <%= if @film["kaiju"] && not Enum.empty?(@film["kaiju"]) do %>
+    <%= if not Enum.empty?(nil_safe_iterator(@film["kaiju"])) do %>
       <.named_divider name="kaiju, etc." />
       <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
-        <%= for kaiju <- @film["kaiju"] do %>
+        <%= for kaiju <- nil_safe_iterator(@film["kaiju"]) do %>
           <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
             <div class="shrink-0">
               <img
@@ -457,16 +390,10 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                 <%= if portrayal["people"] do %>
                   <%= for person <- portrayal["people"] do %>
                     <div class="font-content text-sm sm:text-center text-gray-700">
-                      <%= if person["slug"] do %>
-                        <.link
-                          class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                          href={~p"/v2/people/#{person["slug"]}"}
-                        >
-                          {person["name"]}
-                        </.link>
-                      <% else %>
+                      <.person_showcase_link slug={person["slug"]}>
                         {person["name"]}
-                      <% end %>
+                      </.person_showcase_link>
+
                       <%= if person["alias"] do %>
                         <div class="font-content text-xs text-gray-500">
                           <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{person["alias"]}

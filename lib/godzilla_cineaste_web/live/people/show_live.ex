@@ -1,7 +1,6 @@
 defmodule GodzillaCineasteWeb.People.ShowLive do
   use GodzillaCineasteWeb, :live_view
 
-  import GodzillaCineasteWeb.PeopleComponents
   import GodzillaCineasteWeb.CommonComponents
 
   alias GodzillaCineaste.People
@@ -94,59 +93,41 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             <div class="font-content text-gray-700">Unknown Date</div>
           </div>
         <% end %>
-        <%= if !!@person["aliases"] and not Enum.empty?(@person["aliases"]) do %>
-          <%= for a <- @person["aliases"] do %>
-            <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
-              <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
-              <div>
-                <div class="font-content text-gray-700">{a["name"]}</div>
-                <%= if a["japanese_name"] do %>
-                  <div class="font-content text-gray-500 text-xs">{a["japanese_name"]}</div>
-                <% end %>
-                <%= if a["context"] do %>
-                  <div class="font-content text-gray-500 text-xs">{a["context"]}</div>
-                <% end %>
+        <%= for a <- nil_safe_iterator(@person["aliases"]) do %>
+          <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+            <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
+            <div>
+              <div class="font-content text-gray-700">{a["name"]}</div>
+              <%= if a["japanese_name"] do %>
+                <div class="font-content text-gray-500 text-xs">{a["japanese_name"]}</div>
+              <% end %>
+              <%= if a["context"] do %>
+                <div class="font-content text-gray-500 text-xs">{a["context"]}</div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+        <%= for spouse <- nil_safe_iterator(@person["spouses"]) do %>
+          <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+            <div><.icon name="tabler-chart-circles" class="text-gray-500 h-5 w-5" /></div>
+            <div>
+              <div class="font-content text-gray-500">
+                <.person_showcase_link slug={spouse["slug"]}>
+                  {spouse["name"]}
+                </.person_showcase_link>
               </div>
             </div>
-          <% end %>
+          </div>
         <% end %>
-        <%= if !!@person["spouses"] and not Enum.empty?(@person["spouses"]) do %>
-          <%= for spouse <- @person["spouses"] do %>
-            <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
-              <div><.icon name="tabler-chart-circles" class="text-gray-500 h-5 w-5" /></div>
-              <div>
-                <div class="font-content text-gray-500">
-                  <%= if spouse["slug"] do %>
-                    <.link
-                      class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                      href={~p"/v2/people/#{spouse["slug"]}"}
-                    >
-                      {spouse["name"]}
-                    </.link>
-                  <% else %>
-                    {spouse["name"]}
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
-        <%= if !!@person["family"] and not Enum.empty?(@person["family"]) do %>
+        <%= if not Enum.empty?(nil_safe_iterator(@person["family"])) do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-users-group" class="text-gray-500 h-5 w-5" /></div>
             <div>
-              <%= for family <- @person["family"] do %>
+              <%= for family <- nil_safe_iterator(@person["family"]) do %>
                 <div class="font-content text-gray-500">
-                  <%= if family["slug"] do %>
-                    <.link
-                      class="underline decoration-gray-300 decoration-1 underline-offset-2 hover:cursor-pointer hover:text-red-700 hover:decoration-red-700"
-                      href={~p"/v2/people/#{family["slug"]}"}
-                    >
-                      {family["name"]}
-                    </.link>
-                  <% else %>
+                  <.person_showcase_link slug={family["slug"]}>
                     {family["name"]}
-                  <% end %>
+                  </.person_showcase_link>
                 </div>
                 <div class="font-content text-gray-500 text-xs capitalize">
                   {family["relationship"]}
@@ -157,17 +138,15 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
         <% end %>
       </div>
     </div>
-    <%= if @person["bio"] && !Enum.empty?(@person["bio"]) do %>
-      <%= for b <- @person["bio"] do %>
-        <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
-          {raw(b)}
-        </div>
-      <% end %>
+    <%= for b <- nil_safe_iterator(@person["bio"]) do %>
+      <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
+        {raw(b)}
+      </div>
     <% end %>
-    <%= if @person["accolades"] && !Enum.empty?(@person["accolades"]) do %>
+    <%= if not Enum.empty?(nil_safe_iterator(@person["accolades"])) do %>
       <.named_divider name="Accolades" />
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
-        <%= for accolade <- @person["accolades"] do %>
+        <%= for accolade <- nil_safe_iterator(@person["accolades"]) do %>
           <div class={"font-content text-xs gap-1 #{if accolade["status"] == "won", do: "text-amber-600", else: "text-gray-700"}"}>
             <div class="flex items-end gap-1">
               <div>
