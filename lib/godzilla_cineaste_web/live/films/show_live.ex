@@ -225,8 +225,60 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
       <.full_credits_modal film={@film} credits={@credits} />
     </div>
     <.named_divider name="top billed cast" />
+    <.cast_block block={@film["top_billed_cast"]} />
+    <%= if not Enum.empty?(nil_safe_iterator(@film["supporting_cast"])) do %>
+      <.named_divider name="supporting cast" />
+      <.cast_block block={@film["supporting_cast"]} />
+    <% end %>
+    <%= if not Enum.empty?(nil_safe_iterator(@film["kaiju"])) do %>
+      <.named_divider name="kaiju, etc." />
+      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
+        <%= for kaiju <- nil_safe_iterator(@film["kaiju"]) do %>
+          <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
+            <div class="shrink-0">
+              <img
+                class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
+                src={kaiju["avatar_url"]}
+              />
+            </div>
+            <div class="flex flex-col sm:items-center">
+              <div class="font-content text-gray-500 text-xs">{kaiju["name"]}</div>
+              <%= for portrayal <- kaiju["portrayals"] do %>
+                <%= if portrayal["people"] do %>
+                  <%= for person <- portrayal["people"] do %>
+                    <div class="font-content text-sm sm:text-center text-gray-700">
+                      <.person_showcase_link slug={person["slug"]}>
+                        {person["name"]}
+                      </.person_showcase_link>
+
+                      <%= if person["alias"] do %>
+                        <div class="font-content text-xs text-gray-500">
+                          <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{person["alias"]}
+                        </div>
+                      <% end %>
+                      <div class="font-detail text-xs text-gray-500 uppercase">
+                        <.qualifier_icon qualifier={portrayal["type"]} />
+                      </div>
+                    </div>
+                  <% end %>
+                <% else %>
+                  <div class="font-detail text-xs text-gray-500 uppercase">
+                    <.qualifier_icon qualifier={portrayal["type"]} />
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    """
+  end
+
+  def cast_block(assigns) do
+    ~H"""
     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
-      <%= for cast <- @film["top_billed_cast"] do %>
+      <%= for cast <- @block do %>
         <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
           <div class="shrink-0">
             <img
@@ -294,127 +346,10 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
                 </div>
               <% end %>
             <% end %>
-            <%!-- <%= for role <- @secondary_roles do %>
-              <div class="font-content text-gray-700 text-sm">
-                <.showcase_link entity={get_entity(role)}>
-                  {role_display_name(role)}
-                </.showcase_link>
-              </div>
-              <div class="font-detail text-xs text-gray-500 uppercase">
-                <%= if role.role_qualifiers do %>
-                  <.qualifier_icon qualifier={role.role_qualifiers} />
-                <% end %>
-              </div>
-            <% end %> --%>
           </div>
         </div>
-        <%!-- <.role primary_role={primary_role} secondary_roles={rest} /> --%>
       <% end %>
     </div>
-    <%= if not Enum.empty?(nil_safe_iterator(@film["supporting_cast"])) do %>
-      <.named_divider name="supporting cast" />
-      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:w-fit w-96 m-auto">
-        <%= for cast <- nil_safe_iterator(@film["supporting_cast"]) do %>
-          <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
-            <div class="shrink-0">
-              <img
-                class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
-                src={cast["avatar_url"]}
-              />
-            </div>
-            <div class="flex flex-col sm:items-center">
-              <div class="font-content sm:text-center text-gray-500 text-xs">
-                {raw(process_role_name(cast["role"]))}
-                <%= if cast["character_qualifiers"] do %>
-                  <br />
-                  <span class="text-xs font-detail">
-                    {cast["character_qualifiers"]}
-                  </span>
-                <% end %>
-              </div>
-              <div class="font-content text-sm sm:text-center text-gray-700">
-                <.person_showcase_link slug={cast["slug"]}>
-                  {cast["name"]}
-                  <%= if cast["disambig_chars"] do %>
-                    <span class="text-xs">
-                      (<span class="font-japanese">{cast["disambig_chars"]}</span>)
-                    </span>
-                  <% end %>
-                </.person_showcase_link>
-              </div>
-              <%= if cast["alias"] do %>
-                <div class="font-content text-xs text-gray-500">
-                  <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{cast["alias"]}
-                </div>
-              <% end %>
-              <div class="font-detail text-xs text-gray-500 uppercase">
-                <%= if cast["qualifiers"]  do %>
-                  <.qualifier_icon qualifier={cast["qualifiers"]} />
-                <% end %>
-                <%= if cast["uncredited"] do %>
-                  <.icon name="tabler-id-off" class="text-red-700 h-4 w-4" />
-                <% end %>
-              </div>
-              <%!-- <%= for role <- @secondary_roles do %>
-              <div class="font-content text-gray-700 text-sm">
-                <.showcase_link entity={get_entity(role)}>
-                  {role_display_name(role)}
-                </.showcase_link>
-              </div>
-              <div class="font-detail text-xs text-gray-500 uppercase">
-                <%= if role.role_qualifiers do %>
-                  <.qualifier_icon qualifier={role.role_qualifiers} />
-                <% end %>
-              </div>
-            <% end %> --%>
-            </div>
-          </div>
-          <%!-- <.role primary_role={primary_role} secondary_roles={rest} /> --%>
-        <% end %>
-      </div>
-    <% end %>
-    <%= if not Enum.empty?(nil_safe_iterator(@film["kaiju"])) do %>
-      <.named_divider name="kaiju, etc." />
-      <div class="flex flex-col sm:flex-row sm:flex-wrap sm:w-fit w-96 m-auto gap-4">
-        <%= for kaiju <- nil_safe_iterator(@film["kaiju"]) do %>
-          <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
-            <div class="shrink-0">
-              <img
-                class="h-[75px] w-[75px] sm:h-[100px] sm:w-[100px] max-w-[150px] rounded-lg drop-shadow-lg"
-                src={kaiju["avatar_url"]}
-              />
-            </div>
-            <div class="flex flex-col sm:items-center">
-              <div class="font-content text-gray-500 text-xs">{kaiju["name"]}</div>
-              <%= for portrayal <- kaiju["portrayals"] do %>
-                <%= if portrayal["people"] do %>
-                  <%= for person <- portrayal["people"] do %>
-                    <div class="font-content text-sm sm:text-center text-gray-700">
-                      <.person_showcase_link slug={person["slug"]}>
-                        {person["name"]}
-                      </.person_showcase_link>
-
-                      <%= if person["alias"] do %>
-                        <div class="font-content text-xs text-gray-500">
-                          <.icon name="tabler-at" class="text-gray-500 h-3 w-3" />{person["alias"]}
-                        </div>
-                      <% end %>
-                      <div class="font-detail text-xs text-gray-500 uppercase">
-                        <.qualifier_icon qualifier={portrayal["type"]} />
-                      </div>
-                    </div>
-                  <% end %>
-                <% else %>
-                  <div class="font-detail text-xs text-gray-500 uppercase">
-                    <.qualifier_icon qualifier={portrayal["type"]} />
-                  </div>
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
     """
   end
 
