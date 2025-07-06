@@ -10,8 +10,8 @@ birth_place: Nanticoke, Pennsylvania, USA
 dod: 1968-02-07
 death_place: Los Angeles, California, USA
 cause_of_death: Drug Overdose
-spouse:
-  name: Carol Nugent
+spouses:
+  - name: Carol Nugent
 bio:
   - Served in the Coast Guard from 1952 through 1955.
   - Acquainted with Jack Palance, Henry Fonda, James Dean, and Elvis Presley.
@@ -21,7 +21,8 @@ accolades:
   - status: nominated
     ceremony: 36th Oscars
     category: Best Supporting Actor
-    film: Twilight of Honey
+    films:
+      - title: Twilight of Honor
 works:
   - title: The Rebel
     year: 1959

@@ -1,6 +1,8 @@
 defmodule GodzillaCineasteWeb.Films.ShowLive do
   use GodzillaCineasteWeb, :live_view
 
+  import GodzillaCineasteWeb.CommonComponents
+
   @impl true
   def mount(_params, _session, socket) do
     {:ok, assign(socket, film: nil)}
@@ -45,7 +47,7 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
           <div>
             <.icon name="tabler-calendar-event" class="h-5 w-4 text-gray-500" />
           </div>
-          <div>{@film["release_date"] |> Date.from_iso8601!() |> Calendar.strftime("%-d %b %Y")}</div>
+          <div>{display_date(@film["release_date"])}</div>
         </div>
         <div class="text-gray-700 font-content flex items-center gap-1">
           <div>

@@ -17,6 +17,10 @@ defmodule GodzillaCineaste.People do
     Work
   }
 
+  def get_person(slug) do
+    Library.get_person(slug)
+  end
+
   def list_people do
     Library.list_people()
   end

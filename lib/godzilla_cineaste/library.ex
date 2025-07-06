@@ -28,6 +28,13 @@ defmodule GodzillaCineaste.Library do
     end
   end
 
+  def get_person(slug) do
+    case :ets.lookup(:people, slug) do
+      [{_, person}] -> {:ok, person}
+      [] -> {:error, :not_found}
+    end
+  end
+
   def list_films do
     :films
     |> :ets.tab2list()

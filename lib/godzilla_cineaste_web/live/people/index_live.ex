@@ -3,7 +3,7 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, people: GodzillaCineaste.People.list_people())}
+    {:ok, assign(socket, people: GodzillaCineaste.People.list_people(), page_title: "People")}
   end
 
   @impl true
