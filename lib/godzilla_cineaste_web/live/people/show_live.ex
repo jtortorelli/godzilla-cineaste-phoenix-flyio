@@ -56,6 +56,11 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
               <%= if @person["birth_name"] do %>
                 <div class="font-content text-gray-500 text-xs">{@person["birth_name"]}</div>
               <% end %>
+              <%= if @person["japanese_birth_name"] do %>
+                <div class="font-content text-gray-500 text-xs">
+                  {@person["japanese_birth_name"]}
+                </div>
+              <% end %>
               <%= if @person["birth_place"] do %>
                 <div class="font-content text-gray-500 text-xs">
                   {@person["birth_place"]}
@@ -87,7 +92,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             </div>
           </div>
         <% end %>
-        <%= if String.downcase(@person["dod"]) == "unknown" do %>
+        <%= if String.downcase(@person["dod"] || "") == "unknown" do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
             <div class="font-content text-gray-700">Unknown Date</div>
