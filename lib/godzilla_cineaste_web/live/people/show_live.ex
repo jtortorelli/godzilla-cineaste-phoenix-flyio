@@ -109,6 +109,11 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
               <%= if a["context"] do %>
                 <div class="font-content text-gray-500 text-xs">{a["context"]}</div>
               <% end %>
+              <%= if a["category"] == "mistranslation" do %>
+                <div class="font-content text-gray-500 text-xs">
+                  Mistranslation
+                </div>
+              <% end %>
             </div>
           </div>
         <% end %>

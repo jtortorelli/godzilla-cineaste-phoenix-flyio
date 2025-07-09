@@ -1,8 +1,4 @@
 slugs = ~w(
-anzai-kyoko
-arikawa-sadamasa
-arishima-ichiro
-asahiyo-taro
 chiaki-minoru
 conway-harold
 dan-ikuma
@@ -114,7 +110,7 @@ Enum.each(slugs, fn slug ->
   end
 
   aliases =
-    person.alternate_names
+    entity.alternate_names
     |> Enum.reject(&(&1.category == :birth_name))
     |> Enum.map(fn alias ->
       %{
