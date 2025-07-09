@@ -4,6 +4,7 @@ type: person
 works:
   - format: film
     title: Destroy All Monsters
+    slug: destroy-all-monsters-1968
     year: 1968
     roles:
       - name: Queen Kilaak

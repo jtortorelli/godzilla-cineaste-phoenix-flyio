@@ -1,6 +1,4 @@
 slugs = ~w(
-ai-kyoko
-amamoto-hideyo
 anzai-kyoko
 arikawa-sadamasa
 arishima-ichiro
@@ -115,8 +113,21 @@ Enum.each(slugs, fn slug ->
       role.name
   end
 
+  aliases =
+    person.alternate_names
+    |> Enum.reject(&(&1.category == :birth_name))
+    |> Enum.map(fn alias ->
+      %{
+        name: alias.name,
+        japanese_name: alias.japanese_name,
+        context: alias.context,
+        category: alias.category
+      }
+    end)
+
   map = %{
     name: entity.display_name,
+    aliases: aliases,
     type: "person",
     profession: entity.profession,
     avatar_url: entity.avatar_url,
@@ -139,6 +150,7 @@ Enum.each(slugs, fn slug ->
         %GodzillaCineaste.Film{} = film ->
           %{
             title: film.title,
+            slug: film.slug,
             poster_url: GodzillaCineaste.Film.primary_poster_url(film),
             year: film.release_date.year,
             format: "film",
