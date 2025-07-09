@@ -178,7 +178,157 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
     <div class="full-filmography">
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
         <%= for entry <- @person["works"] do %>
-          <%!-- <.person_filmography_entry entry={entry} /> --%>
+          <%= if String.downcase(entry["format"]) == "tv series" do %>
+            <div class="flex flex-row w-60 items-start gap-3">
+              <div class="shrink-0">
+                <img class="rounded-lg drop-shadow-lg" width={101} src={entry["title_card_url"]} />
+              </div>
+              <div>
+                <div class="font-content text-xs text-gray-500 flex items-baseline gap-1">
+                  <div>
+                    <.icon name="tabler-device-tv-old" class="h-5 w-4" />
+                  </div>
+                  <div>
+                    {entry["year"]}
+                  </div>
+                </div>
+                <div class="font-content text-sm text-gray-700 mb-1">
+                  <span class="italic">{entry["title"]}</span>
+                </div>
+                <%= for s <- nil_safe_iterator(entry["staff"]) do %>
+                  <div class="font-content text-xs text-gray-500 flex">
+                    <div>
+                      <.icon name="tabler-chair-director" class="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div>
+                        {s["role"]}
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+                <%= for r <- nil_safe_iterator(entry["roles"]) do %>
+                  <div class="font-content text-xs text-gray-500 flex gap-1">
+                    <div>
+                      <.icon name="tabler-masks-theater" class="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div>
+                        {r["name"]}
+                      </div>
+                      <div>
+                        {r["episode_count"]} {if r["episode_count"] > 1,
+                          do: "Episodes",
+                          else: "Episode"}
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+          <%= if String.downcase(entry["format"]) == "film" do %>
+            <div class="flex flex-row w-60 items-start gap-3">
+              <div class="shrink-0">
+                <img
+                  class="rounded-lg drop-shadow-lg min-h-[150px]"
+                  height={150}
+                  width={101}
+                  src={entry["poster_url"]}
+                />
+              </div>
+              <div>
+                <div class="font-content text-xs text-gray-500 flex items-baseline gap-1">
+                  <div>
+                    <.icon name="tabler-movie" class="h-5 w-4" />
+                  </div>
+                  <div>
+                    {entry["year"]}
+                  </div>
+                </div>
+                <div class="font-content text-sm text-gray-700 mb-1">
+                  <.film_showcase_link slug={entry["slug"]}>
+                    <span class="italic">{entry["title"]}</span>
+                  </.film_showcase_link>
+                </div>
+                <%= for s <- nil_safe_iterator(entry["staff"]) do %>
+                  <div class="font-content text-xs text-gray-500 flex">
+                    <div>
+                      <.icon name="tabler-chair-director" class="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div>
+                        {s["role"]}
+                      </div>
+                      <%= if s["staff_alias"] do %>
+                        <div>
+                          <.icon name="tabler-at" class="h-3 w-3" />{s["staff_alias"]}
+                        </div>
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+                <%= for r <- nil_safe_iterator(entry["kaiju_roles"]) ++ nil_safe_iterator(entry["roles"]) do %>
+                  <div class="font-content text-xs text-gray-500 flex gap-1">
+                    <div>
+                      <.icon name="tabler-masks-theater" class="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div>
+                        {r["name"]}
+                      </div>
+                      <%= if r["actor_alias"] do %>
+                        <.icon name="tabler-at" class="h-3 w-3" />{r["actor_alias"]}
+                      <% end %>
+                      <%= for q <- nil_safe_iterator(r["qualifiers"]) do %>
+                        <.qualifier_icon qualifier={q} />
+                      <% end %>
+                      <%= if r["uncredited"] do %>
+                        <.icon name="tabler-id-off" class="text-red-700 h-3 w-3" />
+                      <% end %>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+          <%= if String.downcase(entry["format"]) == "book" do %>
+            <div class="flex flex-row w-60 items-start gap-3">
+              <div class="shrink-0">
+                <img
+                  class="rounded-lg drop-shadow-lg min-h-[125px]"
+                  height={125}
+                  width={101}
+                  src={entry["cover_url"]}
+                />
+              </div>
+              <div>
+                <div class="font-content text-xs text-gray-500 flex items-baseline gap-1">
+                  <div>
+                    <.icon name="tabler-book" class="h-5 w-4" />
+                  </div>
+                  <div>
+                    {entry["year"]}
+                  </div>
+                </div>
+                <div class="font-content text-sm text-gray-700 mb-1">
+                  <span class="italic">{entry["title"]}</span>
+                </div>
+                <%= for s <- nil_safe_iterator(entry["staff"]) do %>
+                  <div class="font-content text-xs text-gray-500 flex gap-1">
+                    <div>
+                      <.icon name="tabler-pencil" class="h-4 w-4" />
+                    </div>
+                    <div>
+                      <div>
+                        {s["role"]}
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>

@@ -25,6 +25,7 @@ accolades:
       - title: Twilight of Honor
 works:
   - title: The Rebel
+    title_card_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/tv-series/rebel-1959/title_cards/s-l1200.jpg?t=2024-10-24T16%3A50%3A59.697Z
     year: 1959
     format: TV Series
     staff:
@@ -33,28 +34,33 @@ works:
       - name: Johnny Yuma
         episode_count: 76
   - title: Twilight of Honor
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/twilight-of-honor-1963/posters/MV5BYTY0MmRhNDAtYmNjYi00NGVhLWFlNDAtMDRkZDFjZjEwODNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg?t=2024-10-28T01:38:12.194Z
     year: 1963
     format: Film
     roles:
       - name: Ben Brown
   - title: Frankenstein Conquers the World
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
     slug: frankenstein-conquers-the-world-1965
     year: 1965
     format: Film
     roles:
       - name: Doctor James Bowen
   - title: Invasion of Astro-Monster
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invasion-of-astro-monster-1965/posters/monster-zero-1965.jpg
     slug: invasion-of-astro-monster-1965
     year: 1965
     format: Film
     roles:
       - name: Astronaut Glenn
   - title: The Killing Bottle
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/killing-bottle-1967/posters/The%20Killing%20Bottle%20Poster%201967.jpg
     year: 1967
     format: Film
     roles:
       - name: John Carter
   - title: The Rebel and the King
+    cover_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/books/rebel-and-the-king-2012/The%20Rebel%20and%20the%20King.jpg
     year: 2012
     format: Book
     staff:

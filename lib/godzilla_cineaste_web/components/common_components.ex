@@ -47,4 +47,27 @@ defmodule GodzillaCineasteWeb.CommonComponents do
     </.link>
     """
   end
+
+  def qualifier_icon(assigns) do
+    ~H"""
+    <%= case String.downcase(@qualifier) do %>
+      <% "cgi" -> %>
+        <.icon name="tabler-server" class="h-4 w-4" />
+      <% "motion capture" -> %>
+        <.icon name="tabler-stretching-2" class="h-4 w-4" />
+      <% "american version" -> %>
+        <.icon name="tabler-world" class="h-4 w-4" />
+      <% "photo" -> %>
+        <.icon name="tabler-photo" class="h-4 w-4" />
+      <% "puppet" -> %>
+        <.icon name="tabler-mood-happy" class="h-4 w-4" />
+      <% "stock footage" -> %>
+        <.icon name="tabler-recycle" class="h-4 w-4" />
+      <% "suit actor" -> %>
+        <.icon name="tabler-meeple" class="h-4 w-4" />
+      <% "voice" -> %>
+        <.icon name="tabler-microphone-2" class="h-4 w-4" />
+    <% end %>
+    """
+  end
 end
