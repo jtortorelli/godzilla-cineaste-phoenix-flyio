@@ -1,0 +1,21 @@
+---
+name: Enomoto Ken'ichi
+type: person
+works:
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Tamaso
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+japanese_name: 榎本健一
+birth_place: Tokyo, Japan
+dob: 1904-10-11
+dob_resolution: exact
+dod: 1970-01-07
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/enomoto-kenichi/enomoto-kenichi.jpg
+cause_of_death: Cirrhosis

@@ -1,0 +1,19 @@
+---
+name: William Hope Hodgson
+type: person
+works:
+  - format: film
+    title: Matango
+    year: 1963
+    slug: matango-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/matango-1963/posters/matango-1963.jpg
+japanese_name: ウイリアム・ホープ・ホジスン
+birth_place: Blackmore End, Essex, England
+death_place: Ypres, Belgium
+dob: 1877-11-15
+dob_resolution: exact
+dod: 1918-04-01
+dod_resolution: month
+profession: Author
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/hodgson-william-hope/hodgson-william-hope.jpg
+cause_of_death: Artillery Shell Impact

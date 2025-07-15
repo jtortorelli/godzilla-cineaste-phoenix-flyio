@@ -1,0 +1,77 @@
+---
+name: Iketani Saburô
+type: person
+works:
+  - format: film
+    title: Godzilla
+    year: 1954
+    roles:
+      - name: Announcer
+        uncredited: false
+    slug: godzilla-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-1954/posters/godzilla-1954.jpg
+  - format: film
+    title: Rodan
+    year: 1956
+    roles:
+      - name: News Reader
+        uncredited: true
+    slug: rodan-1956
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rodan-1956/posters/rodan-1956.jpg
+  - format: film
+    title: Battle in Outer Space
+    year: 1959
+    roles:
+      - name: Newsreader
+        uncredited: true
+    slug: battle-in-outer-space-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-in-outer-space-1959/posters/battle-in-outer-space-1959.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Announcer
+        uncredited: true
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: TV Announcer
+        uncredited: true
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: TV Announcer
+        uncredited: true
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: Invasion of Astro-Monster
+    year: 1965
+    roles:
+      - name: Radio Announcer
+        uncredited: true
+    slug: invasion-of-astro-monster-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invasion-of-astro-monster-1965/posters/monster-zero-1965.jpg
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: Radio Announcer
+        uncredited: false
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+japanese_name: 池谷三郎
+birth_place: Tokyo, Japan
+dob: 1923-08-19
+dob_resolution: exact
+dod: 2002-10-19
+dod_resolution: exact
+profession: Announcer
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/iketani-saburo/iketani-saburo.jpg
+cause_of_death: Pneumonia

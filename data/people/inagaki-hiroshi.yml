@@ -1,0 +1,71 @@
+---
+name: Inagaki Hiroshi
+type: person
+aliases:
+  - name: Kahijara Kinpachi
+    context:
+    category: alias
+    japanese_name: 梶原金八
+  - name: Azuma Akihiro
+    context:
+    category: alias
+    japanese_name: 東明浩
+works:
+  - format: film
+    title: 'Samurai I: Musashi Miyamoto'
+    year: 1954
+    slug: samurai-i-musashi-miyamoto-1954
+    staff:
+      - role: Director
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-i-musashi-miyamoto-1954/posters/samurai-i-musashi-miyamoto-1954.jpg
+  - format: film
+    title: 'Samurai II: Duel at Ichijoji Temple'
+    year: 1955
+    slug: samurai-ii-duel-at-ichijoji-temple-1955
+    staff:
+      - role: Director
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-ii-duel-at-ichijoji-temple-1955/posters/samurai-ii-duel-at-ichijoji-temple-1955.jpg
+  - format: film
+    title: 'Samurai III: Duel at Ganryu Island'
+    year: 1956
+    slug: samurai-iii-duel-at-ganryu-island-1956
+    staff:
+      - role: Director
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-iii-duel-at-ganryu-island-1956/posters/samurai-iii-duel-at-ganryu-island-1956.jpg
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    slug: three-treasures-1959
+    staff:
+      - role: Director
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    slug: daredevil-in-the-castle-1961
+    staff:
+      - role: Director
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Whirlwind
+    year: 1964
+    slug: whirlwind-1964
+    staff:
+      - role: Director
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/whirlwind-1964/posters/whirlwind-1964.jpg
+japanese_name: 稲垣浩
+birth_name: Inagaki Kôjirô
+birth_place: Tokyo, Japan
+dob: 1905-12-30
+dob_resolution: exact
+dod: 1980-05-21
+dod_resolution: exact
+profession: Director
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/inagaki-hiroshi/inagaki-hiroshi.jpg
+japanese_birth_name: 稲垣浩二郎
+cause_of_death: Cirrhosis

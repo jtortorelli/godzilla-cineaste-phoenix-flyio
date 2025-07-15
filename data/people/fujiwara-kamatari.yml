@@ -1,0 +1,76 @@
+---
+name: Fujiwara Kamatari
+type: person
+works:
+  - format: film
+    title: Seven Samurai
+    year: 1954
+    roles:
+      - name: Manzô
+        uncredited: false
+    slug: seven-samurai-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/seven-samurai-1954/posters/seven-samurai-1954.jpg
+  - format: film
+    title: Invisible Man
+    year: 1954
+    roles:
+      - name: Mari's Grandfather
+        uncredited: false
+    slug: invisible-man-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invisible-man-1954/posters/invisible-man-1954.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Matashichi
+        uncredited: false
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: Yojimbo
+    year: 1961
+    roles:
+      - name: Tazaemon
+        uncredited: false
+    slug: yojimbo-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/yojimbo-1961/posters/yojimbo-1961.jpg
+  - format: film
+    title: Sanjuro
+    year: 1962
+    roles:
+      - name: Takebayashi
+        uncredited: false
+    slug: sanjuro-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sanjuro-1962/posters/sanjuro-1962.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Hospital Waste Collector
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: Three Outlaw Samurai
+    year: 1964
+    roles:
+      - name: Jinbei
+        uncredited: false
+    slug: three-outlaw-samurai-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-outlaw-samurai-1964/posters/three-outlaw-samurai-1964.jpg
+  - format: film
+    title: Kagemusha
+    year: 1980
+    roles:
+      - name: Doctor
+        uncredited: false
+    slug: kagemusha-1980
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kagemusha-1980/posters/kagemusha-1980.jpg
+japanese_name: 藤原釜足
+birth_place: Tokyo, Japan
+dob: 1905-01-15
+dob_resolution: exact
+dod: 1985-12-21
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/fujiwara-kamatari/fujiwara-kamatari.jpg

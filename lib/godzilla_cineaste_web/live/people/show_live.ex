@@ -48,7 +48,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             </div>
             <div class="space-y-1">
               <div class="font-content text-gray-700">
-                {display_date(@person["dob"])}
+                {display_date(@person["dob"], @person["dob_resolution"])}
                 <%= if !@person["dod"] do %>
                   ({age(@person["dob"])})
                 <% end %>
@@ -74,7 +74,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
             <div class="space-y-1">
               <div class="font-content text-gray-700">
-                {display_date(@person["dod"])} ({lifespan(
+                {display_date(@person["dod"], @person["dod_resolution"])} ({lifespan(
                   @person["dob"],
                   @person["dod"]
                 )})
@@ -224,7 +224,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
                     </div>
                     <div>
                       <div>
-                        {r["name"]}
+                        {raw(process_role_name(r["name"]))}
                       </div>
                       <div>
                         {r["episode_count"]} {if r["episode_count"] > 1,
@@ -285,7 +285,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
                     </div>
                     <div>
                       <div>
-                        {r["name"]}
+                        {raw(process_role_name(r["name"]))}
                       </div>
                       <%= if r["actor_alias"] do %>
                         <.icon name="tabler-at" class="h-3 w-3" />{r["actor_alias"]}

@@ -1,0 +1,38 @@
+---
+name: Ikebe Ryô
+type: person
+works:
+  - format: film
+    title: Battle in Outer Space
+    year: 1959
+    roles:
+      - name: Major Katsumiya Ichirô
+        uncredited: false
+    slug: battle-in-outer-space-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-in-outer-space-1959/posters/battle-in-outer-space-1959.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Doctor Tazawa
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: The War in Space
+    year: 1977
+    roles:
+      - name: Takigawa Masato
+        uncredited: false
+    slug: war-in-space-1977
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-in-space-1977/posters/war-in-space-1977.jpg
+japanese_name: 池部良
+birth_place: Tokyo, Japan
+death_place: Tokyo, Japan
+dob: 1918-02-11
+dob_resolution: exact
+dod: 2010-10-08
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/ikebe-ryo/ikebe-ryo.jpg
+cause_of_death: Sepsis

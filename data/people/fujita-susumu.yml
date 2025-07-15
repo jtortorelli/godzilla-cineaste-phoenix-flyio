@@ -1,0 +1,86 @@
+---
+name: Fujita Susumu
+type: person
+works:
+  - format: film
+    title: The Mysterians
+    year: 1957
+    roles:
+      - name: General Morita
+        uncredited: false
+    slug: mysterians-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mysterians-1957/posters/mysterians-1957.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Tadokoro Hyôe
+        uncredited: false
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Sakakibara Katsuyasu
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Yojimbo
+    year: 1961
+    roles:
+      - name: Honma
+        uncredited: false
+    slug: yojimbo-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/yojimbo-1961/posters/yojimbo-1961.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Police Executive
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: General
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+  - format: film
+    title: Mothra vs. Godzilla
+    year: 1964
+    roles:
+      - name: General
+        uncredited: false
+    slug: mothra-vs-godzilla-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-vs-godzilla-1964/posters/mothra-vs-godzilla-1964.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: General Iwasa
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: Osaka Police Chief
+        uncredited: false
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+japanese_name: 藤田進
+birth_place: Tokyo, Japan
+death_place: Tokyo, Japan
+dob: 1912-01-08
+dob_resolution: exact
+dod: 1990-03-23
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/fujita-susumu/fujita-susumu.jpg
+cause_of_death: Liver Cancer

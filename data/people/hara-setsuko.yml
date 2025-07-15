@@ -1,0 +1,24 @@
+---
+name: Hara Setsuko
+type: person
+works:
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Amaterasu
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+japanese_name: 原節子
+birth_name: Aida Masae
+birth_place: Yokohama, Kanagawa, Japan
+death_place: Kanagawa, Japan
+dob: 1920-06-17
+dob_resolution: exact
+dod: 2015-09-05
+dod_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/hara-setsuko/hara-setsuko.jpg
+japanese_birth_name: 会田昌江
+cause_of_death: Pneumonia

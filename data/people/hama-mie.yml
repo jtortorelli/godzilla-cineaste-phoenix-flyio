@@ -1,0 +1,42 @@
+---
+name: Hama Mie
+type: person
+works:
+  - format: film
+    title: King Kong vs. Godzilla
+    year: 1962
+    roles:
+      - name: Sakurai Fumiko
+        uncredited: false
+    slug: king-kong-vs-godzilla-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/king-kong-vs-godzilla-1962/posters/king-kong-vs-godzilla-1962.jpg
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: Princess Yaya
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: The Adventure of Kigan Castle
+    year: 1966
+    roles:
+      - name: Kureya
+        uncredited: false
+    slug: adventure-of-kigan-castle-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventure-of-kigan-castle-1966/posters/adventures-of-taklamakan-1966.jpg
+  - format: film
+    title: King Kong Escapes
+    year: 1967
+    roles:
+      - name: Madame Piranha
+        uncredited: false
+    slug: king-kong-escapes-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/king-kong-escapes-1967/posters/king-kong-escapes-1967.jpg
+japanese_name: 浜美枝
+birth_place: Tokyo, Japan
+dob: 1943-11-20
+dob_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/hama-mie/hama-mie.jpg

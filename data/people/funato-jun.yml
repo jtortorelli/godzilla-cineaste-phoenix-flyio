@@ -1,0 +1,33 @@
+---
+name: Funato Jun
+type: person
+works:
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: The Prince of Ming
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Detective Nitta
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+japanese_name: 船戸順
+birth_name: Nishina Tsunetaka
+birth_place: Wakayama, Japan
+spouses:
+  - name: Iwai Yumi
+dob: 1938-11-26
+dob_resolution: exact
+dod: 2021-05-26
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/funato-jun/funato-jun.jpg
+japanese_birth_name: 仁科常隆
+cause_of_death: Lung Cancer

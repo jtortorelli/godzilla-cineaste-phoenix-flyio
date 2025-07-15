@@ -1,0 +1,29 @@
+---
+name: Fujiyama Yôko
+type: person
+works:
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: Jinguji Makoto
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Kirino Masayo
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+japanese_name: 藤山陽子
+birth_place: Yokohama, Kanagawa, Japan
+dob: 1941-12-17
+dob_resolution: exact
+dod: 2022-12-11
+dod_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/fujiyama-yoko/fujiyama-yoko.jpg
+cause_of_death: Subarachnoid Hemorrhage

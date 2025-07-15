@@ -1,0 +1,52 @@
+---
+name: Kagawa Kyôko
+type: person
+works:
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Princess Miyazu
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Ai
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Hanamura Michi
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Gondô Reiko
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: Ballad
+    year: 2009
+    roles:
+      - name: Yoshino
+        uncredited: false
+    slug: ballad-2009
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ballad-2009/posters/ballad-2009.jpg
+japanese_name: 香川京子
+birth_name: Makino Kyôko
+birth_place: Namekata, Ibaraki, Japan
+dob: 1931-12-05
+dob_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kagawa-kyoko/kagawa-kyoko.jpg
+japanese_birth_name: 牧野香子

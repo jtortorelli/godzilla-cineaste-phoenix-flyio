@@ -5,6 +5,25 @@ defmodule GodzillaCineasteWeb.CommonComponents do
     date_string |> Date.from_iso8601!() |> Calendar.strftime("%-d %b %Y")
   end
 
+  def display_date(date_string, date_resolution) when is_binary(date_string) do
+    date = Date.from_iso8601!(date_string)
+
+    case date_resolution do
+      "month" -> Calendar.strftime(date, "%b %Y")
+      "year" -> Calendar.strftime(date, "%Y")
+      _ -> Calendar.strftime(date, "%-d %b %Y")
+    end
+  end
+
+  def process_role_name(role_name) do
+    role_name
+    |> String.replace("-maru", "<span class=\"italic\">-maru</span>")
+    |> String.replace("-seijin", "<span class=\"italic\">-seijin</span>")
+    |> String.replace("Gôtengô", "<span class=\"italic\">Gôtengô</span>")
+    |> String.replace("Eclair", "<span class=\"italic\">Eclair</span>")
+    |> String.replace("Karyû", "<span class=\"italic\">Karyû</span>")
+  end
+
   def nil_safe_iterator(key) do
     case key do
       nil -> []

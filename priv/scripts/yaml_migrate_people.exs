@@ -1,47 +1,5 @@
 slugs = ~w(
-chiaki-minoru
-conway-harold
-dan-ikuma
-dunham-robert
-echigo-ken
-enomoto-kenichi
-fujiki-yu
-fujimoto-sanezumi
-fujita-susumu
-fujiwara-kamatari
-fujiyama-yoko
-fukuda-jun
-funato-jun
-furness-george-a
-furuhata-koji
-gondo-yukihiko
-hama-mie
-hara-setsuko
-hasegawa-hiroshi
-hidari-bokuzen
-higuchi-shinji
-hinata-kazuo
-hirata-akihiko
-hirose-shoichi
-hodgson-william-hope
-honda-ishiro
-hoshi-yuriko
-hughes-andrew
-ibuki-toru
-ifukube-akira
-ikebe-ryo
-iketani-saburo
-imaizumi-ren
-inagaki-hiroshi
-inoue-yasuyuki
-ishida-shigeki
-ito-hisaya
-ito-jerry
-ito-minoru
-kagawa-kyoko
-kamiya-makoto
-kato-daisuke
-kato-haruya
+
 
 )
 
@@ -63,6 +21,9 @@ Enum.each(slugs, fn slug ->
 
   spouses =
     entity.relationships |> Enum.filter(&(&1.relationship == :spouse)) |> Enum.sort_by(& &1.order)
+
+  family =
+    entity.relationships |> Enum.filter(&(&1.relationship != :spouse)) |> Enum.sort_by(& &1.order)
 
   {dob, dob_resolution} =
     case entity.dob do
@@ -139,7 +100,20 @@ Enum.each(slugs, fn slug ->
     cause_of_death: entity.cause_of_death,
     spouses:
       Enum.map(spouses, fn s ->
-        %{name: s.relative.display_name, slug: s.relative.slug}
+        %{
+          name: s.relative.display_name,
+          slug: if(s.relative.showcased, do: s.relative.slug, else: nil)
+        }
+        |> Map.reject(fn {_, v} -> is_nil(v) or v == [] end)
+      end),
+    family:
+      Enum.map(family, fn f ->
+        %{
+          name: f.relative.display_name,
+          slug: if(f.relative.showcased, do: f.relative.slug, else: nil),
+          relationship: f.relationship |> Atom.to_string() |> String.replace("_", "-")
+        }
+        |> Map.reject(fn {_, v} -> is_nil(v) or v == [] end)
       end),
     works:
       Enum.map(selected_filmography, fn

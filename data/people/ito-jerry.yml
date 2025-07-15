@@ -1,0 +1,43 @@
+---
+name: Jerry Itô
+type: person
+family:
+  - name: Senda Koreya
+    slug: senda-koreya
+    relationship: uncle
+works:
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Clark Nelson
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Watkins
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: Message from Space
+    year: 1978
+    roles:
+      - name: Earth Federation Commander
+        uncredited: false
+    slug: message-from-space-1978
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/message-from-space-1978/posters/message-from-space-1978.jpg
+japanese_name: ジェリー・伊藤
+birth_name: Gerald Takemichi Itô
+birth_place: New York, United States
+death_place: Los Angeles, California, United States
+dob: 1927-07-12
+dob_resolution: exact
+dod: 2007-07-08
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/ito-jerry/ito-jerry.jpg
+cause_of_death: Pneumonia
