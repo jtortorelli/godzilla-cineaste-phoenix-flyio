@@ -1,0 +1,87 @@
+---
+name: Kawazu Seizaburô
+type: person
+works:
+  - format: film
+    title: Invisible Man
+    year: 1954
+    roles:
+      - name: Nanjô
+        uncredited: false
+    slug: invisible-man-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invisible-man-1954/posters/invisible-man-1954.jpg
+  - format: film
+    title: The Secret of the Telegian
+    year: 1960
+    roles:
+      - name: Onishi
+        uncredited: false
+    slug: secret-of-the-telegian-1960
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/secret-of-the-telegian-1960/posters/secret-of-the-telegian-1960.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Ôno Harunaga
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Yojimbo
+    year: 1961
+    roles:
+      - name: Seibei
+        uncredited: false
+    slug: yojimbo-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/yojimbo-1961/posters/yojimbo-1961.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: General
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Minister
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Minister Tada
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: New Tale of Zatoichi
+    year: 1963
+    roles:
+      - name: Ban'no Yajûrô
+        uncredited: false
+    slug: new-tale-of-zatoichi-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/new-tale-of-zatoichi-1963/posters/new-tale-of-zatoichi-1963.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Gang Leader
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+japanese_name: 河津清三郎
+birth_name: Nakajima Seiichi
+birth_place: Tokyo, Japan
+dob: 1908-08-30
+dob_resolution: exact
+dod: 1983-02-20
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kawazu-seizaburo/kawazu-seizaburo.jpg
+japanese_birth_name: 中島誠一
+cause_of_death: Laryngeal Cancer

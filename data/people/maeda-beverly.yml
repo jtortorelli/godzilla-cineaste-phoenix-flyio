@@ -1,0 +1,18 @@
+---
+name: Maeda Beverly
+type: person
+works:
+  - format: film
+    title: Son of Godzilla
+    year: 1967
+    roles:
+      - name: Saeko
+        uncredited: false
+    slug: son-of-godzilla-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/son-of-godzilla-1967/posters/son-of-godzilla-1967.jpg
+japanese_name: 前田美波里
+birth_place: Kamakura, Kanagawa, Japan
+dob: 1948-08-08
+dob_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/maeda-beverly/maeda-beverly.jpg

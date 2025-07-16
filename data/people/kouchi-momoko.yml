@@ -1,0 +1,40 @@
+---
+name: Kouchi Momoko
+type: person
+works:
+  - format: film
+    title: Godzilla
+    year: 1954
+    roles:
+      - name: Yamane Emiko
+        uncredited: false
+    slug: godzilla-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-1954/posters/godzilla-1954.jpg
+  - format: film
+    title: The Mysterians
+    year: 1957
+    roles:
+      - name: Iwamoto Hiroko
+        uncredited: false
+    slug: mysterians-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mysterians-1957/posters/mysterians-1957.jpg
+  - format: film
+    title: Godzilla vs. Destoroyah
+    year: 1995
+    roles:
+      - name: Yamane Emiko
+        uncredited: false
+    slug: godzilla-vs-destoroyah-1995
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-destoroyah-1995/posters/godzilla-vs-destroyer-1995.jpg
+japanese_name: 河内桃子
+birth_name: Ôkouchi Momoko
+birth_place: Tokyo, Japan
+death_place: Tokyo, Japan
+dob: 1932-03-07
+dob_resolution: exact
+dod: 1998-11-05
+dod_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kochi-momoko/kochi-momoko.jpg
+japanese_birth_name: 大河内桃子
+cause_of_death: Colon Cancer

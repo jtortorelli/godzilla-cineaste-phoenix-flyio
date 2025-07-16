@@ -1,0 +1,135 @@
+---
+name: Kawai Kenji
+type: person
+works:
+  - format: film
+    title: The Red Spectacles
+    year: 1987
+    slug: red-spectacles-1987
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/red-spectacles-1987/posters/red-spectacles-1987.jpg
+  - format: film
+    title: 'Patlabor: The Movie'
+    year: 1989
+    slug: patlabor-the-movie-1989
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/patlabor-the-movie-1989/posters/patlabor-the-movie-1989.jpg
+  - format: film
+    title: 'Stray Dog: Kerberos Panzer Cops'
+    year: 1991
+    slug: stray-dog-kerberos-panzer-cops-1991
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/stray-dog-kerberos-panzer-cops-1991/posters/stray-dog-kerberos-panzer-cops-1991.jpg
+  - format: film
+    title: Talking Head
+    year: 1992
+    slug: talking-head-1992
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/talking-head-1992/posters/talking-head-1992.jpg
+  - format: film
+    title: 'Patlabor 2: The Movie'
+    year: 1993
+    slug: patlabor-2-the-movie-1993
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/patlabor-2-the-movie-1993/posters/patlabor-2-the-movie-1993.jpg
+  - format: film
+    title: Ghost in the Shell
+    year: 1995
+    slug: ghost-in-the-shell-1995
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghost-in-the-shell-1995/posters/ghost-in-the-shell-1995.jpg
+  - format: film
+    title: Ring
+    year: 1998
+    slug: ring-1998
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-1998/posters/ring-1998.jpg
+  - format: film
+    title: Ring 2
+    year: 1999
+    slug: ring-2-1999
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ring-2-1999/posters/ring-2-1999.jpg
+  - format: film
+    title: 'Sakuya: Slayer of Demons'
+    year: 2000
+    slug: sakuya-slayer-of-demons-2000
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sakuya-slayer-of-demons-2000/posters/sakuya-slayer-of-demons-2000.jpg
+  - format: film
+    title: Avalon
+    year: 2001
+    slug: avalon-2001
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/avalon-2001/posters/avalon-2001.jpg
+  - format: film
+    title: The Princess Blade
+    year: 2001
+    slug: princess-blade-2001
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/princess-blade-2001/posters/princess-blade-2001.jpg
+  - format: film
+    title: Death Note
+    year: 2006
+    slug: death-note-2006
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/death-note-2006/posters/death-note-2006.jpg
+  - format: film
+    title: 'Death Note: The Last Name'
+    year: 2006
+    slug: death-note-the-last-name-2006
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/death-note-the-last-name-2006/posters/death-note-the-last-name-2006.jpg
+  - format: film
+    title: 'L: Change the World'
+    year: 2008
+    slug: l-change-the-world-2008
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/l-change-the-world-2008/posters/l-change-the-world-2008.jpg
+  - format: film
+    title: The Sky Crawlers
+    year: 2008
+    slug: sky-crawlers-2008
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sky-crawlers-2008/posters/sky-crawlers-2008.jpg
+  - format: film
+    title: Assault Girls
+    year: 2009
+    slug: assault-girls-2009
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/assault-girls-2009/posters/assault-girls-2009.jpg
+  - format: film
+    title: Gantz
+    year: 2011
+    slug: gantz-2011
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gantz-2011/posters/gantz-2011.jpg
+  - format: film
+    title: 'Gantz: Perfect Answer'
+    year: 2011
+    slug: gantz-perfect-answer-2011
+    staff:
+      - role: Music
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gantz-perfect-answer-2011/posters/gantz-perfect-answer-2011.jpg
+japanese_name: 川井憲次
+dob: 1957-04-23
+dob_resolution: exact
+profession: Composer
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kawai-kenji/kawai-kenji.jpg

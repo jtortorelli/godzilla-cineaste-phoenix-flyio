@@ -121,7 +121,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-chart-circles" class="text-gray-500 h-5 w-5" /></div>
             <div>
-              <div class="font-content text-gray-500">
+              <div class="font-content text-gray-700">
                 <.person_showcase_link slug={spouse["slug"]}>
                   {spouse["name"]}
                 </.person_showcase_link>
@@ -134,7 +134,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             <div><.icon name="tabler-users-group" class="text-gray-500 h-5 w-5" /></div>
             <div>
               <%= for family <- nil_safe_iterator(@person["family"]) do %>
-                <div class="font-content text-gray-500">
+                <div class="font-content text-gray-700">
                   <.person_showcase_link slug={family["slug"]}>
                     {family["name"]}
                   </.person_showcase_link>

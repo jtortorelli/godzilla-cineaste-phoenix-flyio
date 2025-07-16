@@ -1,0 +1,202 @@
+---
+name: Katô Shigeo
+type: person
+works:
+  - format: film
+    title: Seven Samurai
+    year: 1954
+    roles:
+      - name: Peasant
+        uncredited: false
+    slug: seven-samurai-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/seven-samurai-1954/posters/seven-samurai-1954.jpg
+  - format: film
+    title: 'Samurai III: Duel at Ganryu Island'
+    year: 1956
+    roles:
+      - name: Bearer in Procession
+        uncredited: true
+    slug: samurai-iii-duel-at-ganryu-island-1956
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-iii-duel-at-ganryu-island-1956/posters/samurai-iii-duel-at-ganryu-island-1956.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Yamana Peasant
+        uncredited: true
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: The H-Man
+    year: 1959
+    roles:
+      - name: Fisherman
+        uncredited: false
+    slug: h-man-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/h-man-1958/posters/h-man-1958.jpg
+  - format: film
+    title: Battle in Outer Space
+    year: 1959
+    roles:
+      - name: Train Conductor
+        uncredited: false
+    slug: battle-in-outer-space-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/battle-in-outer-space-1959/posters/battle-in-outer-space-1959.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Dam Worker
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: Sanjuro
+    year: 1962
+    roles:
+      - name: Kikui Samurai
+        uncredited: true
+    slug: sanjuro-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sanjuro-1962/posters/sanjuro-1962.jpg
+  - format: film
+    title: Mothra vs. Godzilla
+    year: 1964
+    roles:
+      - name: Islander
+        uncredited: true
+    slug: mothra-vs-godzilla-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-vs-godzilla-1964/posters/mothra-vs-godzilla-1964.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Soldier
+        uncredited: true
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: Ghidorah, the Three-Headed Monster
+    year: 1964
+    roles:
+      - name: Mt. Aso Tourist
+        uncredited: true
+    slug: ghidorah-the-three-headed-monster-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghidorah-the-three-headed-monster-1964/posters/ghidorah-the-three-headed-monster-1964.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: Village Policeman
+        uncredited: true
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Soldier
+        uncredited: true
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+  - format: film
+    title: King Kong Escapes
+    year: 1967
+    roles:
+      - name: Who Henchman
+        uncredited: true
+    slug: king-kong-escapes-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/king-kong-escapes-1967/posters/king-kong-escapes-1967.jpg
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: Mt. Fuji Soldier
+        uncredited: true
+      - name: Mt. Fuji TV Crew
+        uncredited: true
+      - name: Military Officer
+        uncredited: true
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+  - format: film
+    title: Latitude Zero
+    year: 1969
+    roles:
+      - name: Observer
+        uncredited: true
+    slug: latitude-zero-1969
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/latitude-zero-1969/posters/latitude-zero-1969.jpg
+  - format: film
+    title: Space Amoeba
+    year: 1970
+    roles:
+      - name: Islander
+        uncredited: false
+    slug: space-amoeba-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/space-amoeba-1970/posters/space-amoeba-1970.jpg
+  - format: film
+    title: Lake of Dracula
+    year: 1971
+    roles:
+      - name: Coffee Shop Patron
+        uncredited: true
+    slug: lake-of-dracula-1971
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/posters/lake-of-dracula-1971.jpg
+  - format: film
+    title: Godzilla vs. Hedorah
+    year: 1971
+    roles:
+      - name: Construction Worker
+        uncredited: true
+    slug: godzilla-vs-hedorah-1971
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-hedorah-1971/posters/godzilla-vs-hedorah-1971.jpg
+  - format: film
+    title: Prophecies of Nostradamus
+    year: 1974
+    roles:
+      - name: Burned Man
+        uncredited: false
+    slug: prophecies-of-nostradamus-1974
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/prophecies-of-nostradamus-1974/posters/prophecies-of-nostradamus-1974.jpg
+  - format: film
+    title: Terror of Mechagodzilla
+    year: 1975
+    roles:
+      - name: Submarine Crew
+        uncredited: false
+    slug: terror-of-mechagodzilla-1975
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/terror-of-mechagodzilla-1975/posters/terror-of-mechagodzilla-1975.jpg
+  - format: film
+    title: Conflagration
+    year: 1975
+    roles:
+      - name: Misuga HQ Staff
+        uncredited: false
+    slug: conflagration-1975
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/conflagration-1975/posters/explosion-1975.jpg
+  - format: film
+    title: The Return of Godzilla
+    year: 1985
+    roles:
+      - name: Ship's Radio Operator
+        uncredited: false
+    slug: return-of-godzilla-1984
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/return-of-godzilla-1984/posters/return-of-godzilla-1984.jpg
+  - format: film
+    title: Godzilla vs. Megaguirus
+    year: 2000
+    roles:
+      - name: Janitor
+        uncredited: false
+    slug: godzilla-vs-megaguirus-2000
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-megaguirus-2000/posters/godzilla-x-megaguirus-2000.jpg
+japanese_name: 加藤茂雄
+birth_place: Kamakura, Kanagawa, Japan
+death_place: Kamakura, Kanagawa, Japan
+dob: 1925-06-16
+dob_resolution: exact
+dod: 2020-06-14
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kato-shigeo/kato-shigeo.jpg
+cause_of_death: Chronic Renal Failure

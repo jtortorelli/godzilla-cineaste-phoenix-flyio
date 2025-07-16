@@ -1,0 +1,70 @@
+---
+name: Nakamura Nobuo
+type: person
+works:
+  - format: film
+    title: Throne of Blood
+    year: 1957
+    roles:
+      - name: Phantom Warrior
+        uncredited: false
+    slug: throne-of-blood-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/throne-of-blood-1957/posters/throne-of-blood-1957.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Cabinet Secretary
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Ishimaru
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Doctor Munakata
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: Skeptical Museum Curator
+        uncredited: false
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Doctor Kida
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+  - format: film
+    title: Submersion of Japan
+    year: 1973
+    roles:
+      - name: Envoy Nozaki
+        uncredited: false
+    slug: submersion-of-japan-1973
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/submersion-of-japan-1973/posters/submersion-of-japan-1973.jpg
+japanese_name: 中村伸郎
+birth_place: Otaru, Hokkaido, Japan
+death_place: Tokyo, Japan
+dob: 1908-09-14
+dob_resolution: exact
+dod: 1991-07-05
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/nakamura-nobuo/nakamura-nobuo.jpg?t=2024-04-01T19%3A17%3A07.009Z
+cause_of_death: Heart Failure

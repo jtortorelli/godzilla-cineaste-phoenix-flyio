@@ -1,0 +1,34 @@
+---
+name: Kobayashi Yukiko
+type: person
+works:
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: Manabe Kyôko
+        uncredited: false
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+  - format: film
+    title: Space Amoeba
+    year: 1970
+    roles:
+      - name: Saki
+        uncredited: false
+    slug: space-amoeba-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/space-amoeba-1970/posters/space-amoeba-1970.jpg
+  - format: film
+    title: The Vampire Doll
+    year: 1971
+    roles:
+      - name: Nonomura Yûko
+        uncredited: false
+    slug: vampire-doll-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/vampire-doll-1970/posters/vampire-doll-1970.jpg
+japanese_name: 小林夕岐子
+birth_place: Tokyo, Japan
+dob: 1946-10-06
+dob_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kobayashi-yukiko/kobayashi-yukiko.jpg

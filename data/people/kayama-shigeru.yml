@@ -1,0 +1,32 @@
+---
+name: Kayama Shigeru
+type: person
+works:
+  - format: film
+    title: Godzilla
+    year: 1954
+    slug: godzilla-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-1954/posters/godzilla-1954.jpg
+  - format: film
+    title: Godzilla Raids Again
+    year: 1955
+    slug: godzilla-raids-again-1955
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-raids-again-1955/posters/godzilla-raids-again-1955.jpg
+  - format: film
+    title: The Mysterians
+    year: 1957
+    slug: mysterians-1957
+    staff:
+      - role: Screenplay
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mysterians-1957/posters/mysterians-1957.jpg
+japanese_name: 香山滋
+birth_name: Yamada Kôji
+birth_place: Tokyo, Japan
+dob: 1904-07-01
+dob_resolution: exact
+dod: 1975-02-07
+dod_resolution: exact
+profession: Author
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kayama-shigeru/kayama-shigeru.jpg
+japanese_birth_name: 山田鉀治
+cause_of_death: Heart Failure

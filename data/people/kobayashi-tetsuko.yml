@@ -1,0 +1,21 @@
+---
+name: Kobayashi Tetsuko
+type: person
+works:
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: Mû Empress
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+japanese_name: 小林哲子
+birth_place: Tokyo, Japan
+dob: 1941-03-12
+dob_resolution: exact
+dod: 1994-12-09
+dod_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/kobayashi-tetsuko/kobayashi-tetsuko.jpg
+cause_of_death: Lung Cancer
