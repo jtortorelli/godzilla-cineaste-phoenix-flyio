@@ -1,0 +1,146 @@
+---
+name: Shimozawa Kan
+type: person
+works:
+  - format: film
+    title: The Tale of Zatoichi
+    year: 1962
+    slug: tale-of-zatoichi-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-1962/posters/tale-of-zatoichi-1962.jpg
+  - format: film
+    title: The Tale of Zatoichi Continues
+    year: 1962
+    slug: tale-of-zatoichi-continues-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/tale-of-zatoichi-continues-1962/posters/tale-of-zatoichi-continues-1962.jpg
+  - format: film
+    title: New Tale of Zatoichi
+    year: 1963
+    slug: new-tale-of-zatoichi-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/new-tale-of-zatoichi-1963/posters/new-tale-of-zatoichi-1963.jpg
+  - format: film
+    title: Zatoichi the Fugitive
+    year: 1963
+    slug: zatoichi-the-fugitive-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-the-fugitive-1963/posters/zatoichi-the-fugitive-1963.jpg
+  - format: film
+    title: Zatoichi on the Road
+    year: 1963
+    slug: zatoichi-on-the-road-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-on-the-road-1963/posters/Zatoichi.jpg
+  - format: film
+    title: Zatoichi and the Chest of Gold
+    year: 1964
+    slug: zatoichi-and-the-chest-of-gold-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-chest-of-gold-1964/posters/zatoichi-and-the-chest-of-gold-1964.jpg
+  - format: film
+    title: Zatoichi's Flashing Sword
+    year: 1964
+    slug: zatoichis-flashing-sword-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-flashing-sword-1964/posters/zatoichis-flashing-sword-1964.jpg
+  - format: film
+    title: Fight, Zatoichi, Fight
+    year: 1964
+    slug: fight-zatoichi-fight-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/fight-zatoichi-fight-1964/posters/fight-zatoichi-fight-1964.jpg
+  - format: film
+    title: Adventures of Zatoichi
+    year: 1964
+    slug: adventures-of-zatoichi-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventures-of-zatoichi-1964/posters/adventures-of-zatoichi-1964.jpg
+  - format: film
+    title: Zatoichi's Revenge
+    year: 1965
+    slug: zatoichis-revenge-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-revenge-1965/posters/zatoichis-revenge-1965.jpg
+  - format: film
+    title: Zatoichi and the Doomed Man
+    year: 1965
+    slug: zatoichi-and-the-doomed-man-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-doomed-man-1965/posters/zatoichi-and-the-doomed-man-1965.jpg
+  - format: film
+    title: Zatoichi and the Chess Expert
+    year: 1965
+    slug: zatoichi-and-the-chess-expert-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-chess-expert-1965/posters/zatoichi-and-the-chess-expert-1965.jpg
+  - format: film
+    title: Zatoichi's Vengeance
+    year: 1966
+    slug: zatoichis-vengeance-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-vengeance-1966/posters/zatoichis-vengeance-1966.jpg
+  - format: film
+    title: Zatoichi's Pilgrimage
+    year: 1966
+    slug: zatoichis-pilgrimage-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-pilgrimage-1966/posters/zatoichis-pilgrimage-1966.jpg
+  - format: film
+    title: Zatoichi's Cane Sword
+    year: 1967
+    slug: zatoichis-cane-sword-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-cane-sword-1967/posters/zatoichis-cane-sword-1967.jpg
+  - format: film
+    title: Zatoichi the Outlaw
+    year: 1967
+    slug: zatoichi-the-outlaw-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-the-outlaw-1967/posters/zatoichi-the-outlaw-1967.jpg
+  - format: film
+    title: Zatoichi Challenged
+    year: 1967
+    slug: zatoichi-challenged-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-challenged-1967/posters/zatoichi-challenged-1967.jpg
+  - format: film
+    title: Zatoichi and the Fugitives
+    year: 1968
+    slug: zatoichi-and-the-fugitives-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-fugitives-1968/posters/zatoichi-and-the-fugitives-1968.jpg
+  - format: film
+    title: Samaritan Zatoichi
+    year: 1968
+    slug: samaritan-zatoichi-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samaritan-zatoichi-1968/posters/samaritan-zatoichi-1968.jpg
+  - format: film
+    title: Zatoichi Meets Yojimbo
+    year: 1970
+    slug: zatoichi-meets-yojimbo-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-meets-yojimbo-1970/posters/zatoichi-meets-yojimbo-1970.jpg
+  - format: film
+    title: Zatoichi Goes to the Fire Festival
+    year: 1970
+    slug: zatoichi-goes-to-the-fire-festival-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-goes-to-the-fire-festival-1970/posters/zatoichi-goes-to-the-fire-festival-1970.jpg
+  - format: film
+    title: Zatoichi Meets the One-Armed Swordsman
+    year: 1971
+    slug: zatoichi-meets-the-one-armed-swordsman-1971
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-meets-the-one-armed-swordsman-1971/posters/zatoichi-meets-the-one-armed-swordsman-1971.jpg
+  - format: film
+    title: Zatoichi at Large
+    year: 1972
+    slug: zatoichi-at-large-1972
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-at-large-1972/posters/zatoichi-at-large-1972.jpg
+  - format: film
+    title: Zatoichi in Desperation
+    year: 1972
+    slug: zatoichi-in-desperation-1972
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-in-desperation-1972/posters/zatoichi-in-desperation-1972.jpg
+  - format: film
+    title: Zatoichi's Conspiracy
+    year: 1973
+    slug: zatoichis-conspiracy-1973
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-conspiracy-1973/posters/zatoichis-conspiracy-1973.jpg
+  - format: film
+    title: Zatoichi
+    year: 1989
+    slug: zatoichi-1989
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-1989/posters/zatoichi-1989.jpg
+japanese_name: 子母沢寛
+birth_name: Umetani Matsutarô
+birth_place: Atsuta, Hokkaido, Japan
+death_place: Tokyo, Japan
+dob: 1892-02-01
+dob_resolution: exact
+dod: 1968-07-19
+dod_resolution: exact
+profession: Author
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/shimozawa-kan/shimozawa-kan.jpg?t=2024-04-02T00%3A09%3A27.907Z
+japanese_birth_name: 梅谷松太郎
+cause_of_death: Myocardial Infarction

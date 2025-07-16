@@ -1,0 +1,36 @@
+---
+name: Ôki Shôji
+type: person
+works:
+  - format: film
+    title: Yojimbo
+    year: 1961
+    roles:
+      - name: Seibei Underling
+        uncredited: false
+    slug: yojimbo-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/yojimbo-1961/posters/yojimbo-1961.jpg
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: Turbaned Rebel
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: The Adventure of Kigan Castle
+    year: 1966
+    roles:
+      - name: Sundara
+        uncredited: false
+    slug: adventure-of-kigan-castle-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventure-of-kigan-castle-1966/posters/adventures-of-taklamakan-1966.jpg
+japanese_name: 大木正司
+birth_place: Shizuoka, Japan
+dob: 1936-09-27
+dob_resolution: exact
+dod: 2009-11-20
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/oki-shoji/oki-shoji.jpg

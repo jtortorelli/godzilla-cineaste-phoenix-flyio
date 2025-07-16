@@ -1,0 +1,66 @@
+---
+name: Saijô Yasuhiko
+type: person
+works:
+  - format: film
+    title: The Secret of the Telegian
+    year: 1960
+    roles:
+      - name: Reporter
+        uncredited: false
+    slug: secret-of-the-telegian-1960
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/secret-of-the-telegian-1960/posters/secret-of-the-telegian-1960.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Spaceship Crew
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: TV Cameraman
+        uncredited: false
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Man in Convertible
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+  - format: film
+    title: Son of Godzilla
+    year: 1967
+    roles:
+      - name: Suzuki
+        uncredited: false
+    slug: son-of-godzilla-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/son-of-godzilla-1967/posters/son-of-godzilla-1967.jpg
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: SY-3 Crew
+        uncredited: false
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+  - format: film
+    title: Latitude Zero
+    year: 1969
+    roles:
+      - name: Sailor
+        uncredited: false
+    slug: latitude-zero-1969
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/latitude-zero-1969/posters/latitude-zero-1969.jpg
+japanese_name: 西條康彦
+birth_place: Tokyo, Japan
+dob: 1939-02-20
+dob_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/saijo-yasuhiko/saijo-yasuhiko.jpg?t=2024-04-01T19%3A19%3A50.980Z

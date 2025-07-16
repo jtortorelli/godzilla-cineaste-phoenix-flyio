@@ -1,0 +1,25 @@
+---
+name: Sata Keiko
+type: person
+works:
+  - format: film
+    title: The Human Vapor
+    year: 1960
+    roles:
+      - name: Kôno Kyôko
+        uncredited: false
+    slug: human-vapor-1960
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/human-vapor-1960/posters/human-vapor-1960.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Secretary
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+japanese_name: 佐多契子
+dob: 1941-06-09
+dob_resolution: exact
+profession: Actress
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/sata-keiko/sata-keiko.jpg?t=2024-04-02T00%3A08%3A11.349Z

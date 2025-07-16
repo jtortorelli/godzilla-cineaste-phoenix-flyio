@@ -1,0 +1,200 @@
+---
+name: Shimura Takashi
+type: person
+works:
+  - format: film
+    title: Rashomon
+    year: 1950
+    roles:
+      - name: The Woodcutter
+        uncredited: false
+    slug: rashomon-1950
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/rashomon-1950/posters/rashomon-1950.jpg
+  - format: film
+    title: Seven Samurai
+    year: 1954
+    roles:
+      - name: Shimada Kanbei
+        uncredited: false
+    slug: seven-samurai-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/seven-samurai-1954/posters/seven-samurai-1954.jpg
+  - format: film
+    title: Godzilla
+    year: 1954
+    roles:
+      - name: Doctor Yamane Kyôhei
+        uncredited: false
+    slug: godzilla-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-1954/posters/godzilla-1954.jpg
+  - format: film
+    title: Godzilla Raids Again
+    year: 1955
+    roles:
+      - name: Doctor Yamane Kyôhei
+        uncredited: false
+    slug: godzilla-raids-again-1955
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-raids-again-1955/posters/godzilla-raids-again-1955.jpg
+  - format: film
+    title: 'Samurai III: Duel at Ganryu Island'
+    year: 1956
+    roles:
+      - name: Nagaoka Sado
+        uncredited: false
+    slug: samurai-iii-duel-at-ganryu-island-1956
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-iii-duel-at-ganryu-island-1956/posters/samurai-iii-duel-at-ganryu-island-1956.jpg
+  - format: film
+    title: Throne of Blood
+    year: 1957
+    roles:
+      - name: Odagura Noriyasu
+        uncredited: false
+    slug: throne-of-blood-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/throne-of-blood-1957/posters/throne-of-blood-1957.jpg
+  - format: film
+    title: The Mysterians
+    year: 1957
+    roles:
+      - name: Doctor Adachi Tanjirô
+        uncredited: false
+    slug: mysterians-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mysterians-1957/posters/mysterians-1957.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Nagakura Izumi
+        uncredited: false
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Elder Kumaso
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Katagiri Katsumoto
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Yojimbo
+    year: 1961
+    roles:
+      - name: Tokuuemon
+        uncredited: false
+    slug: yojimbo-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/yojimbo-1961/posters/yojimbo-1961.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Newspaper Editor
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: Sanjuro
+    year: 1962
+    roles:
+      - name: Kurofuji
+        uncredited: false
+    slug: sanjuro-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sanjuro-1962/posters/sanjuro-1962.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Doctor Sonoda Keisuke
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Police Executive
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: King Rasetsu
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: Ghidorah, the Three-Headed Monster
+    year: 1964
+    roles:
+      - name: Doctor Tsukamoto
+        uncredited: false
+    slug: ghidorah-the-three-headed-monster-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghidorah-the-three-headed-monster-1964/posters/ghidorah-the-three-headed-monster-1964.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: Axis Scientist
+        uncredited: false
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+  - format: film
+    title: Zatoichi and the Fugitives
+    year: 1968
+    roles:
+      - name: Jun'an
+        uncredited: false
+    slug: zatoichi-and-the-fugitives-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-fugitives-1968/posters/zatoichi-and-the-fugitives-1968.jpg
+  - format: film
+    title: Zatoichi's Conspiracy
+    year: 1973
+    roles:
+      - name: Sakubei
+        uncredited: false
+    slug: zatoichis-conspiracy-1973
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichis-conspiracy-1973/posters/zatoichis-conspiracy-1973.jpg
+  - format: film
+    title: Prophecies of Nostradamus
+    year: 1974
+    roles:
+      - name: Hospital Director
+        uncredited: false
+    slug: prophecies-of-nostradamus-1974
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/prophecies-of-nostradamus-1974/posters/prophecies-of-nostradamus-1974.jpg
+  - format: film
+    title: The Bullet Train
+    year: 1975
+    roles:
+      - name: JNR President
+        uncredited: false
+    slug: bullet-train-1975
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/bullet-train-1975/posters/bullet-train-1975.jpg
+  - format: film
+    title: Kagemusha
+    year: 1980
+    roles:
+      - name: Taguchi Gyobu
+        uncredited: false
+    slug: kagemusha-1980
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/kagemusha-1980/posters/kagemusha-1980.jpg
+japanese_name: 志村喬
+birth_name: Shimazaki Shôji
+birth_place: Asago, Hyogo, Japan
+death_place: Tokyo, Japan
+dob: 1905-03-12
+dob_resolution: exact
+dod: 1982-02-11
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/shimura-takashi/shimura-takashi.jpg?t=2024-04-02T00%3A09%3A33.782Z
+japanese_birth_name: 島崎捷爾
+cause_of_death: Chronic Emphysema

@@ -1,0 +1,148 @@
+---
+name: Ômae Wataru
+type: person
+works:
+  - format: film
+    title: The Human Vapor
+    year: 1960
+    roles:
+      - name: Reporter
+        uncredited: false
+    slug: human-vapor-1960
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/human-vapor-1960/posters/human-vapor-1960.jpg
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Coast Guard
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Sailor
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: Sanjuro
+    year: 1962
+    roles:
+      - name: Kikui Samurai
+        uncredited: true
+    slug: sanjuro-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/sanjuro-1962/posters/sanjuro-1962.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Spaceship Crew
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Toll Booth Worker
+        uncredited: true
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: Radar Officer
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+  - format: film
+    title: Mothra vs. Godzilla
+    year: 1964
+    roles:
+      - name: Kumayama's Henchman
+        uncredited: false
+    slug: mothra-vs-godzilla-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-vs-godzilla-1964/posters/mothra-vs-godzilla-1964.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Satellite Personnel
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Air Traffic Controller
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+  - format: film
+    title: Ebirah, Horror of the Deep
+    year: 1966
+    roles:
+      - name: Reporter
+        uncredited: false
+    slug: ebirah-horror-of-the-deep-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/posters/godzilla-vs-the-sea-monster-1966.jpg
+  - format: film
+    title: Son of Godzilla
+    year: 1967
+    roles:
+      - name: Pilot
+        uncredited: false
+    slug: son-of-godzilla-1967
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/son-of-godzilla-1967/posters/son-of-godzilla-1967.jpg
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: SY-3 Crew
+        uncredited: false
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+  - format: film
+    title: Space Amoeba
+    year: 1970
+    roles:
+      - name: Sakura
+        uncredited: false
+    slug: space-amoeba-1970
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/space-amoeba-1970/posters/space-amoeba-1970.jpg
+  - format: film
+    title: Lake of Dracula
+    year: 1971
+    roles:
+      - name: Fisherman
+        uncredited: false
+    slug: lake-of-dracula-1971
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lake-of-dracula-1971/posters/lake-of-dracula-1971.jpg
+  - format: film
+    title: Godzilla vs. Hedorah
+    year: 1971
+    roles:
+      - name: Policeman
+        uncredited: false
+    slug: godzilla-vs-hedorah-1971
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-hedorah-1971/posters/godzilla-vs-hedorah-1971.jpg
+  - format: film
+    title: Godzilla vs. Gigan
+    year: 1972
+    roles:
+      - name: Alien Henchman
+        uncredited: false
+    slug: godzilla-vs-gigan-1972
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-vs-gigan-1972/posters/godzilla-vs-gigan-1972.jpg
+japanese_name: 大前亘
+birth_place: Gunma, Japan
+dob: 1934-02-14
+dob_resolution: exact
+dod: 2017-12-24
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/omae-wataru/omae-wataru.jpg?t=2024-04-01T19%3A18%3A38.008Z
