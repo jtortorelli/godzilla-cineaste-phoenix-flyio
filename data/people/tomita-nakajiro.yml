@@ -1,0 +1,69 @@
+---
+name: Tomita Nakajirô
+type: person
+works:
+  - format: film
+    title: 'Samurai III: Duel at Ganryu Island'
+    year: 1956
+    roles:
+      - name: Tsujikaze Kôhei
+        uncredited: false
+    slug: samurai-iii-duel-at-ganryu-island-1956
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/samurai-iii-duel-at-ganryu-island-1956/posters/samurai-iii-duel-at-ganryu-island-1956.jpg
+  - format: film
+    title: Throne of Blood
+    year: 1957
+    roles:
+      - name: Warlord
+        uncredited: false
+    slug: throne-of-blood-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/throne-of-blood-1957/posters/throne-of-blood-1957.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Yamana Border Guard
+        uncredited: false
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: Samurai Tokubei
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: Three Outlaw Samurai
+    year: 1964
+    roles:
+      - name: Onda
+        uncredited: false
+    slug: three-outlaw-samurai-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-outlaw-samurai-1964/posters/three-outlaw-samurai-1964.jpg
+  - format: film
+    title: Ghidorah, the Three-Headed Monster
+    year: 1964
+    roles:
+      - name: General
+        uncredited: false
+    slug: ghidorah-the-three-headed-monster-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ghidorah-the-three-headed-monster-1964/posters/ghidorah-the-three-headed-monster-1964.jpg
+  - format: film
+    title: Adventures of Zatoichi
+    year: 1964
+    roles:
+      - name: Kanjûrô
+        uncredited: false
+    slug: adventures-of-zatoichi-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventures-of-zatoichi-1964/posters/adventures-of-zatoichi-1964.jpg
+japanese_name: 富田仲次郎
+birth_place: Tokyo, Japan
+dob: 1911-11-01
+dob_resolution: exact
+dod: 1990-11-15
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/tomita-nakajiro/tomita-nakajiro.jpg?t=2024-04-02T00%3A11%3A52.266Z
+cause_of_death: Heart Failure

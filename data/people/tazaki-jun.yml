@@ -1,0 +1,136 @@
+---
+name: Tazaki Jun
+type: person
+works:
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Kurohiko
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Tsutsui Zekaibô
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Captain Sonoda Raizô
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: King Kong vs. Godzilla
+    year: 1962
+    roles:
+      - name: General Shinzô
+        uncredited: false
+    slug: king-kong-vs-godzilla-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/king-kong-vs-godzilla-1962/posters/king-kong-vs-godzilla-1962.jpg
+  - format: film
+    title: High and Low
+    year: 1963
+    roles:
+      - name: Kamiya
+        uncredited: false
+    slug: high-and-low-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/high-and-low-1963/posters/high-and-low-1963.jpg
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    roles:
+      - name: Slim
+        uncredited: false
+    slug: lost-world-of-sinbad-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: Captain Jinguji Hachirô
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+  - format: film
+    title: Mothra vs. Godzilla
+    year: 1964
+    roles:
+      - name: Newspaper Editor
+        uncredited: false
+    slug: mothra-vs-godzilla-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-vs-godzilla-1964/posters/mothra-vs-godzilla-1964.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Police Chief
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: Frankenstein Conquers the World
+    year: 1965
+    roles:
+      - name: Officer Nishi
+        uncredited: false
+    slug: frankenstein-conquers-the-world-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/frankenstein-conquers-the-world-1965/posters/frankenstein-conquers-the-world-1965.jpg
+  - format: film
+    title: Invasion of Astro-Monster
+    year: 1965
+    roles:
+      - name: Doctor Sakurai
+        uncredited: false
+    slug: invasion-of-astro-monster-1965
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invasion-of-astro-monster-1965/posters/monster-zero-1965.jpg
+  - format: film
+    title: The Adventure of Kigan Castle
+    year: 1966
+    roles:
+      - name: The Innkeeper
+        uncredited: false
+    slug: adventure-of-kigan-castle-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventure-of-kigan-castle-1966/posters/adventures-of-taklamakan-1966.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: General Hashimoto
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+  - format: film
+    title: Ebirah, Horror of the Deep
+    year: 1966
+    roles:
+      - name: Red Bamboo Commander
+        uncredited: false
+    slug: ebirah-horror-of-the-deep-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/ebirah-horror-of-the-deep-1966/posters/godzilla-vs-the-sea-monster-1966.jpg
+  - format: film
+    title: Destroy All Monsters
+    year: 1968
+    roles:
+      - name: Doctor Yoshida
+        uncredited: false
+    slug: destroy-all-monsters-1968
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/destroy-all-monsters-1968/posters/destroy-all-monsters-1968.jpg
+japanese_name: 田崎潤
+birth_name: Tanaka Minoru
+birth_place: Aomori, Japan
+death_place: Tokyo, Japan
+dob: 1913-08-28
+dob_resolution: exact
+dod: 1985-10-18
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/tazaki-jun/tazaki-jun.jpg?t=2024-04-02T00%3A11%3A34.593Z
+japanese_birth_name: 田中実
+cause_of_death: Lung Cancer

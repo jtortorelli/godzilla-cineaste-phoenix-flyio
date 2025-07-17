@@ -1,0 +1,19 @@
+---
+name: Russ Tamblyn
+type: person
+works:
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Doctor Paul Stewart
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+japanese_name: ラス・タンブリン
+birth_name: Russell Irving Tamblyn
+birth_place: Los Angeles, California, United States
+dob: 1934-12-30
+dob_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/tamblyn-russ/tamblyn-russ.jpg?t=2024-04-02T00%3A11%3A07.214Z

@@ -1,0 +1,53 @@
+---
+name: Uehara Ken
+type: person
+family:
+  - name: Kayama Yûzô
+    relationship: son
+works:
+  - format: film
+    title: Mothra
+    year: 1961
+    roles:
+      - name: Doctor Harada
+        uncredited: false
+    slug: mothra-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-1961/posters/mothra-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Minister
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: Gorath
+    year: 1962
+    roles:
+      - name: Doctor Kôno
+        uncredited: false
+    slug: gorath-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/gorath-1962/posters/gorath-1962.jpg
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: Admiral Kusumi
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+japanese_name: 上原謙
+birth_name: Ikehata Kiyoaki
+birth_place: Tokyo, Japan
+spouses:
+  - name: Kozakura Yôko
+  - name: Obayashi Masami
+dob: 1909-11-07
+dob_resolution: exact
+dod: 1991-11-23
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/uehara-ken/uehara-ken.jpg?t=2024-04-02T00%3A20%3A32.661Z
+japanese_birth_name: 池端清亮
+cause_of_death: Heart Failure

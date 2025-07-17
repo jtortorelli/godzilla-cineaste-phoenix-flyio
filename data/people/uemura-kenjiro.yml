@@ -1,0 +1,29 @@
+---
+name: Uemura Kenjirô
+type: person
+works:
+  - format: film
+    title: Invisible Man
+    year: 1954
+    roles:
+      - name: Ken
+        uncredited: false
+    slug: invisible-man-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invisible-man-1954/posters/invisible-man-1954.jpg
+  - format: film
+    title: Zatoichi and the Chest of Gold
+    year: 1964
+    roles:
+      - name: Matsui
+        uncredited: false
+    slug: zatoichi-and-the-chest-of-gold-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/zatoichi-and-the-chest-of-gold-1964/posters/zatoichi-and-the-chest-of-gold-1964.jpg
+japanese_name: 植村謙二郎
+birth_place: Tokyo, Japan
+dob: 1914-01-03
+dob_resolution: exact
+dod: 1979-04-03
+dod_resolution: exact
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/uemura-kenjiro/uemura-kenjiro.jpg?t=2024-04-02T00%3A20%3A41.880Z
+cause_of_death: Dueodenal Perforation

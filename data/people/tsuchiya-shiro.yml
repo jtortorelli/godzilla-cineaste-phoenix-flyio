@@ -1,0 +1,147 @@
+---
+name: Tsuchiya Shirô
+type: person
+aliases:
+  - name: Tsuchiya Hirotoshi
+    context:
+    category: alias
+    japanese_name: 土屋博敏
+works:
+  - format: film
+    title: Seven Samurai
+    year: 1954
+    roles:
+      - name: Samurai
+        uncredited: true
+    slug: seven-samurai-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/seven-samurai-1954/posters/seven-samurai-1954.jpg
+  - format: film
+    title: Invisible Man
+    year: 1954
+    roles:
+      - name: MP
+        actor_alias: Tsuchiya Hirotoshi
+        uncredited: false
+    slug: invisible-man-1954
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/invisible-man-1954/posters/invisible-man-1954.jpg
+  - format: film
+    title: Godzilla Raids Again
+    year: 1955
+    roles:
+      - name: Fishery Chief
+        actor_alias: Tsuchiya Hirotoshi
+        uncredited: false
+    slug: godzilla-raids-again-1955
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/godzilla-raids-again-1955/posters/godzilla-raids-again-1955.jpg
+  - format: film
+    title: Throne of Blood
+    year: 1957
+    roles:
+      - name: Warlord
+        uncredited: false
+    slug: throne-of-blood-1957
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/throne-of-blood-1957/posters/throne-of-blood-1957.jpg
+  - format: film
+    title: The Hidden Fortress
+    year: 1958
+    roles:
+      - name: Yamana Samurai
+        uncredited: true
+    slug: hidden-fortress-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/hidden-fortress-1958/posters/hidden-fortress-1958.jpg
+  - format: film
+    title: The H-Man
+    year: 1959
+    roles:
+      - name: Police Executive
+        uncredited: false
+    slug: h-man-1958
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/h-man-1958/posters/h-man-1958.jpg
+  - format: film
+    title: The Three Treasures
+    year: 1959
+    roles:
+      - name: Yamato Soldier
+        uncredited: false
+    slug: three-treasures-1959
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/three-treasures-1959/posters/birth-of-japan-1959.jpg
+  - format: film
+    title: The Secret of the Telegian
+    year: 1960
+    roles:
+      - name: Police Official
+        uncredited: false
+    slug: secret-of-the-telegian-1960
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/secret-of-the-telegian-1960/posters/secret-of-the-telegian-1960.jpg
+  - format: film
+    title: Daredevil in the Castle
+    year: 1961
+    roles:
+      - name: Hotta Tosho
+        uncredited: false
+    slug: daredevil-in-the-castle-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/daredevil-in-the-castle-1961/posters/daredevil-in-the-castle-1961.jpg
+  - format: film
+    title: The Last War
+    year: 1961
+    roles:
+      - name: Minister
+        uncredited: false
+    slug: last-war-1961
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/last-war-1961/posters/last-war-1961.jpg
+  - format: film
+    title: King Kong vs. Godzilla
+    year: 1962
+    roles:
+      - name: Evacuee
+        uncredited: false
+    slug: king-kong-vs-godzilla-1962
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/king-kong-vs-godzilla-1962/posters/king-kong-vs-godzilla-1962.jpg
+  - format: film
+    title: Atragon
+    year: 1963
+    roles:
+      - name: <span class="italic">Gôtengô</span> Crew
+        uncredited: false
+    slug: atragon-1963
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/atragon-1963/posters/atragon-1963.jpg
+  - format: film
+    title: Mothra vs. Godzilla
+    year: 1964
+    roles:
+      - name: Fisherman
+        uncredited: false
+    slug: mothra-vs-godzilla-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/mothra-vs-godzilla-1964/posters/mothra-vs-godzilla-1964.jpg
+  - format: film
+    title: Dogora
+    year: 1964
+    roles:
+      - name: Coal Miner
+        uncredited: false
+    slug: dogora-1964
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/dogora-1964/posters/dogora-the-space-monster-1964.jpg
+  - format: film
+    title: The Adventure of Kigan Castle
+    year: 1966
+    roles:
+      - name: Merchant
+        uncredited: false
+    slug: adventure-of-kigan-castle-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventure-of-kigan-castle-1966/posters/adventures-of-taklamakan-1966.jpg
+  - format: film
+    title: War of the Gargantuas
+    year: 1966
+    roles:
+      - name: Military Officer
+        uncredited: false
+    slug: war-of-the-gargantuas-1966
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/war-of-the-gargantuas-1966/posters/war-of-the-gargantuas-1966.jpg
+japanese_name: 土屋詩朗
+birth_place: Akita, Japan
+dob: 1901-01-05
+dob_resolution: exact
+dod: unknown
+dod_resolution: unknown
+profession: Actor
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/tsuchiya-shiro/tsuchiya-shiro.jpg?t=2024-04-02T00%3A12%3A14.235Z

@@ -1,0 +1,33 @@
+---
+name: Taniguchi Senkichi
+type: person
+works:
+  - format: film
+    title: The Lost World of Sinbad
+    year: 1963
+    slug: lost-world-of-sinbad-1963
+    staff:
+      - role: Director
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/lost-world-of-sinbad-1963/posters/samurai-pirate-1963.jpg
+  - format: film
+    title: The Adventure of Kigan Castle
+    year: 1966
+    slug: adventure-of-kigan-castle-1966
+    staff:
+      - role: Director
+    poster_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/films/adventure-of-kigan-castle-1966/posters/adventures-of-taklamakan-1966.jpg
+japanese_name: 谷口千吉
+birth_place: Tokyo, Japan
+spouses:
+  - name: Mizuki Yôko
+  - name: Wakayama Setsuko
+    slug: wakayama-setsuko
+  - name: Yachigusa Kaoru
+    slug: yachigusa-kaoru
+dob: 1912-02-19
+dob_resolution: exact
+dod: 2007-10-29
+dod_resolution: exact
+profession: Director
+avatar_url: https://tcpyguvhxiihxcocbhoh.supabase.co/storage/v1/object/public/godzilla-cineaste-public/content/people/taniguchi-senkichi/taniguchi-senkichi.jpg?t=2024-04-02T00%3A11%3A29.009Z
+cause_of_death: Pneumonia
