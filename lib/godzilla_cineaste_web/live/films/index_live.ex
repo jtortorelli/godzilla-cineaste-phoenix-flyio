@@ -31,7 +31,7 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
         <%= for film <- @films do %>
           <div class="sm:flex sm:flex-col sm:w-36 grid grid-cols-[101px_auto] gap-3">
             <div>
-              <.link href={~p"/v2/films/#{film["slug"]}"}>
+              <.link href={~p"/films/#{film["slug"]}"}>
                 <div class="text-center w-fit m-auto">
                   <img
                     class="rounded-lg drop-shadow-lg"
@@ -43,7 +43,7 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
               </.link>
             </div>
             <div class="sm:text-center">
-              <.link href={~p"/v2/films/#{film["slug"]}"}>
+              <.link href={~p"/films/#{film["slug"]}"}>
                 <div class="font-content italic text-sm text-gray-700">
                   {film["title"]}
                 </div>

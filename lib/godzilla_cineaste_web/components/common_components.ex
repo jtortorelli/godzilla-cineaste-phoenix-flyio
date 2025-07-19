@@ -35,7 +35,7 @@ defmodule GodzillaCineasteWeb.CommonComponents do
   def person_showcase_link(assigns) do
     ~H"""
     <%= if @slug do %>
-      <.cineaste_link href={~p"/v2/people/#{@slug}"}>
+      <.cineaste_link href={~p"/people/#{@slug}"}>
         {render_slot(@inner_block)}
       </.cineaste_link>
     <% else %>
@@ -47,7 +47,7 @@ defmodule GodzillaCineasteWeb.CommonComponents do
   def film_showcase_link(assigns) do
     ~H"""
     <%= if @slug do %>
-      <.cineaste_link href={~p"/v2/films/#{@slug}"}>
+      <.cineaste_link href={~p"/films/#{@slug}"}>
         {render_slot(@inner_block)}
       </.cineaste_link>
     <% else %>

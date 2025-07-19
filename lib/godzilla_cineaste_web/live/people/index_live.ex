@@ -30,7 +30,7 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
       <%= for p <- @people do %>
         <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
           <div>
-            <.link href={~p"/v2/people/#{p["slug"]}"}>
+            <.link href={~p"/people/#{p["slug"]}"}>
               <img
                 class="h-[100px] w-[100px]  max-w-[150px] rounded-lg drop-shadow-lg"
                 src={p["avatar_url"]}
@@ -38,7 +38,7 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
             </.link>
           </div>
           <div class="sm:text-center">
-            <.link href={~p"/v2/people/#{p["slug"]}"}>
+            <.link href={~p"/people/#{p["slug"]}"}>
               <div class="font-content text-sm">
                 {p["name"]}
               </div>
