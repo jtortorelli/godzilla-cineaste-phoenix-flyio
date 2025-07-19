@@ -27,8 +27,8 @@ defmodule GodzillaCineaste.Films do
     Library.get_film_series(slug)
   end
 
-  def list_films do
-    Library.list_films()
+  def list_films(search_terms \\ []) do
+    Library.list_films(search_terms)
   end
 
   def get_adjacent_films_in_series(%Film{
@@ -67,32 +67,5 @@ defmodule GodzillaCineaste.Films do
     |> where([_f, _se, fs], fs.id == ^film_series_id)
     |> where([_f, se, _fs], se.entry_number == ^entry_number)
     |> Repo.one()
-  end
-
-  def list_films(search_term \\ nil) do
-    Film
-    |> from()
-    |> where([f], f.showcased)
-    |> order_by([f], f.sort_title)
-    |> maybe_filter_by_search_term(search_term)
-    |> Repo.all()
-  end
-
-  defp maybe_filter_by_search_term(query, nil), do: query
-
-  defp maybe_filter_by_search_term(query, search_term) do
-    subquery =
-      Film
-      |> from()
-      |> join(:cross, [f], a in fragment("jsonb_array_elements(?)", f.aliases))
-      |> where([f, a], fragment("unaccent(? ->> 'title') ilike unaccent(?)", a, ^search_term))
-      |> select([f, a], f.id)
-
-    where(
-      query,
-      [f],
-      ilike(fragment("unaccent(?)", f.title), fragment("unaccent(?)", ^search_term)) or
-        f.id in subquery(subquery)
-    )
   end
 end

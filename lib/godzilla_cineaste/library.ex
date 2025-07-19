@@ -35,9 +35,37 @@ defmodule GodzillaCineaste.Library do
     end
   end
 
-  def list_films do
+  def list_films(search_terms \\ []) do
+    unaccent_term = fn term ->
+      term |> String.normalize(:nfd) |> String.replace(~r/\p{Mn}/u, "")
+    end
+
+    prep_term = fn term ->
+      term |> unaccent_term.() |> String.downcase()
+    end
+
+    contains_search_term? = fn value, search_term ->
+      String.contains?(prep_term.(value), prep_term.(search_term))
+    end
+
     :films
     |> :ets.tab2list()
+    |> Enum.filter(fn {_slug, film} ->
+      case search_terms do
+        [] ->
+          true
+
+        [_ | _] ->
+          title = film["title"]
+          aliases = Enum.map(film["aliases"] || [], & &1["alias"])
+
+          values = [title | aliases]
+
+          Enum.all?(search_terms, fn term ->
+            Enum.any?(values, &contains_search_term?.(&1, term))
+          end)
+      end
+    end)
     |> Enum.sort_by(fn {slug, _} -> slug end)
     |> Enum.map(fn {slug, film} -> Map.put(film, "slug", slug) end)
   end

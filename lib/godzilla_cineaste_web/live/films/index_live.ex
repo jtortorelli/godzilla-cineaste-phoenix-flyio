@@ -59,6 +59,11 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
     </div>
     """
   end
-end
 
-#
+  @impl true
+  def handle_event("film_search_change", %{"value" => value}, socket) do
+    search_terms = String.split(value, " ", trim: true)
+    films = GodzillaCineaste.Films.list_films(search_terms)
+    {:noreply, assign(socket, films: films)}
+  end
+end
