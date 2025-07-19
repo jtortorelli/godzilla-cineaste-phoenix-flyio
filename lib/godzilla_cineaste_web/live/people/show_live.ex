@@ -41,6 +41,14 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             <div class="font-japanese text-gray-700">{@person["japanese_name"]}</div>
           </div>
         <% end %>
+        <%= if @person["type"] == "group" && @person["active_period_start"] do %>
+          <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+            <div><.icon name="tabler-calendar-time" class="text-gray-500 h-5 w-4" /></div>
+            <div class="font-content text-gray-700">
+              {@person["active_period_start"]} - {@person["active_period_end"] || "Present"}
+            </div>
+          </div>
+        <% end %>
         <%= if @person["dob"] do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div>
@@ -151,6 +159,79 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
     <%= for b <- nil_safe_iterator(@person["bio"]) do %>
       <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
         {raw(b)}
+      </div>
+    <% end %>
+    <%= if @person["type"] == "group" && not Enum.empty?(nil_safe_iterator(@person["members"])) do %>
+      <.named_divider name="Members" />
+      <div class="w-96 m-auto sm:w-fit flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
+        <%= for member <- @person["members"] do %>
+          <div class="flex flex-col text-sm gap-3">
+            <div class="sm:text-center text-base font-content text-gray-700">
+              {member["name"]}
+            </div>
+            <div>
+              <%= if member["dob"] do %>
+                <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+                  <div>
+                    <.icon name="tabler-sun-high" class="text-gray-500 h-5 w-4" />
+                  </div>
+                  <div class="space-y-1">
+                    <div class="font-content text-gray-700">
+                      {display_date(member["dob"], member["dob_resolution"])}
+                      <%= if !member["dod"] do %>
+                        ({age(member["dob"])})
+                      <% end %>
+                    </div>
+                    <%= if member["birth_name"] do %>
+                      <div class="font-content text-gray-500 text-xs">{member["birth_name"]}</div>
+                    <% end %>
+                    <%= if member["japanese_birth_name"] do %>
+                      <div class="font-content text-gray-500 text-xs">
+                        {member["japanese_birth_name"]}
+                      </div>
+                    <% end %>
+                    <%= if member["birth_place"] do %>
+                      <div class="font-content text-gray-500 text-xs">
+                        {member["birth_place"]}
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <div>
+              <%= if member["dod"] && String.downcase(member["dod"]) != "unknown" do %>
+                <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+                  <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
+                  <div class="space-y-1">
+                    <div class="font-content text-gray-700">
+                      {display_date(member["dod"], member["dod_resolution"])} ({lifespan(
+                        member["dob"],
+                        member["dod"]
+                      )})
+                    </div>
+                    <%= if member["death_place"] do %>
+                      <div class="font-content text-gray-500 text-xs">
+                        {member["death_place"]}
+                      </div>
+                    <% end %>
+                    <%= if member["cause_of_death"] do %>
+                      <div class="font-content text-gray-500 text-xs">
+                        {member["cause_of_death"]}
+                      </div>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+              <%= if String.downcase(@person["dod"] || "") == "unknown" do %>
+                <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
+                  <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
+                  <div class="font-content text-gray-700">Unknown Date</div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
     <%= if not Enum.empty?(nil_safe_iterator(@person["accolades"])) do %>
