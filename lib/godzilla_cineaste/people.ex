@@ -21,45 +21,8 @@ defmodule GodzillaCineaste.People do
     Library.get_person(slug)
   end
 
-  def list_people do
-    Library.list_people()
-  end
-
-  def list_people(search_term \\ nil) do
-    person_query =
-      from p in Person,
-        select: %{
-          id: p.id,
-          slug: p.slug,
-          display_name: p.display_name,
-          sort_name: p.sort_name,
-          avatar_url: p.avatar_url,
-          dob: p.dob,
-          dod: p.dod,
-          profession: p.profession,
-          struct: "person"
-        },
-        where: p.showcased
-
-    group_query =
-      from g in Group,
-        select: %{
-          id: g.id,
-          slug: g.slug,
-          display_name: g.display_name,
-          sort_name: g.sort_name,
-          avatar_url: g.avatar_url,
-          dob: nil,
-          dod: nil,
-          profession: g.profession,
-          struct: "group"
-        },
-        where: g.showcased,
-        union_all: ^person_query
-
-    ordered_query = from s in subquery(group_query), order_by: s.sort_name
-
-    ordered_query |> maybe_filter_by_search_term(search_term) |> Repo.all()
+  def list_people(search_terms \\ []) do
+    Library.list_people(search_terms)
   end
 
   def get_person_by_slug!(slug) do
@@ -184,40 +147,5 @@ defmodule GodzillaCineaste.People do
     |> order_by([film: f], f.release_date)
     |> preload(^assocs)
     |> Repo.all()
-  end
-
-  defp maybe_filter_by_search_term(query, nil), do: query
-
-  defp maybe_filter_by_search_term(query, search_term) do
-    alternate_name_subquery =
-      Person
-      |> from()
-      |> join(:cross, [p], a in fragment("jsonb_array_elements(?)", p.alternate_names))
-      |> where([p, a], fragment("unaccent(? ->> 'name') ilike unaccent(?)", a, ^search_term))
-      |> select([p, a], p.id)
-
-    group_member_subquery =
-      Group
-      |> from()
-      |> join(:left, [g], p in assoc(g, :members))
-      |> join(:cross, [g, m], a in fragment("jsonb_array_elements(?)", m.alternate_names))
-      |> where(
-        [g, m, a],
-        ilike(fragment("unaccent(?)", m.display_name), fragment("unaccent(?)", ^search_term)) or
-          fragment("unaccent(? ->> 'name') ilike unaccent(?)", a, ^search_term)
-      )
-      |> select([g, m, a], g.id)
-
-    person = "person"
-
-    group = "group"
-
-    where(
-      query,
-      [s],
-      ilike(fragment("unaccent(?)", s.display_name), fragment("unaccent(?)", ^search_term)) or
-        (s.struct == ^person and s.id in subquery(alternate_name_subquery)) or
-        (s.struct == ^group and s.id in subquery(group_member_subquery))
-    )
   end
 end

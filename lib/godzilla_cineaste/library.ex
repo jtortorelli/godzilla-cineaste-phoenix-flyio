@@ -36,18 +36,6 @@ defmodule GodzillaCineaste.Library do
   end
 
   def list_films(search_terms \\ []) do
-    unaccent_term = fn term ->
-      term |> String.normalize(:nfd) |> String.replace(~r/\p{Mn}/u, "")
-    end
-
-    prep_term = fn term ->
-      term |> unaccent_term.() |> String.downcase()
-    end
-
-    contains_search_term? = fn value, search_term ->
-      String.contains?(prep_term.(value), prep_term.(search_term))
-    end
-
     :films
     |> :ets.tab2list()
     |> Enum.filter(fn {_slug, film} ->
@@ -62,7 +50,7 @@ defmodule GodzillaCineaste.Library do
           values = [title | aliases]
 
           Enum.all?(search_terms, fn term ->
-            Enum.any?(values, &contains_search_term?.(&1, term))
+            Enum.any?(values, &contains_search_term?(&1, term))
           end)
       end
     end)
@@ -70,11 +58,41 @@ defmodule GodzillaCineaste.Library do
     |> Enum.map(fn {slug, film} -> Map.put(film, "slug", slug) end)
   end
 
-  def list_people do
+  def list_people(search_terms \\ []) do
     :people
     |> :ets.tab2list()
+    |> Enum.filter(fn {_slug, person} ->
+      case search_terms do
+        [] ->
+          true
+
+        [_ | _] ->
+          name = person["name"]
+          birth_name = person["birth_name"]
+          members = Enum.map(person["members"] || [], & &1["name"])
+          aliases = Enum.map(person["aliases"] || [], & &1["alias"])
+
+          values = [name, birth_name | aliases ++ members] |> Enum.reject(&is_nil/1)
+
+          Enum.all?(search_terms, fn term ->
+            Enum.any?(values, &contains_search_term?(&1, term))
+          end)
+      end
+    end)
     |> Enum.sort_by(fn {slug, _} -> slug end)
     |> Enum.map(fn {slug, person} -> Map.put(person, "slug", slug) end)
+  end
+
+  defp unaccent_term(term) do
+    term |> String.normalize(:nfd) |> String.replace(~r/\p{Mn}/u, "")
+  end
+
+  defp prep_term(term) do
+    term |> unaccent_term() |> String.downcase()
+  end
+
+  def contains_search_term?(value, search_term) do
+    String.contains?(prep_term(value), prep_term(search_term))
   end
 
   def init(_) do

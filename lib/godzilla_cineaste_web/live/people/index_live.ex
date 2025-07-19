@@ -18,7 +18,7 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
           <.icon name="tabler-search" />
         </div>
         <input
-          type="search"
+          type="text"
           id="default-search"
           class="font-content block w-full p-4 pl-12 ps-10 text-base text-red-700 border-none rounded-lg"
           phx-keydown="people_search_change"
@@ -56,6 +56,13 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
       <% end %>
     </div>
     """
+  end
+
+  @impl true
+  def handle_event("people_search_change", %{"value" => value}, socket) do
+    search_terms = String.split(value, " ", trim: true)
+    people = GodzillaCineaste.People.list_people(search_terms)
+    {:noreply, assign(socket, people: people)}
   end
 
   defp display_person_date_range(%{"type" => "person"} = person) do

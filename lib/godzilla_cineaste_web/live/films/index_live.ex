@@ -18,7 +18,7 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
           <.icon name="tabler-search" />
         </div>
         <input
-          type="search"
+          type="text"
           id="default-search"
           class="font-content block w-full p-4 pl-12 ps-10 text-base text-red-700 border-none rounded-lg"
           phx-keydown="film_search_change"
