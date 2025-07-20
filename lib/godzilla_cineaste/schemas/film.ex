@@ -38,6 +38,8 @@ defmodule GodzillaCineaste.Film do
     embeds_one :original_title, FilmOriginalTitle, on_replace: :update
     embeds_many :display_title, FilmDisplayTitle, on_replace: :delete
 
+    field :document, :map
+
     has_many :kaiju_roles, KaijuRole, preload_order: [asc: :order], on_replace: :delete
 
     has_many :roles, Role, preload_order: [asc: :order], on_replace: :delete

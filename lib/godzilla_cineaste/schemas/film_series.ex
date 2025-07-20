@@ -11,6 +11,8 @@ defmodule GodzillaCineaste.FilmSeries do
 
     has_many :entries, FilmSeriesEntry
 
+    field :document, :map
+
     timestamps()
   end
 

@@ -43,6 +43,8 @@ defmodule GodzillaCineaste.Person do
     embeds_one :birth_place, Place, on_replace: :update
     embeds_one :death_place, Place, on_replace: :update
 
+    field :document, :map
+
     embeds_many :alternate_names, PersonAlternateName, on_replace: :delete
 
     many_to_many :groups, Group, join_through: GroupMember
