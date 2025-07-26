@@ -31,24 +31,24 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
         <%= for film <- @films do %>
           <div class="sm:flex sm:flex-col sm:w-36 grid grid-cols-[101px_auto] gap-3">
             <div>
-              <.link href={~p"/films/#{film["slug"]}"}>
+              <.link href={~p"/films/#{film.slug}"}>
                 <div class="text-center w-fit m-auto">
                   <img
                     class="rounded-lg drop-shadow-lg"
                     height={150}
                     width={101}
-                    src={film["poster_url"]}
+                    src={film.document["poster_url"]}
                   />
                 </div>
               </.link>
             </div>
             <div class="sm:text-center">
-              <.link href={~p"/films/#{film["slug"]}"}>
+              <.link href={~p"/films/#{film.slug}"}>
                 <div class="font-content italic text-sm text-gray-700">
-                  {film["title"]}
+                  {film.document["title"]}
                 </div>
                 <div class="font-detail text-red-700 text-xs">
-                  {film["release_date"] |> Date.from_iso8601!() |> then(& &1.year)}
+                  {film.document["release_date"] |> Date.from_iso8601!() |> then(& &1.year)}
                 </div>
               </.link>
             </div>
@@ -62,7 +62,7 @@ defmodule GodzillaCineasteWeb.Films.IndexLive do
 
   @impl true
   def handle_event("film_search_change", %{"value" => value}, socket) do
-    search_terms = String.split(value, " ", trim: true)
+    search_terms = value |> String.downcase() |> String.split(" ", trim: true)
     films = GodzillaCineaste.Films.list_films(search_terms)
     {:noreply, assign(socket, films: films)}
   end
