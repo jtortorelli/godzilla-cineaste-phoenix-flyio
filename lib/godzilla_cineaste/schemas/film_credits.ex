@@ -7,6 +7,7 @@ defmodule GodzillaCineaste.FilmCredits do
 
   schema "film_credits" do
     field :credits, :string
+    field :slug, :string
 
     belongs_to :film, Film
 

@@ -10,20 +10,22 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
 
   @impl true
   def handle_params(%{"slug" => slug}, _uri, socket) do
-    {:ok, film} = GodzillaCineaste.Films.get_film(slug)
+    film = GodzillaCineaste.Films.get_film(slug)
     credits = GodzillaCineaste.Films.get_film_credits(slug)
 
-    series =
-      if film["series"]["slug"],
-        do: GodzillaCineaste.Films.get_film_series(film["series"]["slug"]),
-        else: nil
+    series_document =
+      with series_slug when is_binary(series_slug) <- film.document["series"]["slug"],
+           %GodzillaCineaste.FilmSeries{document: document} <-
+             GodzillaCineaste.Films.get_film_series(series_slug) do
+        document
+      end
 
     {:noreply,
      assign(socket,
-       film: film,
+       film: film.document,
        credits: credits,
-       series: series,
-       page_title: film["title"]
+       series: series_document,
+       page_title: film.document["title"]
      )}
   end
 
@@ -417,6 +419,4 @@ defmodule GodzillaCineasteWeb.Films.ShowLive do
     |> String.replace("20th", "20<span class=\"align-top text-lg\">th</span>")
     |> String.replace("3rd", "3<span class=\"align-top text-lg\">rd</span>")
   end
-
-
 end
