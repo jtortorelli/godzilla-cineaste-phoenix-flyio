@@ -30,22 +30,22 @@ defmodule GodzillaCineasteWeb.People.IndexLive do
       <%= for p <- @people do %>
         <div class="flex flex-row sm:flex-col sm:w-32 items-center gap-3">
           <div>
-            <.link href={~p"/people/#{p["slug"]}"}>
+            <.link href={~p"/people/#{p.slug}"}>
               <img
                 class="h-[100px] w-[100px]  max-w-[150px] rounded-lg drop-shadow-lg"
-                src={p["avatar_url"]}
+                src={p.document["avatar_url"]}
               />
             </.link>
           </div>
           <div class="sm:text-center">
-            <.link href={~p"/people/#{p["slug"]}"}>
+            <.link href={~p"/people/#{p.slug}"}>
               <div class="font-content text-sm">
-                {p["name"]}
+                {p.document["name"]}
               </div>
-              <%= if p["profession"] do %>
-                <div class="font-detail text-xs text-gray-500">{p["profession"]}</div>
+              <%= if p.document["profession"] do %>
+                <div class="font-detail text-xs text-gray-500">{p.document["profession"]}</div>
               <% end %>
-              <%= if p["type"] == "person" do %>
+              <%= if p.document["type"] == "person" do %>
                 <div class="font-detail text-xs text-red-700">
                   {display_person_date_range(p)}
                 </div>

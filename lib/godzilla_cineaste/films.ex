@@ -29,7 +29,6 @@ defmodule GodzillaCineaste.Films do
   def list_films(search_terms \\ []) do
     from(f in Film, where: f.showcased, order_by: f.sort_title)
     |> maybe_filter_by_search_terms(search_terms)
-    |> dbg()
     |> Repo.all()
   end
 
@@ -47,7 +46,7 @@ defmodule GodzillaCineaste.Films do
         OR
         EXISTS (
           SELECT 1
-          FROM jsonb_array_elements(? -> 'aliases') AS alias
+          FROM jsonb_array_elements(COALESCE(? -> 'aliases', '[]'::jsonb)) AS alias
           WHERE UNACCENT(LOWER(alias ->> 'alias')) ~* ALL(?)
         )
         """,

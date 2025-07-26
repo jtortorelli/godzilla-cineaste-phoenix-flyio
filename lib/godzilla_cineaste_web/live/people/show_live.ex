@@ -12,8 +12,8 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
 
   @impl true
   def handle_params(%{"slug" => slug}, _uri, socket) do
-    {:ok, person} = People.get_person(slug)
-    {:noreply, assign(socket, person: person, page_title: person["name"])}
+    person = People.get_person(slug)
+    {:noreply, assign(socket, person: person, page_title: person.document["name"])}
   end
 
   @impl true
@@ -21,7 +21,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
     ~H"""
     <div class="text-center w-fit m-auto">
       <h1 class="font-display tracking-wider uppercase text-2xl text-gray-700 p-4">
-        {@person["name"]}
+        {@person.document["name"]}
       </h1>
     </div>
     <.named_divider name="Overview" />
@@ -29,84 +29,85 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
       <div class="pb-4 lg:shrink-0 h-full w-fit m-auto">
         <img
           class="rounded-lg drop-shadow-lg"
-          src={@person["avatar_url"]}
+          src={@person.document["avatar_url"]}
           height="200px"
           width="200px"
         />
       </div>
       <div class="text-sm m-auto space-y-3 h-full">
-        <%= if @person["japanese_name"] do %>
+        <%= if @person.document["japanese_name"] do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-language" class="text-gray-500 h-5 w-4" /></div>
-            <div class="font-japanese text-gray-700">{@person["japanese_name"]}</div>
+            <div class="font-japanese text-gray-700">{@person.document["japanese_name"]}</div>
           </div>
         <% end %>
-        <%= if @person["type"] == "group" && @person["active_period_start"] do %>
+        <%= if @person.document["type"] == "group" && @person.document["active_period_start"] do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-calendar-time" class="text-gray-500 h-5 w-4" /></div>
             <div class="font-content text-gray-700">
-              {@person["active_period_start"]} - {@person["active_period_end"] || "Present"}
+              {@person.document["active_period_start"]} - {@person.document["active_period_end"] ||
+                "Present"}
             </div>
           </div>
         <% end %>
-        <%= if @person["dob"] do %>
+        <%= if @person.document["dob"] do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div>
               <.icon name="tabler-sun-high" class="text-gray-500 h-5 w-4" />
             </div>
             <div class="space-y-1">
               <div class="font-content text-gray-700">
-                {display_date(@person["dob"], @person["dob_resolution"])}
-                <%= if !@person["dod"] do %>
-                  ({age(@person["dob"])})
+                {display_date(@person.document["dob"], @person.document["dob_resolution"])}
+                <%= if !@person.document["dod"] do %>
+                  ({age(@person.document["dob"])})
                 <% end %>
               </div>
-              <%= if @person["birth_name"] do %>
-                <div class="font-content text-gray-500 text-xs">{@person["birth_name"]}</div>
+              <%= if @person.document["birth_name"] do %>
+                <div class="font-content text-gray-500 text-xs">{@person.document["birth_name"]}</div>
               <% end %>
-              <%= if @person["japanese_birth_name"] do %>
+              <%= if @person.document["japanese_birth_name"] do %>
                 <div class="font-content text-gray-500 text-xs">
-                  {@person["japanese_birth_name"]}
+                  {@person.document["japanese_birth_name"]}
                 </div>
               <% end %>
-              <%= if @person["birth_place"] do %>
+              <%= if @person.document["birth_place"] do %>
                 <div class="font-content text-gray-500 text-xs">
-                  {@person["birth_place"]}
+                  {@person.document["birth_place"]}
                 </div>
               <% end %>
             </div>
           </div>
         <% end %>
-        <%= if @person["dod"] && String.downcase(@person["dod"]) != "unknown" do %>
+        <%= if @person.document["dod"] && String.downcase(@person.document["dod"]) != "unknown" do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
             <div class="space-y-1">
               <div class="font-content text-gray-700">
-                {display_date(@person["dod"], @person["dod_resolution"])} ({lifespan(
-                  @person["dob"],
-                  @person["dod"]
+                {display_date(@person.document["dod"], @person.document["dod_resolution"])} ({lifespan(
+                  @person.document["dob"],
+                  @person.document["dod"]
                 )})
               </div>
-              <%= if @person["death_place"] do %>
+              <%= if @person.document["death_place"] do %>
                 <div class="font-content text-gray-500 text-xs">
-                  {@person["death_place"]}
+                  {@person.document["death_place"]}
                 </div>
               <% end %>
-              <%= if @person["cause_of_death"] do %>
+              <%= if @person.document["cause_of_death"] do %>
                 <div class="font-content text-gray-500 text-xs">
-                  {@person["cause_of_death"]}
+                  {@person.document["cause_of_death"]}
                 </div>
               <% end %>
             </div>
           </div>
         <% end %>
-        <%= if String.downcase(@person["dod"] || "") == "unknown" do %>
+        <%= if String.downcase(@person.document["dod"] || "") == "unknown" do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
             <div class="font-content text-gray-700">Unknown Date</div>
           </div>
         <% end %>
-        <%= for a <- nil_safe_iterator(@person["aliases"]) do %>
+        <%= for a <- nil_safe_iterator(@person.document["aliases"]) do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-at" class="text-gray-500 h-5 w-4" /></div>
             <div>
@@ -125,7 +126,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             </div>
           </div>
         <% end %>
-        <%= for spouse <- nil_safe_iterator(@person["spouses"]) do %>
+        <%= for spouse <- nil_safe_iterator(@person.document["spouses"]) do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-chart-circles" class="text-gray-500 h-5 w-5" /></div>
             <div>
@@ -137,11 +138,11 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             </div>
           </div>
         <% end %>
-        <%= if not Enum.empty?(nil_safe_iterator(@person["family"])) do %>
+        <%= if not Enum.empty?(nil_safe_iterator(@person.document["family"])) do %>
           <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
             <div><.icon name="tabler-users-group" class="text-gray-500 h-5 w-5" /></div>
             <div>
-              <%= for family <- nil_safe_iterator(@person["family"]) do %>
+              <%= for family <- nil_safe_iterator(@person.document["family"]) do %>
                 <div class="font-content text-gray-700">
                   <.person_showcase_link slug={family["slug"]}>
                     {family["name"]}
@@ -156,15 +157,15 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
         <% end %>
       </div>
     </div>
-    <%= for b <- nil_safe_iterator(@person["bio"]) do %>
+    <%= for b <- nil_safe_iterator(@person.document["bio"]) do %>
       <div class="text-sm font-content text-gray-700 mb-1 w-96 mx-auto">
         {raw(b)}
       </div>
     <% end %>
-    <%= if @person["type"] == "group" && not Enum.empty?(nil_safe_iterator(@person["members"])) do %>
+    <%= if @person.document["type"] == "group" && not Enum.empty?(nil_safe_iterator(@person.document["members"])) do %>
       <.named_divider name="Members" />
       <div class="w-96 m-auto sm:w-fit flex flex-col sm:flex-row flex-wrap gap-6 justify-center">
-        <%= for member <- @person["members"] do %>
+        <%= for member <- @person.document["members"] do %>
           <div class="flex flex-col text-sm gap-3">
             <div class="sm:text-center text-base font-content text-gray-700">
               {member["name"]}
@@ -223,7 +224,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
                   </div>
                 </div>
               <% end %>
-              <%= if String.downcase(@person["dod"] || "") == "unknown" do %>
+              <%= if String.downcase(@person.document["dod"] || "") == "unknown" do %>
                 <div class="flex lg:break-inside-avoid-column gap-1 items-baseline">
                   <div><.icon name="tabler-moon" class="text-gray-500 h-5 w-4" /></div>
                   <div class="font-content text-gray-700">Unknown Date</div>
@@ -234,10 +235,10 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
         <% end %>
       </div>
     <% end %>
-    <%= if not Enum.empty?(nil_safe_iterator(@person["accolades"])) do %>
+    <%= if not Enum.empty?(nil_safe_iterator(@person.document["accolades"])) do %>
       <.named_divider name="Accolades" />
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
-        <%= for accolade <- nil_safe_iterator(@person["accolades"]) do %>
+        <%= for accolade <- nil_safe_iterator(@person.document["accolades"]) do %>
           <div class={"font-content text-xs gap-1 #{if accolade["status"] == "won", do: "text-amber-600", else: "text-gray-700"}"}>
             <div class="flex items-end gap-1">
               <div>
@@ -268,7 +269,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
     <.named_divider name="Selected Works" />
     <div class="full-filmography">
       <div class="flex flex-col sm:flex-row sm:flex-wrap gap-4 m-auto sm:w-fit w-96">
-        <%= for entry <- @person["works"] do %>
+        <%= for entry <- @person.document["works"] do %>
           <%= if String.downcase(entry["format"]) == "tv series" do %>
             <div class="flex flex-row w-60 items-start gap-3">
               <div class="shrink-0">
