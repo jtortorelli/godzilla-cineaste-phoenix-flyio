@@ -21,10 +21,11 @@ defmodule GodzillaCineasteWeb.Router do
     get "/about", AboutController, :index
     get "/about/history", AboutController, :history
     get "/about/acknowledgements", AboutController, :acknowledgements
-    live "/films", FilmsLive
-    get "/films/:slug", FilmController, :show
-    live "/people", PeopleLive
-    get "/people/:slug", PeopleController, :show
+
+    live "/films", Films.IndexLive
+    live "/films/:slug", Films.ShowLive
+    live "/people", People.IndexLive
+    live "/people/:slug", People.ShowLive
   end
 
   # Other scopes may use custom stacks.
@@ -46,12 +47,6 @@ defmodule GodzillaCineasteWeb.Router do
 
       live_dashboard "/dashboard", metrics: GodzillaCineasteWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
-
-      scope "/admin" do
-        live "/", GodzillaCineasteWeb.AdminLive
-        live "/people", GodzillaCineasteWeb.AdminPeopleLive
-        live "/people/:slug", GodzillaCineasteWeb.AdminPersonLive
-      end
     end
   end
 end

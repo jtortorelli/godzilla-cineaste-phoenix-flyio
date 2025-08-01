@@ -3,78 +3,58 @@ defmodule GodzillaCineaste.Films do
 
   import Ecto.Query
 
-  alias GodzillaCineaste.{
-    Film,
-    FilmSeries,
-    FilmSeriesEntry,
-    KaijuRole,
-    Repo,
-    Role,
-    Staff
-  }
+  alias GodzillaCineaste.Film
+  alias GodzillaCineaste.FilmCredits
+  alias GodzillaCineaste.FilmSeries
+  alias GodzillaCineaste.Repo
 
-  def get_adjacent_films_in_series(%Film{
-        series_entry: %FilmSeriesEntry{
-          entry_number: entry_number,
-          film_series: %FilmSeries{id: film_series_id}
-        }
-      }) do
-    with previous_film <- get_film_series_entry(film_series_id, entry_number - 1),
-         next_film <- get_film_series_entry(film_series_id, entry_number + 1) do
-      {:ok, previous_film, next_film}
-    end
+  alias NimbleCSV.RFC4180, as: CSV
+
+  def get_film(slug) do
+    Repo.get_by!(Film, slug: slug)
   end
 
-  def get_adjacent_films_in_series(_), do: {:ok, nil, nil}
-
-  def get_film_by_slug!(slug) do
-    Film
-    |> Repo.get_by!(slug: slug)
-    |> Repo.preload(
-      studios: [],
-      production_committee: [:studios],
-      works: [:authors, :studios],
-      series_entry: [film_series: [entries: :film]],
-      credits: [],
-      kaiju_roles: {from(kr in KaijuRole, order_by: [kr.order]), [:person, :kaiju_character]},
-      roles: {from(r in Role, order_by: [r.order]), [:person, :group]},
-      staff: {from(s in Staff, order_by: [s.order]), [:person, :group]}
-    )
+  def get_film_credits(slug) do
+    Repo.get_by!(FilmCredits, slug: slug)
+    |> Map.get(:credits)
+    |> CSV.parse_string(skip_headers: false)
+  rescue
+    Ecto.NoResultsError -> nil
   end
 
-  def get_film_series_entry(film_series_id, entry_number) do
-    Film
-    |> join(:left, [f], se in assoc(f, :series_entry))
-    |> join(:left, [_f, se], fs in assoc(se, :film_series))
-    |> where([_f, _se, fs], fs.id == ^film_series_id)
-    |> where([_f, se, _fs], se.entry_number == ^entry_number)
-    |> Repo.one()
+  def get_film_series(slug) do
+    Repo.get_by!(FilmSeries, slug: slug)
   end
 
-  def list_films(search_term \\ nil) do
-    Film
-    |> from()
-    |> where([f], f.showcased)
-    |> order_by([f], f.sort_title)
-    |> maybe_filter_by_search_term(search_term)
+  def list_films(search_terms \\ []) do
+    from(f in Film, where: f.showcased, order_by: f.sort_title)
+    |> maybe_filter_by_search_terms(search_terms)
     |> Repo.all()
   end
 
-  defp maybe_filter_by_search_term(query, nil), do: query
+  defp maybe_filter_by_search_terms(query, []) do
+    query
+  end
 
-  defp maybe_filter_by_search_term(query, search_term) do
-    subquery =
-      Film
-      |> from()
-      |> join(:cross, [f], a in fragment("jsonb_array_elements(?)", f.aliases))
-      |> where([f, a], fragment("unaccent(? ->> 'title') ilike unaccent(?)", a, ^search_term))
-      |> select([f, a], f.id)
-
+  defp maybe_filter_by_search_terms(query, search_terms) do
     where(
       query,
       [f],
-      ilike(fragment("unaccent(?)", f.title), fragment("unaccent(?)", ^search_term)) or
-        f.id in subquery(subquery)
+      fragment(
+        """
+        UNACCENT(LOWER(? ->> 'title')) ~* ALL(?)
+        OR
+        EXISTS (
+          SELECT 1
+          FROM jsonb_array_elements(COALESCE(? -> 'aliases', '[]'::jsonb)) AS alias
+          WHERE UNACCENT(LOWER(alias ->> 'alias')) ~* ALL(?)
+        )
+        """,
+        f.document,
+        ^search_terms,
+        f.document,
+        ^search_terms
+      )
     )
   end
 end

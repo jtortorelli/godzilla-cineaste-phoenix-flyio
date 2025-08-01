@@ -3,20 +3,16 @@ defmodule GodzillaCineaste.FilmCredits do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias GodzillaCineaste.Film
-
   schema "film_credits" do
     field :credits, :string
-
-    belongs_to :film, Film
+    field :slug, :string
 
     timestamps()
   end
 
   def changeset(film_credits, attrs) do
     film_credits
-    |> cast(attrs, [:credits, :film_id])
-    |> validate_required([:credits])
-    |> assoc_constraint(:film)
+    |> cast(attrs, [:credits, :slug])
+    |> validate_required([:credits, :slug])
   end
 end
