@@ -323,7 +323,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
             <div class="flex flex-row w-60 items-start gap-3">
               <div class="shrink-0">
                 <img
-                  class="rounded-lg drop-shadow-lg min-h-[150px]"
+                  class="rounded-lg drop-shadow-lg min-h-[150px] max-h-[150px]"
                   height={150}
                   width={101}
                   src={entry["poster_url"]}
