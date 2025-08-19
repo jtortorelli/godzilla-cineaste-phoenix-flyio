@@ -313,7 +313,7 @@ defmodule GodzillaCineasteWeb.People.ShowLive do
                       <div>
                         {raw(process_role_name(r["name"]))}
                       </div>
-                      <div>
+                      <div :if={r["episode_count"]}>
                         {r["episode_count"]} {if r["episode_count"] > 1,
                           do: "Episodes",
                           else: "Episode"}
